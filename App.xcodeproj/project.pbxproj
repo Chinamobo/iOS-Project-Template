@@ -17,6 +17,12 @@
 		D51CC8A91622EE3B00BE1083 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51CC8801622EE3B00BE1083 /* UIKit.framework */; };
 		D51CC8AA1622EE3B00BE1083 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51CC8821622EE3B00BE1083 /* Foundation.framework */; };
 		D51CC8B51622EE3B00BE1083 /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D51CC8B41622EE3B00BE1083 /* AppTests.m */; };
+		D526B2F216381830003087FF /* ExampleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2F116381830003087FF /* ExampleEntity.m */; };
+		D526B2F316381830003087FF /* ExampleEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2F116381830003087FF /* ExampleEntity.m */; };
+		D526B2FA16381888003087FF /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D526B2F816381888003087FF /* main.xcdatamodeld */; };
+		D526B2FB16381888003087FF /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D526B2F816381888003087FF /* main.xcdatamodeld */; };
+		D526B2FE163818B4003087FF /* ExampleEntity+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */; };
+		D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */; };
 		D57634521622F36E00FCE9FB /* main~iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634511622F36E00FCE9FB /* main~iPad.storyboard */; };
 		D57634551622F3F200FCE9FB /* main~iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634541622F3F200FCE9FB /* main~iPhone.storyboard */; };
 		D57634571622FC6600FCE9FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57634561622FC6600FCE9FB /* CoreData.framework */; };
@@ -133,8 +139,6 @@
 		D576357E1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */; };
 		D576357F1623096E00FCE9FB /* RFSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D576352A1623096E00FCE9FB /* RFSegue.m */; };
 		D57635801623096E00FCE9FB /* RFSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D576352A1623096E00FCE9FB /* RFSegue.m */; };
-		D57635D01623150500FCE9FB /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D57635CE1623150500FCE9FB /* main.xcdatamodeld */; };
-		D57635D11623150500FCE9FB /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D57635CE1623150500FCE9FB /* main.xcdatamodeld */; };
 		D57635DE1623B92F00FCE9FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */; };
 		D57635E01623B93600FCE9FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */; };
 		D57635E11623B95F00FCE9FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */; };
@@ -168,6 +172,11 @@
 		D51CC8AF1622EE3B00BE1083 /* AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppTests-Info.plist"; sourceTree = "<group>"; };
 		D51CC8B31622EE3B00BE1083 /* AppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTests.h; sourceTree = "<group>"; };
 		D51CC8B41622EE3B00BE1083 /* AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
+		D526B2F016381830003087FF /* ExampleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleEntity.h; path = "Core Data/ExampleEntity.h"; sourceTree = "<group>"; };
+		D526B2F116381830003087FF /* ExampleEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleEntity.m; path = "Core Data/ExampleEntity.m"; sourceTree = "<group>"; };
+		D526B2F916381888003087FF /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
+		D526B2FC163818B3003087FF /* ExampleEntity+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ExampleEntity+Cache.h"; path = "Core Data/ExampleEntity+Cache.h"; sourceTree = "<group>"; };
+		D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ExampleEntity+Cache.m"; path = "Core Data/ExampleEntity+Cache.m"; sourceTree = "<group>"; };
 		D57634511622F36E00FCE9FB /* main~iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPad.storyboard"; sourceTree = "<group>"; };
 		D57634541622F3F200FCE9FB /* main~iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPhone.storyboard"; sourceTree = "<group>"; };
 		D57634561622FC6600FCE9FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -283,9 +292,7 @@
 		D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNavigationPushSegue.m; sourceTree = "<group>"; };
 		D57635291623096E00FCE9FB /* RFSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegue.h; sourceTree = "<group>"; };
 		D576352A1623096E00FCE9FB /* RFSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegue.m; sourceTree = "<group>"; };
-		D57635CF1623150500FCE9FB /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
 		D57635D21623159B00FCE9FB /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
-		D57635D3162316DB00FCE9FB /* CoreDataDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataDefine.h; sourceTree = "<group>"; };
 		D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -363,11 +370,10 @@
 		D51CC8861622EE3B00BE1083 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D526B2EF163817F7003087FF /* Core Data */,
 				D51CC88F1622EE3B00BE1083 /* AppDelegate.h */,
 				D51CC8901622EE3B00BE1083 /* AppDelegate.m */,
 				D57635D21623159B00FCE9FB /* debug.h */,
-				D57635D3162316DB00FCE9FB /* CoreDataDefine.h */,
-				D57635CE1623150500FCE9FB /* main.xcdatamodeld */,
 				D57634511622F36E00FCE9FB /* main~iPad.storyboard */,
 				D57634541622F3F200FCE9FB /* main~iPhone.storyboard */,
 				D51CC89E1622EE3B00BE1083 /* ViewController.h */,
@@ -403,6 +409,18 @@
 				D51CC8AF1622EE3B00BE1083 /* AppTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D526B2EF163817F7003087FF /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				D526B2F816381888003087FF /* main.xcdatamodeld */,
+				D526B2F016381830003087FF /* ExampleEntity.h */,
+				D526B2F116381830003087FF /* ExampleEntity.m */,
+				D526B2FC163818B3003087FF /* ExampleEntity+Cache.h */,
+				D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		D57634701622FF4100FCE9FB /* Resources */ = {
@@ -871,7 +889,9 @@
 				D576357B1623096E00FCE9FB /* RFUI.m in Sources */,
 				D576357D1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */,
 				D576357F1623096E00FCE9FB /* RFSegue.m in Sources */,
-				D57635D01623150500FCE9FB /* main.xcdatamodeld in Sources */,
+				D526B2F216381830003087FF /* ExampleEntity.m in Sources */,
+				D526B2FA16381888003087FF /* main.xcdatamodeld in Sources */,
+				D526B2FE163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,7 +931,9 @@
 				D576357C1623096E00FCE9FB /* RFUI.m in Sources */,
 				D576357E1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */,
 				D57635801623096E00FCE9FB /* RFSegue.m in Sources */,
-				D57635D11623150500FCE9FB /* main.xcdatamodeld in Sources */,
+				D526B2F316381830003087FF /* ExampleEntity.m in Sources */,
+				D526B2FB16381888003087FF /* main.xcdatamodeld in Sources */,
+				D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,13 +1092,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D57635CE1623150500FCE9FB /* main.xcdatamodeld */ = {
+		D526B2F816381888003087FF /* main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D57635CF1623150500FCE9FB /* main.xcdatamodel */,
+				D526B2F916381888003087FF /* main.xcdatamodel */,
 			);
-			currentVersion = D57635CF1623150500FCE9FB /* main.xcdatamodel */;
-			path = main.xcdatamodeld;
+			currentVersion = D526B2F916381888003087FF /* main.xcdatamodel */;
+			name = main.xcdatamodeld;
+			path = "Core Data/main.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
