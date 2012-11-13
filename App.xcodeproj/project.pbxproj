@@ -23,6 +23,102 @@
 		D526B2FB16381888003087FF /* main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D526B2F816381888003087FF /* main.xcdatamodeld */; };
 		D526B2FE163818B4003087FF /* ExampleEntity+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */; };
 		D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */; };
+		D544EC4D1652042E000A1090 /* NSArray+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC101652042E000A1090 /* NSArray+RFKit.m */; };
+		D544EC4E1652042E000A1090 /* NSArray+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC101652042E000A1090 /* NSArray+RFKit.m */; };
+		D544EC4F1652042E000A1090 /* NSBundle+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC121652042E000A1090 /* NSBundle+RFKit.m */; };
+		D544EC501652042E000A1090 /* NSBundle+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC121652042E000A1090 /* NSBundle+RFKit.m */; };
+		D544EC511652042E000A1090 /* NSDate+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC141652042E000A1090 /* NSDate+RFKit.m */; };
+		D544EC521652042E000A1090 /* NSDate+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC141652042E000A1090 /* NSDate+RFKit.m */; };
+		D544EC531652042E000A1090 /* NSDateFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC161652042E000A1090 /* NSDateFormatter+RFKit.m */; };
+		D544EC541652042E000A1090 /* NSDateFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC161652042E000A1090 /* NSDateFormatter+RFKit.m */; };
+		D544EC551652042E000A1090 /* NSDictionary+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC181652042E000A1090 /* NSDictionary+RFKit.m */; };
+		D544EC561652042E000A1090 /* NSDictionary+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC181652042E000A1090 /* NSDictionary+RFKit.m */; };
+		D544EC571652042E000A1090 /* NSFileManager+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1A1652042E000A1090 /* NSFileManager+RFKit.m */; };
+		D544EC581652042E000A1090 /* NSFileManager+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1A1652042E000A1090 /* NSFileManager+RFKit.m */; };
+		D544EC591652042E000A1090 /* NSNumberFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1C1652042E000A1090 /* NSNumberFormatter+RFKit.m */; };
+		D544EC5A1652042E000A1090 /* NSNumberFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1C1652042E000A1090 /* NSNumberFormatter+RFKit.m */; };
+		D544EC5B1652042E000A1090 /* NSObject+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1E1652042E000A1090 /* NSObject+RFKit.m */; };
+		D544EC5C1652042E000A1090 /* NSObject+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC1E1652042E000A1090 /* NSObject+RFKit.m */; };
+		D544EC5D1652042E000A1090 /* NSString+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC201652042E000A1090 /* NSString+RFKit.m */; };
+		D544EC5E1652042E000A1090 /* NSString+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC201652042E000A1090 /* NSString+RFKit.m */; };
+		D544EC5F1652042E000A1090 /* NSURL+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC221652042E000A1090 /* NSURL+RFKit.m */; };
+		D544EC601652042E000A1090 /* NSURL+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC221652042E000A1090 /* NSURL+RFKit.m */; };
+		D544EC611652042E000A1090 /* UIAlertView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC251652042E000A1090 /* UIAlertView+RFKit.m */; };
+		D544EC621652042E000A1090 /* UIAlertView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC251652042E000A1090 /* UIAlertView+RFKit.m */; };
+		D544EC631652042E000A1090 /* UIButton+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC271652042E000A1090 /* UIButton+RFKit.m */; };
+		D544EC641652042E000A1090 /* UIButton+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC271652042E000A1090 /* UIButton+RFKit.m */; };
+		D544EC651652042E000A1090 /* UIColor+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC291652042E000A1090 /* UIColor+RFKit.m */; };
+		D544EC661652042E000A1090 /* UIColor+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC291652042E000A1090 /* UIColor+RFKit.m */; };
+		D544EC671652042E000A1090 /* UIDevice+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2B1652042E000A1090 /* UIDevice+RFKit.m */; };
+		D544EC681652042E000A1090 /* UIDevice+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2B1652042E000A1090 /* UIDevice+RFKit.m */; };
+		D544EC691652042E000A1090 /* UIImage+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2D1652042E000A1090 /* UIImage+RFKit.m */; };
+		D544EC6A1652042E000A1090 /* UIImage+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2D1652042E000A1090 /* UIImage+RFKit.m */; };
+		D544EC6B1652042E000A1090 /* UIView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2F1652042E000A1090 /* UIView+RFKit.m */; };
+		D544EC6C1652042E000A1090 /* UIView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC2F1652042E000A1090 /* UIView+RFKit.m */; };
+		D544EC6D1652042E000A1090 /* UIViewController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC311652042E000A1090 /* UIViewController+RFKit.m */; };
+		D544EC6E1652042E000A1090 /* UIViewController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC311652042E000A1090 /* UIViewController+RFKit.m */; };
+		D544EC731652042E000A1090 /* dout.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC361652042E000A1090 /* dout.m */; };
+		D544EC741652042E000A1090 /* dout.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC361652042E000A1090 /* dout.m */; };
+		D544EC751652042E000A1090 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC3A1652042E000A1090 /* UncaughtExceptionHandler.m */; };
+		D544EC761652042E000A1090 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC3A1652042E000A1090 /* UncaughtExceptionHandler.m */; };
+		D544EC7B1652042E000A1090 /* RFGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC3F1652042E000A1090 /* RFGeometry.m */; };
+		D544EC7C1652042E000A1090 /* RFGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC3F1652042E000A1090 /* RFGeometry.m */; };
+		D544EC7D1652042E000A1090 /* RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC411652042E000A1090 /* RFKit.m */; };
+		D544EC7E1652042E000A1090 /* RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC411652042E000A1090 /* RFKit.m */; };
+		D544EC7F1652042E000A1090 /* RFPerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC441652042E000A1090 /* RFPerformance.m */; };
+		D544EC801652042E000A1090 /* RFPerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC441652042E000A1090 /* RFPerformance.m */; };
+		D544EC831652042E000A1090 /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC4A1652042E000A1090 /* RFUI.m */; };
+		D544EC841652042E000A1090 /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC4A1652042E000A1090 /* RFUI.m */; };
+		D544ED1D165205DA000A1090 /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEC165205DA000A1090 /* RFButton.m */; };
+		D544ED1E165205DA000A1090 /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEC165205DA000A1090 /* RFButton.m */; };
+		D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */; };
+		D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */; };
+		D544ED21165205DA000A1090 /* RFImageGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECF1165205DA000A1090 /* RFImageGallery.m */; };
+		D544ED22165205DA000A1090 /* RFImageGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECF1165205DA000A1090 /* RFImageGallery.m */; };
+		D544ED23165205DA000A1090 /* RFSidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECF4165205DA000A1090 /* RFSidePanel.m */; };
+		D544ED24165205DA000A1090 /* RFSidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECF4165205DA000A1090 /* RFSidePanel.m */; };
+		D544ED25165205DA000A1090 /* RFSidePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF5165205DA000A1090 /* RFSidePanel.xib */; };
+		D544ED26165205DA000A1090 /* RFSidePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF5165205DA000A1090 /* RFSidePanel.xib */; };
+		D544ED27165205DA000A1090 /* SidePanel-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF6165205DA000A1090 /* SidePanel-bg.png */; };
+		D544ED28165205DA000A1090 /* SidePanel-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF6165205DA000A1090 /* SidePanel-bg.png */; };
+		D544ED29165205DA000A1090 /* SidePanel-off.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF7165205DA000A1090 /* SidePanel-off.active.png */; };
+		D544ED2A165205DA000A1090 /* SidePanel-off.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF7165205DA000A1090 /* SidePanel-off.active.png */; };
+		D544ED2B165205DA000A1090 /* SidePanel-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF8165205DA000A1090 /* SidePanel-off.png */; };
+		D544ED2C165205DA000A1090 /* SidePanel-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF8165205DA000A1090 /* SidePanel-off.png */; };
+		D544ED2D165205DA000A1090 /* SidePanel-on.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF9165205DA000A1090 /* SidePanel-on.active.png */; };
+		D544ED2E165205DA000A1090 /* SidePanel-on.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF9165205DA000A1090 /* SidePanel-on.active.png */; };
+		D544ED2F165205DA000A1090 /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECFA165205DA000A1090 /* SidePanel-on.png */; };
+		D544ED30165205DA000A1090 /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECFA165205DA000A1090 /* SidePanel-on.png */; };
+		D544ED31165205DA000A1090 /* RFThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECFD165205DA000A1090 /* RFThemeBundle.m */; };
+		D544ED32165205DA000A1090 /* RFThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECFD165205DA000A1090 /* RFThemeBundle.m */; };
+		D544ED33165205DA000A1090 /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED01165205DA000A1090 /* RFWebViewController.m */; };
+		D544ED34165205DA000A1090 /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED01165205DA000A1090 /* RFWebViewController.m */; };
+		D544ED35165205DA000A1090 /* RFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED02165205DA000A1090 /* RFWebViewController.xib */; };
+		D544ED36165205DA000A1090 /* RFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED02165205DA000A1090 /* RFWebViewController.xib */; };
+		D544ED37165205DA000A1090 /* RFWebViewController_blank.html in Resources */ = {isa = PBXBuildFile; fileRef = D544ED03165205DA000A1090 /* RFWebViewController_blank.html */; };
+		D544ED38165205DA000A1090 /* RFWebViewController_blank.html in Resources */ = {isa = PBXBuildFile; fileRef = D544ED03165205DA000A1090 /* RFWebViewController_blank.html */; };
+		D544ED39165205DA000A1090 /* RFWebViewController_loadFail.html in Resources */ = {isa = PBXBuildFile; fileRef = D544ED04165205DA000A1090 /* RFWebViewController_loadFail.html */; };
+		D544ED3A165205DA000A1090 /* RFWebViewController_loadFail.html in Resources */ = {isa = PBXBuildFile; fileRef = D544ED04165205DA000A1090 /* RFWebViewController_loadFail.html */; };
+		D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */; };
+		D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */; };
+		D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */; };
+		D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */; };
+		D544ED3F165205DA000A1090 /* RFImageTimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED0C165205DA000A1090 /* RFImageTimeTunnel.m */; };
+		D544ED40165205DA000A1090 /* RFImageTimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED0C165205DA000A1090 /* RFImageTimeTunnel.m */; };
+		D544ED41165205DA000A1090 /* RFImageTimeTunnel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED0D165205DA000A1090 /* RFImageTimeTunnel.xib */; };
+		D544ED42165205DA000A1090 /* RFImageTimeTunnel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED0D165205DA000A1090 /* RFImageTimeTunnel.xib */; };
+		D544ED43165205DA000A1090 /* RFModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED10165205DA000A1090 /* RFModalView.m */; };
+		D544ED44165205DA000A1090 /* RFModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED10165205DA000A1090 /* RFModalView.m */; };
+		D544ED45165205DA000A1090 /* RFSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED13165205DA000A1090 /* RFSlideNavigationController.m */; };
+		D544ED46165205DA000A1090 /* RFSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED13165205DA000A1090 /* RFSlideNavigationController.m */; };
+		D544ED47165205DA000A1090 /* RFStatusBarNotificationWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED16165205DA000A1090 /* RFStatusBarNotificationWindow.m */; };
+		D544ED48165205DA000A1090 /* RFStatusBarNotificationWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED16165205DA000A1090 /* RFStatusBarNotificationWindow.m */; };
+		D544ED49165205DA000A1090 /* RFStatusBarNotificationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED17165205DA000A1090 /* RFStatusBarNotificationWindow.xib */; };
+		D544ED4A165205DA000A1090 /* RFStatusBarNotificationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED17165205DA000A1090 /* RFStatusBarNotificationWindow.xib */; };
+		D544ED4B165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED1A165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m */; };
+		D544ED4C165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED1A165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m */; };
+		D544ED4D165205DA000A1090 /* RFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED1C165205DA000A1090 /* RFTableViewCell.m */; };
+		D544ED4E165205DA000A1090 /* RFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED1C165205DA000A1090 /* RFTableViewCell.m */; };
 		D57634521622F36E00FCE9FB /* main~iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634511622F36E00FCE9FB /* main~iPad.storyboard */; };
 		D57634551622F3F200FCE9FB /* main~iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634541622F3F200FCE9FB /* main~iPhone.storyboard */; };
 		D57634571622FC6600FCE9FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57634561622FC6600FCE9FB /* CoreData.framework */; };
@@ -55,86 +151,6 @@
 		D57634C71623083400FCE9FB /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B41623083400FCE9FB /* AFXMLRequestOperation.m */; };
 		D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B91623083400FCE9FB /* AFHTTPRequestOperationLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634BF1623083400FCE9FB /* UIImageView+AFNetworking.m */; };
-		D576352B1623096E00FCE9FB /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634D41623096D00FCE9FB /* RFButton.m */; };
-		D576352C1623096E00FCE9FB /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634D41623096D00FCE9FB /* RFButton.m */; };
-		D576352D1623096E00FCE9FB /* RFImageTimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634D71623096D00FCE9FB /* RFImageTimeTunnel.m */; };
-		D576352E1623096E00FCE9FB /* RFImageTimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634D71623096D00FCE9FB /* RFImageTimeTunnel.m */; };
-		D576352F1623096E00FCE9FB /* RFImageTimeTunnel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634D81623096D00FCE9FB /* RFImageTimeTunnel.xib */; };
-		D57635301623096E00FCE9FB /* RFImageTimeTunnel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634D81623096D00FCE9FB /* RFImageTimeTunnel.xib */; };
-		D57635311623096E00FCE9FB /* RFModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634DB1623096D00FCE9FB /* RFModalView.m */; };
-		D57635321623096E00FCE9FB /* RFModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634DB1623096D00FCE9FB /* RFModalView.m */; };
-		D57635331623096E00FCE9FB /* RFSidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634DE1623096D00FCE9FB /* RFSidePanel.m */; };
-		D57635341623096E00FCE9FB /* RFSidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634DE1623096D00FCE9FB /* RFSidePanel.m */; };
-		D57635351623096E00FCE9FB /* RFSidePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634DF1623096D00FCE9FB /* RFSidePanel.xib */; };
-		D57635361623096E00FCE9FB /* RFSidePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634DF1623096D00FCE9FB /* RFSidePanel.xib */; };
-		D57635371623096E00FCE9FB /* SidePanel-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E01623096D00FCE9FB /* SidePanel-bg.png */; };
-		D57635381623096E00FCE9FB /* SidePanel-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E01623096D00FCE9FB /* SidePanel-bg.png */; };
-		D57635391623096E00FCE9FB /* SidePanel-off.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E11623096D00FCE9FB /* SidePanel-off.active.png */; };
-		D576353A1623096E00FCE9FB /* SidePanel-off.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E11623096D00FCE9FB /* SidePanel-off.active.png */; };
-		D576353B1623096E00FCE9FB /* SidePanel-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E21623096D00FCE9FB /* SidePanel-off.png */; };
-		D576353C1623096E00FCE9FB /* SidePanel-off.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E21623096D00FCE9FB /* SidePanel-off.png */; };
-		D576353D1623096E00FCE9FB /* SidePanel-on.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E31623096D00FCE9FB /* SidePanel-on.active.png */; };
-		D576353E1623096E00FCE9FB /* SidePanel-on.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E31623096D00FCE9FB /* SidePanel-on.active.png */; };
-		D576353F1623096E00FCE9FB /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E41623096D00FCE9FB /* SidePanel-on.png */; };
-		D57635401623096E00FCE9FB /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D57634E41623096D00FCE9FB /* SidePanel-on.png */; };
-		D57635411623096E00FCE9FB /* RFSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634E71623096D00FCE9FB /* RFSlideNavigationController.m */; };
-		D57635421623096E00FCE9FB /* RFSlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634E71623096D00FCE9FB /* RFSlideNavigationController.m */; };
-		D57635431623096E00FCE9FB /* RFStatusBarNotificationWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634EA1623096D00FCE9FB /* RFStatusBarNotificationWindow.m */; };
-		D57635441623096E00FCE9FB /* RFStatusBarNotificationWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634EA1623096D00FCE9FB /* RFStatusBarNotificationWindow.m */; };
-		D57635451623096E00FCE9FB /* RFStatusBarNotificationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634EB1623096D00FCE9FB /* RFStatusBarNotificationWindow.xib */; };
-		D57635461623096E00FCE9FB /* RFStatusBarNotificationWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634EB1623096D00FCE9FB /* RFStatusBarNotificationWindow.xib */; };
-		D57635471623096E00FCE9FB /* RFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634EE1623096D00FCE9FB /* RFTableViewCell.m */; };
-		D57635481623096E00FCE9FB /* RFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634EE1623096D00FCE9FB /* RFTableViewCell.m */; };
-		D57635491623096E00FCE9FB /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634F11623096D00FCE9FB /* RFWebViewController.m */; };
-		D576354A1623096E00FCE9FB /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634F11623096D00FCE9FB /* RFWebViewController.m */; };
-		D576354B1623096E00FCE9FB /* RFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634F21623096D00FCE9FB /* RFWebViewController.xib */; };
-		D576354C1623096E00FCE9FB /* RFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D57634F21623096D00FCE9FB /* RFWebViewController.xib */; };
-		D576354D1623096E00FCE9FB /* RFWebViewController_blank.html in Resources */ = {isa = PBXBuildFile; fileRef = D57634F31623096E00FCE9FB /* RFWebViewController_blank.html */; };
-		D576354E1623096E00FCE9FB /* RFWebViewController_blank.html in Resources */ = {isa = PBXBuildFile; fileRef = D57634F31623096E00FCE9FB /* RFWebViewController_blank.html */; };
-		D576354F1623096E00FCE9FB /* RFWebViewController_loadFail.html in Resources */ = {isa = PBXBuildFile; fileRef = D57634F41623096E00FCE9FB /* RFWebViewController_loadFail.html */; };
-		D57635501623096E00FCE9FB /* RFWebViewController_loadFail.html in Resources */ = {isa = PBXBuildFile; fileRef = D57634F41623096E00FCE9FB /* RFWebViewController_loadFail.html */; };
-		D57635511623096E00FCE9FB /* dout.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634F71623096E00FCE9FB /* dout.m */; };
-		D57635521623096E00FCE9FB /* dout.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634F71623096E00FCE9FB /* dout.m */; };
-		D57635531623096E00FCE9FB /* NSArray+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FA1623096E00FCE9FB /* NSArray+RFKit.m */; };
-		D57635541623096E00FCE9FB /* NSArray+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FA1623096E00FCE9FB /* NSArray+RFKit.m */; };
-		D57635551623096E00FCE9FB /* NSBundle+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FC1623096E00FCE9FB /* NSBundle+RFKit.m */; };
-		D57635561623096E00FCE9FB /* NSBundle+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FC1623096E00FCE9FB /* NSBundle+RFKit.m */; };
-		D57635571623096E00FCE9FB /* NSDate+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FE1623096E00FCE9FB /* NSDate+RFKit.m */; };
-		D57635581623096E00FCE9FB /* NSDate+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634FE1623096E00FCE9FB /* NSDate+RFKit.m */; };
-		D57635591623096E00FCE9FB /* NSDateFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635001623096E00FCE9FB /* NSDateFormatter+RFKit.m */; };
-		D576355A1623096E00FCE9FB /* NSDateFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635001623096E00FCE9FB /* NSDateFormatter+RFKit.m */; };
-		D576355B1623096E00FCE9FB /* NSDictionary+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635021623096E00FCE9FB /* NSDictionary+RFKit.m */; };
-		D576355C1623096E00FCE9FB /* NSDictionary+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635021623096E00FCE9FB /* NSDictionary+RFKit.m */; };
-		D576355D1623096E00FCE9FB /* NSFileManager+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635041623096E00FCE9FB /* NSFileManager+RFKit.m */; };
-		D576355E1623096E00FCE9FB /* NSFileManager+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635041623096E00FCE9FB /* NSFileManager+RFKit.m */; };
-		D576355F1623096E00FCE9FB /* NSNumberFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635061623096E00FCE9FB /* NSNumberFormatter+RFKit.m */; };
-		D57635601623096E00FCE9FB /* NSNumberFormatter+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635061623096E00FCE9FB /* NSNumberFormatter+RFKit.m */; };
-		D57635611623096E00FCE9FB /* NSObject+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635081623096E00FCE9FB /* NSObject+RFKit.m */; };
-		D57635621623096E00FCE9FB /* NSObject+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635081623096E00FCE9FB /* NSObject+RFKit.m */; };
-		D57635631623096E00FCE9FB /* NSString+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350A1623096E00FCE9FB /* NSString+RFKit.m */; };
-		D57635641623096E00FCE9FB /* NSString+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350A1623096E00FCE9FB /* NSString+RFKit.m */; };
-		D57635651623096E00FCE9FB /* NSURL+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350C1623096E00FCE9FB /* NSURL+RFKit.m */; };
-		D57635661623096E00FCE9FB /* NSURL+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350C1623096E00FCE9FB /* NSURL+RFKit.m */; };
-		D57635671623096E00FCE9FB /* UIAlertView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350E1623096E00FCE9FB /* UIAlertView+RFKit.m */; };
-		D57635681623096E00FCE9FB /* UIAlertView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D576350E1623096E00FCE9FB /* UIAlertView+RFKit.m */; };
-		D57635691623096E00FCE9FB /* UIButton+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635101623096E00FCE9FB /* UIButton+RFKit.m */; };
-		D576356A1623096E00FCE9FB /* UIButton+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635101623096E00FCE9FB /* UIButton+RFKit.m */; };
-		D576356B1623096E00FCE9FB /* UIColor+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635121623096E00FCE9FB /* UIColor+RFKit.m */; };
-		D576356C1623096E00FCE9FB /* UIColor+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635121623096E00FCE9FB /* UIColor+RFKit.m */; };
-		D576356D1623096E00FCE9FB /* UIImage+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635141623096E00FCE9FB /* UIImage+RFKit.m */; };
-		D576356E1623096E00FCE9FB /* UIImage+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635141623096E00FCE9FB /* UIImage+RFKit.m */; };
-		D576356F1623096E00FCE9FB /* UIView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635161623096E00FCE9FB /* UIView+RFKit.m */; };
-		D57635701623096E00FCE9FB /* UIView+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635161623096E00FCE9FB /* UIView+RFKit.m */; };
-		D57635711623096E00FCE9FB /* UIViewController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635181623096E00FCE9FB /* UIViewController+RFKit.m */; };
-		D57635721623096E00FCE9FB /* UIViewController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635181623096E00FCE9FB /* UIViewController+RFKit.m */; };
-		D57635731623096E00FCE9FB /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D576351C1623096E00FCE9FB /* UncaughtExceptionHandler.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D57635741623096E00FCE9FB /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D576351C1623096E00FCE9FB /* UncaughtExceptionHandler.m */; };
-		D57635771623096E00FCE9FB /* RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635201623096E00FCE9FB /* RFKit.m */; };
-		D57635781623096E00FCE9FB /* RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635201623096E00FCE9FB /* RFKit.m */; };
-		D57635791623096E00FCE9FB /* RFMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635231623096E00FCE9FB /* RFMath.m */; };
-		D576357A1623096E00FCE9FB /* RFMath.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635231623096E00FCE9FB /* RFMath.m */; };
-		D576357B1623096E00FCE9FB /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635251623096E00FCE9FB /* RFUI.m */; };
-		D576357C1623096E00FCE9FB /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635251623096E00FCE9FB /* RFUI.m */; };
 		D576357D1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */; };
 		D576357E1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */; };
 		D576357F1623096E00FCE9FB /* RFSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D576352A1623096E00FCE9FB /* RFSegue.m */; };
@@ -177,6 +193,101 @@
 		D526B2F916381888003087FF /* main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = main.xcdatamodel; sourceTree = "<group>"; };
 		D526B2FC163818B3003087FF /* ExampleEntity+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ExampleEntity+Cache.h"; path = "Core Data/ExampleEntity+Cache.h"; sourceTree = "<group>"; };
 		D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ExampleEntity+Cache.m"; path = "Core Data/ExampleEntity+Cache.m"; sourceTree = "<group>"; };
+		D544EC0B1652042E000A1090 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		D544EC0F1652042E000A1090 /* NSArray+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RFKit.h"; sourceTree = "<group>"; };
+		D544EC101652042E000A1090 /* NSArray+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RFKit.m"; sourceTree = "<group>"; };
+		D544EC111652042E000A1090 /* NSBundle+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+RFKit.h"; sourceTree = "<group>"; };
+		D544EC121652042E000A1090 /* NSBundle+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+RFKit.m"; sourceTree = "<group>"; };
+		D544EC131652042E000A1090 /* NSDate+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFKit.h"; sourceTree = "<group>"; };
+		D544EC141652042E000A1090 /* NSDate+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFKit.m"; sourceTree = "<group>"; };
+		D544EC151652042E000A1090 /* NSDateFormatter+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RFKit.h"; sourceTree = "<group>"; };
+		D544EC161652042E000A1090 /* NSDateFormatter+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RFKit.m"; sourceTree = "<group>"; };
+		D544EC171652042E000A1090 /* NSDictionary+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RFKit.h"; sourceTree = "<group>"; };
+		D544EC181652042E000A1090 /* NSDictionary+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RFKit.m"; sourceTree = "<group>"; };
+		D544EC191652042E000A1090 /* NSFileManager+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+RFKit.h"; sourceTree = "<group>"; };
+		D544EC1A1652042E000A1090 /* NSFileManager+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+RFKit.m"; sourceTree = "<group>"; };
+		D544EC1B1652042E000A1090 /* NSNumberFormatter+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumberFormatter+RFKit.h"; sourceTree = "<group>"; };
+		D544EC1C1652042E000A1090 /* NSNumberFormatter+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumberFormatter+RFKit.m"; sourceTree = "<group>"; };
+		D544EC1D1652042E000A1090 /* NSObject+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFKit.h"; sourceTree = "<group>"; };
+		D544EC1E1652042E000A1090 /* NSObject+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFKit.m"; sourceTree = "<group>"; };
+		D544EC1F1652042E000A1090 /* NSString+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RFKit.h"; sourceTree = "<group>"; };
+		D544EC201652042E000A1090 /* NSString+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RFKit.m"; sourceTree = "<group>"; };
+		D544EC211652042E000A1090 /* NSURL+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+RFKit.h"; sourceTree = "<group>"; };
+		D544EC221652042E000A1090 /* NSURL+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+RFKit.m"; sourceTree = "<group>"; };
+		D544EC241652042E000A1090 /* UIAlertView+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RFKit.h"; sourceTree = "<group>"; };
+		D544EC251652042E000A1090 /* UIAlertView+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RFKit.m"; sourceTree = "<group>"; };
+		D544EC261652042E000A1090 /* UIButton+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RFKit.h"; sourceTree = "<group>"; };
+		D544EC271652042E000A1090 /* UIButton+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RFKit.m"; sourceTree = "<group>"; };
+		D544EC281652042E000A1090 /* UIColor+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RFKit.h"; sourceTree = "<group>"; };
+		D544EC291652042E000A1090 /* UIColor+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RFKit.m"; sourceTree = "<group>"; };
+		D544EC2A1652042E000A1090 /* UIDevice+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RFKit.h"; sourceTree = "<group>"; };
+		D544EC2B1652042E000A1090 /* UIDevice+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RFKit.m"; sourceTree = "<group>"; };
+		D544EC2C1652042E000A1090 /* UIImage+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RFKit.h"; sourceTree = "<group>"; };
+		D544EC2D1652042E000A1090 /* UIImage+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RFKit.m"; sourceTree = "<group>"; };
+		D544EC2E1652042E000A1090 /* UIView+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFKit.h"; sourceTree = "<group>"; };
+		D544EC2F1652042E000A1090 /* UIView+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFKit.m"; sourceTree = "<group>"; };
+		D544EC301652042E000A1090 /* UIViewController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RFKit.h"; sourceTree = "<group>"; };
+		D544EC311652042E000A1090 /* UIViewController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RFKit.m"; sourceTree = "<group>"; };
+		D544EC321652042E000A1090 /* ChangeLog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.md; sourceTree = "<group>"; };
+		D544EC341652042E000A1090 /* dout.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dout.md; sourceTree = "<group>"; };
+		D544EC351652042E000A1090 /* dout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dout.h; sourceTree = "<group>"; };
+		D544EC361652042E000A1090 /* dout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dout.m; sourceTree = "<group>"; };
+		D544EC391652042E000A1090 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		D544EC3A1652042E000A1090 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		D544EC3C1652042E000A1090 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D544EC3D1652042E000A1090 /* RFARC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFARC.h; sourceTree = "<group>"; };
+		D544EC3E1652042E000A1090 /* RFGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFGeometry.h; sourceTree = "<group>"; };
+		D544EC3F1652042E000A1090 /* RFGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFGeometry.m; sourceTree = "<group>"; };
+		D544EC401652042E000A1090 /* RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFKit.h; sourceTree = "<group>"; };
+		D544EC411652042E000A1090 /* RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFKit.m; sourceTree = "<group>"; };
+		D544EC421652042E000A1090 /* RFKitDefaultCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFKitDefaultCategories.h; sourceTree = "<group>"; };
+		D544EC431652042E000A1090 /* RFPerformance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPerformance.h; sourceTree = "<group>"; };
+		D544EC441652042E000A1090 /* RFPerformance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPerformance.m; sourceTree = "<group>"; };
+		D544EC451652042E000A1090 /* RFRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFRuntime.h; sourceTree = "<group>"; };
+		D544EC461652042E000A1090 /* RFUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUI.h; sourceTree = "<group>"; };
+		D544EC471652042E000A1090 /* RFUIDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIDebug.h; sourceTree = "<group>"; };
+		D544EC481652042E000A1090 /* RFUIInterfaceOrientationSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIInterfaceOrientationSupport.h; sourceTree = "<group>"; };
+		D544EC4A1652042E000A1090 /* RFUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUI.m; sourceTree = "<group>"; };
+		D544ECEB165205DA000A1090 /* RFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFButton.h; sourceTree = "<group>"; };
+		D544ECEC165205DA000A1090 /* RFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFButton.m; sourceTree = "<group>"; };
+		D544ECED165205DA000A1090 /* RFResizableBackgroundImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFResizableBackgroundImageButton.h; sourceTree = "<group>"; };
+		D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFResizableBackgroundImageButton.m; sourceTree = "<group>"; };
+		D544ECF0165205DA000A1090 /* RFImageGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFImageGallery.h; sourceTree = "<group>"; };
+		D544ECF1165205DA000A1090 /* RFImageGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFImageGallery.m; sourceTree = "<group>"; };
+		D544ECF3165205DA000A1090 /* RFSidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSidePanel.h; sourceTree = "<group>"; };
+		D544ECF4165205DA000A1090 /* RFSidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSidePanel.m; sourceTree = "<group>"; };
+		D544ECF5165205DA000A1090 /* RFSidePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFSidePanel.xib; sourceTree = "<group>"; };
+		D544ECF6165205DA000A1090 /* SidePanel-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-bg.png"; sourceTree = "<group>"; };
+		D544ECF7165205DA000A1090 /* SidePanel-off.active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-off.active.png"; sourceTree = "<group>"; };
+		D544ECF8165205DA000A1090 /* SidePanel-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-off.png"; sourceTree = "<group>"; };
+		D544ECF9165205DA000A1090 /* SidePanel-on.active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.active.png"; sourceTree = "<group>"; };
+		D544ECFA165205DA000A1090 /* SidePanel-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.png"; sourceTree = "<group>"; };
+		D544ECFC165205DA000A1090 /* RFThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFThemeBundle.h; sourceTree = "<group>"; };
+		D544ECFD165205DA000A1090 /* RFThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFThemeBundle.m; sourceTree = "<group>"; };
+		D544ECFE165205DA000A1090 /* RFUIThemeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeDelegate.h; sourceTree = "<group>"; };
+		D544ED00165205DA000A1090 /* RFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWebViewController.h; sourceTree = "<group>"; };
+		D544ED01165205DA000A1090 /* RFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWebViewController.m; sourceTree = "<group>"; };
+		D544ED02165205DA000A1090 /* RFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFWebViewController.xib; sourceTree = "<group>"; };
+		D544ED03165205DA000A1090 /* RFWebViewController_blank.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RFWebViewController_blank.html; sourceTree = "<group>"; };
+		D544ED04165205DA000A1090 /* RFWebViewController_loadFail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RFWebViewController_loadFail.html; sourceTree = "<group>"; };
+		D544ED06165205DA000A1090 /* RFFetchedResultsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFetchedResultsTableView.h; sourceTree = "<group>"; };
+		D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFetchedResultsTableView.m; sourceTree = "<group>"; };
+		D544ED08165205DA000A1090 /* RFFetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFetchedResultsTableViewController.h; sourceTree = "<group>"; };
+		D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFetchedResultsTableViewController.m; sourceTree = "<group>"; };
+		D544ED0B165205DA000A1090 /* RFImageTimeTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFImageTimeTunnel.h; sourceTree = "<group>"; };
+		D544ED0C165205DA000A1090 /* RFImageTimeTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFImageTimeTunnel.m; sourceTree = "<group>"; };
+		D544ED0D165205DA000A1090 /* RFImageTimeTunnel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFImageTimeTunnel.xib; sourceTree = "<group>"; };
+		D544ED0F165205DA000A1090 /* RFModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFModalView.h; sourceTree = "<group>"; };
+		D544ED10165205DA000A1090 /* RFModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFModalView.m; sourceTree = "<group>"; };
+		D544ED12165205DA000A1090 /* RFSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSlideNavigationController.h; sourceTree = "<group>"; };
+		D544ED13165205DA000A1090 /* RFSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSlideNavigationController.m; sourceTree = "<group>"; };
+		D544ED15165205DA000A1090 /* RFStatusBarNotificationWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFStatusBarNotificationWindow.h; sourceTree = "<group>"; };
+		D544ED16165205DA000A1090 /* RFStatusBarNotificationWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFStatusBarNotificationWindow.m; sourceTree = "<group>"; };
+		D544ED17165205DA000A1090 /* RFStatusBarNotificationWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFStatusBarNotificationWindow.xib; sourceTree = "<group>"; };
+		D544ED19165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCheckmarkSelectedTableViewCell.h; sourceTree = "<group>"; };
+		D544ED1A165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCheckmarkSelectedTableViewCell.m; sourceTree = "<group>"; };
+		D544ED1B165205DA000A1090 /* RFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTableViewCell.h; sourceTree = "<group>"; };
+		D544ED1C165205DA000A1090 /* RFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTableViewCell.m; sourceTree = "<group>"; };
 		D57634511622F36E00FCE9FB /* main~iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPad.storyboard"; sourceTree = "<group>"; };
 		D57634541622F3F200FCE9FB /* main~iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPhone.storyboard"; sourceTree = "<group>"; };
 		D57634561622FC6600FCE9FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -217,77 +328,6 @@
 		D57634B91623083400FCE9FB /* AFHTTPRequestOperationLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationLogger.m; sourceTree = "<group>"; };
 		D57634BE1623083400FCE9FB /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		D57634BF1623083400FCE9FB /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		D57634D31623096D00FCE9FB /* RFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFButton.h; sourceTree = "<group>"; };
-		D57634D41623096D00FCE9FB /* RFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFButton.m; sourceTree = "<group>"; };
-		D57634D61623096D00FCE9FB /* RFImageTimeTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFImageTimeTunnel.h; sourceTree = "<group>"; };
-		D57634D71623096D00FCE9FB /* RFImageTimeTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFImageTimeTunnel.m; sourceTree = "<group>"; };
-		D57634D81623096D00FCE9FB /* RFImageTimeTunnel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFImageTimeTunnel.xib; sourceTree = "<group>"; };
-		D57634DA1623096D00FCE9FB /* RFModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFModalView.h; sourceTree = "<group>"; };
-		D57634DB1623096D00FCE9FB /* RFModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFModalView.m; sourceTree = "<group>"; };
-		D57634DD1623096D00FCE9FB /* RFSidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSidePanel.h; sourceTree = "<group>"; };
-		D57634DE1623096D00FCE9FB /* RFSidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSidePanel.m; sourceTree = "<group>"; };
-		D57634DF1623096D00FCE9FB /* RFSidePanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFSidePanel.xib; sourceTree = "<group>"; };
-		D57634E01623096D00FCE9FB /* SidePanel-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-bg.png"; sourceTree = "<group>"; };
-		D57634E11623096D00FCE9FB /* SidePanel-off.active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-off.active.png"; sourceTree = "<group>"; };
-		D57634E21623096D00FCE9FB /* SidePanel-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-off.png"; sourceTree = "<group>"; };
-		D57634E31623096D00FCE9FB /* SidePanel-on.active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.active.png"; sourceTree = "<group>"; };
-		D57634E41623096D00FCE9FB /* SidePanel-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.png"; sourceTree = "<group>"; };
-		D57634E61623096D00FCE9FB /* RFSlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSlideNavigationController.h; sourceTree = "<group>"; };
-		D57634E71623096D00FCE9FB /* RFSlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSlideNavigationController.m; sourceTree = "<group>"; };
-		D57634E91623096D00FCE9FB /* RFStatusBarNotificationWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFStatusBarNotificationWindow.h; sourceTree = "<group>"; };
-		D57634EA1623096D00FCE9FB /* RFStatusBarNotificationWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFStatusBarNotificationWindow.m; sourceTree = "<group>"; };
-		D57634EB1623096D00FCE9FB /* RFStatusBarNotificationWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFStatusBarNotificationWindow.xib; sourceTree = "<group>"; };
-		D57634ED1623096D00FCE9FB /* RFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFTableViewCell.h; sourceTree = "<group>"; };
-		D57634EE1623096D00FCE9FB /* RFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTableViewCell.m; sourceTree = "<group>"; };
-		D57634F01623096D00FCE9FB /* RFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWebViewController.h; sourceTree = "<group>"; };
-		D57634F11623096D00FCE9FB /* RFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWebViewController.m; sourceTree = "<group>"; };
-		D57634F21623096D00FCE9FB /* RFWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RFWebViewController.xib; sourceTree = "<group>"; };
-		D57634F31623096E00FCE9FB /* RFWebViewController_blank.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RFWebViewController_blank.html; sourceTree = "<group>"; };
-		D57634F41623096E00FCE9FB /* RFWebViewController_loadFail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RFWebViewController_loadFail.html; sourceTree = "<group>"; };
-		D57634F61623096E00FCE9FB /* dout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dout.h; sourceTree = "<group>"; };
-		D57634F71623096E00FCE9FB /* dout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dout.m; sourceTree = "<group>"; };
-		D57634F91623096E00FCE9FB /* NSArray+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+RFKit.h"; sourceTree = "<group>"; };
-		D57634FA1623096E00FCE9FB /* NSArray+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+RFKit.m"; sourceTree = "<group>"; };
-		D57634FB1623096E00FCE9FB /* NSBundle+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+RFKit.h"; sourceTree = "<group>"; };
-		D57634FC1623096E00FCE9FB /* NSBundle+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+RFKit.m"; sourceTree = "<group>"; };
-		D57634FD1623096E00FCE9FB /* NSDate+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFKit.h"; sourceTree = "<group>"; };
-		D57634FE1623096E00FCE9FB /* NSDate+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFKit.m"; sourceTree = "<group>"; };
-		D57634FF1623096E00FCE9FB /* NSDateFormatter+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+RFKit.h"; sourceTree = "<group>"; };
-		D57635001623096E00FCE9FB /* NSDateFormatter+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+RFKit.m"; sourceTree = "<group>"; };
-		D57635011623096E00FCE9FB /* NSDictionary+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RFKit.h"; sourceTree = "<group>"; };
-		D57635021623096E00FCE9FB /* NSDictionary+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RFKit.m"; sourceTree = "<group>"; };
-		D57635031623096E00FCE9FB /* NSFileManager+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+RFKit.h"; sourceTree = "<group>"; };
-		D57635041623096E00FCE9FB /* NSFileManager+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+RFKit.m"; sourceTree = "<group>"; };
-		D57635051623096E00FCE9FB /* NSNumberFormatter+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumberFormatter+RFKit.h"; sourceTree = "<group>"; };
-		D57635061623096E00FCE9FB /* NSNumberFormatter+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumberFormatter+RFKit.m"; sourceTree = "<group>"; };
-		D57635071623096E00FCE9FB /* NSObject+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RFKit.h"; sourceTree = "<group>"; };
-		D57635081623096E00FCE9FB /* NSObject+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RFKit.m"; sourceTree = "<group>"; };
-		D57635091623096E00FCE9FB /* NSString+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RFKit.h"; sourceTree = "<group>"; };
-		D576350A1623096E00FCE9FB /* NSString+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RFKit.m"; sourceTree = "<group>"; };
-		D576350B1623096E00FCE9FB /* NSURL+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+RFKit.h"; sourceTree = "<group>"; };
-		D576350C1623096E00FCE9FB /* NSURL+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+RFKit.m"; sourceTree = "<group>"; };
-		D576350D1623096E00FCE9FB /* UIAlertView+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+RFKit.h"; sourceTree = "<group>"; };
-		D576350E1623096E00FCE9FB /* UIAlertView+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+RFKit.m"; sourceTree = "<group>"; };
-		D576350F1623096E00FCE9FB /* UIButton+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RFKit.h"; sourceTree = "<group>"; };
-		D57635101623096E00FCE9FB /* UIButton+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RFKit.m"; sourceTree = "<group>"; };
-		D57635111623096E00FCE9FB /* UIColor+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RFKit.h"; sourceTree = "<group>"; };
-		D57635121623096E00FCE9FB /* UIColor+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RFKit.m"; sourceTree = "<group>"; };
-		D57635131623096E00FCE9FB /* UIImage+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RFKit.h"; sourceTree = "<group>"; };
-		D57635141623096E00FCE9FB /* UIImage+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RFKit.m"; sourceTree = "<group>"; };
-		D57635151623096E00FCE9FB /* UIView+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFKit.h"; sourceTree = "<group>"; };
-		D57635161623096E00FCE9FB /* UIView+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFKit.m"; sourceTree = "<group>"; };
-		D57635171623096E00FCE9FB /* UIViewController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RFKit.h"; sourceTree = "<group>"; };
-		D57635181623096E00FCE9FB /* UIViewController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RFKit.m"; sourceTree = "<group>"; };
-		D576351B1623096E00FCE9FB /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
-		D576351C1623096E00FCE9FB /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
-		D576351E1623096E00FCE9FB /* RFARC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFARC.h; sourceTree = "<group>"; };
-		D576351F1623096E00FCE9FB /* RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFKit.h; sourceTree = "<group>"; };
-		D57635201623096E00FCE9FB /* RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFKit.m; sourceTree = "<group>"; };
-		D57635211623096E00FCE9FB /* RFKitDefaultExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFKitDefaultExtensions.h; sourceTree = "<group>"; };
-		D57635221623096E00FCE9FB /* RFMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFMath.h; sourceTree = "<group>"; };
-		D57635231623096E00FCE9FB /* RFMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFMath.m; sourceTree = "<group>"; };
-		D57635241623096E00FCE9FB /* RFUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUI.h; sourceTree = "<group>"; };
-		D57635251623096E00FCE9FB /* RFUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUI.m; sourceTree = "<group>"; };
 		D57635271623096E00FCE9FB /* RFNavigationPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFNavigationPushSegue.h; sourceTree = "<group>"; };
 		D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFNavigationPushSegue.m; sourceTree = "<group>"; };
 		D57635291623096E00FCE9FB /* RFSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegue.h; sourceTree = "<group>"; };
@@ -423,6 +463,228 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		D544EC0C1652042E000A1090 /* RFKit */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC0D1652042E000A1090 /* category */,
+				D544EC321652042E000A1090 /* ChangeLog.md */,
+				D544EC331652042E000A1090 /* doc */,
+				D544EC351652042E000A1090 /* dout.h */,
+				D544EC361652042E000A1090 /* dout.m */,
+				D544EC371652042E000A1090 /* external */,
+				D544EC3C1652042E000A1090 /* README.md */,
+				D544EC3D1652042E000A1090 /* RFARC.h */,
+				D544EC3E1652042E000A1090 /* RFGeometry.h */,
+				D544EC3F1652042E000A1090 /* RFGeometry.m */,
+				D544EC401652042E000A1090 /* RFKit.h */,
+				D544EC411652042E000A1090 /* RFKit.m */,
+				D544EC421652042E000A1090 /* RFKitDefaultCategories.h */,
+				D544EC431652042E000A1090 /* RFPerformance.h */,
+				D544EC441652042E000A1090 /* RFPerformance.m */,
+				D544EC451652042E000A1090 /* RFRuntime.h */,
+			);
+			path = RFKit;
+			sourceTree = "<group>";
+		};
+		D544EC0D1652042E000A1090 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC0E1652042E000A1090 /* Foundation */,
+				D544EC231652042E000A1090 /* UIKit */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		D544EC0E1652042E000A1090 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC0F1652042E000A1090 /* NSArray+RFKit.h */,
+				D544EC101652042E000A1090 /* NSArray+RFKit.m */,
+				D544EC111652042E000A1090 /* NSBundle+RFKit.h */,
+				D544EC121652042E000A1090 /* NSBundle+RFKit.m */,
+				D544EC131652042E000A1090 /* NSDate+RFKit.h */,
+				D544EC141652042E000A1090 /* NSDate+RFKit.m */,
+				D544EC151652042E000A1090 /* NSDateFormatter+RFKit.h */,
+				D544EC161652042E000A1090 /* NSDateFormatter+RFKit.m */,
+				D544EC171652042E000A1090 /* NSDictionary+RFKit.h */,
+				D544EC181652042E000A1090 /* NSDictionary+RFKit.m */,
+				D544EC191652042E000A1090 /* NSFileManager+RFKit.h */,
+				D544EC1A1652042E000A1090 /* NSFileManager+RFKit.m */,
+				D544EC1B1652042E000A1090 /* NSNumberFormatter+RFKit.h */,
+				D544EC1C1652042E000A1090 /* NSNumberFormatter+RFKit.m */,
+				D544EC1D1652042E000A1090 /* NSObject+RFKit.h */,
+				D544EC1E1652042E000A1090 /* NSObject+RFKit.m */,
+				D544EC1F1652042E000A1090 /* NSString+RFKit.h */,
+				D544EC201652042E000A1090 /* NSString+RFKit.m */,
+				D544EC211652042E000A1090 /* NSURL+RFKit.h */,
+				D544EC221652042E000A1090 /* NSURL+RFKit.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		D544EC231652042E000A1090 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC241652042E000A1090 /* UIAlertView+RFKit.h */,
+				D544EC251652042E000A1090 /* UIAlertView+RFKit.m */,
+				D544EC261652042E000A1090 /* UIButton+RFKit.h */,
+				D544EC271652042E000A1090 /* UIButton+RFKit.m */,
+				D544EC281652042E000A1090 /* UIColor+RFKit.h */,
+				D544EC291652042E000A1090 /* UIColor+RFKit.m */,
+				D544EC2A1652042E000A1090 /* UIDevice+RFKit.h */,
+				D544EC2B1652042E000A1090 /* UIDevice+RFKit.m */,
+				D544EC2C1652042E000A1090 /* UIImage+RFKit.h */,
+				D544EC2D1652042E000A1090 /* UIImage+RFKit.m */,
+				D544EC2E1652042E000A1090 /* UIView+RFKit.h */,
+				D544EC2F1652042E000A1090 /* UIView+RFKit.m */,
+				D544EC301652042E000A1090 /* UIViewController+RFKit.h */,
+				D544EC311652042E000A1090 /* UIViewController+RFKit.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D544EC331652042E000A1090 /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC341652042E000A1090 /* dout.md */,
+			);
+			path = doc;
+			sourceTree = "<group>";
+		};
+		D544EC371652042E000A1090 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC381652042E000A1090 /* UncaughtExceptionHandler */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		D544EC381652042E000A1090 /* UncaughtExceptionHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D544EC391652042E000A1090 /* UncaughtExceptionHandler.h */,
+				D544EC3A1652042E000A1090 /* UncaughtExceptionHandler.m */,
+			);
+			path = UncaughtExceptionHandler;
+			sourceTree = "<group>";
+		};
+		D544ECEA165205DA000A1090 /* RFButton */ = {
+			isa = PBXGroup;
+			children = (
+				D544ECEB165205DA000A1090 /* RFButton.h */,
+				D544ECEC165205DA000A1090 /* RFButton.m */,
+				D544ECED165205DA000A1090 /* RFResizableBackgroundImageButton.h */,
+				D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */,
+			);
+			path = RFButton;
+			sourceTree = "<group>";
+		};
+		D544ECEF165205DA000A1090 /* RFImageGallery */ = {
+			isa = PBXGroup;
+			children = (
+				D544ECF0165205DA000A1090 /* RFImageGallery.h */,
+				D544ECF1165205DA000A1090 /* RFImageGallery.m */,
+			);
+			path = RFImageGallery;
+			sourceTree = "<group>";
+		};
+		D544ECF2165205DA000A1090 /* RFSidePanel */ = {
+			isa = PBXGroup;
+			children = (
+				D544ECF3165205DA000A1090 /* RFSidePanel.h */,
+				D544ECF4165205DA000A1090 /* RFSidePanel.m */,
+				D544ECF5165205DA000A1090 /* RFSidePanel.xib */,
+				D544ECF6165205DA000A1090 /* SidePanel-bg.png */,
+				D544ECF7165205DA000A1090 /* SidePanel-off.active.png */,
+				D544ECF8165205DA000A1090 /* SidePanel-off.png */,
+				D544ECF9165205DA000A1090 /* SidePanel-on.active.png */,
+				D544ECFA165205DA000A1090 /* SidePanel-on.png */,
+			);
+			path = RFSidePanel;
+			sourceTree = "<group>";
+		};
+		D544ECFB165205DA000A1090 /* RFUITheme */ = {
+			isa = PBXGroup;
+			children = (
+				D544ECFC165205DA000A1090 /* RFThemeBundle.h */,
+				D544ECFD165205DA000A1090 /* RFThemeBundle.m */,
+				D544ECFE165205DA000A1090 /* RFUIThemeDelegate.h */,
+			);
+			path = RFUITheme;
+			sourceTree = "<group>";
+		};
+		D544ECFF165205DA000A1090 /* RFWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED00165205DA000A1090 /* RFWebViewController.h */,
+				D544ED01165205DA000A1090 /* RFWebViewController.m */,
+				D544ED02165205DA000A1090 /* RFWebViewController.xib */,
+				D544ED03165205DA000A1090 /* RFWebViewController_blank.html */,
+				D544ED04165205DA000A1090 /* RFWebViewController_loadFail.html */,
+			);
+			path = RFWebViewController;
+			sourceTree = "<group>";
+		};
+		D544ED05165205DA000A1090 /* RFFetchedResultsTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED06165205DA000A1090 /* RFFetchedResultsTableView.h */,
+				D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */,
+				D544ED08165205DA000A1090 /* RFFetchedResultsTableViewController.h */,
+				D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */,
+			);
+			path = RFFetchedResultsTableView;
+			sourceTree = "<group>";
+		};
+		D544ED0A165205DA000A1090 /* RFImageTimeTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED0B165205DA000A1090 /* RFImageTimeTunnel.h */,
+				D544ED0C165205DA000A1090 /* RFImageTimeTunnel.m */,
+				D544ED0D165205DA000A1090 /* RFImageTimeTunnel.xib */,
+			);
+			path = RFImageTimeTunnel;
+			sourceTree = "<group>";
+		};
+		D544ED0E165205DA000A1090 /* RFModalView */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED0F165205DA000A1090 /* RFModalView.h */,
+				D544ED10165205DA000A1090 /* RFModalView.m */,
+			);
+			path = RFModalView;
+			sourceTree = "<group>";
+		};
+		D544ED11165205DA000A1090 /* RFSlideNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED12165205DA000A1090 /* RFSlideNavigationController.h */,
+				D544ED13165205DA000A1090 /* RFSlideNavigationController.m */,
+			);
+			path = RFSlideNavigationController;
+			sourceTree = "<group>";
+		};
+		D544ED14165205DA000A1090 /* RFStatusBarNotificationController */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED15165205DA000A1090 /* RFStatusBarNotificationWindow.h */,
+				D544ED16165205DA000A1090 /* RFStatusBarNotificationWindow.m */,
+				D544ED17165205DA000A1090 /* RFStatusBarNotificationWindow.xib */,
+			);
+			path = RFStatusBarNotificationController;
+			sourceTree = "<group>";
+		};
+		D544ED18165205DA000A1090 /* RFTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D544ED19165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.h */,
+				D544ED1A165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m */,
+				D544ED1B165205DA000A1090 /* RFTableViewCell.h */,
+				D544ED1C165205DA000A1090 /* RFTableViewCell.m */,
+			);
+			path = RFTableViewCell;
+			sourceTree = "<group>";
+		};
 		D57634701622FF4100FCE9FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,174 +783,32 @@
 		D57634D11623096D00FCE9FB /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
-				D57634D21623096D00FCE9FB /* RFButton */,
-				D57634D51623096D00FCE9FB /* RFImageTimeTunnel */,
-				D57634D91623096D00FCE9FB /* RFModalView */,
-				D57634DC1623096D00FCE9FB /* RFSidePanel */,
-				D57634E51623096D00FCE9FB /* RFSlideNavigationController */,
-				D57634E81623096D00FCE9FB /* RFStatusBarNotificationController */,
-				D57634EC1623096D00FCE9FB /* RFTableViewCell */,
-				D57634EF1623096D00FCE9FB /* RFWebViewController */,
+				D544ECEA165205DA000A1090 /* RFButton */,
+				D544ED05165205DA000A1090 /* RFFetchedResultsTableView */,
+				D544ECEF165205DA000A1090 /* RFImageGallery */,
+				D544ED0A165205DA000A1090 /* RFImageTimeTunnel */,
+				D544ED0E165205DA000A1090 /* RFModalView */,
+				D544ECF2165205DA000A1090 /* RFSidePanel */,
+				D544ED11165205DA000A1090 /* RFSlideNavigationController */,
+				D544ED14165205DA000A1090 /* RFStatusBarNotificationController */,
+				D544ED18165205DA000A1090 /* RFTableViewCell */,
+				D544ECFB165205DA000A1090 /* RFUITheme */,
+				D544ECFF165205DA000A1090 /* RFWebViewController */,
 			);
 			path = Alpha;
-			sourceTree = "<group>";
-		};
-		D57634D21623096D00FCE9FB /* RFButton */ = {
-			isa = PBXGroup;
-			children = (
-				D57634D31623096D00FCE9FB /* RFButton.h */,
-				D57634D41623096D00FCE9FB /* RFButton.m */,
-			);
-			path = RFButton;
-			sourceTree = "<group>";
-		};
-		D57634D51623096D00FCE9FB /* RFImageTimeTunnel */ = {
-			isa = PBXGroup;
-			children = (
-				D57634D61623096D00FCE9FB /* RFImageTimeTunnel.h */,
-				D57634D71623096D00FCE9FB /* RFImageTimeTunnel.m */,
-				D57634D81623096D00FCE9FB /* RFImageTimeTunnel.xib */,
-			);
-			path = RFImageTimeTunnel;
-			sourceTree = "<group>";
-		};
-		D57634D91623096D00FCE9FB /* RFModalView */ = {
-			isa = PBXGroup;
-			children = (
-				D57634DA1623096D00FCE9FB /* RFModalView.h */,
-				D57634DB1623096D00FCE9FB /* RFModalView.m */,
-			);
-			path = RFModalView;
-			sourceTree = "<group>";
-		};
-		D57634DC1623096D00FCE9FB /* RFSidePanel */ = {
-			isa = PBXGroup;
-			children = (
-				D57634DD1623096D00FCE9FB /* RFSidePanel.h */,
-				D57634DE1623096D00FCE9FB /* RFSidePanel.m */,
-				D57634DF1623096D00FCE9FB /* RFSidePanel.xib */,
-				D57634E01623096D00FCE9FB /* SidePanel-bg.png */,
-				D57634E11623096D00FCE9FB /* SidePanel-off.active.png */,
-				D57634E21623096D00FCE9FB /* SidePanel-off.png */,
-				D57634E31623096D00FCE9FB /* SidePanel-on.active.png */,
-				D57634E41623096D00FCE9FB /* SidePanel-on.png */,
-			);
-			path = RFSidePanel;
-			sourceTree = "<group>";
-		};
-		D57634E51623096D00FCE9FB /* RFSlideNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				D57634E61623096D00FCE9FB /* RFSlideNavigationController.h */,
-				D57634E71623096D00FCE9FB /* RFSlideNavigationController.m */,
-			);
-			path = RFSlideNavigationController;
-			sourceTree = "<group>";
-		};
-		D57634E81623096D00FCE9FB /* RFStatusBarNotificationController */ = {
-			isa = PBXGroup;
-			children = (
-				D57634E91623096D00FCE9FB /* RFStatusBarNotificationWindow.h */,
-				D57634EA1623096D00FCE9FB /* RFStatusBarNotificationWindow.m */,
-				D57634EB1623096D00FCE9FB /* RFStatusBarNotificationWindow.xib */,
-			);
-			path = RFStatusBarNotificationController;
-			sourceTree = "<group>";
-		};
-		D57634EC1623096D00FCE9FB /* RFTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				D57634ED1623096D00FCE9FB /* RFTableViewCell.h */,
-				D57634EE1623096D00FCE9FB /* RFTableViewCell.m */,
-			);
-			path = RFTableViewCell;
-			sourceTree = "<group>";
-		};
-		D57634EF1623096D00FCE9FB /* RFWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D57634F01623096D00FCE9FB /* RFWebViewController.h */,
-				D57634F11623096D00FCE9FB /* RFWebViewController.m */,
-				D57634F21623096D00FCE9FB /* RFWebViewController.xib */,
-				D57634F31623096E00FCE9FB /* RFWebViewController_blank.html */,
-				D57634F41623096E00FCE9FB /* RFWebViewController_loadFail.html */,
-			);
-			path = RFWebViewController;
 			sourceTree = "<group>";
 		};
 		D57634F51623096E00FCE9FB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D57634F61623096E00FCE9FB /* dout.h */,
-				D57634F71623096E00FCE9FB /* dout.m */,
-				D57634F81623096E00FCE9FB /* extension */,
-				D57635191623096E00FCE9FB /* external */,
-				D576351E1623096E00FCE9FB /* RFARC.h */,
-				D576351F1623096E00FCE9FB /* RFKit.h */,
-				D57635201623096E00FCE9FB /* RFKit.m */,
-				D57635211623096E00FCE9FB /* RFKitDefaultExtensions.h */,
-				D57635221623096E00FCE9FB /* RFMath.h */,
-				D57635231623096E00FCE9FB /* RFMath.m */,
-				D57635241623096E00FCE9FB /* RFUI.h */,
-				D57635251623096E00FCE9FB /* RFUI.m */,
+				D544EC0B1652042E000A1090 /* Readme.md */,
+				D544EC0C1652042E000A1090 /* RFKit */,
+				D544EC461652042E000A1090 /* RFUI.h */,
+				D544EC471652042E000A1090 /* RFUIDebug.h */,
+				D544EC481652042E000A1090 /* RFUIInterfaceOrientationSupport.h */,
+				D544EC4A1652042E000A1090 /* RFUI.m */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		D57634F81623096E00FCE9FB /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				D57634F91623096E00FCE9FB /* NSArray+RFKit.h */,
-				D57634FA1623096E00FCE9FB /* NSArray+RFKit.m */,
-				D57634FB1623096E00FCE9FB /* NSBundle+RFKit.h */,
-				D57634FC1623096E00FCE9FB /* NSBundle+RFKit.m */,
-				D57634FD1623096E00FCE9FB /* NSDate+RFKit.h */,
-				D57634FE1623096E00FCE9FB /* NSDate+RFKit.m */,
-				D57634FF1623096E00FCE9FB /* NSDateFormatter+RFKit.h */,
-				D57635001623096E00FCE9FB /* NSDateFormatter+RFKit.m */,
-				D57635011623096E00FCE9FB /* NSDictionary+RFKit.h */,
-				D57635021623096E00FCE9FB /* NSDictionary+RFKit.m */,
-				D57635031623096E00FCE9FB /* NSFileManager+RFKit.h */,
-				D57635041623096E00FCE9FB /* NSFileManager+RFKit.m */,
-				D57635051623096E00FCE9FB /* NSNumberFormatter+RFKit.h */,
-				D57635061623096E00FCE9FB /* NSNumberFormatter+RFKit.m */,
-				D57635071623096E00FCE9FB /* NSObject+RFKit.h */,
-				D57635081623096E00FCE9FB /* NSObject+RFKit.m */,
-				D57635091623096E00FCE9FB /* NSString+RFKit.h */,
-				D576350A1623096E00FCE9FB /* NSString+RFKit.m */,
-				D576350B1623096E00FCE9FB /* NSURL+RFKit.h */,
-				D576350C1623096E00FCE9FB /* NSURL+RFKit.m */,
-				D576350D1623096E00FCE9FB /* UIAlertView+RFKit.h */,
-				D576350E1623096E00FCE9FB /* UIAlertView+RFKit.m */,
-				D576350F1623096E00FCE9FB /* UIButton+RFKit.h */,
-				D57635101623096E00FCE9FB /* UIButton+RFKit.m */,
-				D57635111623096E00FCE9FB /* UIColor+RFKit.h */,
-				D57635121623096E00FCE9FB /* UIColor+RFKit.m */,
-				D57635131623096E00FCE9FB /* UIImage+RFKit.h */,
-				D57635141623096E00FCE9FB /* UIImage+RFKit.m */,
-				D57635151623096E00FCE9FB /* UIView+RFKit.h */,
-				D57635161623096E00FCE9FB /* UIView+RFKit.m */,
-				D57635171623096E00FCE9FB /* UIViewController+RFKit.h */,
-				D57635181623096E00FCE9FB /* UIViewController+RFKit.m */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		D57635191623096E00FCE9FB /* external */ = {
-			isa = PBXGroup;
-			children = (
-				D576351A1623096E00FCE9FB /* UncaughtExceptionHandler */,
-			);
-			path = external;
-			sourceTree = "<group>";
-		};
-		D576351A1623096E00FCE9FB /* UncaughtExceptionHandler */ = {
-			isa = PBXGroup;
-			children = (
-				D576351B1623096E00FCE9FB /* UncaughtExceptionHandler.h */,
-				D576351C1623096E00FCE9FB /* UncaughtExceptionHandler.m */,
-			);
-			path = UncaughtExceptionHandler;
 			sourceTree = "<group>";
 		};
 		D57635261623096E00FCE9FB /* RFSegue */ = {
@@ -790,17 +910,17 @@
 				D5763498162301AE00FCE9FB /* Default-Portrait@2x~ipad.png in Resources */,
 				D5763499162301AE00FCE9FB /* Default-Landscape~ipad.png in Resources */,
 				D576349A162301AE00FCE9FB /* Default-Landscape@2x~ipad.png in Resources */,
-				D576352F1623096E00FCE9FB /* RFImageTimeTunnel.xib in Resources */,
-				D57635351623096E00FCE9FB /* RFSidePanel.xib in Resources */,
-				D57635371623096E00FCE9FB /* SidePanel-bg.png in Resources */,
-				D57635391623096E00FCE9FB /* SidePanel-off.active.png in Resources */,
-				D576353B1623096E00FCE9FB /* SidePanel-off.png in Resources */,
-				D576353D1623096E00FCE9FB /* SidePanel-on.active.png in Resources */,
-				D576353F1623096E00FCE9FB /* SidePanel-on.png in Resources */,
-				D57635451623096E00FCE9FB /* RFStatusBarNotificationWindow.xib in Resources */,
-				D576354B1623096E00FCE9FB /* RFWebViewController.xib in Resources */,
-				D576354D1623096E00FCE9FB /* RFWebViewController_blank.html in Resources */,
-				D576354F1623096E00FCE9FB /* RFWebViewController_loadFail.html in Resources */,
+				D544ED25165205DA000A1090 /* RFSidePanel.xib in Resources */,
+				D544ED27165205DA000A1090 /* SidePanel-bg.png in Resources */,
+				D544ED29165205DA000A1090 /* SidePanel-off.active.png in Resources */,
+				D544ED2B165205DA000A1090 /* SidePanel-off.png in Resources */,
+				D544ED2D165205DA000A1090 /* SidePanel-on.active.png in Resources */,
+				D544ED2F165205DA000A1090 /* SidePanel-on.png in Resources */,
+				D544ED35165205DA000A1090 /* RFWebViewController.xib in Resources */,
+				D544ED37165205DA000A1090 /* RFWebViewController_blank.html in Resources */,
+				D544ED39165205DA000A1090 /* RFWebViewController_loadFail.html in Resources */,
+				D544ED41165205DA000A1090 /* RFImageTimeTunnel.xib in Resources */,
+				D544ED49165205DA000A1090 /* RFStatusBarNotificationWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,17 +928,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D57635301623096E00FCE9FB /* RFImageTimeTunnel.xib in Resources */,
-				D57635361623096E00FCE9FB /* RFSidePanel.xib in Resources */,
-				D57635381623096E00FCE9FB /* SidePanel-bg.png in Resources */,
-				D576353A1623096E00FCE9FB /* SidePanel-off.active.png in Resources */,
-				D576353C1623096E00FCE9FB /* SidePanel-off.png in Resources */,
-				D576353E1623096E00FCE9FB /* SidePanel-on.active.png in Resources */,
-				D57635401623096E00FCE9FB /* SidePanel-on.png in Resources */,
-				D57635461623096E00FCE9FB /* RFStatusBarNotificationWindow.xib in Resources */,
-				D576354C1623096E00FCE9FB /* RFWebViewController.xib in Resources */,
-				D576354E1623096E00FCE9FB /* RFWebViewController_blank.html in Resources */,
-				D57635501623096E00FCE9FB /* RFWebViewController_loadFail.html in Resources */,
+				D544ED26165205DA000A1090 /* RFSidePanel.xib in Resources */,
+				D544ED28165205DA000A1090 /* SidePanel-bg.png in Resources */,
+				D544ED2A165205DA000A1090 /* SidePanel-off.active.png in Resources */,
+				D544ED2C165205DA000A1090 /* SidePanel-off.png in Resources */,
+				D544ED2E165205DA000A1090 /* SidePanel-on.active.png in Resources */,
+				D544ED30165205DA000A1090 /* SidePanel-on.png in Resources */,
+				D544ED36165205DA000A1090 /* RFWebViewController.xib in Resources */,
+				D544ED38165205DA000A1090 /* RFWebViewController_blank.html in Resources */,
+				D544ED3A165205DA000A1090 /* RFWebViewController_loadFail.html in Resources */,
+				D544ED42165205DA000A1090 /* RFImageTimeTunnel.xib in Resources */,
+				D544ED4A165205DA000A1090 /* RFStatusBarNotificationWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,40 +978,48 @@
 				D57634C71623083400FCE9FB /* AFXMLRequestOperation.m in Sources */,
 				D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */,
 				D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */,
-				D576352B1623096E00FCE9FB /* RFButton.m in Sources */,
-				D576352D1623096E00FCE9FB /* RFImageTimeTunnel.m in Sources */,
-				D57635311623096E00FCE9FB /* RFModalView.m in Sources */,
-				D57635331623096E00FCE9FB /* RFSidePanel.m in Sources */,
-				D57635411623096E00FCE9FB /* RFSlideNavigationController.m in Sources */,
-				D57635431623096E00FCE9FB /* RFStatusBarNotificationWindow.m in Sources */,
-				D57635471623096E00FCE9FB /* RFTableViewCell.m in Sources */,
-				D57635491623096E00FCE9FB /* RFWebViewController.m in Sources */,
-				D57635511623096E00FCE9FB /* dout.m in Sources */,
-				D57635531623096E00FCE9FB /* NSArray+RFKit.m in Sources */,
-				D57635551623096E00FCE9FB /* NSBundle+RFKit.m in Sources */,
-				D57635571623096E00FCE9FB /* NSDate+RFKit.m in Sources */,
-				D57635591623096E00FCE9FB /* NSDateFormatter+RFKit.m in Sources */,
-				D576355B1623096E00FCE9FB /* NSDictionary+RFKit.m in Sources */,
-				D576355D1623096E00FCE9FB /* NSFileManager+RFKit.m in Sources */,
-				D576355F1623096E00FCE9FB /* NSNumberFormatter+RFKit.m in Sources */,
-				D57635611623096E00FCE9FB /* NSObject+RFKit.m in Sources */,
-				D57635631623096E00FCE9FB /* NSString+RFKit.m in Sources */,
-				D57635651623096E00FCE9FB /* NSURL+RFKit.m in Sources */,
-				D57635671623096E00FCE9FB /* UIAlertView+RFKit.m in Sources */,
-				D57635691623096E00FCE9FB /* UIButton+RFKit.m in Sources */,
-				D576356B1623096E00FCE9FB /* UIColor+RFKit.m in Sources */,
-				D576356D1623096E00FCE9FB /* UIImage+RFKit.m in Sources */,
-				D576356F1623096E00FCE9FB /* UIView+RFKit.m in Sources */,
-				D57635711623096E00FCE9FB /* UIViewController+RFKit.m in Sources */,
-				D57635731623096E00FCE9FB /* UncaughtExceptionHandler.m in Sources */,
-				D57635771623096E00FCE9FB /* RFKit.m in Sources */,
-				D57635791623096E00FCE9FB /* RFMath.m in Sources */,
-				D576357B1623096E00FCE9FB /* RFUI.m in Sources */,
 				D576357D1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */,
 				D576357F1623096E00FCE9FB /* RFSegue.m in Sources */,
 				D526B2F216381830003087FF /* ExampleEntity.m in Sources */,
 				D526B2FA16381888003087FF /* main.xcdatamodeld in Sources */,
 				D526B2FE163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
+				D544EC4D1652042E000A1090 /* NSArray+RFKit.m in Sources */,
+				D544EC4F1652042E000A1090 /* NSBundle+RFKit.m in Sources */,
+				D544EC511652042E000A1090 /* NSDate+RFKit.m in Sources */,
+				D544EC531652042E000A1090 /* NSDateFormatter+RFKit.m in Sources */,
+				D544EC551652042E000A1090 /* NSDictionary+RFKit.m in Sources */,
+				D544EC571652042E000A1090 /* NSFileManager+RFKit.m in Sources */,
+				D544EC591652042E000A1090 /* NSNumberFormatter+RFKit.m in Sources */,
+				D544EC5B1652042E000A1090 /* NSObject+RFKit.m in Sources */,
+				D544EC5D1652042E000A1090 /* NSString+RFKit.m in Sources */,
+				D544EC5F1652042E000A1090 /* NSURL+RFKit.m in Sources */,
+				D544EC611652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
+				D544EC631652042E000A1090 /* UIButton+RFKit.m in Sources */,
+				D544EC651652042E000A1090 /* UIColor+RFKit.m in Sources */,
+				D544EC671652042E000A1090 /* UIDevice+RFKit.m in Sources */,
+				D544EC691652042E000A1090 /* UIImage+RFKit.m in Sources */,
+				D544EC6B1652042E000A1090 /* UIView+RFKit.m in Sources */,
+				D544EC6D1652042E000A1090 /* UIViewController+RFKit.m in Sources */,
+				D544EC731652042E000A1090 /* dout.m in Sources */,
+				D544EC751652042E000A1090 /* UncaughtExceptionHandler.m in Sources */,
+				D544EC7B1652042E000A1090 /* RFGeometry.m in Sources */,
+				D544EC7D1652042E000A1090 /* RFKit.m in Sources */,
+				D544EC7F1652042E000A1090 /* RFPerformance.m in Sources */,
+				D544EC831652042E000A1090 /* RFUI.m in Sources */,
+				D544ED1D165205DA000A1090 /* RFButton.m in Sources */,
+				D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
+				D544ED21165205DA000A1090 /* RFImageGallery.m in Sources */,
+				D544ED23165205DA000A1090 /* RFSidePanel.m in Sources */,
+				D544ED31165205DA000A1090 /* RFThemeBundle.m in Sources */,
+				D544ED33165205DA000A1090 /* RFWebViewController.m in Sources */,
+				D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
+				D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
+				D544ED3F165205DA000A1090 /* RFImageTimeTunnel.m in Sources */,
+				D544ED43165205DA000A1090 /* RFModalView.m in Sources */,
+				D544ED45165205DA000A1090 /* RFSlideNavigationController.m in Sources */,
+				D544ED47165205DA000A1090 /* RFStatusBarNotificationWindow.m in Sources */,
+				D544ED4B165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m in Sources */,
+				D544ED4D165205DA000A1090 /* RFTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,40 +1028,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51CC8B51622EE3B00BE1083 /* AppTests.m in Sources */,
-				D576352C1623096E00FCE9FB /* RFButton.m in Sources */,
-				D576352E1623096E00FCE9FB /* RFImageTimeTunnel.m in Sources */,
-				D57635321623096E00FCE9FB /* RFModalView.m in Sources */,
-				D57635341623096E00FCE9FB /* RFSidePanel.m in Sources */,
-				D57635421623096E00FCE9FB /* RFSlideNavigationController.m in Sources */,
-				D57635441623096E00FCE9FB /* RFStatusBarNotificationWindow.m in Sources */,
-				D57635481623096E00FCE9FB /* RFTableViewCell.m in Sources */,
-				D576354A1623096E00FCE9FB /* RFWebViewController.m in Sources */,
-				D57635521623096E00FCE9FB /* dout.m in Sources */,
-				D57635541623096E00FCE9FB /* NSArray+RFKit.m in Sources */,
-				D57635561623096E00FCE9FB /* NSBundle+RFKit.m in Sources */,
-				D57635581623096E00FCE9FB /* NSDate+RFKit.m in Sources */,
-				D576355A1623096E00FCE9FB /* NSDateFormatter+RFKit.m in Sources */,
-				D576355C1623096E00FCE9FB /* NSDictionary+RFKit.m in Sources */,
-				D576355E1623096E00FCE9FB /* NSFileManager+RFKit.m in Sources */,
-				D57635601623096E00FCE9FB /* NSNumberFormatter+RFKit.m in Sources */,
-				D57635621623096E00FCE9FB /* NSObject+RFKit.m in Sources */,
-				D57635641623096E00FCE9FB /* NSString+RFKit.m in Sources */,
-				D57635661623096E00FCE9FB /* NSURL+RFKit.m in Sources */,
-				D57635681623096E00FCE9FB /* UIAlertView+RFKit.m in Sources */,
-				D576356A1623096E00FCE9FB /* UIButton+RFKit.m in Sources */,
-				D576356C1623096E00FCE9FB /* UIColor+RFKit.m in Sources */,
-				D576356E1623096E00FCE9FB /* UIImage+RFKit.m in Sources */,
-				D57635701623096E00FCE9FB /* UIView+RFKit.m in Sources */,
-				D57635721623096E00FCE9FB /* UIViewController+RFKit.m in Sources */,
-				D57635741623096E00FCE9FB /* UncaughtExceptionHandler.m in Sources */,
-				D57635781623096E00FCE9FB /* RFKit.m in Sources */,
-				D576357A1623096E00FCE9FB /* RFMath.m in Sources */,
-				D576357C1623096E00FCE9FB /* RFUI.m in Sources */,
 				D576357E1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */,
 				D57635801623096E00FCE9FB /* RFSegue.m in Sources */,
 				D526B2F316381830003087FF /* ExampleEntity.m in Sources */,
 				D526B2FB16381888003087FF /* main.xcdatamodeld in Sources */,
 				D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
+				D544EC4E1652042E000A1090 /* NSArray+RFKit.m in Sources */,
+				D544EC501652042E000A1090 /* NSBundle+RFKit.m in Sources */,
+				D544EC521652042E000A1090 /* NSDate+RFKit.m in Sources */,
+				D544EC541652042E000A1090 /* NSDateFormatter+RFKit.m in Sources */,
+				D544EC561652042E000A1090 /* NSDictionary+RFKit.m in Sources */,
+				D544EC581652042E000A1090 /* NSFileManager+RFKit.m in Sources */,
+				D544EC5A1652042E000A1090 /* NSNumberFormatter+RFKit.m in Sources */,
+				D544EC5C1652042E000A1090 /* NSObject+RFKit.m in Sources */,
+				D544EC5E1652042E000A1090 /* NSString+RFKit.m in Sources */,
+				D544EC601652042E000A1090 /* NSURL+RFKit.m in Sources */,
+				D544EC621652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
+				D544EC641652042E000A1090 /* UIButton+RFKit.m in Sources */,
+				D544EC661652042E000A1090 /* UIColor+RFKit.m in Sources */,
+				D544EC681652042E000A1090 /* UIDevice+RFKit.m in Sources */,
+				D544EC6A1652042E000A1090 /* UIImage+RFKit.m in Sources */,
+				D544EC6C1652042E000A1090 /* UIView+RFKit.m in Sources */,
+				D544EC6E1652042E000A1090 /* UIViewController+RFKit.m in Sources */,
+				D544EC741652042E000A1090 /* dout.m in Sources */,
+				D544EC761652042E000A1090 /* UncaughtExceptionHandler.m in Sources */,
+				D544EC7C1652042E000A1090 /* RFGeometry.m in Sources */,
+				D544EC7E1652042E000A1090 /* RFKit.m in Sources */,
+				D544EC801652042E000A1090 /* RFPerformance.m in Sources */,
+				D544EC841652042E000A1090 /* RFUI.m in Sources */,
+				D544ED1E165205DA000A1090 /* RFButton.m in Sources */,
+				D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
+				D544ED22165205DA000A1090 /* RFImageGallery.m in Sources */,
+				D544ED24165205DA000A1090 /* RFSidePanel.m in Sources */,
+				D544ED32165205DA000A1090 /* RFThemeBundle.m in Sources */,
+				D544ED34165205DA000A1090 /* RFWebViewController.m in Sources */,
+				D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
+				D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
+				D544ED40165205DA000A1090 /* RFImageTimeTunnel.m in Sources */,
+				D544ED44165205DA000A1090 /* RFModalView.m in Sources */,
+				D544ED46165205DA000A1090 /* RFSlideNavigationController.m in Sources */,
+				D544ED48165205DA000A1090 /* RFStatusBarNotificationWindow.m in Sources */,
+				D544ED4C165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m in Sources */,
+				D544ED4E165205DA000A1090 /* RFTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
