@@ -89,8 +89,6 @@
 		D544ED2E165205DA000A1090 /* SidePanel-on.active.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECF9165205DA000A1090 /* SidePanel-on.active.png */; };
 		D544ED2F165205DA000A1090 /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECFA165205DA000A1090 /* SidePanel-on.png */; };
 		D544ED30165205DA000A1090 /* SidePanel-on.png in Resources */ = {isa = PBXBuildFile; fileRef = D544ECFA165205DA000A1090 /* SidePanel-on.png */; };
-		D544ED31165205DA000A1090 /* RFThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECFD165205DA000A1090 /* RFThemeBundle.m */; };
-		D544ED32165205DA000A1090 /* RFThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECFD165205DA000A1090 /* RFThemeBundle.m */; };
 		D544ED33165205DA000A1090 /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED01165205DA000A1090 /* RFWebViewController.m */; };
 		D544ED34165205DA000A1090 /* RFWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED01165205DA000A1090 /* RFWebViewController.m */; };
 		D544ED35165205DA000A1090 /* RFWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D544ED02165205DA000A1090 /* RFWebViewController.xib */; };
@@ -161,6 +159,13 @@
 		D57635E21623B95F00FCE9FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */; };
 		D5F2EA8A169D616C0067E7D3 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D5F2EA88169D616C0067E7D3 /* en.lproj */; };
 		D5F2EA8B169D616C0067E7D3 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */; };
+		D5F2EAB5169D66950067E7D3 /* RFDismissModalBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EAAE169D66950067E7D3 /* RFDismissModalBarButtonItem.m */; };
+		D5F2EAB6169D66950067E7D3 /* RFPopBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EAB0169D66950067E7D3 /* RFPopBarButtonItem.m */; };
+		D5F2EAB7169D66950067E7D3 /* RFSegueDismissModalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EAB2169D66950067E7D3 /* RFSegueDismissModalButton.m */; };
+		D5F2EAB8169D66950067E7D3 /* RFSeguePopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EAB4169D66950067E7D3 /* RFSeguePopButton.m */; };
+		D5F2EAC1169D66A00067E7D3 /* RFUIThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EABC169D66A00067E7D3 /* RFUIThemeBundle.m */; };
+		D5F2EAC2169D66A00067E7D3 /* RFUIThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EABE169D66A00067E7D3 /* RFUIThemeManager.m */; };
+		D5F2EAC3169D66A00067E7D3 /* UIResponder+RFUITheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F2EAC0169D66A00067E7D3 /* UIResponder+RFUITheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,8 +269,6 @@
 		D544ECF8165205DA000A1090 /* SidePanel-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-off.png"; sourceTree = "<group>"; };
 		D544ECF9165205DA000A1090 /* SidePanel-on.active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.active.png"; sourceTree = "<group>"; };
 		D544ECFA165205DA000A1090 /* SidePanel-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SidePanel-on.png"; sourceTree = "<group>"; };
-		D544ECFC165205DA000A1090 /* RFThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFThemeBundle.h; sourceTree = "<group>"; };
-		D544ECFD165205DA000A1090 /* RFThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFThemeBundle.m; sourceTree = "<group>"; };
 		D544ECFE165205DA000A1090 /* RFUIThemeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeDelegate.h; sourceTree = "<group>"; };
 		D544ED00165205DA000A1090 /* RFWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFWebViewController.h; sourceTree = "<group>"; };
 		D544ED01165205DA000A1090 /* RFWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFWebViewController.m; sourceTree = "<group>"; };
@@ -339,6 +342,21 @@
 		D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D5F2EA88169D616C0067E7D3 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
+		D5F2EAAD169D66950067E7D3 /* RFDismissModalBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFDismissModalBarButtonItem.h; sourceTree = "<group>"; };
+		D5F2EAAE169D66950067E7D3 /* RFDismissModalBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDismissModalBarButtonItem.m; sourceTree = "<group>"; };
+		D5F2EAAF169D66950067E7D3 /* RFPopBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPopBarButtonItem.h; sourceTree = "<group>"; };
+		D5F2EAB0169D66950067E7D3 /* RFPopBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPopBarButtonItem.m; sourceTree = "<group>"; };
+		D5F2EAB1169D66950067E7D3 /* RFSegueDismissModalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegueDismissModalButton.h; sourceTree = "<group>"; };
+		D5F2EAB2169D66950067E7D3 /* RFSegueDismissModalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueDismissModalButton.m; sourceTree = "<group>"; };
+		D5F2EAB3169D66950067E7D3 /* RFSeguePopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSeguePopButton.h; sourceTree = "<group>"; };
+		D5F2EAB4169D66950067E7D3 /* RFSeguePopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSeguePopButton.m; sourceTree = "<group>"; };
+		D5F2EABA169D66A00067E7D3 /* RFUITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUITheme.h; sourceTree = "<group>"; };
+		D5F2EABB169D66A00067E7D3 /* RFUIThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeBundle.h; sourceTree = "<group>"; };
+		D5F2EABC169D66A00067E7D3 /* RFUIThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUIThemeBundle.m; sourceTree = "<group>"; };
+		D5F2EABD169D66A00067E7D3 /* RFUIThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeManager.h; sourceTree = "<group>"; };
+		D5F2EABE169D66A00067E7D3 /* RFUIThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUIThemeManager.m; sourceTree = "<group>"; };
+		D5F2EABF169D66A00067E7D3 /* UIResponder+RFUITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+RFUITheme.h"; sourceTree = "<group>"; };
+		D5F2EAC0169D66A00067E7D3 /* UIResponder+RFUITheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+RFUITheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,9 +630,14 @@
 		D544ECFB165205DA000A1090 /* RFUITheme */ = {
 			isa = PBXGroup;
 			children = (
-				D544ECFC165205DA000A1090 /* RFThemeBundle.h */,
-				D544ECFD165205DA000A1090 /* RFThemeBundle.m */,
+				D5F2EABA169D66A00067E7D3 /* RFUITheme.h */,
+				D5F2EABB169D66A00067E7D3 /* RFUIThemeBundle.h */,
+				D5F2EABC169D66A00067E7D3 /* RFUIThemeBundle.m */,
 				D544ECFE165205DA000A1090 /* RFUIThemeDelegate.h */,
+				D5F2EABD169D66A00067E7D3 /* RFUIThemeManager.h */,
+				D5F2EABE169D66A00067E7D3 /* RFUIThemeManager.m */,
+				D5F2EABF169D66A00067E7D3 /* UIResponder+RFUITheme.h */,
+				D5F2EAC0169D66A00067E7D3 /* UIResponder+RFUITheme.m */,
 			);
 			path = RFUITheme;
 			sourceTree = "<group>";
@@ -820,10 +843,18 @@
 		D57635261623096E00FCE9FB /* RFSegue */ = {
 			isa = PBXGroup;
 			children = (
+				D5F2EAAD169D66950067E7D3 /* RFDismissModalBarButtonItem.h */,
+				D5F2EAAE169D66950067E7D3 /* RFDismissModalBarButtonItem.m */,
 				D57635271623096E00FCE9FB /* RFNavigationPushSegue.h */,
 				D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */,
+				D5F2EAAF169D66950067E7D3 /* RFPopBarButtonItem.h */,
+				D5F2EAB0169D66950067E7D3 /* RFPopBarButtonItem.m */,
 				D57635291623096E00FCE9FB /* RFSegue.h */,
 				D576352A1623096E00FCE9FB /* RFSegue.m */,
+				D5F2EAB1169D66950067E7D3 /* RFSegueDismissModalButton.h */,
+				D5F2EAB2169D66950067E7D3 /* RFSegueDismissModalButton.m */,
+				D5F2EAB3169D66950067E7D3 /* RFSeguePopButton.h */,
+				D5F2EAB4169D66950067E7D3 /* RFSeguePopButton.m */,
 			);
 			path = RFSegue;
 			sourceTree = "<group>";
@@ -1018,7 +1049,6 @@
 				D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
 				D544ED21165205DA000A1090 /* RFImageGallery.m in Sources */,
 				D544ED23165205DA000A1090 /* RFSidePanel.m in Sources */,
-				D544ED31165205DA000A1090 /* RFThemeBundle.m in Sources */,
 				D544ED33165205DA000A1090 /* RFWebViewController.m in Sources */,
 				D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
 				D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
@@ -1028,6 +1058,13 @@
 				D544ED47165205DA000A1090 /* RFStatusBarNotificationWindow.m in Sources */,
 				D544ED4B165205DA000A1090 /* RFCheckmarkSelectedTableViewCell.m in Sources */,
 				D544ED4D165205DA000A1090 /* RFTableViewCell.m in Sources */,
+				D5F2EAB5169D66950067E7D3 /* RFDismissModalBarButtonItem.m in Sources */,
+				D5F2EAB6169D66950067E7D3 /* RFPopBarButtonItem.m in Sources */,
+				D5F2EAB7169D66950067E7D3 /* RFSegueDismissModalButton.m in Sources */,
+				D5F2EAB8169D66950067E7D3 /* RFSeguePopButton.m in Sources */,
+				D5F2EAC1169D66A00067E7D3 /* RFUIThemeBundle.m in Sources */,
+				D5F2EAC2169D66A00067E7D3 /* RFUIThemeManager.m in Sources */,
+				D5F2EAC3169D66A00067E7D3 /* UIResponder+RFUITheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,7 +1105,6 @@
 				D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
 				D544ED22165205DA000A1090 /* RFImageGallery.m in Sources */,
 				D544ED24165205DA000A1090 /* RFSidePanel.m in Sources */,
-				D544ED32165205DA000A1090 /* RFThemeBundle.m in Sources */,
 				D544ED34165205DA000A1090 /* RFWebViewController.m in Sources */,
 				D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
 				D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
