@@ -159,6 +159,8 @@
 		D57635E01623B93600FCE9FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */; };
 		D57635E11623B95F00FCE9FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */; };
 		D57635E21623B95F00FCE9FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */; };
+		D5F2EA8A169D616C0067E7D3 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D5F2EA88169D616C0067E7D3 /* en.lproj */; };
+		D5F2EA8B169D616C0067E7D3 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -335,6 +337,8 @@
 		D57635D21623159B00FCE9FB /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D5F2EA88169D616C0067E7D3 /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -426,6 +430,8 @@
 		D51CC8871622EE3B00BE1083 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D5F2EA88169D616C0067E7D3 /* en.lproj */,
+				D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */,
 				D51CC8881622EE3B00BE1083 /* Info.plist */,
 				D51CC88C1622EE3B00BE1083 /* main.m */,
 				D51CC88E1622EE3B00BE1083 /* Prefix.pch */,
@@ -921,6 +927,8 @@
 				D544ED39165205DA000A1090 /* RFWebViewController_loadFail.html in Resources */,
 				D544ED41165205DA000A1090 /* RFImageTimeTunnel.xib in Resources */,
 				D544ED49165205DA000A1090 /* RFStatusBarNotificationWindow.xib in Resources */,
+				D5F2EA8A169D616C0067E7D3 /* en.lproj in Resources */,
+				D5F2EA8B169D616C0067E7D3 /* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
