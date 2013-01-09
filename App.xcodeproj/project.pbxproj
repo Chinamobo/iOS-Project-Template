@@ -149,7 +149,7 @@
 		D57634C51623083400FCE9FB /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B01623083400FCE9FB /* AFPropertyListRequestOperation.m */; };
 		D57634C61623083400FCE9FB /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B21623083400FCE9FB /* AFURLConnectionOperation.m */; };
 		D57634C71623083400FCE9FB /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B41623083400FCE9FB /* AFXMLRequestOperation.m */; };
-		D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B91623083400FCE9FB /* AFHTTPRequestOperationLogger.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634B91623083400FCE9FB /* AFHTTPRequestOperationLogger.m */; };
 		D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D57634BF1623083400FCE9FB /* UIImageView+AFNetworking.m */; };
 		D576357D1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */; };
 		D576357E1623096E00FCE9FB /* RFNavigationPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D57635281623096E00FCE9FB /* RFNavigationPushSegue.m */; };
