@@ -187,7 +187,7 @@
 		D51CC89F1622EE3B00BE1083 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D51CC8A61622EE3B00BE1083 /* AppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51CC8A71622EE3B00BE1083 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D51CC8AF1622EE3B00BE1083 /* AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppTests-Info.plist"; sourceTree = "<group>"; };
+		D51CC8AF1622EE3B00BE1083 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		D51CC8B31622EE3B00BE1083 /* AppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTests.h; sourceTree = "<group>"; };
 		D51CC8B41622EE3B00BE1083 /* AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
 		D526B2F016381830003087FF /* ExampleEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleEntity.h; path = "Core Data/ExampleEntity.h"; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 		D51CC8AE1622EE3B00BE1083 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D51CC8AF1622EE3B00BE1083 /* AppTests-Info.plist */,
+				D51CC8AF1622EE3B00BE1083 /* Tests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1179,7 +1179,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App/App-Prefix.pch";
-				INFOPLIST_FILE = "AppTests/AppTests-Info.plist";
+				INFOPLIST_FILE = "AppTests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -1196,7 +1196,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App/App-Prefix.pch";
-				INFOPLIST_FILE = "AppTests/AppTests-Info.plist";
+				INFOPLIST_FILE = "AppTests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
