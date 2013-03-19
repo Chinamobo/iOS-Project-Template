@@ -320,14 +320,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51CC8A81622EE3B00BE1083 /* SenTestingKit.framework in Frameworks */,
-				D57635E11623B95F00FCE9FB /* MobileCoreServices.framework in Frameworks */,
-				D57635E21623B95F00FCE9FB /* SystemConfiguration.framework in Frameworks */,
-				D576346E1622FE4B00FCE9FB /* QuartzCore.framework in Frameworks */,
-				D576346F1622FE4E00FCE9FB /* CoreGraphics.framework in Frameworks */,
-				D51CC8A91622EE3B00BE1083 /* UIKit.framework in Frameworks */,
 				D576346B1622FDD000FCE9FB /* CoreData.framework in Frameworks */,
+				D576346F1622FE4E00FCE9FB /* CoreGraphics.framework in Frameworks */,
 				D51CC8AA1622EE3B00BE1083 /* Foundation.framework in Frameworks */,
+				D57635E11623B95F00FCE9FB /* MobileCoreServices.framework in Frameworks */,
+				D576346E1622FE4B00FCE9FB /* QuartzCore.framework in Frameworks */,
+				D51CC8A81622EE3B00BE1083 /* SenTestingKit.framework in Frameworks */,
+				D57635E21623B95F00FCE9FB /* SystemConfiguration.framework in Frameworks */,
+				D51CC8A91622EE3B00BE1083 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +339,9 @@
 			children = (
 				D51CC8861622EE3B00BE1083 /* App */,
 				D51CC8AD1622EE3B00BE1083 /* AppTests */,
-				D57634701622FF4100FCE9FB /* Resources */,
 				D51CC87F1622EE3B00BE1083 /* Frameworks */,
 				D51CC87D1622EE3B00BE1083 /* Products */,
+				D57634701622FF4100FCE9FB /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,12 +358,12 @@
 			isa = PBXGroup;
 			children = (
 				D57634A31623083400FCE9FB /* AFNetworking */,
+				D57634D01623096D00FCE9FB /* RFUI */,
 				D57634561622FC6600FCE9FB /* CoreData.framework */,
 				D51CC8841622EE3B00BE1083 /* CoreGraphics.framework */,
 				D51CC8821622EE3B00BE1083 /* Foundation.framework */,
 				D57635DF1623B93600FCE9FB /* MobileCoreServices.framework */,
 				D57634581622FC7100FCE9FB /* QuartzCore.framework */,
-				D57634D01623096D00FCE9FB /* RFUI */,
 				D51CC8A71622EE3B00BE1083 /* SenTestingKit.framework */,
 				D57635DD1623B92F00FCE9FB /* SystemConfiguration.framework */,
 				D51CC8801622EE3B00BE1083 /* UIKit.framework */,
@@ -374,37 +374,24 @@
 		D51CC8861622EE3B00BE1083 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D52552A416F864E900DC8930 /* [Special] */,
 				D526B2EF163817F7003087FF /* Core Data */,
 				D51CC88F1622EE3B00BE1083 /* AppDelegate.h */,
 				D51CC8901622EE3B00BE1083 /* AppDelegate.m */,
-				D57635D21623159B00FCE9FB /* debug.h */,
 				D57634511622F36E00FCE9FB /* main~iPad.storyboard */,
 				D57634541622F3F200FCE9FB /* main~iPhone.storyboard */,
 				D51CC89E1622EE3B00BE1083 /* ViewController.h */,
 				D51CC89F1622EE3B00BE1083 /* ViewController.m */,
-				D51CC8871622EE3B00BE1083 /* Supporting Files */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		D51CC8871622EE3B00BE1083 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D5F2EA88169D616C0067E7D3 /* en.lproj */,
-				D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */,
-				D51CC8881622EE3B00BE1083 /* Info.plist */,
-				D51CC88C1622EE3B00BE1083 /* main.m */,
-				D51CC88E1622EE3B00BE1083 /* Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D51CC8AD1622EE3B00BE1083 /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				D51CC8AE1622EE3B00BE1083 /* Supporting Files */,
 				D51CC8B31622EE3B00BE1083 /* AppTests.h */,
 				D51CC8B41622EE3B00BE1083 /* AppTests.m */,
-				D51CC8AE1622EE3B00BE1083 /* Supporting Files */,
 			);
 			path = AppTests;
 			sourceTree = "<group>";
@@ -417,14 +404,35 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D52552A416F864E900DC8930 /* [Special] */ = {
+			isa = PBXGroup;
+			children = (
+				D52552A516F8652A00DC8930 /* Localizations */,
+				D57635D21623159B00FCE9FB /* debug.h */,
+				D51CC8881622EE3B00BE1083 /* Info.plist */,
+				D51CC88C1622EE3B00BE1083 /* main.m */,
+				D51CC88E1622EE3B00BE1083 /* Prefix.pch */,
+			);
+			name = "[Special]";
+			sourceTree = "<group>";
+		};
+		D52552A516F8652A00DC8930 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				D5F2EA88169D616C0067E7D3 /* en.lproj */,
+				D5F2EA89169D616C0067E7D3 /* zh-Hans.lproj */,
+			);
+			name = Localizations;
+			sourceTree = "<group>";
+		};
 		D526B2EF163817F7003087FF /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				D526B2F816381888003087FF /* main.xcdatamodeld */,
-				D526B2F016381830003087FF /* ExampleEntity.h */,
-				D526B2F116381830003087FF /* ExampleEntity.m */,
 				D526B2FC163818B3003087FF /* ExampleEntity+Cache.h */,
 				D526B2FD163818B4003087FF /* ExampleEntity+Cache.m */,
+				D526B2F016381830003087FF /* ExampleEntity.h */,
+				D526B2F116381830003087FF /* ExampleEntity.m */,
+				D526B2F816381888003087FF /* main.xcdatamodeld */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -474,10 +482,10 @@
 			isa = PBXGroup;
 			children = (
 				D544EC0D1652042E000A1090 /* category */,
-				D544EC351652042E000A1090 /* dout.h */,
-				D544EC361652042E000A1090 /* dout.m */,
 				D544EC371652042E000A1090 /* external */,
 				D53B4C1616E74A7500B6EB7E /* RFAlloctionProxy */,
+				D544EC351652042E000A1090 /* dout.h */,
+				D544EC361652042E000A1090 /* dout.m */,
 				D544EC3D1652042E000A1090 /* RFARC.h */,
 				D544EC3E1652042E000A1090 /* RFGeometry.h */,
 				D544EC3F1652042E000A1090 /* RFGeometry.m */,
@@ -634,6 +642,7 @@
 		D57634A31623083400FCE9FB /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				D57634B61623083400FCE9FB /* extension */,
 				D57634A41623083400FCE9FB /* AFHTTPClient.h */,
 				D57634A51623083400FCE9FB /* AFHTTPClient.m */,
 				D57634A61623083400FCE9FB /* AFHTTPRequestOperation.h */,
@@ -651,7 +660,6 @@
 				D57634B21623083400FCE9FB /* AFURLConnectionOperation.m */,
 				D57634B31623083400FCE9FB /* AFXMLRequestOperation.h */,
 				D57634B41623083400FCE9FB /* AFXMLRequestOperation.m */,
-				D57634B61623083400FCE9FB /* extension */,
 				D57634BE1623083400FCE9FB /* UIImageView+AFNetworking.h */,
 				D57634BF1623083400FCE9FB /* UIImageView+AFNetworking.m */,
 			);
@@ -700,8 +708,8 @@
 		D57634F51623096E00FCE9FB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				D53B4C1D16E74A8B00B6EB7E /* RFFeatureSupportProxyDelegates.h */,
 				D544EC0C1652042E000A1090 /* RFKit */,
+				D53B4C1D16E74A8B00B6EB7E /* RFFeatureSupportProxyDelegates.h */,
 				D544EC461652042E000A1090 /* RFUI.h */,
 				D544EC4A1652042E000A1090 /* RFUI.m */,
 				D544EC471652042E000A1090 /* RFUIDebug.h */,
@@ -796,24 +804,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D57634521622F36E00FCE9FB /* main~iPad.storyboard in Resources */,
-				D57634551622F3F200FCE9FB /* main~iPhone.storyboard in Resources */,
-				D576347C1623002600FCE9FB /* Icon@2x.png in Resources */,
-				D576347D1623002600FCE9FB /* Icon.png in Resources */,
-				D576347E1623002600FCE9FB /* Icon-Small@2x.png in Resources */,
-				D576347F1623002600FCE9FB /* Icon-Small.png in Resources */,
-				D57634801623002600FCE9FB /* Icon-Small-50@2x.png in Resources */,
-				D57634811623002600FCE9FB /* Icon-Small-50.png in Resources */,
-				D57634821623002600FCE9FB /* Icon-72@2x.png in Resources */,
-				D57634831623002600FCE9FB /* Icon-72.png in Resources */,
 				D5763488162300B600FCE9FB /* Default-568h@2x.png in Resources */,
+				D576349A162301AE00FCE9FB /* Default-Landscape@2x~ipad.png in Resources */,
+				D5763499162301AE00FCE9FB /* Default-Landscape~ipad.png in Resources */,
+				D5763498162301AE00FCE9FB /* Default-Portrait@2x~ipad.png in Resources */,
+				D5763497162301AE00FCE9FB /* Default-Portrait~ipad.png in Resources */,
 				D5763489162300B600FCE9FB /* Default.png in Resources */,
 				D576348A162300B600FCE9FB /* Default@2x.png in Resources */,
-				D5763497162301AE00FCE9FB /* Default-Portrait~ipad.png in Resources */,
-				D5763498162301AE00FCE9FB /* Default-Portrait@2x~ipad.png in Resources */,
-				D5763499162301AE00FCE9FB /* Default-Landscape~ipad.png in Resources */,
-				D576349A162301AE00FCE9FB /* Default-Landscape@2x~ipad.png in Resources */,
 				D5F2EA8A169D616C0067E7D3 /* en.lproj in Resources */,
+				D57634831623002600FCE9FB /* Icon-72.png in Resources */,
+				D57634821623002600FCE9FB /* Icon-72@2x.png in Resources */,
+				D57634811623002600FCE9FB /* Icon-Small-50.png in Resources */,
+				D57634801623002600FCE9FB /* Icon-Small-50@2x.png in Resources */,
+				D576347F1623002600FCE9FB /* Icon-Small.png in Resources */,
+				D576347E1623002600FCE9FB /* Icon-Small@2x.png in Resources */,
+				D576347D1623002600FCE9FB /* Icon.png in Resources */,
+				D576347C1623002600FCE9FB /* Icon@2x.png in Resources */,
+				D57634521622F36E00FCE9FB /* main~iPad.storyboard in Resources */,
+				D57634551622F3F200FCE9FB /* main~iPhone.storyboard in Resources */,
 				D5F2EA8B169D616C0067E7D3 /* zh-Hans.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,63 +856,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51CC88D1622EE3B00BE1083 /* main.m in Sources */,
-				D51CC8911622EE3B00BE1083 /* AppDelegate.m in Sources */,
-				D51CC8A01622EE3B00BE1083 /* ViewController.m in Sources */,
 				D57634C01623083400FCE9FB /* AFHTTPClient.m in Sources */,
 				D57634C11623083400FCE9FB /* AFHTTPRequestOperation.m in Sources */,
+				D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */,
 				D57634C21623083400FCE9FB /* AFImageRequestOperation.m in Sources */,
 				D57634C31623083400FCE9FB /* AFJSONRequestOperation.m in Sources */,
 				D57634C41623083400FCE9FB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D57634C51623083400FCE9FB /* AFPropertyListRequestOperation.m in Sources */,
 				D57634C61623083400FCE9FB /* AFURLConnectionOperation.m in Sources */,
 				D57634C71623083400FCE9FB /* AFXMLRequestOperation.m in Sources */,
-				D57634C91623083400FCE9FB /* AFHTTPRequestOperationLogger.m in Sources */,
-				D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */,
-				D526B2F216381830003087FF /* ExampleEntity.m in Sources */,
-				D526B2FA16381888003087FF /* main.xcdatamodeld in Sources */,
+				D51CC8911622EE3B00BE1083 /* AppDelegate.m in Sources */,
+				D544EC731652042E000A1090 /* dout.m in Sources */,
 				D526B2FE163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
+				D526B2F216381830003087FF /* ExampleEntity.m in Sources */,
+				D51CC88D1622EE3B00BE1083 /* main.m in Sources */,
+				D526B2FA16381888003087FF /* main.xcdatamodeld in Sources */,
 				D544EC4D1652042E000A1090 /* NSArray+RFKit.m in Sources */,
 				D544EC4F1652042E000A1090 /* NSBundle+RFKit.m in Sources */,
 				D544EC511652042E000A1090 /* NSDate+RFKit.m in Sources */,
 				D544EC531652042E000A1090 /* NSDateFormatter+RFKit.m in Sources */,
 				D544EC551652042E000A1090 /* NSDictionary+RFKit.m in Sources */,
 				D544EC571652042E000A1090 /* NSFileManager+RFKit.m in Sources */,
+				D53B4C1516E74A5A00B6EB7E /* NSJSONSerialization+RFKit.m in Sources */,
 				D544EC591652042E000A1090 /* NSNumberFormatter+RFKit.m in Sources */,
 				D544EC5B1652042E000A1090 /* NSObject+RFKit.m in Sources */,
 				D544EC5D1652042E000A1090 /* NSString+RFKit.m in Sources */,
 				D544EC5F1652042E000A1090 /* NSURL+RFKit.m in Sources */,
+				D53B4C1B16E74A7500B6EB7E /* RFAlloctionProxyButton.m in Sources */,
+				D53B4C1C16E74A7500B6EB7E /* RFAlloctionProxyView.m in Sources */,
+				D544ED1D165205DA000A1090 /* RFButton.m in Sources */,
+				D53B4C3A16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m in Sources */,
+				D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
+				D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
+				D544EC7B1652042E000A1090 /* RFGeometry.m in Sources */,
+				D53B4C3E16E74B0D00B6EB7E /* RFNavigationPushAsRootSegue.m in Sources */,
+				D53B4C3F16E74B0D00B6EB7E /* RFNavigationPushSegue.m in Sources */,
+				D544EC7F1652042E000A1090 /* RFPerformance.m in Sources */,
+				D53B4C3B16E74B0D00B6EB7E /* RFPopBarButtonItem.m in Sources */,
+				D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
+				D53B4C4016E74B0D00B6EB7E /* RFSegue.m in Sources */,
+				D53B4C3C16E74B0D00B6EB7E /* RFSegueDismissModalButton.m in Sources */,
+				D53B4C3D16E74B0D00B6EB7E /* RFSeguePopButton.m in Sources */,
+				D544EC831652042E000A1090 /* RFUI.m in Sources */,
+				D53B4C2716E74AD100B6EB7E /* RFUIThemeBundle.m in Sources */,
+				D53B4C2816E74AD100B6EB7E /* RFUIThemeManager.m in Sources */,
 				D544EC611652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
 				D544EC631652042E000A1090 /* UIButton+RFKit.m in Sources */,
 				D544EC651652042E000A1090 /* UIColor+RFKit.m in Sources */,
 				D544EC671652042E000A1090 /* UIDevice+RFKit.m in Sources */,
 				D544EC691652042E000A1090 /* UIImage+RFKit.m in Sources */,
+				D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */,
+				D53B4C2916E74AD100B6EB7E /* UIResponder+RFUITheme.m in Sources */,
+				D53B4C1116E74A4F00B6EB7E /* UIStoryboard+RFKit.m in Sources */,
 				D544EC6B1652042E000A1090 /* UIView+RFKit.m in Sources */,
 				D544EC6D1652042E000A1090 /* UIViewController+RFKit.m in Sources */,
-				D544EC731652042E000A1090 /* dout.m in Sources */,
-				D544EC751652042E000A1090 /* UncaughtExceptionHandler.m in Sources */,
-				D544EC7B1652042E000A1090 /* RFGeometry.m in Sources */,
-				D544EC7F1652042E000A1090 /* RFPerformance.m in Sources */,
-				D544EC831652042E000A1090 /* RFUI.m in Sources */,
-				D544ED1D165205DA000A1090 /* RFButton.m in Sources */,
-				D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
-				D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
-				D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
-				D53B4C1116E74A4F00B6EB7E /* UIStoryboard+RFKit.m in Sources */,
 				D53B4C1216E74A4F00B6EB7E /* UIWebView+RFKit.m in Sources */,
-				D53B4C1516E74A5A00B6EB7E /* NSJSONSerialization+RFKit.m in Sources */,
-				D53B4C1B16E74A7500B6EB7E /* RFAlloctionProxyButton.m in Sources */,
-				D53B4C1C16E74A7500B6EB7E /* RFAlloctionProxyView.m in Sources */,
-				D53B4C2716E74AD100B6EB7E /* RFUIThemeBundle.m in Sources */,
-				D53B4C2816E74AD100B6EB7E /* RFUIThemeManager.m in Sources */,
-				D53B4C2916E74AD100B6EB7E /* UIResponder+RFUITheme.m in Sources */,
-				D53B4C3A16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m in Sources */,
-				D53B4C3B16E74B0D00B6EB7E /* RFPopBarButtonItem.m in Sources */,
-				D53B4C3C16E74B0D00B6EB7E /* RFSegueDismissModalButton.m in Sources */,
-				D53B4C3D16E74B0D00B6EB7E /* RFSeguePopButton.m in Sources */,
-				D53B4C3E16E74B0D00B6EB7E /* RFNavigationPushAsRootSegue.m in Sources */,
-				D53B4C3F16E74B0D00B6EB7E /* RFNavigationPushSegue.m in Sources */,
-				D53B4C4016E74B0D00B6EB7E /* RFSegue.m in Sources */,
+				D544EC751652042E000A1090 /* UncaughtExceptionHandler.m in Sources */,
+				D51CC8A01622EE3B00BE1083 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,9 +921,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D51CC8B51622EE3B00BE1083 /* AppTests.m in Sources */,
+				D544EC741652042E000A1090 /* dout.m in Sources */,
+				D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
 				D526B2F316381830003087FF /* ExampleEntity.m in Sources */,
 				D526B2FB16381888003087FF /* main.xcdatamodeld in Sources */,
-				D526B2FF163818B4003087FF /* ExampleEntity+Cache.m in Sources */,
 				D544EC4E1652042E000A1090 /* NSArray+RFKit.m in Sources */,
 				D544EC501652042E000A1090 /* NSBundle+RFKit.m in Sources */,
 				D544EC521652042E000A1090 /* NSDate+RFKit.m in Sources */,
@@ -926,6 +935,13 @@
 				D544EC5C1652042E000A1090 /* NSObject+RFKit.m in Sources */,
 				D544EC5E1652042E000A1090 /* NSString+RFKit.m in Sources */,
 				D544EC601652042E000A1090 /* NSURL+RFKit.m in Sources */,
+				D544ED1E165205DA000A1090 /* RFButton.m in Sources */,
+				D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
+				D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
+				D544EC7C1652042E000A1090 /* RFGeometry.m in Sources */,
+				D544EC801652042E000A1090 /* RFPerformance.m in Sources */,
+				D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
+				D544EC841652042E000A1090 /* RFUI.m in Sources */,
 				D544EC621652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
 				D544EC641652042E000A1090 /* UIButton+RFKit.m in Sources */,
 				D544EC661652042E000A1090 /* UIColor+RFKit.m in Sources */,
@@ -933,15 +949,7 @@
 				D544EC6A1652042E000A1090 /* UIImage+RFKit.m in Sources */,
 				D544EC6C1652042E000A1090 /* UIView+RFKit.m in Sources */,
 				D544EC6E1652042E000A1090 /* UIViewController+RFKit.m in Sources */,
-				D544EC741652042E000A1090 /* dout.m in Sources */,
 				D544EC761652042E000A1090 /* UncaughtExceptionHandler.m in Sources */,
-				D544EC7C1652042E000A1090 /* RFGeometry.m in Sources */,
-				D544EC801652042E000A1090 /* RFPerformance.m in Sources */,
-				D544EC841652042E000A1090 /* RFUI.m in Sources */,
-				D544ED1E165205DA000A1090 /* RFButton.m in Sources */,
-				D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
-				D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
-				D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
