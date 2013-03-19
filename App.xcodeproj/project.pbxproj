@@ -28,9 +28,6 @@
 		D53B4C1516E74A5A00B6EB7E /* NSJSONSerialization+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C1416E74A5A00B6EB7E /* NSJSONSerialization+RFKit.m */; };
 		D53B4C1B16E74A7500B6EB7E /* RFAlloctionProxyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C1816E74A7500B6EB7E /* RFAlloctionProxyButton.m */; };
 		D53B4C1C16E74A7500B6EB7E /* RFAlloctionProxyView.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C1A16E74A7500B6EB7E /* RFAlloctionProxyView.m */; };
-		D53B4C2716E74AD100B6EB7E /* RFUIThemeBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C2116E74AD100B6EB7E /* RFUIThemeBundle.m */; };
-		D53B4C2816E74AD100B6EB7E /* RFUIThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C2416E74AD100B6EB7E /* RFUIThemeManager.m */; };
-		D53B4C2916E74AD100B6EB7E /* UIResponder+RFUITheme.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C2616E74AD100B6EB7E /* UIResponder+RFUITheme.m */; };
 		D53B4C3A16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C2C16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m */; };
 		D53B4C3B16E74B0D00B6EB7E /* RFPopBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C2E16E74B0D00B6EB7E /* RFPopBarButtonItem.m */; };
 		D53B4C3C16E74B0D00B6EB7E /* RFSegueDismissModalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B4C3016E74B0D00B6EB7E /* RFSegueDismissModalButton.m */; };
@@ -82,14 +79,6 @@
 		D544EC801652042E000A1090 /* RFPerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC441652042E000A1090 /* RFPerformance.m */; };
 		D544EC831652042E000A1090 /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC4A1652042E000A1090 /* RFUI.m */; };
 		D544EC841652042E000A1090 /* RFUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D544EC4A1652042E000A1090 /* RFUI.m */; };
-		D544ED1D165205DA000A1090 /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEC165205DA000A1090 /* RFButton.m */; };
-		D544ED1E165205DA000A1090 /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEC165205DA000A1090 /* RFButton.m */; };
-		D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */; };
-		D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */; };
-		D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */; };
-		D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */; };
-		D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */; };
-		D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */; };
 		D57634521622F36E00FCE9FB /* main~iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634511622F36E00FCE9FB /* main~iPad.storyboard */; };
 		D57634551622F3F200FCE9FB /* main~iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57634541622F3F200FCE9FB /* main~iPhone.storyboard */; };
 		D57634571622FC6600FCE9FB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57634561622FC6600FCE9FB /* CoreData.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -173,14 +162,6 @@
 		D53B4C1916E74A7500B6EB7E /* RFAlloctionProxyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAlloctionProxyView.h; sourceTree = "<group>"; };
 		D53B4C1A16E74A7500B6EB7E /* RFAlloctionProxyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAlloctionProxyView.m; sourceTree = "<group>"; };
 		D53B4C1D16E74A8B00B6EB7E /* RFFeatureSupportProxyDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFeatureSupportProxyDelegates.h; sourceTree = "<group>"; };
-		D53B4C1F16E74AD100B6EB7E /* RFUITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUITheme.h; sourceTree = "<group>"; };
-		D53B4C2016E74AD100B6EB7E /* RFUIThemeBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeBundle.h; sourceTree = "<group>"; };
-		D53B4C2116E74AD100B6EB7E /* RFUIThemeBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUIThemeBundle.m; sourceTree = "<group>"; };
-		D53B4C2216E74AD100B6EB7E /* RFUIThemeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeDelegate.h; sourceTree = "<group>"; };
-		D53B4C2316E74AD100B6EB7E /* RFUIThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIThemeManager.h; sourceTree = "<group>"; };
-		D53B4C2416E74AD100B6EB7E /* RFUIThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUIThemeManager.m; sourceTree = "<group>"; };
-		D53B4C2516E74AD100B6EB7E /* UIResponder+RFUITheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+RFUITheme.h"; sourceTree = "<group>"; };
-		D53B4C2616E74AD100B6EB7E /* UIResponder+RFUITheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+RFUITheme.m"; sourceTree = "<group>"; };
 		D53B4C2B16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFDismissModalBarButtonItem.h; sourceTree = "<group>"; };
 		D53B4C2C16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFDismissModalBarButtonItem.m; sourceTree = "<group>"; };
 		D53B4C2D16E74B0D00B6EB7E /* RFPopBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPopBarButtonItem.h; sourceTree = "<group>"; };
@@ -246,14 +227,6 @@
 		D544EC471652042E000A1090 /* RFUIDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIDebug.h; sourceTree = "<group>"; };
 		D544EC481652042E000A1090 /* RFUIInterfaceOrientationSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFUIInterfaceOrientationSupport.h; sourceTree = "<group>"; };
 		D544EC4A1652042E000A1090 /* RFUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFUI.m; sourceTree = "<group>"; };
-		D544ECEB165205DA000A1090 /* RFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFButton.h; sourceTree = "<group>"; };
-		D544ECEC165205DA000A1090 /* RFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFButton.m; sourceTree = "<group>"; };
-		D544ECED165205DA000A1090 /* RFResizableBackgroundImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFResizableBackgroundImageButton.h; sourceTree = "<group>"; };
-		D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFResizableBackgroundImageButton.m; sourceTree = "<group>"; };
-		D544ED06165205DA000A1090 /* RFFetchedResultsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFetchedResultsTableView.h; sourceTree = "<group>"; };
-		D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFetchedResultsTableView.m; sourceTree = "<group>"; };
-		D544ED08165205DA000A1090 /* RFFetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFFetchedResultsTableViewController.h; sourceTree = "<group>"; };
-		D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFFetchedResultsTableViewController.m; sourceTree = "<group>"; };
 		D57634511622F36E00FCE9FB /* main~iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPad.storyboard"; sourceTree = "<group>"; };
 		D57634541622F3F200FCE9FB /* main~iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "main~iPhone.storyboard"; sourceTree = "<group>"; };
 		D57634561622FC6600FCE9FB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -448,21 +421,6 @@
 			path = RFAlloctionProxy;
 			sourceTree = "<group>";
 		};
-		D53B4C1E16E74AD100B6EB7E /* RFUITheme */ = {
-			isa = PBXGroup;
-			children = (
-				D53B4C1F16E74AD100B6EB7E /* RFUITheme.h */,
-				D53B4C2016E74AD100B6EB7E /* RFUIThemeBundle.h */,
-				D53B4C2116E74AD100B6EB7E /* RFUIThemeBundle.m */,
-				D53B4C2216E74AD100B6EB7E /* RFUIThemeDelegate.h */,
-				D53B4C2316E74AD100B6EB7E /* RFUIThemeManager.h */,
-				D53B4C2416E74AD100B6EB7E /* RFUIThemeManager.m */,
-				D53B4C2516E74AD100B6EB7E /* UIResponder+RFUITheme.h */,
-				D53B4C2616E74AD100B6EB7E /* UIResponder+RFUITheme.m */,
-			);
-			path = RFUITheme;
-			sourceTree = "<group>";
-		};
 		D53B4C2A16E74B0D00B6EB7E /* Return */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,28 +536,6 @@
 			path = UncaughtExceptionHandler;
 			sourceTree = "<group>";
 		};
-		D544ECEA165205DA000A1090 /* RFButton */ = {
-			isa = PBXGroup;
-			children = (
-				D544ECEB165205DA000A1090 /* RFButton.h */,
-				D544ECEC165205DA000A1090 /* RFButton.m */,
-				D544ECED165205DA000A1090 /* RFResizableBackgroundImageButton.h */,
-				D544ECEE165205DA000A1090 /* RFResizableBackgroundImageButton.m */,
-			);
-			path = RFButton;
-			sourceTree = "<group>";
-		};
-		D544ED05165205DA000A1090 /* RFFetchedResultsTableView */ = {
-			isa = PBXGroup;
-			children = (
-				D544ED06165205DA000A1090 /* RFFetchedResultsTableView.h */,
-				D544ED07165205DA000A1090 /* RFFetchedResultsTableView.m */,
-				D544ED08165205DA000A1090 /* RFFetchedResultsTableViewController.h */,
-				D544ED09165205DA000A1090 /* RFFetchedResultsTableViewController.m */,
-			);
-			path = RFFetchedResultsTableView;
-			sourceTree = "<group>";
-		};
 		D57634701622FF4100FCE9FB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,22 +623,11 @@
 		D57634D01623096D00FCE9FB /* RFUI */ = {
 			isa = PBXGroup;
 			children = (
-				D57634D11623096D00FCE9FB /* Alpha */,
 				D57634F51623096E00FCE9FB /* Core */,
 				D57635261623096E00FCE9FB /* RFSegue */,
 			);
 			name = RFUI;
 			path = Frameworks/RFUI;
-			sourceTree = "<group>";
-		};
-		D57634D11623096D00FCE9FB /* Alpha */ = {
-			isa = PBXGroup;
-			children = (
-				D544ECEA165205DA000A1090 /* RFButton */,
-				D544ED05165205DA000A1090 /* RFFetchedResultsTableView */,
-				D53B4C1E16E74AD100B6EB7E /* RFUITheme */,
-			);
-			path = Alpha;
 			sourceTree = "<group>";
 		};
 		D57634F51623096E00FCE9FB /* Core */ = {
@@ -899,29 +824,22 @@
 				D544EC5F1652042E000A1090 /* NSURL+RFKit.m in Sources */,
 				D53B4C1B16E74A7500B6EB7E /* RFAlloctionProxyButton.m in Sources */,
 				D53B4C1C16E74A7500B6EB7E /* RFAlloctionProxyView.m in Sources */,
-				D544ED1D165205DA000A1090 /* RFButton.m in Sources */,
 				D53B4C3A16E74B0D00B6EB7E /* RFDismissModalBarButtonItem.m in Sources */,
-				D544ED3B165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
-				D544ED3D165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
 				D544EC7B1652042E000A1090 /* RFGeometry.m in Sources */,
 				D53B4C3E16E74B0D00B6EB7E /* RFNavigationPushAsRootSegue.m in Sources */,
 				D53B4C3F16E74B0D00B6EB7E /* RFNavigationPushSegue.m in Sources */,
 				D544EC7F1652042E000A1090 /* RFPerformance.m in Sources */,
 				D53B4C3B16E74B0D00B6EB7E /* RFPopBarButtonItem.m in Sources */,
-				D544ED1F165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
 				D53B4C4016E74B0D00B6EB7E /* RFSegue.m in Sources */,
 				D53B4C3C16E74B0D00B6EB7E /* RFSegueDismissModalButton.m in Sources */,
 				D53B4C3D16E74B0D00B6EB7E /* RFSeguePopButton.m in Sources */,
 				D544EC831652042E000A1090 /* RFUI.m in Sources */,
-				D53B4C2716E74AD100B6EB7E /* RFUIThemeBundle.m in Sources */,
-				D53B4C2816E74AD100B6EB7E /* RFUIThemeManager.m in Sources */,
 				D544EC611652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
 				D544EC631652042E000A1090 /* UIButton+RFKit.m in Sources */,
 				D544EC651652042E000A1090 /* UIColor+RFKit.m in Sources */,
 				D544EC671652042E000A1090 /* UIDevice+RFKit.m in Sources */,
 				D544EC691652042E000A1090 /* UIImage+RFKit.m in Sources */,
 				D57634CE1623083400FCE9FB /* UIImageView+AFNetworking.m in Sources */,
-				D53B4C2916E74AD100B6EB7E /* UIResponder+RFUITheme.m in Sources */,
 				D53B4C1116E74A4F00B6EB7E /* UIStoryboard+RFKit.m in Sources */,
 				D544EC6B1652042E000A1090 /* UIView+RFKit.m in Sources */,
 				D544EC6D1652042E000A1090 /* UIViewController+RFKit.m in Sources */,
@@ -950,12 +868,8 @@
 				D544EC5C1652042E000A1090 /* NSObject+RFKit.m in Sources */,
 				D544EC5E1652042E000A1090 /* NSString+RFKit.m in Sources */,
 				D544EC601652042E000A1090 /* NSURL+RFKit.m in Sources */,
-				D544ED1E165205DA000A1090 /* RFButton.m in Sources */,
-				D544ED3C165205DA000A1090 /* RFFetchedResultsTableView.m in Sources */,
-				D544ED3E165205DA000A1090 /* RFFetchedResultsTableViewController.m in Sources */,
 				D544EC7C1652042E000A1090 /* RFGeometry.m in Sources */,
 				D544EC801652042E000A1090 /* RFPerformance.m in Sources */,
-				D544ED20165205DA000A1090 /* RFResizableBackgroundImageButton.m in Sources */,
 				D544EC841652042E000A1090 /* RFUI.m in Sources */,
 				D544EC621652042E000A1090 /* UIAlertView+RFKit.m in Sources */,
 				D544EC641652042E000A1090 /* UIButton+RFKit.m in Sources */,

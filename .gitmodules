@@ -1,12 +1,9 @@
-[submodule "Frameworks/RFUI/Core"]
-	path = Frameworks/RFUI/Core
-url=git@mobogit:RFUICore.git
-[submodule "Frameworks/RFUI/Alpha"]
-	path = Frameworks/RFUI/Alpha
-url=git@mobogit:RFUIAlpha.git
 [submodule "Frameworks/AFNetworking"]
 	path = Frameworks/AFNetworking
-url=git@mobogit:AFNetworking.git
+	url = https://github.com/Chinamobo/AFNetworking.git
+[submodule "Frameworks/RFUI/Core"]
+	path = Frameworks/RFUI/Core
+	url = https://github.com/RFUI/Core.git
 [submodule "Frameworks/RFUI/RFSegue"]
 	path = Frameworks/RFUI/RFSegue
-url=git@mobogit:RFSegue.git
+	url = https://bb9z@github.com/RFUI/RFSegue.git
