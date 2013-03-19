@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LastRunTime</key>
+	<string>date Tue Mar 19 15:08:00 CST 2013</string>
+	<key>Scripts</key>
+	<array>
+		<dict>
+			<key>scriptName</key>
+			<string>sort-Xcode-project-file.pl</string>
+		</dict>
+	</array>
+	<key>UserData</key>
+	<dict>
+		<key>AutoBuildCount</key>
+		<dict>
+			<key>Users</key>
+			<dict/>
+		</dict>
+	</dict>
+</dict>
+</plist>
