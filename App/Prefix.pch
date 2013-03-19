@@ -11,6 +11,4 @@
 #ifdef __OBJC__
     #import "debug.h"
     #import "RFUI.h"
-    #import <MobileCoreServices/MobileCoreServices.h>
-    #import <SystemConfiguration/SystemConfiguration.h>
 #endif

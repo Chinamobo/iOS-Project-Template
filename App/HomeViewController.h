@@ -1,13 +1,13 @@
 //
-//  AppTests.h
-//  AppTests
+//  ViewController.h
+//  App
 //
 //  Created by BB9z on 13-3-19.
 //  Copyright (c) 2013年 Chinamobo Co., Ltd. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <UIKit/UIKit.h>
 
-@interface AppTests : SenTestCase
+@interface HomeViewController : UIViewController
 
 @end

@@ -2,8 +2,8 @@
 //  main.m
 //  App
 //
-//  Created by BB9z on 12-10-8.
-//  Copyright (c) 2012年 Chinamobo. All rights reserved.
+//  Created by BB9z on 13-3-19.
+//  Copyright (c) 2013年 Chinamobo Co., Ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

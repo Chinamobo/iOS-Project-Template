@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  RootNavigationController.h
 //  App
 //
 //  Created by BB9z on 13-3-19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface RootNavigationController : UINavigationController
 
 @end
