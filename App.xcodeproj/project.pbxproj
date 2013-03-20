@@ -750,7 +750,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export scriptPath=$SRCROOT/Scripts\nexport scriptConfigPath=\"$scriptPath/.scriptConfig.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\n\n# 文件夹自动排序\nexport enableAutoGroupSortByName=1\n\n# 特定注释高亮\nexport enableCodeCommentsHighlight=1\nexport codeCommentsHighlightKeywords=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\n# 跳过 /Frameworks/ 目录下的文件\nexport codeCommentsHighlightSkipFrameworks=1\n\n$scriptPath/MBAutoBuildScript.sh\n";
+			shellScript = "export scriptPath=\"${SRCROOT}/Scripts\"\nexport scriptConfigPath=\"$scriptPath/.scriptConfig.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\n\n# 文件夹自动排序\nexport enableAutoGroupSortByName=1\n\n# 特定注释高亮\nexport enableCodeCommentsHighlight=1\nexport codeCommentsHighlightKeywords=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\n# 跳过 /Frameworks/ 目录下的文件\nexport codeCommentsHighlightSkipFrameworks=1\n\n\"$scriptPath/MBAutoBuildScript.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
