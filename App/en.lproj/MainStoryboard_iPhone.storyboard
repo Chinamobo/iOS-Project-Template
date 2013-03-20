@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hf9-5r-cMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-496" y="-632"/>
+            <point key="canvasLocation" x="-458" y="-632"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="5">
