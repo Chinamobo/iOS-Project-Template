@@ -321,8 +321,8 @@
 		D544D75916F8A83A00F64000 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				D501EC8C16F8C3A40014F393 /* General */,
 				D544D8C016F8B0F000F64000 /* DataModel */,
+				D501EC8C16F8C3A40014F393 /* General */,
 				D544D75A16F8A83A00F64000 /* Supporting Files */,
 				D544D76216F8A83A00F64000 /* AppDelegate.h */,
 				D544D76316F8A83A00F64000 /* AppDelegate.m */,
