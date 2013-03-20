@@ -1,0 +1,15 @@
+[submodule "Frameworks/AFNetworking"]
+	path = Frameworks/AFNetworking
+	url = https://github.com/Chinamobo/AFNetworking.git
+[submodule "Frameworks/RFUI/Core"]
+	path = Frameworks/RFUI/Core
+	url = https://github.com/RFUI/Core.git
+[submodule "Frameworks/RFUI/RFSegue"]
+	path = Frameworks/RFUI/RFSegue
+	url = https://github.com/RFUI/RFSegue.git
+[submodule "Frameworks/RFUI/Alpha"]
+	path = Frameworks/RFUI/Alpha
+	url = https://github.com/RFUI/Alpha.git
+[submodule "Frameworks/JSONModel"]
+	path = Frameworks/JSONModel
+	url = https://github.com/Chinamobo/JSONModel.git

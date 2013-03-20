@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="iN0-l3-epB" customClass="MBRefreshHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="w51-IE-ozo">
+                    <rect key="frame" x="120" y="8" width="80" height="25"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="cKV-Ju-IZG"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载状态" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqo-Gw-i52">
+                    <rect key="frame" x="132" y="38" width="56" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上次刷新时间：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-PR-7ed">
+                    <rect key="frame" x="111" y="55" width="98" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table_refresh_indicator" translatesAutoresizingMaskIntoConstraints="NO" id="xpr-dT-IXF">
+                    <rect key="frame" x="30" y="27" width="12" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="CTQ-9u-7GT">
+                    <rect key="frame" x="30" y="28" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="CTQ-9u-7GT" secondAttribute="centerY" id="0YY-Fy-09n"/>
+                <constraint firstAttribute="centerX" secondItem="Pk7-PR-7ed" secondAttribute="centerX" id="2JH-mt-qnL"/>
+                <constraint firstAttribute="centerX" secondItem="w51-IE-ozo" secondAttribute="centerX" id="40v-5W-Dvu"/>
+                <constraint firstItem="CTQ-9u-7GT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="Czx-9L-f9G"/>
+                <constraint firstItem="xpr-dT-IXF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="ePL-dJ-u2N"/>
+                <constraint firstAttribute="centerY" secondItem="xpr-dT-IXF" secondAttribute="centerY" constant="1" id="fr8-V2-lg5"/>
+                <constraint firstItem="w51-IE-ozo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jOb-UR-6lg"/>
+                <constraint firstItem="Pk7-PR-7ed" firstAttribute="top" secondItem="dqo-Gw-i52" secondAttribute="bottom" id="qNu-J3-7Y8"/>
+                <constraint firstItem="dqo-Gw-i52" firstAttribute="top" secondItem="w51-IE-ozo" secondAttribute="bottom" constant="5" id="shy-fU-3xy"/>
+                <constraint firstAttribute="centerX" secondItem="dqo-Gw-i52" secondAttribute="centerX" id="wlp-pI-fk8"/>
+                <constraint firstAttribute="bottom" secondItem="Pk7-PR-7ed" secondAttribute="bottom" constant="3" id="xPq-jC-cLE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="CTQ-9u-7GT" id="OC1-ab-Fg6"/>
+                <outlet property="indicatorImageView" destination="xpr-dT-IXF" id="680-0p-MbC"/>
+                <outlet property="lastTimeLabel" destination="Pk7-PR-7ed" id="kUA-Nk-eLH"/>
+                <outlet property="statusLabel" destination="dqo-Gw-i52" id="2iV-dI-azn"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo_refresh" width="80" height="25"/>
+        <image name="table_refresh_indicator" width="12" height="20"/>
+    </resources>
+</document>
