@@ -958,7 +958,7 @@
 		D544D78F16F8A83B00F64000 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/${PROJECT_NAME:rfc1034identifier}.app/${PROJECT_NAME:rfc1034identifier}";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -975,7 +975,7 @@
 		D544D79016F8A83B00F64000 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/${PROJECT_NAME:rfc1034identifier}.app/${PROJECT_NAME:rfc1034identifier}";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
