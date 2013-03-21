@@ -1,7 +1,7 @@
 #! /bin/sh
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
 
-echo "MBAutoBuildScript 0.2.1"
+echo "MBAutoBuildScript 0.2.2"
 echo "-----------------------"
 
 # 文件夹自动排序
@@ -42,6 +42,15 @@ if [ $enableAutoBuildCount = 1 ]; then
 		else
 			echo "错误：找不到 Info.plist 中的 CFBundleVersion"
 		fi
+	fi
+fi
+
+# 提醒修改产品名
+if [[ $enableChangeProductNameRemind = 1 && $PROJECT = "App" ]]; then
+	if [ "$USER" != "BB9z" ]; then
+		projectFilePath="${SRCROOT}/${PROJECT}.xcodeproj"
+		echo "$projectFilePath:0:TODO:你必须先给项目改名" | perl -p -e "s/TODO:/ \$1/"
+		exit 2
 	fi
 fi
 
