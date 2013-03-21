@@ -41,8 +41,9 @@
 
 @end
 
-NSString *const APIURLTypeLogin = @"Login";
+static NSString *const APIURLTypeLogin = @"Login";
 
-NSString *const UDkUserName = @"User Name";
-NSString *const UDkUserPass = @"User Password";
-NSString *const UDkUserRemeberPass = @"User Password Remeber";
+extern NSString *const UDkUserName;
+extern NSString *const UDkUserPass;
+extern NSString *const UDkUserRemeberPass;
+

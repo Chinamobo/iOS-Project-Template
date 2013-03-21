@@ -1,4 +1,5 @@
 
+#import "debug.h"
 #import "API.h"
 
 #import "AFHTTPRequestOperationLogger.h"
@@ -11,7 +12,6 @@
 NSString *const UDkLastUpdateCheckTime = @"Last Update Check Time";
 NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 
-#define DebugAPIUpdateForceAutoUpdate 0
 #define APIEnableOfflineLogin 1
 
 @interface API ()
@@ -29,7 +29,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     static NSString *_macAddress = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _macAddress =  [UIDevice macAddress];
+        _macAddress = (DebugAPIEnableTestProfile)? DebugAPITestProfileMacAddress : [UIDevice macAddress];
     });
 	return _macAddress;
 }
@@ -149,13 +149,21 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 
 #pragma mark - 具体业务
 - (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback {
+    // 注意：不是每个流程无 callback 都直接返回，因为登录操作无回调无意义所以直接返回了
     if (!callback) return;
     
-    NSString *userName = name;
+    if (!DebugAPIEnableTestProfile) {
+        RFAssert(name, @"用户名不能为空");
+        name = @"";
+        RFAssert(pass, @"密码不能为空");
+        pass = @"";
+    }
+    
+    NSString *userName = (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name;
     if (self.isNetworkReachable) {        
         [self postType:APIURLTypeLogin parameters:@{
              @"login" : userName,
-             @"password" : pass,
+             @"password" : (DebugAPITestProfileName)? DebugAPITestProfilePassword : pass,
              @"mac_address" : self.macAddress
          } success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSDictionary *info = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
@@ -188,3 +196,8 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 }
 
 @end
+
+#pragma mark - 管理的 User Default key 定义
+NSString *const UDkUserName = @"User Name";
+NSString *const UDkUserPass = @"User Password";
+NSString *const UDkUserRemeberPass = @"User Password Remeber";
