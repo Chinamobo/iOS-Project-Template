@@ -64,7 +64,7 @@
         NSInferMappingModelAutomaticallyOption : @YES
         };
         if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.dataBaseURL options:option error:&error]) {
-            dout_error(@"%@", error)
+            RFAssert(!error, @"数据模型不兼容了：%@", error);
         }
     }
     return _persistentStoreCoordinator;

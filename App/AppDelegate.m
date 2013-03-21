@@ -1,13 +1,15 @@
 
 #import "AppDelegate.h"
 #import "DataModel/DataStack.h"
-
-
+#import "API/API.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // TODO: 如有可能，需要把模块初始化置后
     [DataStack sharedInstance];
+    [API sharedInstance];
     
     return YES;
 }
