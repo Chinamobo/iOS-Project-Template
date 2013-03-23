@@ -90,6 +90,7 @@
 		D544D8C616F8B15400F64000 /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D544D8C516F8B15400F64000 /* DataStack.m */; };
 		D555D5C416FB4A5100885336 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = D555D5C316FB4A5100885336 /* API.m */; };
 		D555D5C616FB4CAF00885336 /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = D555D5C516FB4CAF00885336 /* config.plist */; };
+		D5FB5DA416FDE7E7002F7742 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB5DA316FDE7E7002F7742 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 		D555D5C216FB4A5100885336 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = API/API.h; sourceTree = "<group>"; };
 		D555D5C316FB4A5100885336 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API.m; path = API/API.m; sourceTree = "<group>"; };
 		D555D5C516FB4CAF00885336 /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		D5FB5DA316FDE7E7002F7742 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 				D5348B2B16F8B7170059AFB4 /* CoreGraphics.framework in Frameworks */,
 				D544D75616F8A83A00F64000 /* Foundation.framework in Frameworks */,
 				D5348B3A16F8B7D80059AFB4 /* MobileCoreServices.framework in Frameworks */,
+				D5FB5DA416FDE7E7002F7742 /* QuartzCore.framework in Frameworks */,
 				D5348B3B16F8B7D80059AFB4 /* SystemConfiguration.framework in Frameworks */,
 				D544D75416F8A83A00F64000 /* UIKit.framework in Frameworks */,
 			);
@@ -316,6 +319,7 @@
 				D544D75716F8A83A00F64000 /* CoreGraphics.framework */,
 				D544D75516F8A83A00F64000 /* Foundation.framework */,
 				D544D8BE16F8AE7E00F64000 /* MobileCoreServices.framework */,
+				D5FB5DA316FDE7E7002F7742 /* QuartzCore.framework */,
 				D544D77A16F8A83A00F64000 /* SenTestingKit.framework */,
 				D544D8BC16F8AE6300F64000 /* SystemConfiguration.framework */,
 				D544D75316F8A83A00F64000 /* UIKit.framework */,
