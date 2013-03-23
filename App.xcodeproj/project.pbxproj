@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		D501EC8616F8BBDC0014F393 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D501EC8516F8BBDC0014F393 /* RootNavigationController.m */; };
 		D5348B2B16F8B7170059AFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75716F8A83A00F64000 /* CoreGraphics.framework */; };
-		D5348B3A16F8B7D80059AFB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BE16F8AE7E00F64000 /* MobileCoreServices.framework */; };
-		D5348B3B16F8B7D80059AFB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BC16F8AE6300F64000 /* SystemConfiguration.framework */; };
+		D5348B3A16F8B7D80059AFB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BE16F8AE7E00F64000 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D5348B3B16F8B7D80059AFB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BC16F8AE6300F64000 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D544D75416F8A83A00F64000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75316F8A83A00F64000 /* UIKit.framework */; };
 		D544D75616F8A83A00F64000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75516F8A83A00F64000 /* Foundation.framework */; };
 		D544D75E16F8A83A00F64000 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D544D75C16F8A83A00F64000 /* InfoPlist.strings */; };
