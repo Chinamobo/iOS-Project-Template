@@ -62,7 +62,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
         // 设置属性
         
         // 配置网络
-        if (DEBUG) {
+        if (RFDEBUG) {
             [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
         }
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
