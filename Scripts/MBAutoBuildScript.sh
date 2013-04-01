@@ -45,6 +45,14 @@ if [ $enableAutoBuildCount = 1 ]; then
 	fi
 fi
 
+# 代码审查强制立即修改
+findFixRightNow=$(find "${SRCROOT}" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \))
+fixRightNowList=$(egrep --with-filename --line-number --only-matching " ($codeReviewFixRightNowKeywords).*\$" $findFixRightNow)
+if [[ -n $fixRightNowList ]]; then
+	echo $fixRightNowList
+	exit 2
+fi
+
 # 提醒修改产品名
 if [[ $enableChangeProductNameRemind = 1 && $PROJECT = "App" ]]; then
 	if [ "$USER" != "BB9z" ]; then
