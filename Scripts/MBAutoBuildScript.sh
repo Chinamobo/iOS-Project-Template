@@ -57,7 +57,7 @@ fi
 if [[ $enableChangeProductNameRemind = 1 && $PROJECT = "App" ]]; then
 	if [ "$USER" != "BB9z" ]; then
 		projectFilePath="${SRCROOT}/${PROJECT}.xcodeproj"
-		echo "$projectFilePath:0:TODO:你必须先给项目改名" | perl -p -e "s/TODO:/ \$1/"
+		echo "$projectFilePath:0: TODO:你必须先给项目改名"
 		exit 2
 	fi
 fi
