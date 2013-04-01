@@ -29,7 +29,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     static NSString *_macAddress = nil;
     static dispatch_once_t oncePredicate;
     dispatch_once(&oncePredicate, ^{
-        _macAddress = (DebugAPIEnableTestProfile)? DebugAPITestProfileMacAddress : [UIDevice macAddress];
+        _macAddress = (DebugAPIEnableTestProfile)? DebugAPITestProfileMacAddress : [[UIDevice currentDevice] macAddress];
     });
 	return _macAddress;
 }

@@ -4,7 +4,8 @@
  
     接口地址在 config.plist 中配置
     尽量不要直接使用 AFHTTPClient 或更低级的 request 对象
-    多使用，封装具体业务
+    多用封装好的业务方法
+    如果有像UserID这种东西，让API来管理，不要在外面获取再传进来
  */
 
 #import "DataStack.h"
