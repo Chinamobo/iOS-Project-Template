@@ -2,7 +2,7 @@
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
 # Maintained by BB9z (https://github.com/BB9z)
 
-echo "MBAutoBuildScript 0.2.5"
+echo "MBAutoBuildScript 0.3.0"
 echo "-----------------------"
 
 # allSourceFilePathList=$(find "${SRCROOT}" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \))
