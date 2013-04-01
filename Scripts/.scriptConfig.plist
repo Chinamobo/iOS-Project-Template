@@ -16,7 +16,10 @@
 		<key>AutoBuildCount</key>
 		<dict>
 			<key>Users</key>
-			<dict/>
+			<dict>
+				<key>BB9z</key>
+				<integer>0</integer>
+			</dict>
 		</dict>
 	</dict>
 </dict>

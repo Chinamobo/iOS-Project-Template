@@ -1,7 +1,8 @@
 #! /bin/sh
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
+# Maintained by BB9z (https://github.com/BB9z)
 
-echo "MBAutoBuildScript 0.2.3"
+echo "MBAutoBuildScript 0.2.5"
 echo "-----------------------"
 
 # allSourceFilePathList=$(find "${SRCROOT}" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \))
@@ -20,9 +21,9 @@ fi
 # 特定注释高亮
 if [ $enableCodeCommentsHighlight = 1 ]; then
 	if [ $codeCommentsHighlightSkipFrameworks = 1 ]; then
-		find "$SRCROOT" \( -not -path "${SRCROOT}/Frameworks/*" -and \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($codeCommentsHighlightKeywords).*\$" | perl -p -e "s/($codeCommentsHighlightKeywords)/ warning: \$1/"
+		find "$SRCROOT" \( -not -path "${SRCROOT}/Frameworks/*" -and \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "// ($codeCommentsHighlightKeywords):.*\$" | perl -p -e "s/\/\/ ($codeCommentsHighlightKeywords):/ warning: \$1/"
 	else
-		find "$SRCROOT" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($codeCommentsHighlightKeywords).*\$" | perl -p -e "s/($codeCommentsHighlightKeywords)/ warning: \$1/"
+		find "$SRCROOT" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "// ($codeCommentsHighlightKeywords):.*\$" | perl -p -e "s/\/\/ ($codeCommentsHighlightKeywords):/ warning: \$1/"
 	fi
 fi
 
@@ -45,11 +46,19 @@ if [ $enableAutoBuildCount = 1 ]; then
 		else
 			echo "错误：找不到 Info.plist 中的 CFBundleVersion"
 		fi
+	else
+		echo "跳过版本设置"
 	fi
 fi
 
 # 代码审查强制立即修改
-find "$SRCROOT" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching " ($codeReviewFixRightNowKeywords).*\$" | perl -p -e "s/ ($codeReviewFixRightNowKeywords)/: \$1/"
+# USER="User for test"
+codeReviewCommandList=$(find "$SRCROOT" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "// ($codeReviewFixRightNowKeywords)\(($USER)\).*\$")
+if [[ -n "$codeReviewCommandList" ]]; then
+	echo "请你（$USER）立即对以下代码进行修改"
+	echo "$codeReviewCommandList" | perl -p -e "s/\/\/ ($codeReviewFixRightNowKeywords)\(($USER)\)/: CodeReview评价\(\$1\)/"
+	exit 2
+fi
 
 # 提醒修改产品名
 if [[ $enableChangeProductNameRemind = 1 && $PROJECT = "App" ]]; then
