@@ -771,8 +771,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
+			shellScript = "# 0.2.3\n\nexport scriptPath=\"$SRCROOT/Scripts\"\nexport scriptConfigPath=\"$scriptPath/.scriptConfig.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\nexport autoBuildCountUseDataFormat=0\nexport autoBuildCountDataFormat=\"+%y%m%d\"\n\n# 文件夹自动排序\nexport enableAutoGroupSortByName=1\n\n# 特定注释高亮\nexport enableCodeCommentsHighlight=1\nexport codeCommentsHighlightKeywords=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\n# 跳过 /Frameworks/ 目录下的文件\nexport codeCommentsHighlightSkipFrameworks=1\n\n# 提醒修改产品名\nexport enableChangeProductNameRemind=1\n\n# 代码审查强制立即修改\nexport codeReviewFixRightNowKeywords=\"FUCK:|FIXRIGHTNOW:\"\n\n\"$scriptPath/MBAutoBuildScript.sh\"\n";
 			showEnvVarsInLog = 0;
-			shellScript = "export scriptPath=\"$SRCROOT/Scripts\"\nexport scriptConfigPath=\"$scriptPath/.scriptConfig.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\nexport autoBuildCountUseDataFormat=0\nexport autoBuildCountDataFormat=\"+%y%m%d\"\n\n# 文件夹自动排序\nexport enableAutoGroupSortByName=1\n\n# 特定注释高亮\nexport enableCodeCommentsHighlight=1\nexport codeCommentsHighlightKeywords=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\n# 跳过 /Frameworks/ 目录下的文件\nexport codeCommentsHighlightSkipFrameworks=1\n\n# 提醒修改产品名\nexport enableChangeProductNameRemind=1\n\n# 代码审查强制立即修改\nexport codeReviewFixRightNowKeywords=\"FUCK:|FIXRIGHTNOW:\"\n\n\"$scriptPath/MBAutoBuildScript.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

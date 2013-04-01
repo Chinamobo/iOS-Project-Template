@@ -1,8 +1,11 @@
 #! /bin/sh
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
 
-echo "MBAutoBuildScript 0.2.2"
+echo "MBAutoBuildScript 0.2.3"
 echo "-----------------------"
+
+# allSourceFilePathList=$(find "${SRCROOT}" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \))
+# echo "$allSourceFilePathList"
 
 # 文件夹自动排序
 if [ $enableAutoGroupSortByName = 1 ]; then
@@ -46,12 +49,7 @@ if [ $enableAutoBuildCount = 1 ]; then
 fi
 
 # 代码审查强制立即修改
-findFixRightNow=$(find "${SRCROOT}" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \))
-fixRightNowList=$(egrep --with-filename --line-number --only-matching " ($codeReviewFixRightNowKeywords).*\$" $findFixRightNow)
-if [[ -n $fixRightNowList ]]; then
-	echo $fixRightNowList
-	exit 2
-fi
+find "$SRCROOT" \( -name "*.h" -or -name "*.m" -or -name "*.mm" -or -name "*.c" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching " ($codeReviewFixRightNowKeywords).*\$" | perl -p -e "s/ ($codeReviewFixRightNowKeywords)/: \$1/"
 
 # 提醒修改产品名
 if [[ $enableChangeProductNameRemind = 1 && $PROJECT = "App" ]]; then
