@@ -20,15 +20,16 @@ Chinamobo iOS 项目模版
 * 编译脚本辅助系统，特色：
   - 自动编译计数，为了减少冲突，为每个独立用户分别纪录编译数最终加和。也可设置按日期格式命名；
   - 项目文件中文件自动按名称排序，强制按统一规则组织目录，也可减少合并冲突；
-  - 特定注释高亮，Xcode 没有 TODO 列表？那是过去了。可指定忽略第三方库中的 TODO；
+  - 特定注释高亮，Xcode 没有 TODO 列表？那是过去了。可指定忽略第三方库（必须放在 Frameworks 目录下）中的 TODO；
   - 强制修改产品名，clone 下项目后不改名就开发了？必须改；
+  - 代码审查强制立即修改，使用方式跟高亮注释差不多，但必须指定给某个人，指定的用户必须移除注释才能通过编译。语法：`// KEYWORD(用户名): 留言内容`；
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
   - 支持配置开关。
   
 * 引入定制的 AFNetworking submodule，特色：
   - 传输最小化，clone 下来只有几百KB；
   - 默认包含 SystemConfiguration，MobileCoreServices 两个 Frameworks，而且不必将其加入 pch 文件中；
-  - 加入 AFHTTPRequestOperationLogger，便于查看做了哪些请求。
+  - 集成 AFHTTPRequestOperationLogger，便于查看做了哪些请求。
   
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue submodule；
@@ -52,5 +53,5 @@ Chinamobo iOS 项目模版
 * 添加了最常见的二进制 Frameworks：CoreData、QuartzCore；
 * 添加全局异常断点、全局编译 scheme；
 * iOS 5.0 的 Deployment Target。Storyboard 版本设置为 iOS 5，关闭 Autolayout；
-* API 模块，不细说了。
+* API 模块，内容很多不细说了。
   
