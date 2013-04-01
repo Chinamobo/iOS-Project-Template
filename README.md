@@ -23,6 +23,7 @@ Chinamobo iOS 项目模版
   - 特定注释高亮，Xcode 没有 TODO 列表？那是过去了。可指定忽略第三方库中的 TODO；
   - 强制修改产品名，clone 下项目后不改名就开发了？必须改；
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
+  - 
   - 支持配置开关。
   
 * 引入定制的 AFNetworking submodule，特色：
@@ -33,15 +34,18 @@ Chinamobo iOS 项目模版
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue submodule；
   - pch 文件调整；
-  - 为不同编译模式添加调试开关定义；
+  - 为不同编译模式添加调试开关定义。
+  
+* 国际化定制：
+  - 除增加默认的 Localizable.strings 外，加入 InfoPlist.strings；
+  - 本地化版本去掉英文版本，用 Base 版本替代；
+  - CFBundleDevelopmentRegion 设为 zh_CN。
   
 * 修复 Xcode 默认模版修改产品名后默认的单元测试路径错误；
 * Prefix.pch 和 Info.plist 路径简化；
 * 增加 debug.h，控制开发调试行为；
 * 代码签名规则简化，Release 使用发布 Profile；
 * 添加仓库级别的 git 忽略规则；
-* 项目国际化设置增加简体中文；
-* Storyboard 默认本地化语言改为简体中文；
 * 应用起始改为 RootNavigationController，隐藏导航栏；
 * 增加默认的 Core Data Model 及其 Stack；
 * 全套应用 Icon、Launch Image 及 Info.plist 相应定义，只需删除不需要的；
