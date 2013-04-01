@@ -23,7 +23,6 @@ Chinamobo iOS 项目模版
   - 特定注释高亮，Xcode 没有 TODO 列表？那是过去了。可指定忽略第三方库中的 TODO；
   - 强制修改产品名，clone 下项目后不改名就开发了？必须改；
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
-  - 
   - 支持配置开关。
   
 * 引入定制的 AFNetworking submodule，特色：
@@ -49,6 +48,7 @@ Chinamobo iOS 项目模版
 * 应用起始改为 RootNavigationController，隐藏导航栏；
 * 增加默认的 Core Data Model 及其 Stack；
 * 全套应用 Icon、Launch Image 及 Info.plist 相应定义，只需删除不需要的；
+* Info.plist 中增加 iTunes 文件共享字段，默认关闭；
 * 添加了最常见的二进制 Frameworks：CoreData、QuartzCore；
 * 添加全局异常断点、全局编译 scheme；
 * iOS 5.0 的 Deployment Target。Storyboard 版本设置为 iOS 5，关闭 Autolayout；
