@@ -11,13 +11,13 @@
 #import "DataStack.h"
 #import "AFNetworking.h"
 
-@interface API : NSObject
+@interface API : AFHTTPClient
+
 + (API *)sharedInstance;
 
 #pragma mark - 状态与通用流程
 @property (readonly, nonatomic, getter = isNetworkReachable) BOOL networkReachable;
 @property (readonly, nonatomic) NSString *macAddress;
-@property (readonly, nonatomic) NSDictionary *configInfo;
 
 // 请求执行通用的更新流程
 - (void)requestUpdate;
@@ -30,21 +30,9 @@
 - (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback;
 
 
-#pragma mark - 直接使用网络请求
-- (void)getType:(NSString *)APIURLType parameters:(NSDictionary *)parameters success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
-- (void)postType:(NSString *)APIURLType parameters:(NSDictionary *)parameters success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
-
-// 更底层一些的
-@property (RF_STRONG, nonatomic) AFHTTPClient *core;
-- (NSString *)APIURLPathForType:(NSString *)typeString;
-
 
 @end
 
-static NSString *const APIURLTypeLogin = @"Login";
-
+// 暴漏给外部的常量
 extern NSString *const UDkUserName;
-extern NSString *const UDkUserPass;
-extern NSString *const UDkUserRemeberPass;
 

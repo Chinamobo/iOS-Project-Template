@@ -1,6 +1,7 @@
 
 #import "debug.h"
 #import "API.h"
+#import "APIInterface.h"
 
 #import "AFHTTPRequestOperationLogger.h"
 
@@ -9,14 +10,9 @@
 #import "UIDevice+RFKit.h"
 #import "UIAlertView+RFKit.h"
 
-NSString *const UDkLastUpdateCheckTime = @"Last Update Check Time";
-NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
-
-#define APIEnableOfflineLogin 1
 
 @interface API ()
 <UIAlertViewDelegate>
-@property (RF_STRONG, nonatomic) NSDictionary *configInfo;
 
 @property (readwrite, nonatomic) BOOL updating;
 - (void)doUpdate;
@@ -25,6 +21,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 
 @implementation API
 
+#pragma mark - Property
 - (NSString *)macAddress {
     static NSString *_macAddress = nil;
     static dispatch_once_t oncePredicate;
@@ -34,16 +31,8 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 	return _macAddress;
 }
 
-- (NSDictionary *)configInfo {
-    if (!_configInfo) {
-        NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"]];
-        _configInfo = config[@"API"];
-    }
-    return _configInfo;
-}
-
 - (BOOL)isNetworkReachable {
-    return (self.core.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable)? : NO;
+    return (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable)? : NO;
 }
 
 #pragma mark -
@@ -57,25 +46,26 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 }
 
 - (id)init {
-    self = [super init];
+    self = [self initWithBaseURL:[NSURL URLWithString:APIURLDeployBase]];
     if (self) {
         // 设置属性
+        self.parameterEncoding = AFFormURLParameterEncoding;
         
         // 配置网络
         if (RFDEBUG) {
             [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
+            [AFHTTPRequestOperationLogger sharedLogger].level = AFLoggerLevelFatal;
         }
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-        _core = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:self.configInfo[@"Deploy Base"]]];
         
         // 设置环境监听
-        __weak __typeof__(self) selfRef = self;
-        [_core setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        __weak __typeof(&*self)weakSelf = self;
+        [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
             if (status == AFNetworkReachabilityStatusReachableViaWiFi) {
-                if (!selfRef.hasAutoSynced) {
+                if (!weakSelf.hasAutoSynced) {
 
-                    [selfRef autoUpdate];
-                    selfRef.hasAutoSynced = NO;
+                    [weakSelf autoUpdate];
+                    weakSelf.hasAutoSynced = NO;
                 }
             }
         }];
@@ -86,13 +76,14 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     return self;
 }
 
+#pragma mark - 通用流程
+// API 初始化后的检查
 - (void)contextCheck {
     @autoreleasepool {
-
+        
     }
 }
 
-#pragma mark -
 - (void)requestUpdate {
     if (!self.isUpdating) {
         [self doUpdate];
@@ -103,8 +94,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     NSDate *lastUpdateCheckTime = [[NSUserDefaults standardUserDefaults] objectForKey:UDkLastUpdateCheckTime];
     
     if (lastUpdateCheckTime && !DebugAPIUpdateForceAutoUpdate) {
-        NSTimeInterval updateCheckInterval = [self.configInfo doubleForKey:CPkAutoUpdateCheckInterval];
-        if (fabs([lastUpdateCheckTime timeIntervalSinceNow]) < updateCheckInterval) return;
+        if (fabs([lastUpdateCheckTime timeIntervalSinceNow]) < APIConfigAutoUpdateCheckInterval) return;
     }
     
     if (self.isNetworkReachable) {
@@ -124,7 +114,6 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     // TODO: 更新操作
 }
 
-#pragma mark - 更新结束
 /// 执行更新后的工作，需保证必定能被调用
 - (void)afterUpdate {
     dout_info(@"更新完毕")
@@ -132,22 +121,8 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     self.updating = NO;
 }
 
-#pragma mark - 工具
-- (NSString *)APIURLPathForType:(NSString *)typeString {
-    NSString *path = self.configInfo[@"URLs"][typeString];
-    RFAssert(path, @"没有Type为\"%@\"的API路径", typeString);
-    return path;
-}
-
-- (void)getType:(NSString *)APIURLType parameters:(NSDictionary *)parameters success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure {
-    [self.core getPath:[self APIURLPathForType:APIURLType] parameters:parameters success:success failure:failure];
-}
-
-- (void)postType:(NSString *)APIURLType parameters:(NSDictionary *)parameters success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure {
-    [self.core postPath:[self APIURLPathForType:APIURLType] parameters:parameters success:success failure:failure];
-}
-
 #pragma mark - 具体业务
+// TODO: 用户信息存取，而且直接放UserDefault极不安全
 - (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback {
     // 注意：不是每个流程无 callback 都直接返回，因为登录操作无回调无意义所以直接返回了
     if (!callback) return;
@@ -160,8 +135,8 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     }
     
     NSString *userName = (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name;
-    if (self.isNetworkReachable) {        
-        [self postType:APIURLTypeLogin parameters:@{
+    if (self.isNetworkReachable) {
+        [self postPath:APIURLLogin parameters:@{
              @"login" : userName,
              @"password" : (DebugAPITestProfileName)? DebugAPITestProfilePassword : pass,
              @"mac_address" : self.macAddress
@@ -180,7 +155,7 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
     }
     else {
         // 离线登陆
-        if (APIEnableOfflineLogin) {
+        if (APIConfigOfflineLoginEnabled) {
             if ([[[NSUserDefaults standardUserDefaults] stringForKey:UDkUserName] isEqualToString:name]
                 && [[[NSUserDefaults standardUserDefaults] stringForKey:UDkUserPass] isEqualToString:pass]) {
                 callback(YES, @"OK");
@@ -197,7 +172,3 @@ NSString *const CPkAutoUpdateCheckInterval = @"Auto Update Check Interval";
 
 @end
 
-#pragma mark - 管理的 User Default key 定义
-NSString *const UDkUserName = @"User Name";
-NSString *const UDkUserPass = @"User Password";
-NSString *const UDkUserRemeberPass = @"User Password Remeber";
