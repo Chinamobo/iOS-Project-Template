@@ -32,7 +32,7 @@ Chinamobo iOS 项目模版
   - 集成 AFHTTPRequestOperationLogger，便于查看做了哪些请求。
   
 * RFUI 集成：
-  - 引入 RFUI/Core、RFSegue submodule；
+  - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
   - pch 文件调整；
   - 为不同编译模式添加调试开关定义。
   
