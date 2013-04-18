@@ -75,10 +75,9 @@
 
 @implementation NSManagedObjectContext (DataStack)
 - (BOOL)save {
-    NSError *e = nil;
-    [self save:&e];
-    if (e) {
-        dout_error(@"%@", e);
+    NSError __autoreleasing *e = nil;
+    if (![self save:&e]) {
+        dout_error(@"ManagedObjectContext saved failed: %@", e);
         return NO;
     }
     return YES;

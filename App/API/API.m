@@ -32,7 +32,8 @@
 }
 
 - (BOOL)isNetworkReachable {
-    return (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable)? : NO;
+    if (DebugAPIUsingLocalTestData) return YES;
+    return (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable)? YES : NO;
 }
 
 #pragma mark -
@@ -61,11 +62,10 @@
         // 设置环境监听
         __weak __typeof(&*self)weakSelf = self;
         [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            if (status == AFNetworkReachabilityStatusReachableViaWiFi) {
+            if (status == AFNetworkReachabilityStatusReachableViaWiFi || DebugAPIUsingLocalTestData) {
                 if (!weakSelf.hasAutoSynced) {
-
                     [weakSelf autoUpdate];
-                    weakSelf.hasAutoSynced = NO;
+                    weakSelf.hasAutoSynced = YES;
                 }
             }
         }];
@@ -168,6 +168,20 @@
             callback(NO, @"无网络连接");
         }
     }
+}
+
+#pragma mark - Debug method
+- (id)localTestJSONObjectFromAPIURL:(NSString *)APIURL {
+    NSString *fileName = [APIURL lastPathComponent];
+    NSParameterAssert(fileName);
+    NSString *localFilePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json" inDirectory:@"TestData"];
+    NSInputStream *fileStream = [NSInputStream inputStreamWithFileAtPath:localFilePath];
+    NSError __autoreleasing *e = nil;
+    [fileStream open];
+    id obj = [NSJSONSerialization JSONObjectWithStream:fileStream options:NSJSONReadingAllowFragments error:&e];
+    [fileStream close];
+    if (e) dout_error(@"%@", e);
+    return obj;
 }
 
 @end
