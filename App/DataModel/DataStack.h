@@ -13,8 +13,11 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+- (BOOL)save;
+
 @end
 
 @interface NSManagedObjectContext (DataStack)
-- (BOOL)save;
+- (BOOL)save DEPRECATED_ATTRIBUTE;
 @end

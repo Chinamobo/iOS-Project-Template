@@ -19,10 +19,10 @@
     self = [super init];
     if (self) {
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillTerminateNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [self.managedObjectContext save];
+            [self save];
         }];
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
-            [self.managedObjectContext save];
+            [self save];
         }];
     }
     
@@ -34,6 +34,14 @@
     return [baseURL URLByAppendingPathComponent:@".cache"];
 }
 
+- (BOOL)save {
+    NSError __autoreleasing *e = nil;
+    if (![self.managedObjectContext save:&e]) {
+        dout_error(@"ManagedObjectContext saved failed: %@", e);
+        return NO;
+    }
+    return YES;
+}
 
 #pragma mark - Core Data Stack
 - (NSManagedObjectContext *)managedObjectContext {
