@@ -13,6 +13,7 @@ echo $CodeCommentsHighlightKeywords
 if [ $EnableAutoGroupSortByName = "YES" ]; then
 	if [ -n "$(find "$SRCROOT" -name project.pbxproj -newer "$timeFile")" ]; then
 		echo "整理 project.pbxproj"
+		echo "你可能需要重新编译"
 		perl -w "$ScriptPath/sort-Xcode-project-file.pl" "$PROJECT_FILE_PATH"
 	else
 		echo "跳过 project.pbxproj 整理"
