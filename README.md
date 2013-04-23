@@ -42,6 +42,18 @@ Chinamobo iOS 项目模版
   - 本地化版本去掉英文版本，用 Base 版本替代；
   - CFBundleDevelopmentRegion 设为 zh_CN。
   
+* 更严格的编译警告配置，开启：
+  - GCC_WARN_SHADOW
+  - GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED
+  - GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS
+  - GCC_WARN_ABOUT_MISSING_PROTOTYPES
+  - GCC_WARN_ABOUT_MISSING_NEWLINE
+  - GCC_WARN_SIGN_COMPARE
+  - GCC_WARN_UNKNOWN_PRAGMAS
+  - GCC_WARN_UNUSED_FUNCTION
+  - GCC_WARN_UNUSED_LABEL
+  - CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES
+
 * 修复 Xcode 默认模版修改产品名后单元测试路径错误；
 * Prefix.pch 和 Info.plist 路径简化；
 * 增加 debug.h，控制开发调试行为；
