@@ -104,6 +104,13 @@
 			remoteGlobalIDString = D544D74F16F8A83A00F64000;
 			remoteInfo = App;
 		};
+		D5E35E7017261606005F9AE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D544D74816F8A83A00F64000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5E35E6C172613DA005F9AE4;
+			remoteInfo = MBBuildSystem;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -683,6 +690,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		D5E35E6C172613DA005F9AE4 /* MBBuildSystem */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = D5E35E6F172613DA005F9AE4 /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */;
+			buildPhases = (
+			);
+			buildToolPath = ./MBAutoBuildScript.sh;
+			buildWorkingDirectory = "$(ScriptPath)";
+			dependencies = (
+			);
+			name = MBBuildSystem;
+			passBuildSettingsInEnvironment = 1;
+			productName = MBBuildSystem;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		D544D74F16F8A83A00F64000 /* App */ = {
 			isa = PBXNativeTarget;
@@ -696,6 +720,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D5E35E7117261606005F9AE4 /* PBXTargetDependency */,
 			);
 			name = App;
 			productName = App;
@@ -747,6 +772,7 @@
 			targets = (
 				D544D74F16F8A83A00F64000 /* App */,
 				D544D77816F8A83A00F64000 /* AppTests */,
+				D5E35E6C172613DA005F9AE4 /* MBBuildSystem */,
 			);
 		};
 /* End PBXProject section */
@@ -813,7 +839,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#! /bin/sh\n# 0.3.0\n# Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.\n\nexport scriptPath=\"$SRCROOT/Scripts\"\nexport scriptConfigPath=\"$scriptPath/.scriptConfig.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\nexport autoBuildCountUseDataFormat=0\nexport autoBuildCountDataFormat=\"+%y%m%d\"\n\n# 文件夹自动排序\nexport enableAutoGroupSortByName=1\n\n# 特定注释高亮\nexport enableCodeCommentsHighlight=1\nexport codeCommentsHighlightKeywords=\"TODO|FIXME|\\?\\?\\?|\\!\\!\\!\"\n# 跳过 /Frameworks/ 目录下的文件\nexport codeCommentsHighlightSkipFrameworks=1\n\n# 提醒修改产品名\nexport enableChangeProductNameRemind=1\n\n# 代码审查强制立即修改\nexport codeReviewFixRightNowKeywords=\"FUCK|FIXRIGHTNOW\"\n\n\"$scriptPath/MBAutoBuildScript.sh\"\n";
+			shellScript = "#! /bin/sh\n# BuildCount 0.4.0\n# Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.\n\nexport scriptPath=\"$SRCROOT/Scripts\"\nexport buildCountRecordFile=\"$scriptPath/BuildCountRecord.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\nexport autoBuildCountUseDataFormat=0\nexport autoBuildCountDataFormat=\"+%y%m%d\"\n\n\"$scriptPath/MBAutoBuildScript_BuildCount.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -838,6 +864,7 @@
 				D544D8A516F8ABFC00F64000 /* dout.m in Sources */,
 				D544D77316F8A83A00F64000 /* HomeViewController.m in Sources */,
 				D544D76016F8A83A00F64000 /* main.m in Sources */,
+				D5E35E5B17258571005F9AE4 /* Model.xcdatamodeld in Sources */,
 				D544D88C16F8ABFC00F64000 /* NSArray+RFKit.m in Sources */,
 				D544D88D16F8ABFC00F64000 /* NSBundle+RFKit.m in Sources */,
 				D544D88E16F8ABFC00F64000 /* NSDate+RFKit.m in Sources */,
@@ -878,7 +905,6 @@
 				D544D8A016F8ABFC00F64000 /* UIViewController+RFKit.m in Sources */,
 				D544D8A116F8ABFC00F64000 /* UIWebView+RFKit.m in Sources */,
 				D544D8A616F8ABFC00F64000 /* UncaughtExceptionHandler.m in Sources */,
-				D5E35E5B17258571005F9AE4 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +923,11 @@
 			isa = PBXTargetDependency;
 			target = D544D74F16F8A83A00F64000 /* App */;
 			targetProxy = D544D77E16F8A83A00F64000 /* PBXContainerItemProxy */;
+		};
+		D5E35E7117261606005F9AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5E35E6C172613DA005F9AE4 /* MBBuildSystem */;
+			targetProxy = D5E35E7017261606005F9AE4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1037,6 +1068,34 @@
 			};
 			name = Release;
 		};
+		D5E35E6D172613DA005F9AE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\?\\?\\?|\\!\\!\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = Debug;
+		};
+		D5E35E6E172613DA005F9AE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\?\\?\\?|\\!\\!\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1063,6 +1122,15 @@
 			buildConfigurations = (
 				D544D78F16F8A83B00F64000 /* Debug */,
 				D544D79016F8A83B00F64000 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5E35E6F172613DA005F9AE4 /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5E35E6D172613DA005F9AE4 /* Debug */,
+				D5E35E6E172613DA005F9AE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
