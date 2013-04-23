@@ -2,7 +2,7 @@
     API
     网络基础及接口封装
  
-    接口地址在 config.plist 中配置
+    接口地址在 APIInterface.h 中配置
     尽量不要直接使用 AFHTTPClient 或更低级的 request 对象
     多用封装好的业务方法
     如果有像UserID这种东西，让API来管理，不要在外面获取再传进来
