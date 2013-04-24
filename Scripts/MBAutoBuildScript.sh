@@ -6,8 +6,8 @@ echo "MBAutoBuildScript 0.4.0 "
 echo "Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved."
 echo "-----------------------"
 
+cd "$ScriptPath"
 timeFile=$"$ScriptPath/PreBuild.time"
-echo $CodeCommentsHighlightKeywords
 
 # 文件夹自动排序
 if [ $EnableAutoGroupSortByName = "YES" ]; then
