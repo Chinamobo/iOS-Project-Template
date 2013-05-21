@@ -28,14 +28,13 @@ Chinamobo iOS 项目模版
   - 支持配置开关。
   
 * 引入定制的 AFNetworking submodule，特色：
-  - 传输最小化，clone 下来只有几百KB；
+  - 精简了历史以便传输最小化，clone 下来只有几百KB；
   - 默认包含 SystemConfiguration，MobileCoreServices 两个 Frameworks，而且不必将其加入 pch 文件中；
-  - 集成 AFHTTPRequestOperationLogger，便于查看做了哪些请求。
+  - 集成 AFHTTPRequestOperationLogger，便于调试网络请求。
   
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
-  - pch 文件调整；
-  - 为不同编译模式添加调试开关定义。
+  - pch 文件调整。
   
 * 国际化定制：
   - 除增加默认的 Localizable.strings 外，加入 InfoPlist.strings；
@@ -53,10 +52,14 @@ Chinamobo iOS 项目模版
   - GCC_WARN_UNUSED_FUNCTION
   - GCC_WARN_UNUSED_LABEL
   - CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES
+  
+* 调试增强：
+  - 定制了不同模式的调试开关；
+  - 开启 dout 开关：DOUT_FALG_TRACE、DOUT_ASSERT_AT_ERROR；
+  - 增加 debug.h，专用于控制业务代码的调试行为；
 
 * 修复 Xcode 默认模版修改产品名后单元测试路径错误；
 * Prefix.pch 和 Info.plist 路径简化；
-* 增加 debug.h，控制开发调试行为；
 * 代码签名规则简化，Release 使用发布 Profile；
 * 添加仓库级别的 git 忽略规则；
 * 应用起始改为 RootNavigationController，隐藏导航栏；
