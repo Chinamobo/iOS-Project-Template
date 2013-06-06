@@ -17,7 +17,3 @@
 - (BOOL)save;
 
 @end
-
-@interface NSManagedObjectContext (DataStack)
-- (BOOL)save DEPRECATED_ATTRIBUTE;
-@end

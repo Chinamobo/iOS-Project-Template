@@ -1,5 +1,6 @@
 
 #import "DataStack.h"
+#import "debug.h"
 
 @interface DataStack ()
 @end
@@ -30,8 +31,17 @@
 }
 
 - (NSURL *)dataBaseURL {
-    NSURL *baseURL = [[[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory inDomains:NSUserDomainMask] firstObject];
-    return [baseURL URLByAppendingPathComponent:@".cache"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *directoryURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] firstObject];
+    BOOL isDirectory = YES;
+    if (![fileManager fileExistsAtPath:[directoryURL path] isDirectory:&isDirectory]) {
+        RFAssert(isDirectory, @"指定目录实际是文件");
+        NSError __autoreleasing *e = nil;
+        [fileManager createDirectoryAtURL:directoryURL withIntermediateDirectories:YES attributes:nil error:&e];
+        if (e) dout_error(@"%@", e);
+    }
+    NSURL *baseURL = [directoryURL URLByAppendingPathComponent:@".record"];
+    return baseURL;
 }
 
 - (BOOL)save {
@@ -67,29 +77,21 @@
     if (!_persistentStoreCoordinator) {
         NSError *error = nil;
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
-        NSDictionary *option = @{
-        NSMigratePersistentStoresAutomaticallyOption : @YES,
-        NSInferMappingModelAutomaticallyOption : @YES
-        };
-        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.dataBaseURL options:option error:&error]) {
-            RFAssert(!error, @"数据模型不兼容了：%@", error);
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.dataBaseURL options:@{
+                       NSMigratePersistentStoresAutomaticallyOption : @YES,
+                             NSInferMappingModelAutomaticallyOption : @YES
+              } error:&error]) {
+            if (DebugResetPersistentStoreIfCannotAutomaticallyMigrated) {
+                dout_warning(@"数据模型不兼容，原有数据被清理");
+                [[NSFileManager defaultManager] removeItemAtURL:self.dataBaseURL error:nil];
+                RFAssert([_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:self.dataBaseURL options:nil error:nil], @"数据库不能被强制重建");
+            }
+            else {
+                RFAssert(!error, @"数据模型不兼容了：%@", error);
+            }
         }
     }
     return _persistentStoreCoordinator;
 }
-
-@end
-
-
-@implementation NSManagedObjectContext (DataStack)
-- (BOOL)save {
-    NSError __autoreleasing *e = nil;
-    if (![self save:&e]) {
-        dout_error(@"ManagedObjectContext saved failed: %@", e);
-        return NO;
-    }
-    return YES;
-}
-
 
 @end

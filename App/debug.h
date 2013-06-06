@@ -21,4 +21,9 @@
 #define DebugAPITestProfilePassword @"pass"
 #define DebugAPITestProfileMacAddress @"something"
 
+/// Data model
+// 当 Core Data 数据模型修改时重置数据库
+// 一定不要在有发布版后使用，要建版本去merge
+#define DebugResetPersistentStoreIfCannotAutomaticallyMigrated 1
+
 #endif
