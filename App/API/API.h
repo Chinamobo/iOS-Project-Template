@@ -10,26 +10,30 @@
 
 #import "DataStack.h"
 #import "AFNetworking.h"
+#import "APIAutoSyncPlugin.h"
+#import "APIAppUpdatePlugin.h"
 
 @interface API : AFHTTPClient
+<APIAutoSyncPluginDelegate>
 
 + (API *)sharedInstance;
 
 #pragma mark - 状态与通用流程
-@property (readonly, nonatomic, getter = isNetworkReachable) BOOL networkReachable;
 @property (readonly, nonatomic) NSString *macAddress;
 
 // 请求执行通用的更新流程
 - (void)requestUpdate;
 @property (readonly, nonatomic, getter = isUpdating) BOOL updating;
-// 应用启动后，会在网络可用时执行一次自动同步的操作
-@property (assign, nonatomic) BOOL hasAutoSynced;
 
 
 #pragma mark - 具体业务
 - (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback;
 
+#pragma mark - 自动更新
+@property (strong, nonatomic) APIAutoSyncPlugin *autoSyncPlugin;
+@property (readonly, assign, nonatomic) BOOL canPerformSync;
 
+@property (strong, nonatomic) APIAppUpdatePlugin *appUpdatePlugin;
 
 @end
 

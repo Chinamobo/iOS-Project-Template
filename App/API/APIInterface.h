@@ -17,13 +17,17 @@ NSString *const APIURLLogin         = @"login";
 
 
 #pragma mark - User deafult key
-NSString *const UDkLastUpdateCheckTime = @"Last Update Check Time";
-
 NSString *const UDkUserName = @"User Name";
 NSString *const UDkUserPass = @"User Password";
 NSString *const UDkUserRemeberPass = @"User Password Remeber";
 
 #pragma mark - 配置
-NSTimeInterval const APIConfigAutoUpdateCheckInterval = 5000;
 
 BOOL const APIConfigOfflineLoginEnabled = YES;
+
+#pragma mark APIAppUpdatePlugin
+NSString *const APIConfigAppStroeID = nil;
+NSString *const APIConfigEnterpriseDistributionURL = @"";
+
+#pragma mark APIAutoSyncPlugin
+NSTimeInterval const APIConfigAutoUpdateCheckInterval = 5000;

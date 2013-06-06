@@ -21,6 +21,13 @@
 
 @implementation API
 
++ (void)load {
+    @autoreleasepool {
+        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:1 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:[[NSBundle mainBundlePathForCaches] stringByAppendingPathComponent:@".urlCache"]];
+        [NSURLCache setSharedURLCache:URLCache];
+    }
+}
+
 #pragma mark - Property
 - (NSString *)macAddress {
     static NSString *_macAddress = nil;
@@ -29,11 +36,6 @@
         _macAddress = (DebugAPIEnableTestProfile)? DebugAPITestProfileMacAddress : [[UIDevice currentDevice] macAddress];
     });
 	return _macAddress;
-}
-
-- (BOOL)isNetworkReachable {
-    if (DebugAPIUsingLocalTestData) return YES;
-    return (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable)? YES : NO;
 }
 
 #pragma mark -
@@ -48,31 +50,22 @@
 
 - (id)init {
     self = [self initWithBaseURL:[NSURL URLWithString:APIURLDeployBase]];
-    if (self) {
-        // 设置属性
-        self.parameterEncoding = AFFormURLParameterEncoding;
-        
-        // 配置网络
-        if (RFDEBUG) {
-            [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
-            [AFHTTPRequestOperationLogger sharedLogger].level = AFLoggerLevelFatal;
-        }
-        [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-        
-        // 设置环境监听
-        __weak __typeof(&*self)weakSelf = self;
-        [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-            if (status == AFNetworkReachabilityStatusReachableViaWiFi || DebugAPIUsingLocalTestData) {
-                if (!weakSelf.hasAutoSynced) {
-                    [weakSelf autoUpdate];
-                    weakSelf.hasAutoSynced = YES;
-                }
-            }
-        }];
-        
-        // 后续操作
-        [self contextCheck];
+    if (!self) return nil;
+    
+    // 设置属性
+    self.autoSyncPlugin = [[APIAutoSyncPlugin alloc] initWithMaster:self];
+    self.autoSyncPlugin.syncCheckInterval = APIConfigAutoUpdateCheckInterval;
+    
+    // 配置网络
+    if (RFDEBUG) {
+        [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
+        [AFHTTPRequestOperationLogger sharedLogger].level = AFLoggerLevelInfo;
     }
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
+    // 后续操作
+    [self contextCheck];
+    
     return self;
 }
 
@@ -90,24 +83,10 @@
     }
 }
 
-- (void)autoUpdate {
-    NSDate *lastUpdateCheckTime = [[NSUserDefaults standardUserDefaults] objectForKey:UDkLastUpdateCheckTime];
-    
-    if (lastUpdateCheckTime && !DebugAPIUpdateForceAutoUpdate) {
-        if (fabs([lastUpdateCheckTime timeIntervalSinceNow]) < APIConfigAutoUpdateCheckInterval) return;
-    }
-    
-    if (self.isNetworkReachable) {
-        dout_info(@"Start auto update.");
-        [self doUpdate];
-    }
-}
-
 - (void)doUpdate {
     self.updating = YES;
-    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:UDkLastUpdateCheckTime];
     
-    if (!self.isNetworkReachable) {
+    if (self.networkReachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
         [UIAlertView showWithTitle:@"提示" message:@"可能尚未联网，请检查你的网络连接" buttonTitle:@"OK"];
     }
     
@@ -117,6 +96,7 @@
 /// 执行更新后的工作，需保证必定能被调用
 - (void)afterUpdate {
     dout_info(@"更新完毕")
+    [self.autoSyncPlugin syncFinshed:YES];
     
     self.updating = NO;
 }
@@ -135,7 +115,7 @@
     }
     
     NSString *userName = (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name;
-    if (self.isNetworkReachable) {
+    if (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable) {
         [self postPath:APIURLLogin parameters:@{
              @"login" : userName,
              @"password" : (DebugAPITestProfileName)? DebugAPITestProfilePassword : pass,
@@ -168,6 +148,40 @@
             callback(NO, @"无网络连接");
         }
     }
+}
+
+#pragma mark - Auto sync
++ (NSSet *)keyPathsForValuesAffectingCanPerformSync {
+    API *this;
+    return [NSSet setWithObjects:@keypath(this, isUpdating), @keypath(this, networkReachabilityStatus), nil];
+}
+
+- (BOOL)canPerformSync {
+    if (!self.isUpdating && self.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)startSync {
+    [self doUpdate];
+    self.appUpdatePlugin.showNoticeIfNoUpdateAvailableUsingBuildInNoticeDelegate = NO;
+    [self.appUpdatePlugin checkUpdate];
+}
+
+- (void)clearAfterSync {
+    self.autoSyncPlugin = nil;
+    self.appUpdatePlugin = nil;
+}
+
+- (APIAppUpdatePlugin *)appUpdatePlugin {
+    if (!_appUpdatePlugin) {
+        APIAppUpdatePlugin *up = [[APIAppUpdatePlugin alloc] initWithMaster:self];
+        up.appStoreID = APIConfigAppStroeID;
+        up.enterpriseDistributionPlistURL = [NSURL URLWithString: APIConfigEnterpriseDistributionURL];
+        _appUpdatePlugin = up;
+    }
+    return _appUpdatePlugin;
 }
 
 #pragma mark - Debug method

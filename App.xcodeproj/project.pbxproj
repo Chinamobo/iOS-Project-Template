@@ -27,6 +27,8 @@
 		D536CA2A17607891007806DA /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = D536CA1E17607891007806DA /* UIImage+GIF.m */; };
 		D536CA2B17607891007806DA /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D536CA2017607891007806DA /* UIImageView+WebCache.m */; };
 		D536CA2D176078B6007806DA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D536CA2C176078B6007806DA /* ImageIO.framework */; };
+		D536CA3417607AE2007806DA /* APIAppUpdatePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D536CA3017607AE2007806DA /* APIAppUpdatePlugin.m */; };
+		D536CA3517607AE2007806DA /* APIAutoSyncPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D536CA3317607AE2007806DA /* APIAutoSyncPlugin.m */; };
 		D544D75416F8A83A00F64000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75316F8A83A00F64000 /* UIKit.framework */; };
 		D544D75616F8A83A00F64000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75516F8A83A00F64000 /* Foundation.framework */; };
 		D544D76016F8A83A00F64000 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D544D75F16F8A83A00F64000 /* main.m */; };
@@ -164,6 +166,10 @@
 		D536CA1F17607891007806DA /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		D536CA2017607891007806DA /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		D536CA2C176078B6007806DA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D536CA2F17607AE2007806DA /* APIAppUpdatePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIAppUpdatePlugin.h; sourceTree = "<group>"; };
+		D536CA3017607AE2007806DA /* APIAppUpdatePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIAppUpdatePlugin.m; sourceTree = "<group>"; };
+		D536CA3217607AE2007806DA /* APIAutoSyncPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIAutoSyncPlugin.h; sourceTree = "<group>"; };
+		D536CA3317607AE2007806DA /* APIAutoSyncPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIAutoSyncPlugin.m; sourceTree = "<group>"; };
 		D544D75016F8A83A00F64000 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D544D75316F8A83A00F64000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D544D75516F8A83A00F64000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -416,6 +422,24 @@
 				D536CA2017607891007806DA /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		D536CA2E17607AE2007806DA /* AppUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				D536CA2F17607AE2007806DA /* APIAppUpdatePlugin.h */,
+				D536CA3017607AE2007806DA /* APIAppUpdatePlugin.m */,
+			);
+			path = AppUpdate;
+			sourceTree = "<group>";
+		};
+		D536CA3117607AE2007806DA /* AutoSync */ = {
+			isa = PBXGroup;
+			children = (
+				D536CA3217607AE2007806DA /* APIAutoSyncPlugin.h */,
+				D536CA3317607AE2007806DA /* APIAutoSyncPlugin.m */,
+			);
+			path = AutoSync;
 			sourceTree = "<group>";
 		};
 		D544D74716F8A83A00F64000 = {
@@ -761,6 +785,8 @@
 		D555D5C116FB4A3A00885336 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D536CA2E17607AE2007806DA /* AppUpdate */,
+				D536CA3117607AE2007806DA /* AutoSync */,
 				D59D6B0D171FB5EE00656807 /* API.h */,
 				D59D6B0E171FB5EE00656807 /* API.m */,
 				D59D6B0F171FB5EE00656807 /* APIInterface.h */,
@@ -963,6 +989,8 @@
 				D544D86816F8ABFC00F64000 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D544D86A16F8ABFC00F64000 /* AFURLConnectionOperation.m in Sources */,
 				D59D6B12171FB5EE00656807 /* API.m in Sources */,
+				D536CA3417607AE2007806DA /* APIAppUpdatePlugin.m in Sources */,
+				D536CA3517607AE2007806DA /* APIAutoSyncPlugin.m in Sources */,
 				D544D76416F8A83A00F64000 /* AppDelegate.m in Sources */,
 				D59D6B16171FB5F900656807 /* DataStack.m in Sources */,
 				D544D8A516F8ABFC00F64000 /* dout.m in Sources */,
