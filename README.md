@@ -25,7 +25,8 @@ Chinamobo iOS 项目模版
   - 强制修改产品名，clone 下项目后不改名就开发了？必须改；
   - 代码审查强制立即修改，使用方式跟高亮注释差不多，但必须指定给某个人，指定的用户必须移除注释才能通过编译。语法：`// KEYWORD(用户名): 留言内容`；
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
-  - 支持配置开关。
+  - 支持配置开关；
+  - 缺陷是当项目文件修改后，会导致一次编译取消，需再跑一次。
   
 * 引入定制的 AFNetworking submodule，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)
   
@@ -53,22 +54,29 @@ Chinamobo iOS 项目模版
 * 调试增强：
   - 定制了不同模式的调试开关；
   - 开启 dout 开关：DOUT_FALG_TRACE、DOUT_ASSERT_AT_ERROR；
-  - 增加 debug.h，专用于控制业务代码的调试行为；
+  - 增加 debug.h，专用于控制业务模块的调试行为；
+  - 添加全局异常断点、特殊符号断点。
 
+* Core Data 基础结构：
+  - 增加默认的 Core Data Model 及其 Stack；
+  - Model 初始版本设为 V0；
+  - Model 不兼容时重置数据，加快开发。
+  
+* API 模块：
+  - 通用接口访问层，基于 AFHTTPClient；
+  - 自动同步，应用版本监测插件。
+
+* Deployment Target 设置为 iOS 5.0；
+* Storyboard 版本设置为 iOS 5，关闭 Autolayout；
 * 修复 Xcode 默认模版修改产品名后单元测试路径错误；
 * Prefix.pch 和 Info.plist 路径简化；
 * 代码签名规则简化，Release 使用发布 Profile；
 * 添加仓库级别的 git 忽略规则；
 * 应用起始改为 RootNavigationController，隐藏导航栏；
-* 增加默认的 Core Data Model 及其 Stack；
-* Core Data Model 初始版本设为 V0；
 * 全套应用 Icon、Launch Image 及 Info.plist 相应定义，只需删除不需要的；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；
-* 添加 CoreData、QuartzCore Frameworks；
-* 添加全局异常断点、全局编译 scheme；
-* Deployment Target 设置为 iOS 5.0。
-* Storyboard 版本设置为 iOS 5，关闭 Autolayout；
-* API 模块，内容很多不细说了。
+* 引入第三方组件所需的 Frameworks；
+* 添加全局编译 scheme。
   
 Licenses
 ----
