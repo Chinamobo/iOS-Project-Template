@@ -1,11 +1,11 @@
 /**
     DataStack
  
-    Core Data 管理
+    Core Data 基础构件
+    请在下方引入各 ManagedObject 的头文件
  */
 
 #import "RFCoreData.h"
-// TODO: 把 ManagedObject 的类别在这引进来，集中引用 DataStack，过去每用一种对象就要引用一次的方式过于繁琐了
 
 @interface DataStack : NSObject
 + (DataStack *)sharedInstance;

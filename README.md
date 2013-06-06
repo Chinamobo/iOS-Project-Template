@@ -27,10 +27,7 @@ Chinamobo iOS 项目模版
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
   - 支持配置开关。
   
-* 引入定制的 AFNetworking submodule，特色：
-  - 精简了历史以便传输最小化，clone 下来只有几百KB；
-  - 默认包含 SystemConfiguration，MobileCoreServices 两个 Frameworks，而且不必将其加入 pch 文件中；
-  - 集成 AFHTTPRequestOperationLogger，便于调试网络请求。
+* 引入定制的 AFNetworking submodule，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)
   
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
