@@ -104,21 +104,15 @@
 #pragma mark - 具体业务
 // TODO: 用户信息存取，而且直接放UserDefault极不安全
 - (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback {
-    // 注意：不是每个流程无 callback 都直接返回，因为登录操作无回调无意义所以直接返回了
-    if (!callback) return;
-    
     if (!DebugAPIEnableTestProfile) {
         RFAssert(name, @"用户名不能为空");
-        name = @"";
         RFAssert(pass, @"密码不能为空");
-        pass = @"";
     }
     
-    NSString *userName = (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name;
     if (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable) {
         [self postPath:APIURLLogin parameters:@{
-             @"login" : userName,
-             @"password" : (DebugAPITestProfileName)? DebugAPITestProfilePassword : pass,
+             @"login" : (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name,
+             @"password" : (DebugAPIEnableTestProfile)? DebugAPITestProfilePassword : pass,
              @"mac_address" : self.macAddress
          } success:^(AFHTTPRequestOperation *operation, id responseObject) {
              NSDictionary *info = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
