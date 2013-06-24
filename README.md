@@ -34,7 +34,7 @@ Chinamobo iOS 项目模版
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
   - RFUI/Alpha 默认引入：RFBackground、RFCoreData、RFCoreDataAutoFetchTableViewPlugin、RFPlugin；
-  - pch 文件调整。
+  - pch 文件调整，默认包含的头文件修改为 RFUI.h。
   
 * 国际化定制：
   - 除增加默认的 Localizable.strings 外，加入 InfoPlist.strings；
