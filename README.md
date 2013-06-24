@@ -65,8 +65,12 @@ Chinamobo iOS 项目模版
   
 * API 模块：
   - 通用接口访问层，基于 AFHTTPClient；
-  - 自动同步，应用版本监测插件。
+  - AFNetworking 扩展，在更加便捷的同时，支持更丰富的调试；
+  - 自动同步插件；
+  - 应用版本监测更新模块，支持 App Store 和企业发布；
+  - 用户插件，登陆、用户信息获取自动化完成，高度可配置。
 
+* 附加一组默认 UI 素材，及相应 UIAppearance 设置；
 * Deployment Target 设置为 iOS 5.0；
 * Storyboard 版本设置为 iOS 5，关闭 Autolayout；
 * 修复 Xcode 默认模版修改产品名后单元测试路径错误；
