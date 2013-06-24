@@ -29,6 +29,7 @@ Chinamobo iOS 项目模版
   - 缺陷是当项目文件修改后，会导致一次编译取消，需再跑一次。
   
 * 引入定制的 AFNetworking submodule，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)
+* 引入精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) submodule，默认只包含了 model 的核心文件，网络部分没有使用；
   
 * RFUI 集成：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；

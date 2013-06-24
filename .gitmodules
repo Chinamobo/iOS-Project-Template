@@ -10,3 +10,6 @@
 [submodule "Frameworks/RFUI/Alpha"]
 	path = Frameworks/RFUI/Alpha
 	url = https://github.com/RFUI/Alpha.git
+[submodule "Frameworks/JSONModel"]
+	path = Frameworks/JSONModel
+	url = https://github.com/Chinamobo/JSONModel.git
