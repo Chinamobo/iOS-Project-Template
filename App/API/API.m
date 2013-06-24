@@ -4,12 +4,11 @@
 #import "APIInterface.h"
 
 #import "AFHTTPRequestOperationLogger.h"
-
 #import "NSJSONSerialization+RFKit.h"
 #import "NSDateFormatter+RFKit.h"
 #import "UIDevice+RFKit.h"
 #import "UIAlertView+RFKit.h"
-
+#import "NSFileManager+RFKit.h"
 
 @interface API ()
 <UIAlertViewDelegate>
@@ -28,16 +27,6 @@
     }
 }
 
-#pragma mark - Property
-- (NSString *)macAddress {
-    static NSString *_macAddress = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&oncePredicate, ^{
-        _macAddress = (DebugAPIEnableTestProfile)? DebugAPITestProfileMacAddress : [[UIDevice currentDevice] macAddress];
-    });
-	return _macAddress;
-}
-
 #pragma mark -
 + (instancetype)sharedInstance {
 	static API* sharedInstance = nil;
@@ -53,6 +42,10 @@
     if (!self) return nil;
     
     // 设置属性
+    self.user = [[APIUserPlugin alloc] initWithMaster:self];
+    self.user.shouldRememberPassword = YES;
+    self.user.shouldAutoFetchOtherUserInformationAfterLogin = YES;
+    
     self.autoSyncPlugin = [[APIAutoSyncPlugin alloc] initWithMaster:self];
     self.autoSyncPlugin.syncCheckInterval = APIConfigAutoUpdateCheckInterval;
     
@@ -102,49 +95,10 @@
 }
 
 #pragma mark - 具体业务
-// TODO: 用户信息存取，而且直接放UserDefault极不安全
-- (void)loginWithUserName:(NSString *)name pass:(NSString *)pass callback:(void (^)(BOOL success, NSString *message))callback {
-    if (!DebugAPIEnableTestProfile) {
-        RFAssert(name, @"用户名不能为空");
-        RFAssert(pass, @"密码不能为空");
-    }
-    
-    if (self.networkReachabilityStatus != AFNetworkReachabilityStatusNotReachable) {
-        [self postPath:APIURLLogin parameters:@{
-             @"login" : (DebugAPIEnableTestProfile)? DebugAPITestProfileName : name,
-             @"password" : (DebugAPIEnableTestProfile)? DebugAPITestProfilePassword : pass,
-             @"mac_address" : self.macAddress
-         } success:^(AFHTTPRequestOperation *operation, id responseObject) {
-             NSDictionary *info = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-             douto(info)
-             if ([info boolForKey:@"status"]) {
-                 callback(YES, info[@"msg"]);
-             }
-             else {
-                 callback(NO, info[@"msg"]);
-             }
-         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-             callback(NO, error.localizedDescription);
-         }];
-    }
-    else {
-        // 离线登陆
-        if (APIConfigOfflineLoginEnabled) {
-            if ([[[NSUserDefaults standardUserDefaults] stringForKey:UDkUserName] isEqualToString:name]
-                && [[[NSUserDefaults standardUserDefaults] stringForKey:UDkUserPass] isEqualToString:pass]) {
-                callback(YES, @"OK");
-            }
-            else {
-                callback(NO, @"用户名与密码不匹配");
-            }
-        }
-        else {
-            callback(NO, @"无网络连接");
-        }
-    }
-}
 
-#pragma mark - Auto sync
+
+
+#pragma mark - Auto sync & App update
 + (NSSet *)keyPathsForValuesAffectingCanPerformSync {
     API *this;
     return [NSSet setWithObjects:@keypath(this, isUpdating), @keypath(this, networkReachabilityStatus), nil];
@@ -176,6 +130,13 @@
         _appUpdatePlugin = up;
     }
     return _appUpdatePlugin;
+}
+
+#pragma mark - 统一错误处理
+
+- (void)alertError:(NSError *)error title:(NSString *)title {
+    NSString *message = error.localizedDescription.length? error.localizedDescription : nil;
+    [UIAlertView showWithTitle:title? : @"不能完成请求" message:message buttonTitle:@"确定"];
 }
 
 #pragma mark - Debug method

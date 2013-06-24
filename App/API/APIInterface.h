@@ -11,21 +11,21 @@
 #import <Foundation/Foundation.h>
 
 #pragma mark - 接口定义
-NSString *const APIURLDeployBase    = @"http://example.com/api/";
+//! 注意：涉及用户系统的接口请定义在 APIUserPlugin 内
+NSString *const APIURLDeployBase    = @"http://liaison.edoctorsh.com/api/";
 
-NSString *const APIURLLogin         = @"login";
+NSString *const APIURLExample       = @"exapmle";
 
 
 #pragma mark - User deafult key
-NSString *const UDkUserName = @"User Name";
-NSString *const UDkUserPass = @"User Password";
-NSString *const UDkUserRemeberPass = @"User Password Remeber";
+
 
 #pragma mark - 配置
-
-BOOL const APIConfigOfflineLoginEnabled = YES;
+BOOL const APIConfigOfflineLoginEnabled = NO;
 
 #pragma mark APIAppUpdatePlugin
+NSUInteger APIConfigFetchPageSize = 10;
+
 NSString *const APIConfigAppStroeID = nil;
 NSString *const APIConfigEnterpriseDistributionURL = @"";
 
