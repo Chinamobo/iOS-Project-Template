@@ -16,9 +16,53 @@
     [DataStack sharedInstance];
     [API sharedInstance];
     
+    [self generalAppearanceSetup];
     return YES;
 }
-							
+
+- (void)generalAppearanceSetup {
+    id navigationBarAppearance = [UINavigationBar appearance];
+    
+    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBG"] forBarMetrics:UIBarMetricsDefault];
+    
+    // 导航栏标题定制
+    [navigationBarAppearance setTitleTextAttributes:@{
+              UITextAttributeTextColor : [UIColor colorWithRGBHex:0x2384d0],
+        UITextAttributeTextShadowColor : [UIColor colorWithRGBHex:0xfff9fa]
+     }];
+    [navigationBarAppearance setTitleVerticalPositionAdjustment:2 forBarMetrics:UIBarMetricsDefault];
+    
+    // 清除导航栏按钮的背景
+    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
+    [[UIBarButtonItem appearance] setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    // Flat 风格的导航栏背景
+//    id apr = [UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil];
+//    [apr setTintColor:[UIColor colorWithRGBHex:0x2384d0]];
+//    UIImage *bg = [[UIImage imageNamed:@"navigationBarButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+//    [apr setBackgroundImage:bg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [apr setBackButtonBackgroundImage:[UIImage imageNamed:@"navigationBarButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    // 移除 iOS 6 多余的阴影
+    if ([UINavigationBar instancesRespondToSelector:@selector(setShadowImage:)]) {
+        [navigationBarAppearance setShadowImage:[[UIImage alloc] init]];
+    }
+    
+    // Checkbox
+//    id checkboxAppearance = [RFCheckBox appearance];
+//    id checkboxAppearance2 = [RFCheckBox appearanceWhenContainedIn:[LoginViewController class], nil];
+//    [checkboxAppearance setOnImage:[UIImage imageNamed:@"checkbox_on"]];
+//    [checkboxAppearance2 setOnHighlightedImage:[UIImage imageNamed:@"checkbox_onHighlighted"]];
+//    [checkboxAppearance setOnDisabledImage:[UIImage imageNamed:@"checkbox_onDisabled"]];
+//    [checkboxAppearance setOffImage:[UIImage imageNamed:@"checkbox_off"]];
+//    [checkboxAppearance2 setOffHighlightedImage:[UIImage imageNamed:@"checkbox_offHighlighted"]];
+//    [checkboxAppearance setOffDisabledImage:[UIImage imageNamed:@"checkbox_offDisabled"]];
+    
+    // 刷新按钮
+//    [[UIActivityIndicatorView appearanceWhenContainedIn:[RFRefreshButton class], nil] setColor:[UIColor colorWithRGBHex:0x2384d0]];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
