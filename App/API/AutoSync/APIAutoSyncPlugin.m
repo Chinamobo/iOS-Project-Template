@@ -26,6 +26,10 @@ static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOCo
         [self addObserver:self forKeyPath:@keypath(self, syncCheckInterval) options:NSKeyValueObservingOptionNew context:APIAutoSyncPluginKVOContext];
 
         self.lastSyncCheckTime = [[NSUserDefaults standardUserDefaults] objectForKey:UDkLastUpdateCheckTime];
+        if (!self.lastSyncCheckTime) {
+            dout_info(@"Init auto sync start.")
+            [self.master startSync];
+        }
         _dout_float([self.lastSyncCheckTime timeIntervalSinceNow])
     }
     return self;

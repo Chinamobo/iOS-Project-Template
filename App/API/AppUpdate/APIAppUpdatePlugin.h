@@ -1,4 +1,17 @@
+/**
+    APIAppUpdatePlugin
+    应用更新插件
 
+    特性：
+    * 支持 App Store 作为数据源，无需额外服务器
+    * 支持企业发布，如需显示更新摘要，需要在`metadata`字段中添加`releaseNotes`字段
+    * 用户选择支持直接更新，支持忽略特定版本
+
+    使用：
+    * 先设置`appStoreID`或`enterpriseDistributionPlistURL`，同时设置只检查 App Store
+    * 执行`checkUpdate`方法进行检查
+    * 如果不设置`noticeDelegate`，将使用内建的通知方式通知并提示用户操作
+ */
 
 #import "RFPlugin.h"
 
@@ -41,6 +54,7 @@
 
 extern NSString *const UDkUpdateIgnoredVersion;
 
+// 只是用于hold住插件，防止在AlertView dismiss前被释放
 @interface APIAppUpdatePluginAlertView : UIAlertView
 @property (strong, nonatomic) APIAppUpdatePlugin *plugin;
 @end

@@ -50,8 +50,12 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     if (self.enterpriseDistributionPlistURL) {
         op = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:self.enterpriseDistributionPlistURL]];
         [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            id plist = [NSPropertyListSerialization propertyListWithData:responseObject options:0 format:nil error:nil];
-            douto(plist)
+            NSError __autoreleasing *e = nil;
+            id plist = [NSPropertyListSerialization propertyListWithData:responseObject options:0 format:nil error:&e];
+            if (e) {
+                dout_warning(@"检查版本出错 %@", e);
+                return;
+            }
             [self proccessEnterpriseDistributionInfo:plist];
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -89,9 +93,7 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     [self checkResponseInfo];
 }
 
-- (void)checkResponseInfo {
-    douto(self.installURL)
-    
+- (void)checkResponseInfo {    
     BOOL isIgnored = ([self.remoteVersion isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
     
     NSString *currentVersion = [[NSBundle mainBundle] versionString];
