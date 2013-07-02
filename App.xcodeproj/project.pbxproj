@@ -13,6 +13,10 @@
 		D507D851174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D84E174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.m */; };
 		D507D858174B786200DEECA5 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D856174B786200DEECA5 /* UIView+RFPatternImageBackground.m */; };
 		D507D85E174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D85C174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m */; };
+		D51ECE4D178298C400B04EBB /* RFPullToFetchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D51ECE3D178298C400B04EBB /* RFPullToFetchTableView.m */; };
+		D51ECE4E178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = D51ECE3F178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.m */; };
+		D51ECE57178298EF00B04EBB /* EntityList.m in Sources */ = {isa = PBXBuildFile; fileRef = D51ECE56178298EF00B04EBB /* EntityList.m */; };
+		D51ECE5B1782994400B04EBB /* EntityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51ECE5A1782994400B04EBB /* EntityDetailViewController.m */; };
 		D5348B2B16F8B7170059AFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75716F8A83A00F64000 /* CoreGraphics.framework */; };
 		D5348B3A16F8B7D80059AFB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BE16F8AE7E00F64000 /* MobileCoreServices.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D5348B3B16F8B7D80059AFB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D8BC16F8AE6300F64000 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -187,6 +191,14 @@
 		D507D856174B786200DEECA5 /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D507D85B174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCoreDataAutoFetchTableViewPlugin.h; sourceTree = "<group>"; };
 		D507D85C174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCoreDataAutoFetchTableViewPlugin.m; sourceTree = "<group>"; };
+		D51ECE3C178298C400B04EBB /* RFPullToFetchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPullToFetchTableView.h; sourceTree = "<group>"; };
+		D51ECE3D178298C400B04EBB /* RFPullToFetchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPullToFetchTableView.m; sourceTree = "<group>"; };
+		D51ECE3E178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RFScrollViewContentDistance.h"; sourceTree = "<group>"; };
+		D51ECE3F178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RFScrollViewContentDistance.m"; sourceTree = "<group>"; };
+		D51ECE55178298EF00B04EBB /* EntityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityList.h; sourceTree = "<group>"; };
+		D51ECE56178298EF00B04EBB /* EntityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityList.m; sourceTree = "<group>"; };
+		D51ECE591782994400B04EBB /* EntityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityDetailViewController.h; sourceTree = "<group>"; };
+		D51ECE5A1782994400B04EBB /* EntityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityDetailViewController.m; sourceTree = "<group>"; };
 		D536CA0D17607891007806DA /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
 		D536CA0E17607891007806DA /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
 		D536CA1017607891007806DA /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -503,6 +515,44 @@
 			path = RFCoreDataAutoFetchTableViewPlugin;
 			sourceTree = "<group>";
 		};
+		D51ECE1E178298A200B04EBB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECE581782991E00B04EBB /* Detail */,
+				D51ECE1F178298AF00B04EBB /* List */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D51ECE1F178298AF00B04EBB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECE55178298EF00B04EBB /* EntityList.h */,
+				D51ECE56178298EF00B04EBB /* EntityList.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		D51ECE20178298C400B04EBB /* RFPullToFetchTableView */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECE3C178298C400B04EBB /* RFPullToFetchTableView.h */,
+				D51ECE3D178298C400B04EBB /* RFPullToFetchTableView.m */,
+				D51ECE3E178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.h */,
+				D51ECE3F178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.m */,
+			);
+			path = RFPullToFetchTableView;
+			sourceTree = "<group>";
+		};
+		D51ECE581782991E00B04EBB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D51ECE591782994400B04EBB /* EntityDetailViewController.h */,
+				D51ECE5A1782994400B04EBB /* EntityDetailViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		D536CA0B17607891007806DA /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +640,7 @@
 			children = (
 				D555D5C116FB4A3A00885336 /* API */,
 				D544D8C016F8B0F000F64000 /* DataModel */,
+				D51ECE1E178298A200B04EBB /* Entity */,
 				D501EC8C16F8C3A40014F393 /* General */,
 				D544D75A16F8A83A00F64000 /* Supporting Files */,
 				D544D76216F8A83A00F64000 /* AppDelegate.h */,
@@ -915,6 +966,7 @@
 				D507D859174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin */,
 				D5BA922B17786607000AA598 /* RFInitializing */,
 				D59D6B08171FA63B00656807 /* RFPlugin */,
+				D51ECE20178298C400B04EBB /* RFPullToFetchTableView */,
 			);
 			path = Alpha;
 			sourceTree = "<group>";
@@ -1264,6 +1316,8 @@
 				D544D76416F8A83A00F64000 /* AppDelegate.m in Sources */,
 				D59D6B16171FB5F900656807 /* DataStack.m in Sources */,
 				D544D8A516F8ABFC00F64000 /* dout.m in Sources */,
+				D51ECE5B1782994400B04EBB /* EntityDetailViewController.m in Sources */,
+				D51ECE57178298EF00B04EBB /* EntityList.m in Sources */,
 				D507D849174B776F00DEECA5 /* EXTScope.m in Sources */,
 				D544D77316F8A83A00F64000 /* HomeViewController.m in Sources */,
 				D5BA9226177865E8000AA598 /* JRSwizzle.m in Sources */,
@@ -1305,6 +1359,7 @@
 				D544D8AC16F8ABFC00F64000 /* RFPerformance.m in Sources */,
 				D59D6B0B171FA63B00656807 /* RFPlugin.m in Sources */,
 				D544D8B316F8ABFC00F64000 /* RFPopBarButtonItem.m in Sources */,
+				D51ECE4D178298C400B04EBB /* RFPullToFetchTableView.m in Sources */,
 				D544D8B816F8ABFC00F64000 /* RFSegue.m in Sources */,
 				D544D8B416F8ABFC00F64000 /* RFSegueDismissModalButton.m in Sources */,
 				D544D8B516F8ABFC00F64000 /* RFSeguePopButton.m in Sources */,
@@ -1323,6 +1378,7 @@
 				D536CA2A17607891007806DA /* UIImage+GIF.m in Sources */,
 				D544D89B16F8ABFC00F64000 /* UIImage+RFKit.m in Sources */,
 				D536CA2B17607891007806DA /* UIImageView+WebCache.m in Sources */,
+				D51ECE4E178298C400B04EBB /* UIScrollView+RFScrollViewContentDistance.m in Sources */,
 				D556CB6317153EFF00665FBF /* UISearchBar+RFKit.m in Sources */,
 				D544D89C16F8ABFC00F64000 /* UIStoryboard+RFKit.m in Sources */,
 				D544D89D16F8ABFC00F64000 /* UITableView+RFKit.m in Sources */,
