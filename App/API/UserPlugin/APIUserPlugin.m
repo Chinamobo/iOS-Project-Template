@@ -2,6 +2,10 @@
 #import "APIUserPlugin.h"
 #import "API.h"
 
+extern NSString *const APIURLLogin;
+extern NSString *const APIURLForgetPassword;
+extern NSString *const APIURLUserInfo;
+
 NSString *const UDkLastUserAccount = @"Last User Account";
 NSString *const UDkUserPass = @"User Password";
 NSString *const UDkUserRemeberPass = @"Should Remember User Password";
