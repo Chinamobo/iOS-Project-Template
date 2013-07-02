@@ -1,8 +1,8 @@
 /*!
     Chinamobo iOS 项目模版
 
-    基于 v 1.1.0
-    Update at 2013/06/24
+    基于 v 1.2.0
+    Update at 2013/07/02
 
     发布版本可在 https://github.com/Chinamobo/iOS-Project-Template 获取
     详细更新纪录及说明见 https://github.com/BB9z/iOS-Project-Template

@@ -1581,7 +1581,7 @@
 			buildSettings = {
 				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\?\\?\\?|\\!\\!\\!|MARK";
 				CodeCommentsHighlightSkipFrameworks = YES;
-				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW";
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
 				EnableAutoGroupSortByName = YES;
 				EnableChangeProductNameRemind = YES;
 				EnableCodeCommentsHighlight = YES;
@@ -1595,7 +1595,7 @@
 			buildSettings = {
 				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\?\\?\\?|\\!\\!\\!|MARK";
 				CodeCommentsHighlightSkipFrameworks = YES;
-				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW";
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
 				EnableAutoGroupSortByName = YES;
 				EnableChangeProductNameRemind = YES;
 				EnableCodeCommentsHighlight = YES;
