@@ -32,17 +32,17 @@
      }];
     [navigationBarAppearance setTitleVerticalPositionAdjustment:2 forBarMetrics:UIBarMetricsDefault];
     
-    // 清除导航栏按钮的背景
-    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
-    [[UIBarButtonItem appearance] setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    // 导航栏按钮背景统一
+    id apr = [UIBarButtonItem appearance];
+    [apr setTintColor:[UIColor colorWithRGBHex:0x2384d0]];
+    UIImage *bg = [[UIImage imageNamed:@"navigationBarButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
+    [apr setBackgroundImage:bg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [apr setBackButtonBackgroundImage:[UIImage imageNamed:@"navigationBarButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-    // Flat 风格的导航栏背景
-//    id apr = [UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil];
-//    [apr setTintColor:[UIColor colorWithRGBHex:0x2384d0]];
-//    UIImage *bg = [[UIImage imageNamed:@"navigationBarButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
-//    [apr setBackgroundImage:bg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-//    [apr setBackButtonBackgroundImage:[UIImage imageNamed:@"navigationBarButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    // 如果想清空按钮背景，最好子类这些按钮然后清空该类按钮的背景
+//    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
+//    [[FlatBarButtonItem appearance] setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [[FlatBarButtonItem appearance] setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
     // 移除 iOS 6 多余的阴影
     if ([UINavigationBar instancesRespondToSelector:@selector(setShadowImage:)]) {
