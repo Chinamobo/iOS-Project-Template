@@ -2,11 +2,6 @@
 #import "APIUserPlugin.h"
 #import "API.h"
 
-// 用户接口
-NSString *const APIURLLogin         = @"login";
-NSString *const APIURLForgetPassword= @"forgetPassword";
-NSString *const APIURLUserInfo      = @"userInfo";
-
 NSString *const UDkLastUserAccount = @"Last User Account";
 NSString *const UDkUserPass = @"User Password";
 NSString *const UDkUserRemeberPass = @"Should Remember User Password";
@@ -75,7 +70,7 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
                  self.isLoggedIn = YES;
              }
              else {
-                 e = [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:0 userInfo:@{NSLocalizedDescriptionKey: JSONObject[@"result"]}];
+                 e = [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:0 userInfo:@{ NSLocalizedDescriptionKey: JSONObject[@"result"] }];
              }
          }
          

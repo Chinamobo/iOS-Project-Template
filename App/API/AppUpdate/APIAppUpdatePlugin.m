@@ -22,7 +22,7 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     self = [super init];
     if (self) {
         self.master = api;
-
+        
         self.noticeDelegate = self;
     }
     return self;
@@ -30,7 +30,7 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
 
 - (void)checkUpdate {
     AFHTTPRequestOperation *op;
-
+    
     if (self.appStoreID) {
         NSURLRequest *rq = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@", self.appStoreID]]];
         op = [AFJSONRequestOperation JSONRequestOperationWithRequest:rq success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
@@ -93,7 +93,7 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     [self checkResponseInfo];
 }
 
-- (void)checkResponseInfo {    
+- (void)checkResponseInfo {
     BOOL isIgnored = ([self.remoteVersion isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
     
     NSString *currentVersion = [[NSBundle mainBundle] versionString];
@@ -112,8 +112,8 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
         return;
     }
     
-    if (hasNewVersion) {        
-        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", plugin.remoteVersion] message:plugin.releaseNotes delegate:plugin cancelButtonTitle:@"稍后更新" otherButtonTitles:@"更新", @"跳过该版本", nil];
+    if (hasNewVersion) {
+        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", plugin.remoteVersion] message:plugin.releaseNotes delegate:plugin cancelButtonTitle:@"下次再说" otherButtonTitles:@"更新", @"跳过该版本", nil];
         notice.plugin = self;
         [notice show];
     }

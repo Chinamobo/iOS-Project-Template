@@ -11,11 +11,14 @@
 #import <Foundation/Foundation.h>
 
 #pragma mark - 接口定义
-//! 注意：涉及用户系统的接口请定义在 APIUserPlugin 内
-NSString *const APIURLDeployBase    = @"http://liaison.edoctorsh.com/api/";
+NSString *const APIURLDeployBase    = @"http://example.com/api/";
 
 NSString *const APIURLExample       = @"exapmle";
 
+// 用户接口
+NSString *const APIURLLogin         = @"login";
+NSString *const APIURLForgetPassword= @"forgetPassword";
+NSString *const APIURLUserInfo      = @"userInfo";
 
 #pragma mark - User deafult key
 

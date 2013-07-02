@@ -99,7 +99,6 @@
 		D59D6B0B171FA63B00656807 /* RFPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D59D6B0A171FA63B00656807 /* RFPlugin.m */; };
 		D59D6B12171FB5EE00656807 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = D59D6B0E171FB5EE00656807 /* API.m */; };
 		D59D6B16171FB5F900656807 /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D59D6B15171FB5F900656807 /* DataStack.m */; };
-		D59D6B19171FB92300656807 /* TestData in Resources */ = {isa = PBXBuildFile; fileRef = D59D6B18171FB92300656807 /* TestData */; };
 		D5BA920117786479000AA598 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BA91E717786479000AA598 /* JSONModel.m */; };
 		D5BA920217786479000AA598 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BA91E917786479000AA598 /* JSONModelArray.m */; };
 		D5BA920317786479000AA598 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BA91EB17786479000AA598 /* JSONModelClassProperty.m */; };
@@ -348,7 +347,6 @@
 		D59D6B0F171FB5EE00656807 /* APIInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIInterface.h; sourceTree = "<group>"; };
 		D59D6B14171FB5F900656807 /* DataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStack.h; sourceTree = "<group>"; };
 		D59D6B15171FB5F900656807 /* DataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStack.m; sourceTree = "<group>"; };
-		D59D6B18171FB92300656807 /* TestData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestData; sourceTree = "<group>"; };
 		D5BA91E617786479000AA598 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		D5BA91E717786479000AA598 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		D5BA91E817786479000AA598 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -887,7 +885,6 @@
 			isa = PBXGroup;
 			children = (
 				D59D6B17171FB91100656807 /* JSONObjects */,
-				D59D6B18171FB92300656807 /* TestData */,
 				D59D6B14171FB5F900656807 /* DataStack.h */,
 				D59D6B15171FB5F900656807 /* DataStack.m */,
 				D5E35E5917258571005F9AE4 /* Model.xcdatamodeld */,
@@ -1206,7 +1203,6 @@
 				D5BA926317786C04000AA598 /* navigationBarButton.png in Resources */,
 				D5BA926417786C04000AA598 /* navigationBG.png in Resources */,
 				D5BA926517786C04000AA598 /* navigationBG@2x~iphone.png in Resources */,
-				D59D6B19171FB92300656807 /* TestData in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
