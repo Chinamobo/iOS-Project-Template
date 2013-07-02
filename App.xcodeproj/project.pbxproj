@@ -11,7 +11,6 @@
 		D507D849174B776F00DEECA5 /* EXTScope.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D846174B776F00DEECA5 /* EXTScope.m */; };
 		D507D850174B77DC00DEECA5 /* NSManagedObject+RFCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D84C174B77DC00DEECA5 /* NSManagedObject+RFCoreData.m */; };
 		D507D851174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D84E174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.m */; };
-		D507D857174B786200DEECA5 /* RFBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D854174B786200DEECA5 /* RFBackgroundImageView.m */; };
 		D507D858174B786200DEECA5 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D856174B786200DEECA5 /* UIView+RFPatternImageBackground.m */; };
 		D507D85E174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D507D85C174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m */; };
 		D5348B2B16F8B7170059AFB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D544D75716F8A83A00F64000 /* CoreGraphics.framework */; };
@@ -185,8 +184,6 @@
 		D507D84D174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+RFCoreDataSyncPurge.h"; sourceTree = "<group>"; };
 		D507D84E174B77DC00DEECA5 /* NSManagedObject+RFCoreDataSyncPurge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+RFCoreDataSyncPurge.m"; sourceTree = "<group>"; };
 		D507D84F174B77DC00DEECA5 /* RFCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCoreData.h; sourceTree = "<group>"; };
-		D507D853174B786200DEECA5 /* RFBackgroundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFBackgroundImageView.h; sourceTree = "<group>"; };
-		D507D854174B786200DEECA5 /* RFBackgroundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFBackgroundImageView.m; sourceTree = "<group>"; };
 		D507D855174B786200DEECA5 /* UIView+RFPatternImageBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFPatternImageBackground.h"; sourceTree = "<group>"; };
 		D507D856174B786200DEECA5 /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D507D85B174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCoreDataAutoFetchTableViewPlugin.h; sourceTree = "<group>"; };
@@ -493,8 +490,6 @@
 		D507D852174B786200DEECA5 /* RFBackground */ = {
 			isa = PBXGroup;
 			children = (
-				D507D853174B786200DEECA5 /* RFBackgroundImageView.h */,
-				D507D854174B786200DEECA5 /* RFBackgroundImageView.m */,
 				D507D855174B786200DEECA5 /* UIView+RFPatternImageBackground.h */,
 				D507D856174B786200DEECA5 /* UIView+RFPatternImageBackground.m */,
 			);
@@ -1303,7 +1298,6 @@
 				D5BA9229177865E8000AA598 /* RACSwizzling.m in Sources */,
 				D544D8A916F8ABFC00F64000 /* RFAlloctionProxyButton.m in Sources */,
 				D544D8AA16F8ABFC00F64000 /* RFAlloctionProxyView.m in Sources */,
-				D507D857174B786200DEECA5 /* RFBackgroundImageView.m in Sources */,
 				D5BD220D1709664700F8FB39 /* RFContainedSegue.m in Sources */,
 				D507D85E174B786B00DEECA5 /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */,
 				D544D8B216F8ABFC00F64000 /* RFDismissModalBarButtonItem.m in Sources */,
