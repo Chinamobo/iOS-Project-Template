@@ -7,7 +7,6 @@
 #import "NSJSONSerialization+RFKit.h"
 #import "NSDateFormatter+RFKit.h"
 #import "UIDevice+RFKit.h"
-#import "UIAlertView+RFKit.h"
 #import "NSFileManager+RFKit.h"
 
 @interface API ()
@@ -20,14 +19,6 @@
 
 @implementation API
 
-+ (void)load {
-    @autoreleasepool {
-        NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:1 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:[[NSBundle mainBundlePathForCaches] stringByAppendingPathComponent:@".urlCache"]];
-        [NSURLCache setSharedURLCache:URLCache];
-    }
-}
-
-#pragma mark -
 + (instancetype)sharedInstance {
 	static API* sharedInstance = nil;
     static dispatch_once_t oncePredicate;
@@ -41,6 +32,8 @@
     self = [self initWithBaseURL:[NSURL URLWithString:APIURLDeployBase]];
     if (!self) return nil;
     
+//    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
+    
     // 设置属性
     self.user = [[APIUserPlugin alloc] initWithMaster:self];
     self.user.shouldRememberPassword = YES;
@@ -50,7 +43,7 @@
     self.autoSyncPlugin.syncCheckInterval = APIConfigAutoUpdateCheckInterval;
     
     // 配置网络
-    if (RFDEBUG) {
+    if ([UIDevice currentDevice].isBeingDebugged) {
         [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
         [AFHTTPRequestOperationLogger sharedLogger].level = AFLoggerLevelInfo;
     }
@@ -137,20 +130,6 @@
 - (void)alertError:(NSError *)error title:(NSString *)title {
     NSString *message = error.localizedDescription.length? error.localizedDescription : nil;
     [UIAlertView showWithTitle:title? : @"不能完成请求" message:message buttonTitle:@"确定"];
-}
-
-#pragma mark - Debug method
-- (id)localTestJSONObjectFromAPIURL:(NSString *)APIURL {
-    NSString *fileName = [APIURL lastPathComponent];
-    NSParameterAssert(fileName);
-    NSString *localFilePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json" inDirectory:@"TestData"];
-    NSInputStream *fileStream = [NSInputStream inputStreamWithFileAtPath:localFilePath];
-    NSError __autoreleasing *e = nil;
-    [fileStream open];
-    id obj = [NSJSONSerialization JSONObjectWithStream:fileStream options:NSJSONReadingAllowFragments error:&e];
-    [fileStream close];
-    if (e) dout_error(@"%@", e);
-    return obj;
 }
 
 @end

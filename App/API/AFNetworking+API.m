@@ -18,13 +18,7 @@
         callback(op, JSON, error);
     }];
     
-    op.credential = self.defaultCredential;
-#ifdef _AFNETWORKING_PIN_SSL_CERTIFICATES_
-    op.SSLPinningMode = self.defaultSSLPinningMode;
-#endif
-    op.allowsInvalidSSLCertificate = self.allowsInvalidSSLCertificate;
-    
-    [self enqueueHTTPRequestOperation:op];
+    [self enqueueJSONRequestOperation:op];
 }
 
 - (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback {
@@ -37,13 +31,33 @@
         callback(op, JSON, error);
     }];
     
-    op.credential = self.defaultCredential;
-#ifdef _AFNETWORKING_PIN_SSL_CERTIFICATES_
-    op.SSLPinningMode = self.defaultSSLPinningMode;
-#endif
-    op.allowsInvalidSSLCertificate = self.allowsInvalidSSLCertificate;
+    [self enqueueJSONRequestOperation:op];
+}
+
+- (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters attachFiles:(void (^)(id <AFMultipartFormData> formData))bodyConstructBlock uploadProgressBlock:(void (^)(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite))progressBlock completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback {
+    NSMutableURLRequest *rq = [self multipartFormRequestWithMethod:@"POST" path:path parameters:parameters constructingBodyWithBlock:bodyConstructBlock];
     
-    [self enqueueHTTPRequestOperation:op];
+    AFJSONRequestOperation *op = [[AFJSONRequestOperation alloc] initWithRequest:rq];
+    [op setUploadProgressBlock:progressBlock];
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        dispatch_after_seconds(DebugAPIDeplayFetchCallbackReturnSecond, ^{
+            callback((AFJSONRequestOperation *)operation, responseObject, nil);
+        });
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        callback((AFJSONRequestOperation *)operation, nil, error);
+    }];
+    
+    [self enqueueJSONRequestOperation:op];
+}
+
+- (void)enqueueJSONRequestOperation:(AFHTTPRequestOperation *)operation {
+    operation.credential = self.defaultCredential;
+#ifdef _AFNETWORKING_PIN_SSL_CERTIFICATES_
+    operation.SSLPinningMode = self.defaultSSLPinningMode;
+#endif
+    operation.allowsInvalidSSLCertificate = self.allowsInvalidSSLCertificate;
+    
+    [self enqueueHTTPRequestOperation:operation];
 }
 
 @end
