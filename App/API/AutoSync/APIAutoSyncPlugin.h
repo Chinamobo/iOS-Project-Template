@@ -16,20 +16,6 @@
 
 #import "RFPlugin.h"
 
-typedef NS_OPTIONS(NSUInteger, APIAutoSyncPluginStatus) {
-
-    APIAutoSyncPluginStatusNone = 0,
-    
-    // 当 API 同步条件满足时该位置为1
-    APIAutoSyncPluginStatusMasterConditionMatched = 1 << 0,
-    
-    // 当更新时间周期满足时该位置为1
-    APIAutoSyncPluginStatusTimeIntervalMatched = 1 << 1,
-    
-    // 已经完成过更新时该位置为1
-    APIAutoSyncPluginStatusFinished = 1 << 4
-};
-
 @protocol APIAutoSyncPluginDelegate;
 
 @interface APIAutoSyncPlugin : RFPlugin
@@ -40,7 +26,8 @@ typedef NS_OPTIONS(NSUInteger, APIAutoSyncPluginStatus) {
 @property (assign, nonatomic) NSTimeInterval syncCheckInterval;
 @property (copy, nonatomic) NSDate *lastSyncCheckTime;
 
-@property (assign, nonatomic) APIAutoSyncPluginStatus staues;
+// 是否已经同步过了
+@property (readonly, nonatomic) BOOL hasSynced;
 
 // API 需要在同步结束后调用该方法已通知插件
 - (void)syncFinshed:(BOOL)success;

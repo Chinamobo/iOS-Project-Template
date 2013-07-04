@@ -6,8 +6,9 @@ NSString *const UDkLastUpdateCheckTime = @"Last Update Check Time";
 static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOContext;
 
 @interface APIAutoSyncPlugin ()
-@property (RF_WEAK, nonatomic) id<APIAutoSyncPluginDelegate> master;
+@property (weak, nonatomic) id<APIAutoSyncPluginDelegate> master;
 @property (strong, nonatomic) NSTimer *watchToSyncCheckTimeMatchTimer;
+@property (readwrite, nonatomic) BOOL hasSynced;
 @end
 
 @implementation APIAutoSyncPlugin
@@ -21,29 +22,24 @@ static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOCo
     self = [super init];
     if (self) {
         self.master = api;
-        
-        [self addObserver:self forKeyPath:@keypath(self, staues) options:NSKeyValueObservingOptionNew context:APIAutoSyncPluginKVOContext];
-        [self addObserver:self forKeyPath:@keypath(self, syncCheckInterval) options:NSKeyValueObservingOptionNew context:APIAutoSyncPluginKVOContext];
-
-        self.lastSyncCheckTime = [[NSUserDefaults standardUserDefaults] objectForKey:UDkLastUpdateCheckTime];
-        if (!self.lastSyncCheckTime) {
-            dout_info(@"Init auto sync start.")
-            [self.master startSync];
-        }
-        _dout_float([self.lastSyncCheckTime timeIntervalSinceNow])
     }
     return self;
 }
 
-- (void)dealloc {
-    _doutwork()
-    [self removeObserver:self forKeyPath:@keypath(self, staues) context:APIAutoSyncPluginKVOContext];
-    [self removeObserver:self forKeyPath:@keypath(self, syncCheckInterval) context:APIAutoSyncPluginKVOContext];
+- (void)onInit {
+    self.lastSyncCheckTime = [[NSUserDefaults standardUserDefaults] objectForKey:UDkLastUpdateCheckTime];
+    _dout_float([self.lastSyncCheckTime timeIntervalSinceNow])
 }
 
-+ (NSSet *)keyPathsForValuesAffectingStaues {
-    APIAutoSyncPlugin *this;
-    return [NSSet setWithObjects:@keypath(this, master.canPerformSync), @keypath(this, lastSyncCheckTime), @keypath(this, syncCheckInterval), nil];
+- (void)afterInit {
+    [(NSObject *)self.master addObserver:self forKeyPath:@keypath(self.master, canPerformSync) options:NSKeyValueObservingOptionNew context:APIAutoSyncPluginKVOContext];
+    [self addObserver:self forKeyPath:@keypath(self, syncCheckInterval) options:NSKeyValueObservingOptionNew context:APIAutoSyncPluginKVOContext];
+    [self evaluateStatus];
+}
+
+- (void)dealloc {
+    [(NSObject *)self.master removeObserver:self forKeyPath:@keypath(self.master, canPerformSync) context:APIAutoSyncPluginKVOContext];
+    [self removeObserver:self forKeyPath:@keypath(self, syncCheckInterval) context:APIAutoSyncPluginKVOContext];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -52,49 +48,28 @@ static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOCo
         return;
     }
     
-    if (object == self) {
-        if ([keyPath isEqualToString:@keypath(self, staues)]) {
-            if (self.staues & APIAutoSyncPluginStatusMasterConditionMatched
-                && self.staues & APIAutoSyncPluginStatusTimeIntervalMatched
-                && !(self.staues & APIAutoSyncPluginStatusFinished)) {
-                dout_info(@"Start auto sync.");
-                [self.master startSync];
-            }
-            return;
-        }
-        else if ([keyPath isEqualToString:@keypath(self, syncCheckInterval)]) {
-            if (![self isTimeIntervalMatched]) {
-                self.watchToSyncCheckTimeMatchTimer = [NSTimer scheduledTimerWithTimeInterval:self.syncCheckInterval+[self.lastSyncCheckTime timeIntervalSinceNow] target:self selector:@selector(onWatchToSyncCheckTimeMatchTimerFired) userInfo:nil repeats:NO];
-            }
-            return;
-        }
+    if (object == self.master && [keyPath isEqualToString:@keypath(self.master, canPerformSync)]) {
+        [self evaluateStatus];
+        return;
+    }
+    
+    if (object == self && [keyPath isEqualToString:@keypath(self, syncCheckInterval)]) {
+        [self evaluateStatus];
+        return;
     }
     
     [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
-- (APIAutoSyncPluginStatus)staues {
-    if (self.master.canPerformSync) {
-        _staues |= APIAutoSyncPluginStatusMasterConditionMatched;
+- (void)evaluateStatus {
+    if (self.master.canPerformSync && !self.hasSynced && [self isTimeIntervalMatched]) {
+        dout_info(@"Start auto sync.");
+        [self.master startSync];
     }
-    else {
-        _staues &= ~APIAutoSyncPluginStatusMasterConditionMatched;
-    }
-    
-    _staues &= ~APIAutoSyncPluginStatusTimeIntervalMatched;
-    if ([self isTimeIntervalMatched]) {
-        _staues |= APIAutoSyncPluginStatusTimeIntervalMatched;
-    }
-    
-    if (DebugAPIUpdateForceAutoUpdate) {
-        _staues |= APIAutoSyncPluginStatusTimeIntervalMatched;
-    }
-    
-    return _staues;
 }
 
 - (BOOL)isTimeIntervalMatched {
-    if (self.lastSyncCheckTime) {
+    if (self.lastSyncCheckTime && !DebugAPIUpdateForceAutoUpdate) {
         return fabs([self.lastSyncCheckTime timeIntervalSinceNow]) > self.syncCheckInterval;
     }
     return YES;
@@ -109,8 +84,7 @@ static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOCo
 
 - (void)syncFinshed:(BOOL)success {
     dout_info(@"Auto sync finshed.")
-    
-    self.staues |= APIAutoSyncPluginStatusFinished;
+    self.hasSynced = YES;
     
     if (success) {
         self.lastSyncCheckTime = [NSDate date];
