@@ -1,6 +1,7 @@
 
 #import "APIUserPlugin.h"
 #import "API.h"
+#import "debug.h"
 
 extern NSString *const APIURLLogin;
 extern NSString *const APIURLForgetPassword;
@@ -37,6 +38,10 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 
 - (void)afterInit {
     [super afterInit];
+    
+    if (DebugAPISkipLogin) {
+        self.isLoggedIn = YES;
+    }
     
     if (self.shouldAutoLogin) {
         [self loginWithCallback:nil];

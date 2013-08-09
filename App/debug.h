@@ -15,6 +15,11 @@
 // 每次启动强制自动更新，忽略更新间隔检查
 #define DebugAPIUpdateForceAutoUpdate 0
 
+
+/// User Model
+// 是否跳过登录
+#define DebugAPISkipLogin 0
+
 // 测试帐户
 #define DebugAPIEnableTestProfile 0
 #define DebugAPITestProfileName @"name"
