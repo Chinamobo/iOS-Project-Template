@@ -17,6 +17,8 @@ Chinamobo iOS 项目模版
 修改明细
 ----
 * 基于 Xcode 5.0 Single View Application 模版，通用版本；
+* 国际化定制：
+  - CFBundleDevelopmentRegion 设为 zh_CN。
 * Deployment Target 设置为 iOS 6.0；
 
 Licenses
