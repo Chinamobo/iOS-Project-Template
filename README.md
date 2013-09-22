@@ -20,6 +20,7 @@ Chinamobo iOS 项目模版
 * 国际化定制：
   - CFBundleDevelopmentRegion 设为 zh_CN。
 * Deployment Target 设置为 iOS 6.0；
+* Storyboard 版本设置为 iOS 6；
 
 Licenses
 ----
