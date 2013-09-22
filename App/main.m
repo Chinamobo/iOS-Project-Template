@@ -1,21 +1,16 @@
-/*!
-    Chinamobo iOS 项目模版
-
-    基于 v 1.2.0
-    Update at 2013/07/02
-
-    发布版本可在 https://github.com/Chinamobo/iOS-Project-Template 获取
-    详细更新纪录及说明见 https://github.com/BB9z/iOS-Project-Template
- 
-    基于 The Apache License, Version 2.0 发布
-    http://www.apache.org/licenses/LICENSE-2.0
- */
+//
+//  main.m
+//  App
+//
+//  Created by BB9z on 13-9-22.
+//  Copyright (c) 2013年 Chinamobo. All rights reserved.
+//
 
 #import <UIKit/UIKit.h>
 
 #import "AppDelegate.h"
 
-int main(int argc, char *argv[])
+int main(int argc, char * argv[])
 {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
