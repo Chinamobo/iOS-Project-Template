@@ -17,9 +17,22 @@ Chinamobo iOS 项目模版
 修改明细
 ----
 * 基于 Xcode 5.0 Single View Application 模版，通用版本；
-* 引入定制的 AFNetworking submodule，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)
-* 引入精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) submodule，默认只包含了 model 的核心文件，网络部分没有使用；
-* RFUI 集成：
+* 包含 API 网络请求模块：
+  - 基于定制的 AFNetworking，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)；
+  - 通用接口访问层，基于 AFHTTPClient；
+  - AFNetworking 扩展，在更加便捷的同时，支持更丰富的调试；
+  - 自动同步插件；
+  - 应用版本监测更新模块，支持 App Store 和企业发布；
+  - 用户插件，登陆、用户信息获取自动化完成，高度可配置。
+  
+* 包含数据模块：
+  - 以 Core Data 为核心，解决数据更新、获取与持久化；
+  - 使用精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) 优雅处理获取的 JSON 数据；
+  - 包含 Core Data 基础结构，默认的 Model 文件及其 Stack；
+  - Core Data Model 初始版本设为 V0；
+  - Core Data Model 不兼容时重置数据，加快开发。
+  
+* RFUI 集成，外观无关、可复用的界面套件：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
   - RFUI/Alpha 默认引入：RFBackground、RFButton、RFCheckbox、RFCoreData、RFCoreDataAutoFetchTableViewPlugin、RFPlugin；
   - pch 文件调整，默认包含的头文件修改为 RFUI.h。
