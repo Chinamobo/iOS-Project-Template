@@ -116,6 +116,13 @@
 			remoteGlobalIDString = D5197A3917EECAAF00CA387C;
 			remoteInfo = App;
 		};
+		D5197D2B17F0242C00CA387C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5197A3217EECAAF00CA387C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5197D2717F0241F00CA387C;
+			remoteInfo = MBBuildSystem;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -357,8 +364,8 @@
 			files = (
 				D5197D0517F01E1D00CA387C /* CoreData.framework in Frameworks */,
 				D5197A4017EECAAF00CA387C /* CoreGraphics.framework in Frameworks */,
-				D5197A4217EECAAF00CA387C /* UIKit.framework in Frameworks */,
 				D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */,
+				D5197A4217EECAAF00CA387C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,9 +373,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5197A6017EECAAF00CA387C /* XCTest.framework in Frameworks */,
-				D5197A6217EECAAF00CA387C /* UIKit.framework in Frameworks */,
 				D5197A6117EECAAF00CA387C /* Foundation.framework in Frameworks */,
+				D5197A6217EECAAF00CA387C /* UIKit.framework in Frameworks */,
+				D5197A6017EECAAF00CA387C /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +405,11 @@
 			isa = PBXGroup;
 			children = (
 				D5197C0217F019E500CA387C /* AFNetworking */,
+				D5197C2E17F019E500CA387C /* JSONModel */,
+				D5197AC517F019E200CA387C /* RFUI */,
 				D5197D0417F01E1D00CA387C /* CoreData.framework */,
 				D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */,
 				D5197A3D17EECAAF00CA387C /* Foundation.framework */,
-				D5197C2E17F019E500CA387C /* JSONModel */,
-				D5197AC517F019E200CA387C /* RFUI */,
 				D5197A4117EECAAF00CA387C /* UIKit.framework */,
 				D5197A5F17EECAAF00CA387C /* XCTest.framework */,
 			);
@@ -412,17 +419,17 @@
 		D5197A4317EECAAF00CA387C /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D5197D1017F0213600CA387C /* API */,
+				D5197D0817F01ED400CA387C /* Data */,
+				D5197A7517EECF1A00CA387C /* Home */,
+				D5197A4417EECAAF00CA387C /* Supporting Files */,
 				D5197A4C17EECAAF00CA387C /* AppDelegate.h */,
 				D5197A4D17EECAAF00CA387C /* AppDelegate.m */,
+				D5197A5817EECAAF00CA387C /* Images.xcassets */,
 				D5197A5217EECAAF00CA387C /* Main_iPad.storyboard */,
 				D5197A4F17EECAAF00CA387C /* Main_iPhone.storyboard */,
 				D5197A7917EED1EC00CA387C /* RootNavigationController.h */,
 				D5197A7A17EED1EC00CA387C /* RootNavigationController.m */,
-				D5197D1017F0213600CA387C /* API */,
-				D5197D0817F01ED400CA387C /* Data */,
-				D5197A7517EECF1A00CA387C /* Home */,
-				D5197A5817EECAAF00CA387C /* Images.xcassets */,
-				D5197A4417EECAAF00CA387C /* Supporting Files */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -442,8 +449,8 @@
 		D5197A6517EECAAF00CA387C /* AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D5197A6B17EECAAF00CA387C /* AppTests.m */,
 				D5197A6617EECAAF00CA387C /* Supporting Files */,
+				D5197A6B17EECAAF00CA387C /* AppTests.m */,
 			);
 			path = AppTests;
 			sourceTree = "<group>";
@@ -554,11 +561,11 @@
 			isa = PBXGroup;
 			children = (
 				D5197B6517F019E400CA387C /* LICENSE */,
+				D5197B6A17F019E400CA387C /* RFKit */,
 				D5197B6617F019E400CA387C /* Readme.md */,
 				D5197B6717F019E400CA387C /* RFInitializing.h */,
 				D5197B6817F019E400CA387C /* RFKeyboard.h */,
 				D5197B6917F019E400CA387C /* RFKeyboard.m */,
-				D5197B6A17F019E400CA387C /* RFKit */,
 				D5197BE717F019E500CA387C /* RFUI.h */,
 				D5197BE817F019E500CA387C /* RFUI.m */,
 				D5197BE917F019E500CA387C /* RFUIDebug.h */,
@@ -571,17 +578,17 @@
 			isa = PBXGroup;
 			children = (
 				D5197B6B17F019E400CA387C /* category */,
-				D5197B9C17F019E400CA387C /* ChangeLog.md */,
 				D5197B9D17F019E400CA387C /* doc */,
-				D5197BA017F019E400CA387C /* dout.h */,
-				D5197BA117F019E400CA387C /* dout.m */,
 				D5197BA217F019E400CA387C /* external */,
 				D5197BA617F019E400CA387C /* extobjc */,
 				D5197BAC17F019E400CA387C /* LICENSE */,
 				D5197BAD17F019E400CA387C /* ReactiveCocoaMini */,
+				D5197BB817F019E400CA387C /* RFAlloctionProxy */,
+				D5197B9C17F019E400CA387C /* ChangeLog.md */,
+				D5197BA017F019E400CA387C /* dout.h */,
+				D5197BA117F019E400CA387C /* dout.m */,
 				D5197BB617F019E400CA387C /* README.md */,
 				D5197BB717F019E400CA387C /* README~zh-hans.md */,
-				D5197BB817F019E400CA387C /* RFAlloctionProxy */,
 				D5197BBD17F019E400CA387C /* RFARC.h */,
 				D5197BBE17F019E400CA387C /* RFDispatch.h */,
 				D5197BBF17F019E400CA387C /* RFDispatch.m */,
@@ -733,11 +740,11 @@
 		D5197BEB17F019E500CA387C /* RFSegue */ = {
 			isa = PBXGroup;
 			children = (
-				D5197BEC17F019E500CA387C /* Change.md */,
 				D5197BED17F019E500CA387C /* LICENSE */,
+				D5197BF017F019E500CA387C /* Return */,
+				D5197BEC17F019E500CA387C /* Change.md */,
 				D5197BEE17F019E500CA387C /* Readme.md */,
 				D5197BEF17F019E500CA387C /* Readme~zh-hans.md */,
-				D5197BF017F019E500CA387C /* Return */,
 				D5197BF917F019E500CA387C /* RFContainedSegue.h */,
 				D5197BFA17F019E500CA387C /* RFContainedSegue.m */,
 				D5197BFB17F019E500CA387C /* RFNavigationPushAsRootSegue.h */,
@@ -769,6 +776,7 @@
 		D5197C0217F019E500CA387C /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				D5197C0E17F019E500CA387C /* extension */,
 				D5197C0317F019E500CA387C /* AFHTTPClient.h */,
 				D5197C0417F019E500CA387C /* AFHTTPClient.m */,
 				D5197C0517F019E500CA387C /* AFHTTPRequestOperation.h */,
@@ -780,7 +788,6 @@
 				D5197C0B17F019E500CA387C /* AFNetworking.h */,
 				D5197C0C17F019E500CA387C /* AFURLConnectionOperation.h */,
 				D5197C0D17F019E500CA387C /* AFURLConnectionOperation.m */,
-				D5197C0E17F019E500CA387C /* extension */,
 				D5197C2C17F019E500CA387C /* LICENSE.md */,
 				D5197C2D17F019E500CA387C /* README.md */,
 			);
@@ -800,9 +807,9 @@
 		D5197C0F17F019E500CA387C /* AFHTTPRequestOperationLogger */ = {
 			isa = PBXGroup;
 			children = (
+				D5197C1217F019E500CA387C /* LICENSE */,
 				D5197C1017F019E500CA387C /* AFHTTPRequestOperationLogger.h */,
 				D5197C1117F019E500CA387C /* AFHTTPRequestOperationLogger.m */,
-				D5197C1217F019E500CA387C /* LICENSE */,
 				D5197C1317F019E500CA387C /* README.md */,
 			);
 			path = AFHTTPRequestOperationLogger;
@@ -841,12 +848,12 @@
 		D5197C2E17F019E500CA387C /* JSONModel */ = {
 			isa = PBXGroup;
 			children = (
-				D5197D0017F01AB000CA387C /* LICENSE_jsonmodel.txt */,
-				D5197D0117F01AB000CA387C /* README.md */,
 				D5197C3017F019E500CA387C /* JSONModel */,
 				D5197C3917F019E500CA387C /* JSONModelCategories */,
-				D5197C3C17F019E500CA387C /* JSONModelLib.h */,
 				D5197C4417F019E500CA387C /* JSONModelTransformations */,
+				D5197C3C17F019E500CA387C /* JSONModelLib.h */,
+				D5197D0017F01AB000CA387C /* LICENSE_jsonmodel.txt */,
+				D5197D0117F01AB000CA387C /* README.md */,
 			);
 			name = JSONModel;
 			path = Frameworks/JSONModel;
@@ -900,14 +907,14 @@
 		D5197D1017F0213600CA387C /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D5197D1617F0213600CA387C /* AppUpdate */,
+				D5197D1917F0213600CA387C /* AutoSync */,
+				D5197D1C17F0213600CA387C /* UserPlugin */,
 				D5197D1117F0213600CA387C /* AFNetworking+API.h */,
 				D5197D1217F0213600CA387C /* AFNetworking+API.m */,
 				D5197D1317F0213600CA387C /* API.h */,
 				D5197D1417F0213600CA387C /* API.m */,
 				D5197D1517F0213600CA387C /* APIInterface.h */,
-				D5197D1617F0213600CA387C /* AppUpdate */,
-				D5197D1917F0213600CA387C /* AutoSync */,
-				D5197D1C17F0213600CA387C /* UserPlugin */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -943,6 +950,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		D5197D2717F0241F00CA387C /* MBBuildSystem */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "";
+			buildConfigurationList = D5197D2817F0242000CA387C /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */;
+			buildPhases = (
+			);
+			buildToolPath = ./MBAutoBuildScript.sh;
+			buildWorkingDirectory = "$(ScriptPath)";
+			dependencies = (
+			);
+			name = MBBuildSystem;
+			passBuildSettingsInEnvironment = 1;
+			productName = MBBuildSystem;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		D5197A3917EECAAF00CA387C /* App */ = {
 			isa = PBXNativeTarget;
@@ -951,10 +975,12 @@
 				D5197A3617EECAAF00CA387C /* Sources */,
 				D5197A3717EECAAF00CA387C /* Frameworks */,
 				D5197A3817EECAAF00CA387C /* Resources */,
+				D5197D2D17F0258B00CA387C /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D5197D2C17F0242C00CA387C /* PBXTargetDependency */,
 			);
 			name = App;
 			productName = App;
@@ -1008,6 +1034,7 @@
 			targets = (
 				D5197A3917EECAAF00CA387C /* App */,
 				D5197A5D17EECAAF00CA387C /* AppTests */,
+				D5197D2717F0241F00CA387C /* MBBuildSystem */,
 			);
 		};
 /* End PBXProject section */
@@ -1017,8 +1044,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5197A5417EECAAF00CA387C /* Main_iPad.storyboard in Resources */,
 				D5197A5917EECAAF00CA387C /* Images.xcassets in Resources */,
+				D5197A5417EECAAF00CA387C /* Main_iPad.storyboard in Resources */,
 				D5197A5117EECAAF00CA387C /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1033,98 +1060,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D5197D2D17F0258B00CA387C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#! /bin/sh\n# BuildCount 0.4.0\n# Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.\n\nexport scriptPath=\"$SRCROOT/Scripts\"\nexport buildCountRecordFile=\"$scriptPath/BuildCountRecord.plist\"\n\n# 配置开关\n# 自动增加构建数\nexport enableAutoBuildCount=1\nexport autoBuildCountUseDataFormat=0\nexport autoBuildCountDataFormat=\"+%y%m%d\"\n\n\"$scriptPath/MBAutoBuildScript_BuildCount.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D5197A3617EECAAF00CA387C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5197D2317F0213600CA387C /* APIAppUpdatePlugin.m in Sources */,
-				D5197D2617F0213600CA387C /* UserInformation.m in Sources */,
-				D5197CD817F019E600CA387C /* AFURLConnectionOperation.m in Sources */,
-				D5197CE417F019E600CA387C /* SDWebImageManager.m in Sources */,
-				D5197CB217F019E600CA387C /* RACSwizzling.m in Sources */,
-				D5197CCC17F019E600CA387C /* RFDismissModalBarButtonItem.m in Sources */,
-				D5197CA317F019E600CA387C /* UIView+RFAnimate.m in Sources */,
-				D5197CE517F019E600CA387C /* UIImage+GIF.m in Sources */,
-				D5197CAB17F019E600CA387C /* UncaughtExceptionHandler.m in Sources */,
-				D5197C9817F019E600CA387C /* NSObject+RFKit.m in Sources */,
-				D5197CB617F019E600CA387C /* RFAlloctionProxyView.m in Sources */,
-				D5197CEC17F019E600CA387C /* JSONModelArray.m in Sources */,
-				D5197CAA17F019E600CA387C /* dout.m in Sources */,
-				D5197CD917F019E600CA387C /* AFHTTPRequestOperationLogger.m in Sources */,
-				D5197C5817F019E500CA387C /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */,
-				D5197CF417F019E600CA387C /* JSONValueTransformer.m in Sources */,
-				D5197CE217F019E600CA387C /* SDWebImageDownloader.m in Sources */,
-				D5197C5217F019E500CA387C /* RFControl.m in Sources */,
-				D5197CD617F019E600CA387C /* AFJSONRequestOperation.m in Sources */,
-				D5197CE117F019E600CA387C /* SDWebImageDecoder.m in Sources */,
-				D5197CAC17F019E600CA387C /* EXTScope.m in Sources */,
-				D5197CE617F019E600CA387C /* UIImage+MultiFormat.m in Sources */,
-				D5197C5617F019E500CA387C /* NSManagedObject+RFCoreDataSyncPurge.m in Sources */,
-				D5197CED17F019E600CA387C /* JSONModelClassProperty.m in Sources */,
-				D5197D2417F0213600CA387C /* APIAutoSyncPlugin.m in Sources */,
-				D5197CD717F019E600CA387C /* AFNetworkActivityIndicatorManager.m in Sources */,
-				D5197C5117F019E500CA387C /* RFButton.m in Sources */,
-				D5197CF317F019E600CA387C /* JSONKeyMapper.m in Sources */,
-				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
-				D5197C9517F019E600CA387C /* NSFileManager+RFKit.m in Sources */,
-				D5197D0B17F01EEC00CA387C /* Model.xcdatamodeld in Sources */,
-				D5197CCE17F019E600CA387C /* RFSegueDismissModalButton.m in Sources */,
-				D5197CB917F019E600CA387C /* RFPerformance.m in Sources */,
-				D5197C9917F019E600CA387C /* NSString+RFKit.m in Sources */,
-				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
-				D5197D2517F0213600CA387C /* APIUserPlugin.m in Sources */,
-				D5197CEE17F019E600CA387C /* JSONModelError.m in Sources */,
-				D5197C9117F019E600CA387C /* NSBundle+RFKit.m in Sources */,
-				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
-				D5197C9617F019E600CA387C /* NSJSONSerialization+RFKit.m in Sources */,
-				D5197CC717F019E600CA387C /* RFUI.m in Sources */,
-				D5197CAF17F019E600CA387C /* JRSwizzle.m in Sources */,
-				D5197CB817F019E600CA387C /* RFGeometry.m in Sources */,
-				D5197A4E17EECAAF00CA387C /* AppDelegate.m in Sources */,
-				D5197C9717F019E600CA387C /* NSNumberFormatter+RFKit.m in Sources */,
-				D5197D0F17F020A000CA387C /* DataStack.m in Sources */,
-				D5197CCD17F019E600CA387C /* RFPopBarButtonItem.m in Sources */,
-				D5197D2117F0213600CA387C /* AFNetworking+API.m in Sources */,
-				D5197CA417F019E600CA387C /* UIView+RFKit.m in Sources */,
-				D5197C9217F019E600CA387C /* NSDate+RFKit.m in Sources */,
 				D5197CD417F019E600CA387C /* AFHTTPClient.m in Sources */,
-				D5197CE717F019E600CA387C /* UIImageView+WebCache.m in Sources */,
-				D5197D2217F0213600CA387C /* API.m in Sources */,
-				D5197C5017F019E500CA387C /* UIView+RFPatternImageBackground.m in Sources */,
-				D5197CB517F019E600CA387C /* RFAlloctionProxyButton.m in Sources */,
-				D5197C9D17F019E600CA387C /* UIColor+RFKit.m in Sources */,
-				D5197CEF17F019E600CA387C /* NSArray+JSONModel.m in Sources */,
-				D5197C9B17F019E600CA387C /* UIAlertView+RFKit.m in Sources */,
-				D5197CA617F019E600CA387C /* UIWebView+RFKit.m in Sources */,
-				D5197CDF17F019E600CA387C /* SDImageCache.m in Sources */,
-				D5197C9E17F019E600CA387C /* UIDevice+RFKit.m in Sources */,
-				D5197C6C17F019E500CA387C /* RFPlugin.m in Sources */,
-				D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */,
-				D5197CE317F019E600CA387C /* SDWebImageDownloaderOperation.m in Sources */,
-				D5197C9417F019E600CA387C /* NSDictionary+RFKit.m in Sources */,
-				D5197C9C17F019E600CA387C /* UIButton+RFKit.m in Sources */,
-				D5197CEB17F019E600CA387C /* JSONModel.m in Sources */,
-				D5197C9A17F019E600CA387C /* NSURL+RFKit.m in Sources */,
-				D5197C9317F019E600CA387C /* NSDateFormatter+RFKit.m in Sources */,
-				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
-				D5197CD117F019E600CA387C /* RFNavigationPushAsRootSegue.m in Sources */,
-				D5197CDD17F019E600CA387C /* NSData+GIF.m in Sources */,
-				D5197CE017F019E600CA387C /* SDWebImageCompat.m in Sources */,
 				D5197CD517F019E600CA387C /* AFHTTPRequestOperation.m in Sources */,
-				D5197CA517F019E600CA387C /* UIViewController+RFKit.m in Sources */,
+				D5197CD917F019E600CA387C /* AFHTTPRequestOperationLogger.m in Sources */,
+				D5197CD617F019E600CA387C /* AFJSONRequestOperation.m in Sources */,
+				D5197CD717F019E600CA387C /* AFNetworkActivityIndicatorManager.m in Sources */,
+				D5197D2117F0213600CA387C /* AFNetworking+API.m in Sources */,
+				D5197CD817F019E600CA387C /* AFURLConnectionOperation.m in Sources */,
+				D5197D2217F0213600CA387C /* API.m in Sources */,
+				D5197D2317F0213600CA387C /* APIAppUpdatePlugin.m in Sources */,
+				D5197D2417F0213600CA387C /* APIAutoSyncPlugin.m in Sources */,
+				D5197D2517F0213600CA387C /* APIUserPlugin.m in Sources */,
+				D5197A4E17EECAAF00CA387C /* AppDelegate.m in Sources */,
+				D5197D0F17F020A000CA387C /* DataStack.m in Sources */,
+				D5197CAA17F019E600CA387C /* dout.m in Sources */,
+				D5197CAC17F019E600CA387C /* EXTScope.m in Sources */,
+				D5197A7817EECF3B00CA387C /* HomeViewController.m in Sources */,
+				D5197CAF17F019E600CA387C /* JRSwizzle.m in Sources */,
+				D5197CF317F019E600CA387C /* JSONKeyMapper.m in Sources */,
+				D5197CEB17F019E600CA387C /* JSONModel.m in Sources */,
+				D5197CEC17F019E600CA387C /* JSONModelArray.m in Sources */,
+				D5197CED17F019E600CA387C /* JSONModelClassProperty.m in Sources */,
+				D5197CEE17F019E600CA387C /* JSONModelError.m in Sources */,
+				D5197CF417F019E600CA387C /* JSONValueTransformer.m in Sources */,
+				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
+				D5197D0B17F01EEC00CA387C /* Model.xcdatamodeld in Sources */,
+				D5197CEF17F019E600CA387C /* NSArray+JSONModel.m in Sources */,
+				D5197C9017F019E600CA387C /* NSArray+RFKit.m in Sources */,
+				D5197C9117F019E600CA387C /* NSBundle+RFKit.m in Sources */,
+				D5197CDD17F019E600CA387C /* NSData+GIF.m in Sources */,
+				D5197C9217F019E600CA387C /* NSDate+RFKit.m in Sources */,
+				D5197C9317F019E600CA387C /* NSDateFormatter+RFKit.m in Sources */,
+				D5197C9417F019E600CA387C /* NSDictionary+RFKit.m in Sources */,
+				D5197C9517F019E600CA387C /* NSFileManager+RFKit.m in Sources */,
+				D5197C9617F019E600CA387C /* NSJSONSerialization+RFKit.m in Sources */,
+				D5197C5517F019E500CA387C /* NSManagedObject+RFCoreData.m in Sources */,
+				D5197C5617F019E500CA387C /* NSManagedObject+RFCoreDataSyncPurge.m in Sources */,
+				D5197C9717F019E600CA387C /* NSNumberFormatter+RFKit.m in Sources */,
+				D5197CB117F019E600CA387C /* NSObject+RACKVOWrapper.m in Sources */,
+				D5197C9817F019E600CA387C /* NSObject+RFKit.m in Sources */,
+				D5197C9917F019E600CA387C /* NSString+RFKit.m in Sources */,
+				D5197C9A17F019E600CA387C /* NSURL+RFKit.m in Sources */,
+				D5197CB217F019E600CA387C /* RACSwizzling.m in Sources */,
+				D5197CB517F019E600CA387C /* RFAlloctionProxyButton.m in Sources */,
+				D5197CB617F019E600CA387C /* RFAlloctionProxyView.m in Sources */,
+				D5197C5117F019E500CA387C /* RFButton.m in Sources */,
 				D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */,
 				D5197CD017F019E600CA387C /* RFContainedSegue.m in Sources */,
-				D5197CCF17F019E600CA387C /* RFSeguePopButton.m in Sources */,
-				D5197C9017F019E600CA387C /* NSArray+RFKit.m in Sources */,
-				D5197CD217F019E600CA387C /* RFNavigationPushSegue.m in Sources */,
-				D5197C5517F019E500CA387C /* NSManagedObject+RFCoreData.m in Sources */,
-				D5197CA217F019E600CA387C /* UITableView+RFKit.m in Sources */,
+				D5197C5217F019E500CA387C /* RFControl.m in Sources */,
+				D5197C5817F019E500CA387C /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */,
+				D5197CCC17F019E600CA387C /* RFDismissModalBarButtonItem.m in Sources */,
+				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
+				D5197CB817F019E600CA387C /* RFGeometry.m in Sources */,
 				D5197C8F17F019E600CA387C /* RFKeyboard.m in Sources */,
-				D5197A7817EECF3B00CA387C /* HomeViewController.m in Sources */,
+				D5197CD117F019E600CA387C /* RFNavigationPushAsRootSegue.m in Sources */,
+				D5197CD217F019E600CA387C /* RFNavigationPushSegue.m in Sources */,
+				D5197CB917F019E600CA387C /* RFPerformance.m in Sources */,
+				D5197C6C17F019E500CA387C /* RFPlugin.m in Sources */,
+				D5197CCD17F019E600CA387C /* RFPopBarButtonItem.m in Sources */,
 				D5197CD317F019E600CA387C /* RFSegue.m in Sources */,
-				D5197CB117F019E600CA387C /* NSObject+RACKVOWrapper.m in Sources */,
+				D5197CCE17F019E600CA387C /* RFSegueDismissModalButton.m in Sources */,
+				D5197CCF17F019E600CA387C /* RFSeguePopButton.m in Sources */,
+				D5197CC717F019E600CA387C /* RFUI.m in Sources */,
+				D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */,
+				D5197CDF17F019E600CA387C /* SDImageCache.m in Sources */,
+				D5197CE017F019E600CA387C /* SDWebImageCompat.m in Sources */,
+				D5197CE117F019E600CA387C /* SDWebImageDecoder.m in Sources */,
+				D5197CE217F019E600CA387C /* SDWebImageDownloader.m in Sources */,
+				D5197CE317F019E600CA387C /* SDWebImageDownloaderOperation.m in Sources */,
+				D5197CE417F019E600CA387C /* SDWebImageManager.m in Sources */,
+				D5197C9B17F019E600CA387C /* UIAlertView+RFKit.m in Sources */,
+				D5197C9C17F019E600CA387C /* UIButton+RFKit.m in Sources */,
+				D5197C9D17F019E600CA387C /* UIColor+RFKit.m in Sources */,
+				D5197C9E17F019E600CA387C /* UIDevice+RFKit.m in Sources */,
+				D5197CE517F019E600CA387C /* UIImage+GIF.m in Sources */,
+				D5197CE617F019E600CA387C /* UIImage+MultiFormat.m in Sources */,
 				D5197C9F17F019E600CA387C /* UIImage+RFKit.m in Sources */,
+				D5197CE717F019E600CA387C /* UIImageView+WebCache.m in Sources */,
+				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
+				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
+				D5197CA217F019E600CA387C /* UITableView+RFKit.m in Sources */,
+				D5197CA317F019E600CA387C /* UIView+RFAnimate.m in Sources */,
+				D5197CA417F019E600CA387C /* UIView+RFKit.m in Sources */,
+				D5197C5017F019E500CA387C /* UIView+RFPatternImageBackground.m in Sources */,
+				D5197CA517F019E600CA387C /* UIViewController+RFKit.m in Sources */,
+				D5197CA617F019E600CA387C /* UIWebView+RFKit.m in Sources */,
+				D5197CAB17F019E600CA387C /* UncaughtExceptionHandler.m in Sources */,
+				D5197D2617F0213600CA387C /* UserInformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1143,6 +1187,11 @@
 			isa = PBXTargetDependency;
 			target = D5197A3917EECAAF00CA387C /* App */;
 			targetProxy = D5197A6317EECAAF00CA387C /* PBXContainerItemProxy */;
+		};
+		D5197D2C17F0242C00CA387C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D5197D2717F0241F00CA387C /* MBBuildSystem */;
+			targetProxy = D5197D2B17F0242C00CA387C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1324,6 +1373,40 @@
 			};
 			name = Release;
 		};
+		D5197D2917F0242000CA387C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = Debug;
+		};
+		D5197D2A17F0242000CA387C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1350,6 +1433,15 @@
 			buildConfigurations = (
 				D5197A7317EECAAF00CA387C /* Debug */,
 				D5197A7417EECAAF00CA387C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5197D2817F0242000CA387C /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5197D2917F0242000CA387C /* Debug */,
+				D5197D2A17F0242000CA387C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
