@@ -47,12 +47,26 @@ Chinamobo iOS 项目模版
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
   - RFUI/Alpha 默认引入：RFBackground、RFButton、RFCheckbox、RFCoreData、RFCoreDataAutoFetchTableViewPlugin、RFPlugin；
   - pch 文件调整，默认包含的头文件修改为 RFUI.h。
-* 添加基础流程界面，根导航控制器，导航条改为不透明，保证后续视图布局与 iOS 6 一致；
+  
+* 调试增强：
+  - 定制了不同模式的调试开关；
+  - 开启 dout 开关：DOUT_FALG_TRACE、DOUT_ASSERT_AT_ERROR；
+  - 增加 debug.h，专用于控制业务模块的调试行为；
+  - 添加全局异常断点、特殊符号断点。
+ 
 * 国际化定制：
+  - 增 Localizable.strings，InfoPlist.strings；
+  - 本地化版本去掉英文版本，用 Base 版本替代；
   - CFBundleDevelopmentRegion 设为 zh_CN。
+
+* 添加基础流程界面，根导航控制器，导航条改为不透明，保证后续视图布局与 iOS 6 一致；
 * Deployment Target 设置为 iOS 6.0；
 * Storyboard 版本设置为 iOS 6；
+* 代码签名规则简化，Release 使用发布 Profile；
+* 添加仓库级别的 git 忽略规则；
 * 全套应用 Icon 及启动画面；
+* Info.plist 中增加 iTunes 文件共享字段，默认关闭；
+* 编译 scheme 整理。
 
 Licenses
 ----
