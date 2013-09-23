@@ -22,6 +22,7 @@
 		D5197A6A17EECAAF00CA387C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197A6817EECAAF00CA387C /* InfoPlist.strings */; };
 		D5197A6C17EECAAF00CA387C /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A6B17EECAAF00CA387C /* AppTests.m */; };
 		D5197A7817EECF3B00CA387C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A7717EECF3B00CA387C /* HomeViewController.m */; };
+		D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A7A17EED1EC00CA387C /* RootNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		D5197A6B17EECAAF00CA387C /* AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
 		D5197A7617EECF3B00CA387C /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D5197A7717EECF3B00CA387C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D5197A7917EED1EC00CA387C /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		D5197A7A17EED1EC00CA387C /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +119,12 @@
 			children = (
 				D5197A4C17EECAAF00CA387C /* AppDelegate.h */,
 				D5197A4D17EECAAF00CA387C /* AppDelegate.m */,
-				D5197A7517EECF1A00CA387C /* Home */,
-				D5197A5817EECAAF00CA387C /* Images.xcassets */,
 				D5197A5217EECAAF00CA387C /* Main_iPad.storyboard */,
 				D5197A4F17EECAAF00CA387C /* Main_iPhone.storyboard */,
+				D5197A7917EED1EC00CA387C /* RootNavigationController.h */,
+				D5197A7A17EED1EC00CA387C /* RootNavigationController.m */,
+				D5197A7517EECF1A00CA387C /* Home */,
+				D5197A5817EECAAF00CA387C /* Images.xcassets */,
 				D5197A4417EECAAF00CA387C /* Supporting Files */,
 			);
 			path = App;
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5197A4E17EECAAF00CA387C /* AppDelegate.m in Sources */,
+				D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */,
 				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
 				D5197A7817EECF3B00CA387C /* HomeViewController.m in Sources */,
 			);
