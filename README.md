@@ -17,6 +17,12 @@ Chinamobo iOS 项目模版
 修改明细
 ----
 * 基于 Xcode 5.0 Single View Application 模版，通用版本；
+* 引入定制的 AFNetworking submodule，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)
+* 引入精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) submodule，默认只包含了 model 的核心文件，网络部分没有使用；
+* RFUI 集成：
+  - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
+  - RFUI/Alpha 默认引入：RFBackground、RFButton、RFCheckbox、RFCoreData、RFCoreDataAutoFetchTableViewPlugin、RFPlugin；
+  - pch 文件调整，默认包含的头文件修改为 RFUI.h。
 * 添加基础流程界面，根导航控制器，导航条改为不透明，保证后续视图布局与 iOS 6 一致；
 * 国际化定制：
   - CFBundleDevelopmentRegion 设为 zh_CN。
