@@ -13,12 +13,12 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
 
 @implementation APIAppUpdatePlugin
 
-- (id)init {
+- (instancetype)init {
     RFAssert(false, @"Use initWithMaster: instead.");
     return nil;
 }
 
-- (id)initWithMaster:(AFHTTPClient<RFPluginSupported> *)api {
+- (instancetype)initWithMaster:(AFHTTPClient<RFPluginSupported> *)api {
     self = [super init];
     if (self) {
         self.master = api;

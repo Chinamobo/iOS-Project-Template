@@ -20,7 +20,7 @@
 
 @interface APIAutoSyncPlugin : RFPlugin
 
-- (id)initWithMaster:(id<APIAutoSyncPluginDelegate>)api;
+- (instancetype)initWithMaster:(id<APIAutoSyncPluginDelegate>)api;
 
 // 更新检查间隔
 @property (assign, nonatomic) NSTimeInterval syncCheckInterval;

@@ -28,7 +28,7 @@
 	return sharedInstance;
 }
 
-- (id)init {
+- (instancetype)init {
     self = [self initWithBaseURL:[NSURL URLWithString:APIURLDeployBase]];
     if (!self) return nil;
     

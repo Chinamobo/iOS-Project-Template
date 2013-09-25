@@ -26,7 +26,7 @@
 @interface APIAppUpdatePlugin : RFPlugin
 <APIAppUpdatePluginNoticeDelegate>
 
-- (id)initWithMaster:(AFHTTPClient<RFPluginSupported> *)api;
+- (instancetype)initWithMaster:(AFHTTPClient<RFPluginSupported> *)api;
 
 // AppStore 上的应用ID，如：569781369
 @property (copy, nonatomic) NSString *appStoreID;
