@@ -12,7 +12,7 @@ Chinamobo iOS 项目模版
 
 这个仓库可以本地留一份，以后直接 push 到新的 remote 就可以了。
 
-项目最低要求 Xcode 5.0。
+项目最低要求 Xcode 5。
 
 修改明细
 ----
@@ -52,7 +52,7 @@ Chinamobo iOS 项目模版
   - 定制了不同模式的调试开关；
   - 开启 dout 开关：DOUT_FALG_TRACE、DOUT_ASSERT_AT_ERROR；
   - 增加 debug.h，专用于控制业务模块的调试行为；
-  - 添加全局异常断点、特殊符号断点。
+  - 添加全局异常断点、测试失败断点。
  
 * 国际化定制：
   - 增 Localizable.strings，InfoPlist.strings；
@@ -63,6 +63,7 @@ Chinamobo iOS 项目模版
 * Deployment Target 设置为 iOS 6.0；
 * Storyboard 版本设置为 iOS 6；
 * 代码签名规则简化，Release 使用发布 Profile；
+* 附加一组默认 UI 素材，及相应 UIAppearance 设置；
 * 添加仓库级别的 git 忽略规则；
 * 全套应用 Icon 及启动画面；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；
