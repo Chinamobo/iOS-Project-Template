@@ -13,12 +13,12 @@ static void *const APIAutoSyncPluginKVOContext = (void *)&APIAutoSyncPluginKVOCo
 
 @implementation APIAutoSyncPlugin
 
-- (id)init {
+- (instancetype)init {
     RFAssert(false, @"Use initWithMaster: instead.");
     return nil;
 }
 
-- (id)initWithMaster:(id<APIAutoSyncPluginDelegate>)api {
+- (instancetype)initWithMaster:(id<APIAutoSyncPluginDelegate>)api {
     self = [super init];
     if (self) {
         self.master = api;

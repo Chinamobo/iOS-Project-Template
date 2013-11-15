@@ -1,25 +1,34 @@
+//
+//  AppTests.m
+//  AppTests
+//
+//  Created by BB9z on 13-9-22.
+//  Copyright (c) 2013年 Chinamobo. All rights reserved.
+//
 
-#import "AppTests.h"
+#import <XCTest/XCTest.h>
+
+@interface AppTests : XCTestCase
+
+@end
 
 @implementation AppTests
 
 - (void)setUp
 {
     [super setUp];
-    
-    // Set-up code here.
+    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Tear-down code here.
-    
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in AppTests");
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end

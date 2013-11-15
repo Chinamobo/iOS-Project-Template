@@ -24,7 +24,7 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 
 @implementation APIUserPlugin
 
-- (id)init {
+- (instancetype)init {
     RFAssert(false, @"You should call initWithMaster: instead.");
     return nil;
 }
