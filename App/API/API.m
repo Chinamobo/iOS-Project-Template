@@ -3,7 +3,7 @@
 #import "API.h"
 #import "APIInterface.h"
 
-#import "AFHTTPRequestOperationLogger.h"
+#import "AFNetworkActivityLogger.h"
 #import "NSJSONSerialization+RFKit.h"
 #import "NSDateFormatter+RFKit.h"
 #import "UIDevice+RFKit.h"
@@ -44,8 +44,8 @@
     
     // 配置网络
     if ([UIDevice currentDevice].isBeingDebugged) {
-        [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
-        [AFHTTPRequestOperationLogger sharedLogger].level = AFLoggerLevelInfo;
+        [[AFNetworkActivityLogger sharedLogger] startLogging];
+        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelInfo;
     }
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     

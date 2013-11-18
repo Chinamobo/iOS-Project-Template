@@ -12,7 +12,7 @@ Chinamobo iOS 项目模版
 
 这个仓库可以本地留一份，以后直接 push 到新的 remote 就可以了。
 
-项目最低要求 Xcode 5。
+项目最低要求 Xcode 5，支持 iOS 6 及以上版本。需要 AFNetworking 2，1.x 不再支持。
 
 修改明细
 ----
@@ -30,7 +30,7 @@ Chinamobo iOS 项目模版
 
 * 包含 API 网络请求模块：
   - 基于定制的 AFNetworking，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)；
-  - 通用接口访问层，基于 AFHTTPClient；
+  - 通用接口访问层，基于 AFHTTPRequestOperationManager；
   - AFNetworking 扩展，在更加便捷的同时，支持更丰富的调试；
   - 自动同步插件；
   - 应用版本监测更新模块，支持 App Store 和企业发布；
@@ -71,7 +71,7 @@ Chinamobo iOS 项目模版
 
 Licenses
 ----
-Copyright 2013 BB9z@myopera.com
+Copyright 2013 BB9z@me.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

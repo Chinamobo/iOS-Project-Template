@@ -2,18 +2,33 @@
     AFNetworking 扩展
 
     将成功和失败两个回调合并为一个
-    使用 AFJSONRequestOperation 执行请求，并直接返回解析好的 JSON 对象
+    响应作为 JSON 处理
+ 
+    上传、下载进度在返回的 AFHTTPRequestOperation 对象上单独设置就行了
  */
 
 #import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
 
-@interface AFHTTPClient (API)
+@interface AFHTTPRequestOperationManager (API)
+// KVO not supported.
+@property (readonly, nonatomic, assign) AFNetworkReachabilityStatus networkReachabilityStatus;
 
-- (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback;
+#pragma mark -
 
-- (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback;
+- (AFHTTPRequestOperation *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback;
 
-// 上传文件的便利方法
-- (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters attachFiles:(void (^)(id <AFMultipartFormData> formData))bodyConstructBlock uploadProgressBlock:(void (^)(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite))progressBlock completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback;
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString parameters:(NSDictionary *)formParameters completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback;
+
+/**
+ 上传文件的便利方法
+ */
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString parameters:(NSDictionary *)formParameters attachFiles:(void (^)(id <AFMultipartFormData> formData))bodyConstructBlock completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback;
+
+#pragma mark -
+/**
+ 创建一个响应为JSON的请求
+ */
+- (AFHTTPRequestOperation *)JSONRequestOperationWithRequest:(NSURLRequest *)request completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback;
 
 @end

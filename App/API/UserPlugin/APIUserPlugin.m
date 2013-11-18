@@ -62,10 +62,10 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
     
     self.isLogining = YES;
     
-    [self.master postPath:APIURLLogin parameters:@{
+    [self.master POST:APIURLLogin parameters:@{
          @"username" : self.userAccount,
          @"password" : self.userPassword
-     } completion:^(AFJSONRequestOperation *operation, id JSONObject, NSError *error) {
+     } completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *error) {
          BOOL isSuccess = NO;
          NSError __autoreleasing *e = error;
 
@@ -103,7 +103,7 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 
 #pragma mark -
 - (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback{
-    [self.master postPath:APIURLForgetPassword parameters:recoverInfo completion:^(AFJSONRequestOperation *operation, id JSONObject, NSError *Error) {
+    [self.master POST:APIURLForgetPassword parameters:recoverInfo completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *Error) {
         if (JSONObject) {
             if ([JSONObject[@"Result"] isEqualToString:@"0"]) {
                 callback(JSONObject[@"password"], nil);
@@ -139,10 +139,10 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 }
 
 - (void)fetchUserInfoWithID:(int)userID completion:(void (^)(UserInformation *info, NSError *error))callback {
-    [self.master getPath:APIURLUserInfo parameters:@{
+    [self.master GET:APIURLUserInfo parameters:@{
          @"uid" : @(userID),
          @"token" : (self.token)? : @""
-     } completion:^(AFJSONRequestOperation *operation, id JSONObject, NSError *error) {
+     } completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *error) {
          if (callback) {
              NSError __autoreleasing *e = nil;
              UserInformation *info = [[UserInformation alloc] initWithDictionary:JSONObject error:&e];

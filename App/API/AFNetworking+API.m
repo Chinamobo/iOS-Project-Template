@@ -2,62 +2,71 @@
 #import "AFNetworking+API.h"
 #import "debug.h"
 
-@interface AFHTTPClient ()
-@property (readwrite, nonatomic, strong) NSURLCredential *defaultCredential;
+@interface AFHTTPRequestOperationManager ()
 @end
 
-@implementation AFHTTPClient (API)
+@implementation AFHTTPRequestOperationManager (API)
 
-- (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback {
-    AFJSONRequestOperation *op;
-    op = [AFJSONRequestOperation JSONRequestOperationWithRequest:[self requestWithMethod:@"GET" path:path parameters:parameters] success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        dispatch_after_seconds(DebugAPIDeplayFetchCallbackReturnSecond, ^{
-            callback(op, JSON, nil);
-        });
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        callback(op, JSON, error);
+- (AFNetworkReachabilityStatus)networkReachabilityStatus {
+    return self.reachabilityManager.networkReachabilityStatus;
+}
+
+#pragma mark -
+
+- (AFHTTPRequestOperation *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback {
+    AFHTTPRequestOperation *op = [self JSONRequestOperationWithRequest:[self requestWithMethod:@"GET" URLString:URLString parameters:parameters] completion:callback];
+    [self.operationQueue addOperation:op];
+    return op;
+}
+
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString parameters:(NSDictionary *)formParameters completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback {
+    AFHTTPRequestOperation *op = [self JSONRequestOperationWithRequest:[self requestWithMethod:@"POST" URLString:URLString parameters:formParameters] completion:callback];
+    [self.operationQueue addOperation:op];
+    return op;
+}
+
+- (AFHTTPRequestOperation *)POST:(NSString *)URLString parameters:(NSDictionary *)formParameters attachFiles:(void (^)(id <AFMultipartFormData> formData))bodyConstructBlock completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback {
+    NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:formParameters constructingBodyWithBlock:bodyConstructBlock];
+    AFHTTPRequestOperation *op = [self JSONRequestOperationWithRequest:request completion:callback];
+    [self.operationQueue addOperation:op];
+    return op;
+}
+
+#pragma mark -
+
+- (NSMutableURLRequest *)requestWithMethod:(NSString *)method URLString:(NSString *)URLString parameters:(NSDictionary *)parameters {
+    return [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters];
+}
+
+- (AFHTTPRequestOperation *)JSONRequestOperationWithRequest:(NSURLRequest *)request completion:(void (^)(AFHTTPRequestOperation *operation, id JSONResponseObject, NSError *error))callback {
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    operation.shouldUseCredentialStorage = self.shouldUseCredentialStorage;
+    operation.credential = self.credential;
+    operation.securityPolicy = self.securityPolicy;
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *op, id responseObject) {
+        if (DebugAPIDelayFetchCallbackReturnSecond) {
+            dispatch_after_seconds(DebugAPIDelayFetchCallbackReturnSecond, ^{
+                callback(op, responseObject, nil);
+            });
+        }
+        else {
+            callback(op, responseObject, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *op, NSError *error) {
+        if (DebugAPIDelayFetchCallbackReturnSecond) {
+            dispatch_after_seconds(DebugAPIDelayFetchCallbackReturnSecond, ^{
+                callback(op, op.responseObject, error);
+            });
+        }
+        else {
+            callback(op, op.responseObject, error);
+        }
     }];
     
-    [self enqueueJSONRequestOperation:op];
+    return operation;
 }
 
-- (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback {
-    AFJSONRequestOperation *op;
-    op = [AFJSONRequestOperation JSONRequestOperationWithRequest:[self requestWithMethod:@"POST" path:path parameters:parameters] success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        dispatch_after_seconds(DebugAPIDeplayFetchCallbackReturnSecond, ^{
-            callback(op, JSON, nil);
-        });
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        callback(op, JSON, error);
-    }];
-    
-    [self enqueueJSONRequestOperation:op];
-}
-
-- (void)postPath:(NSString *)path parameters:(NSDictionary *)parameters attachFiles:(void (^)(id <AFMultipartFormData> formData))bodyConstructBlock uploadProgressBlock:(void (^)(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite))progressBlock completion:(void (^)(AFJSONRequestOperation *operation, id JSONObject, NSError *error))callback {
-    NSMutableURLRequest *rq = [self multipartFormRequestWithMethod:@"POST" path:path parameters:parameters constructingBodyWithBlock:bodyConstructBlock];
-    
-    AFJSONRequestOperation *op = [[AFJSONRequestOperation alloc] initWithRequest:rq];
-    [op setUploadProgressBlock:progressBlock];
-    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        dispatch_after_seconds(DebugAPIDeplayFetchCallbackReturnSecond, ^{
-            callback((AFJSONRequestOperation *)operation, responseObject, nil);
-        });
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        callback((AFJSONRequestOperation *)operation, nil, error);
-    }];
-    
-    [self enqueueJSONRequestOperation:op];
-}
-
-- (void)enqueueJSONRequestOperation:(AFHTTPRequestOperation *)operation {
-    operation.credential = self.defaultCredential;
-#ifdef _AFNETWORKING_PIN_SSL_CERTIFICATES_
-    operation.SSLPinningMode = self.defaultSSLPinningMode;
-#endif
-    operation.allowsInvalidSSLCertificate = self.allowsInvalidSSLCertificate;
-    
-    [self enqueueHTTPRequestOperation:operation];
-}
 
 @end

@@ -1,14 +1,13 @@
 
 #import "APIAppUpdatePlugin.h"
-#import "AFJSONRequestOperation.h"
-#import "AFHTTPClient.h"
+#import "AFHTTPRequestOperationManager.h"
 #import "AFHTTPRequestOperation.h"
 
 NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
 
 @interface APIAppUpdatePlugin ()
 <APIAppUpdatePluginNoticeDelegate, UIAlertViewDelegate>
-@property (RF_WEAK, nonatomic) AFHTTPClient<RFPluginSupported> *master;
+@property (RF_WEAK, nonatomic) AFHTTPRequestOperationManager<RFPluginSupported> *master;
 @end
 
 @implementation APIAppUpdatePlugin
@@ -18,7 +17,7 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     return nil;
 }
 
-- (instancetype)initWithMaster:(AFHTTPClient<RFPluginSupported> *)api {
+- (instancetype)initWithMaster:(AFHTTPRequestOperationManager<RFPluginSupported> *)api {
     self = [super init];
     if (self) {
         self.master = api;
@@ -33,9 +32,13 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     
     if (self.appStoreID) {
         NSURLRequest *rq = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://itunes.apple.com/lookup?id=%@", self.appStoreID]]];
-        op = [AFJSONRequestOperation JSONRequestOperationWithRequest:rq success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        
+        op = [[AFHTTPRequestOperation alloc] initWithRequest:rq];
+        op.responseSerializer = [AFJSONResponseSerializer serializer];
+        [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id JSON) {
             [self proccessAppStoreInfo:JSON];
-        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            id JSON = operation.responseObject;
             if ([JSON isKindOfClass:[NSDictionary class]]) {
                 [self proccessAppStoreInfo:JSON];
             }
@@ -43,26 +46,21 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
                 dout_warning(@"检查版本出错 %@", error);
             }
         }];
-        [self.master enqueueHTTPRequestOperation:op];
+        
+        [self.master.operationQueue addOperation:op];
         return;
     }
     
     if (self.enterpriseDistributionPlistURL) {
         op = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:self.enterpriseDistributionPlistURL]];
-        [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSError __autoreleasing *e = nil;
-            id plist = [NSPropertyListSerialization propertyListWithData:responseObject options:0 format:nil error:&e];
-            if (e) {
-                dout_warning(@"检查版本出错 %@", e);
-                return;
-            }
+        op.responseSerializer = [AFPropertyListResponseSerializer serializer];
+        [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id plist) {
             [self proccessEnterpriseDistributionInfo:plist];
-            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             dout_warning(@"检查版本出错 %@", error);
         }];
         
-        [self.master enqueueHTTPRequestOperation:op];
+        [self.master.operationQueue addOperation:op];
         return;
     }
     

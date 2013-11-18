@@ -10,7 +10,7 @@
 
 /// API
 // 接收到数据后延迟返回
-#define DebugAPIDeplayFetchCallbackReturnSecond 0
+#define DebugAPIDelayFetchCallbackReturnSecond 0
 
 // 每次启动强制自动更新，忽略更新间隔检查
 #define DebugAPIUpdateForceAutoUpdate 0

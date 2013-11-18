@@ -17,7 +17,7 @@
 #import "APIAutoSyncPlugin.h"
 #import "APIAppUpdatePlugin.h"
 
-@interface API : AFHTTPClient
+@interface API : AFHTTPRequestOperationManager
 <APIAutoSyncPluginDelegate>
 
 + (instancetype)sharedInstance;
