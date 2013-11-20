@@ -12,9 +12,10 @@ timeFile=$"$ScriptPath/PreBuild.time"
 # 文件夹自动排序
 if [ $EnableAutoGroupSortByName = "YES" ]; then
 	if [ -n "$(find "$SRCROOT" -name project.pbxproj -newer "$timeFile")" ]; then
-		echo "整理 project.pbxproj"
-		echo "你可能需要重新编译"
 		perl -w "$ScriptPath/sort-Xcode-project-file.pl" "$PROJECT_FILE_PATH"
+		echo "$ProjectFilePath:0: 整理 project.pbxproj，你需要重新编译项目"
+		touch "$timeFile"
+		exit 1
 	else
 		echo "跳过 project.pbxproj 整理"
 	fi
