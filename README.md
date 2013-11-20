@@ -67,6 +67,7 @@ Chinamobo iOS 项目模版
 * 添加仓库级别的 git 忽略规则；
 * 全套应用 Icon 及启动画面；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；
+* 修改 info.plist 和 pch 文件路径，修正项目更名路径可能更新不正确的问题；
 * 编译 scheme 整理。
 
 Licenses
