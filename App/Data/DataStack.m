@@ -94,4 +94,14 @@
     return _persistentStoreCoordinator;
 }
 
+#pragma mark - 单例快速访问
+
++ (NSManagedObjectContext *)managedObjectContext {
+    return [self sharedInstance].managedObjectContext;
+}
+
++ (BOOL)save {
+    return [[self sharedInstance] save];
+}
+
 @end

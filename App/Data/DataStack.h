@@ -16,4 +16,8 @@
 
 - (BOOL)save;
 
+#pragma mark - 单例快速访问
++ (NSManagedObjectContext *)managedObjectContext;
++ (BOOL)save;
+
 @end
