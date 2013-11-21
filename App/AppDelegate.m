@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.m
 //  App
@@ -41,43 +42,30 @@
     // 标题位移，应该根据导航条背景调整
     [navigationBarAppearance setTitleVerticalPositionAdjustment:2 forBarMetrics:UIBarMetricsDefault];
     
-    
-    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBG"] forBarMetrics:UIBarMetricsDefault];
-    return;
-    
-    // 导航栏按钮统一, iOS 7 风格
-    id apr = [UIBarButtonItem appearance];
-    [apr setTintColor:[UIColor colorWithRGBHex:0x2384d0]];
-    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
-    [apr setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [apr setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    
-    [apr setTitleTextAttributes:@{
-                                  UITextAttributeTextColor : [UIColor colorWithRGBHex:0x2384d0],
-                                  UITextAttributeTextShadowColor : [UIColor colorWithRGBHex:0xfff9fa]
-                                  } forState:UIControlStateNormal];
-    [apr setTitleTextAttributes:@{
-                                  UITextAttributeTextColor : [UIColor colorWithRGBHex:0x00FFFF]
-                                  } forState:UIControlStateHighlighted];
-    [apr setTitleTextAttributes:@{
-                                  UITextAttributeTextColor : [UIColor colorWithRGBHex:0xAAAAAA alpha:0.5]
-                                  } forState:UIControlStateDisabled];
-    
-    return;
-
-    
-
-    
-    
-    // 传统风格
-    //    UIImage *bg = [[UIImage imageNamed:@"navigationBarButton"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
-    //    [apr setBackgroundImage:bg forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    //    [apr setBackButtonBackgroundImage:[UIImage imageNamed:@"navigationBarButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBG"] forBarMetrics:UIBarMetricsDefault];
     
     // 移除 iOS 6 多余的阴影
-    if ([UINavigationBar instancesRespondToSelector:@selector(setShadowImage:)]) {
-        [navigationBarAppearance setShadowImage:[[UIImage alloc] init]];
-    }
+//    if ([UINavigationBar instancesRespondToSelector:@selector(setShadowImage:)]) {
+//        [navigationBarAppearance setShadowImage:[[UIImage alloc] init]];
+//    }
+    
+    // 导航栏按钮统一, iOS 7 风格
+//    id apr = [UIBarButtonItem appearance];
+//    [apr setTintColor:[UIColor colorWithRGBHex:0x2384d0]];
+//    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
+//    [apr setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    [apr setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+//    
+//    [apr setTitleTextAttributes:@{
+//        UITextAttributeTextColor : [UIColor colorWithRGBHex:0x2384d0],
+//        UITextAttributeTextShadowColor : [UIColor colorWithRGBHex:0xfff9fa]
+//        } forState:UIControlStateNormal];
+//    [apr setTitleTextAttributes:@{
+//        UITextAttributeTextColor : [UIColor colorWithRGBHex:0x00FFFF]
+//        } forState:UIControlStateHighlighted];
+//    [apr setTitleTextAttributes:@{
+//        UITextAttributeTextColor : [UIColor colorWithRGBHex:0xAAAAAA alpha:0.5]
+//        } forState:UIControlStateDisabled];
     
     // Checkbox
     //    id checkboxAppearance = [RFCheckBox appearance];

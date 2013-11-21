@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="RootNavigation">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A598" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="RootNavigation">
     <dependencies>
         <deployment version="1536" defaultVersion="1536" identifier="iOS"/>
         <development version="5000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Root Navigation Controller-->
@@ -12,6 +12,8 @@
                 <navigationController definesPresentationContext="YES" id="RootNavigation" customClass="RootNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RootNavigationBar">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.52156865600000002" green="0.60392159219999997" blue="0.71372550729999995" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.52156865600000002" green="0.60392159219999997" blue="0.71372550729999995" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Home" kind="relationship" relationship="rootViewController" id="RootNavigationRelationship"/>
@@ -21,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-895" y="0.0"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home View Controller - Welcome-->
         <scene sceneID="HomeScene">
             <objects>
                 <viewController id="Home" customClass="HomeViewController" sceneMemberID="viewController">
@@ -34,7 +36,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="F8a-Qp-AYO"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="F8a-Qp-AYO">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Vsz-0k-Cre"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
