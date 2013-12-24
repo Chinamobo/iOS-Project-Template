@@ -2,7 +2,7 @@
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
 # Maintained by BB9z (https://github.com/BB9z)
 
-echo "MBAutoBuildScript 0.4.0 "
+echo "MBAutoBuildScript 0.4.1"
 echo "Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved."
 echo "-----------------------"
 
@@ -13,7 +13,7 @@ timeFile=$"$ScriptPath/PreBuild.time"
 if [ $EnableAutoGroupSortByName = "YES" ]; then
 	if [ -n "$(find "$SRCROOT" -name project.pbxproj -newer "$timeFile")" ]; then
 		perl -w "$ScriptPath/sort-Xcode-project-file.pl" "$PROJECT_FILE_PATH"
-		echo "$ProjectFilePath:0: 整理 project.pbxproj，你需要重新编译项目"
+		echo "$ProjectFilePath:0: 整理 project.pbxproj，请重新编译项目"
 		touch "$timeFile"
 		exit 1
 	else
@@ -42,7 +42,7 @@ fi
 # 提醒修改产品名
 if [[ $EnableChangeProductNameRemind = "YES" && $PROJECT = "App" ]]; then
 	if [ "$USER" != "BB9z" ]; then
-		echo "$ProjectFilePath:0: TODO:你必须先给项目改名"
+		echo "$ProjectFilePath:0: 提示: 强制提醒修改产品名已启用，你必须先给项目改名才能编译"
 		exit 2
 	fi
 fi
