@@ -1,13 +1,17 @@
 
 #import "APIAppUpdatePlugin.h"
 #import "AFHTTPRequestOperationManager.h"
-#import "AFHTTPRequestOperation.h"
+#import "API.h"
 
 NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
+NSString *const UDkUpdateForceVesrion = @"Update Force Version";
 
-@interface APIAppUpdatePlugin ()
-<APIAppUpdatePluginNoticeDelegate, UIAlertViewDelegate>
-@property (RF_WEAK, nonatomic) AFHTTPRequestOperationManager<RFPluginSupported> *master;
+@interface APIAppUpdatePlugin () <
+    UIAlertViewDelegate
+>
+@property (weak, nonatomic) AFHTTPRequestOperationManager<RFPluginSupported> *master;
+@property (assign, nonatomic) BOOL silenceMode;
+@property (copy, nonatomic) void (^complationBlock)(APIAppUpdatePlugin *);
 @end
 
 @implementation APIAppUpdatePlugin
@@ -27,7 +31,23 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     return self;
 }
 
-- (void)checkUpdate {
+- (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *))completion {
+    if (self.isChecking) {
+        if (!isSilence) {
+            [UIAlertView showWithTitle:@"更新提示" message:@"正在检查更新，请稍后再试" buttonTitle:@"知道了"];
+        }
+        return;
+    }
+
+    self.isChecking = YES;
+    self.silenceMode = isSilence;
+    self.complationBlock = completion? completion : ^(APIAppUpdatePlugin *plugin) {};
+
+    if (self.customCheckAPIURL) {
+        [self checkCustomAPI];
+        return;
+    }
+
     AFHTTPRequestOperation *op;
     
     if (self.appStoreID) {
@@ -44,6 +64,9 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
             }
             else {
                 dout_warning(@"检查版本出错 %@", error);
+                self.isChecking = NO;
+                self.lastError = error;
+                self.complationBlock(self);
             }
         }];
         
@@ -54,17 +77,42 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     if (self.enterpriseDistributionPlistURL) {
         op = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:self.enterpriseDistributionPlistURL]];
         op.responseSerializer = [AFPropertyListResponseSerializer serializer];
+        [op.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/x-plist", @"text/xml", nil]];
         [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id plist) {
             [self proccessEnterpriseDistributionInfo:plist];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             dout_warning(@"检查版本出错 %@", error);
+            self.isChecking = NO;
+            self.lastError = error;
+            self.complationBlock(self);
         }];
         
         [self.master.operationQueue addOperation:op];
         return;
     }
-    
+
     dout_error(@"Can't check updated version. Neither appStoreID or enterpriseDistributionPlistURL set.");
+    self.isChecking = NO;
+}
+
+- (void)checkCustomAPI {
+    @weakify(self);
+    [(API *)self.master fetch:self.customCheckAPIURL.absoluteString method:nil parameters:nil expectClass:[MBAppVersion class] success:^(MBAppVersion *info) {
+        @strongify(self);
+        self.isForceUpdate = info.isForceUpdate;
+        self.installURL = [NSURL URLWithString:info.URI];
+        self.releaseNotes = info.releaseNote;
+        self.remoteVersion = info.version;
+
+        [self checkResponseInfo];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        @strongify(self);
+        if (!self.silenceMode) {
+            [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+        }
+    } completion:^(AFHTTPRequestOperation *operation) {
+        
+    }];
 }
 
 - (void)proccessAppStoreInfo:(NSDictionary *)info {
@@ -96,10 +144,24 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     
     NSString *currentVersion = [[NSBundle mainBundle] versionString];
     BOOL hasNewVersion = ([currentVersion compare:self.remoteVersion options:NSNumericSearch] == NSOrderedAscending);
-    
+
+    if (hasNewVersion && self.isForceUpdate) {
+        [[NSUserDefaults standardUserDefaults] setObject:self.remoteVersion forKey:UDkUpdateForceVesrion];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:@"强制更新提示" message:[NSString stringWithFormat:@"应用必须更新才能使用\n%@\n点击确认关闭应用", self.releaseNotes] delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
+        notice.plugin = self;
+        [notice show];
+        self.isChecking = NO;
+        self.complationBlock(self);
+        return;
+    }
+
     if ([self.noticeDelegate respondsToSelector:@selector(appUpdatePlugin:hasNewVersionAvailable:isIgnored:)]) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.noticeDelegate appUpdatePlugin:self hasNewVersionAvailable:hasNewVersion isIgnored:isIgnored];
+            self.isChecking = NO;
+            self.complationBlock(self);
         });
     }
 }
@@ -132,6 +194,10 @@ NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
     switch (buttonIndex) {
         case 0:
             // 取消
+            if (self.isForceUpdate) {
+                [[UIApplication sharedApplication] openURL:self.installURL];
+                exit(EXIT_SUCCESS);
+            }
             break;
             
         case 1:

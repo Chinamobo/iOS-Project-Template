@@ -19,14 +19,25 @@
 
 @protocol APIAppUpdatePluginNoticeDelegate <NSObject>
 @optional
-- (void)appUpdatePlugin:(APIAppUpdatePlugin *)plugin  hasNewVersionAvailable:(BOOL)hasNewVersion isIgnored:(BOOL)isIgnored;
+- (void)appUpdatePlugin:(APIAppUpdatePlugin *)plugin hasNewVersionAvailable:(BOOL)hasNewVersion isIgnored:(BOOL)isIgnored;
 
 @end
 
-@interface APIAppUpdatePlugin : RFPlugin
-<APIAppUpdatePluginNoticeDelegate>
+@interface APIAppUpdatePlugin : RFPlugin <
+    APIAppUpdatePluginNoticeDelegate
+>
 
 - (instancetype)initWithMaster:(AFHTTPRequestOperationManager<RFPluginSupported> *)api;
+
+/// 执行更新检查
+- (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *plugin))completion;
+
+@property (assign, nonatomic) BOOL isChecking;
+@property (strong, nonatomic) NSError *lastError;
+
+#pragma mark - 设置
+
+@property (copy, nonatomic) NSURL *customCheckAPIURL;
 
 // AppStore 上的应用ID，如：569781369
 @property (copy, nonatomic) NSString *appStoreID;
@@ -34,15 +45,17 @@
 // 如果同时设置了AppStore ID，则只检查 AppStore 版本
 @property (copy, nonatomic) NSURL *enterpriseDistributionPlistURL;
 
-// 执行更新检查
-- (void)checkUpdate;
-
-// 更新信息
+#pragma mark - 更新信息
 @property (copy, nonatomic) NSString *releaseNotes;
 @property (copy, nonatomic) NSString *remoteVersion;
 
+// 是否强制用户升级
+@property (assign, nonatomic) BOOL isForceUpdate;
+
 // 执行安装的URL
 @property (copy, nonatomic) NSURL *installURL;
+
+#pragma mark - 通知
 
 // 可选，不设置使用内建的通知方式
 @property (weak, nonatomic) id<APIAppUpdatePluginNoticeDelegate> noticeDelegate;
@@ -53,6 +66,7 @@
 @end
 
 extern NSString *const UDkUpdateIgnoredVersion;
+extern NSString *const UDkUpdateForceVesrion;
 
 // 只是用于hold住插件，防止在AlertView dismiss前被释放
 @interface APIAppUpdatePluginAlertView : UIAlertView

@@ -44,13 +44,18 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
     }
     
     if (self.shouldAutoLogin) {
-        [self loginWithCallback:nil];
+        [self loginWithCallback:^(BOOL success, NSError *error) {
+            if (!success) {
+                [self.master alertError:error title:nil];
+            }
+        }];
     }
 }
 
 #pragma mark - 登入
 
 - (void)loginWithCallback:(void (^)(BOOL success, NSError *error))callback {
+    NSParameterAssert(callback);
     if (self.isLoggedIn || self.isLogining) return;
     
     if (!self.userAccount.length || !self.userPassword.length) {
@@ -61,38 +66,42 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
     }
     
     self.isLogining = YES;
-    
-    [self.master POST:APIURLLogin parameters:@{
-         @"username" : self.userAccount,
-         @"password" : self.userPassword
-     } completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *error) {
-         BOOL isSuccess = NO;
-         NSError __autoreleasing *e = error;
 
-         if ([JSONObject isKindOfClass:[NSDictionary class]]) {
-             self.userID = [JSONObject[@"uid"] intValue];
-             self.token = JSONObject[@"token"];
-             
-             if (self.userID) {
-                 [self saveProfileConfig];
-                 isSuccess = YES;
-                 self.isLoggedIn = YES;
-             }
-             else {
-                 e = [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:0 userInfo:@{ NSLocalizedDescriptionKey: JSONObject[@"result"] }];
-             }
-         }
-         
-         if (callback) {
-             callback(isSuccess, e);
-         }
-         
-         if (self.shouldAutoFetchOtherUserInformationAfterLogin) {
-             [self fetchUserInformationCompletion:nil];
-         }
-         
-         self.isLogining = NO;
-     }];
+    [self.master send:APIURLLogin parameters:@{
+        @"username" : self.userAccount,
+        @"password" : self.userPassword
+    } success:^(id JSONObject) {
+        BOOL isSuccess = NO;
+        NSError __autoreleasing *e;
+
+        if ([JSONObject isKindOfClass:[NSDictionary class]]) {
+            self.userID = [JSONObject[@"uid"] intValue];
+            self.token = JSONObject[@"token"];
+
+            if (self.userID) {
+                [self saveProfileConfig];
+                isSuccess = YES;
+                self.isLoggedIn = YES;
+            }
+            else {
+                e = [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:0 userInfo:@{ NSLocalizedDescriptionKey: JSONObject[@"result"] }];
+            }
+        }
+
+        if (callback) {
+            callback(isSuccess, e);
+        }
+
+        if (self.shouldAutoFetchOtherUserInformationAfterLogin) {
+            [self fetchUserInformationCompletion:nil];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(NO, error);
+        }
+    } completion:^(AFHTTPRequestOperation *operation) {
+        self.isLogining = NO;
+    }];
 }
 
 - (void)logout {
@@ -102,20 +111,16 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 }
 
 #pragma mark -
-- (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback{
-    [self.master POST:APIURLForgetPassword parameters:recoverInfo completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *Error) {
-        if (JSONObject) {
-            if ([JSONObject[@"Result"] isEqualToString:@"0"]) {
-                callback(JSONObject[@"password"], nil);
-            }
-            else {
-                callback(nil, Error);
-            }
+- (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback {
+    [self.master send:APIURLForgetPassword parameters:recoverInfo success:^(id responseObject) {
+        if (callback) {
+            callback(responseObject, nil);
         }
-        else {
-            callback(nil, Error);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(nil, error);
         }
-    }];
+    } completion:nil];
 }
 
 #pragma mark -
@@ -139,16 +144,18 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 }
 
 - (void)fetchUserInfoWithID:(int)userID completion:(void (^)(UserInformation *info, NSError *error))callback {
-    [self.master GET:APIURLUserInfo parameters:@{
-         @"uid" : @(userID),
-         @"token" : (self.token)? : @""
-     } completion:^(AFHTTPRequestOperation *operation, id JSONObject, NSError *error) {
-         if (callback) {
-             NSError __autoreleasing *e = nil;
-             UserInformation *info = [[UserInformation alloc] initWithDictionary:JSONObject error:&e];
-             callback(info, (error)? error : e);
-         }
-     }];
+    [self.master fetch:APIURLUserInfo method:nil parameters:@{
+        @"uid" : @(userID),
+        @"token" : (self.token)? : @""
+    } expectClass:[UserInformation class] success:^(id JSONModelObject) {
+        if (callback) {
+            callback(JSONModelObject, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (callback) {
+            callback(nil, error);
+        }
+    } completion:nil];
 }
 
 #pragma mark - Secret staues

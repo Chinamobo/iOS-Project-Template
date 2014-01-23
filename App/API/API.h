@@ -11,14 +11,16 @@
  */
 
 #import "AFNetworking+API.h"
+#import "RFAPI.h"
 #import "DataStack.h"
 
 #import "APIUserPlugin.h"
 #import "APIAutoSyncPlugin.h"
 #import "APIAppUpdatePlugin.h"
+#import "SVProgressHUD.h"
 
-@interface API : AFHTTPRequestOperationManager
-<APIAutoSyncPluginDelegate>
+@interface API : RFAPI <APIAutoSyncPluginDelegate
+>
 
 + (instancetype)sharedInstance;
 
@@ -30,8 +32,8 @@
 #pragma mark - 具体业务
 
 
-
 #pragma mark - 自动更新
+
 @property (strong, nonatomic) APIAutoSyncPlugin *autoSyncPlugin;
 @property (readonly, assign, nonatomic) BOOL canPerformSync;
 
@@ -39,13 +41,23 @@
 @property (strong, nonatomic) APIAppUpdatePlugin *appUpdatePlugin;
 
 #pragma mark -
-// 显示错误的统一方法，默认使用 UIAlertView
-// 重写已使用其他提示方式
+
+- (void)fetch:(NSString *)URI method:(NSString *)method parameters:(NSDictionary *)parameters expectClass:(Class)modelClass success:(void (^)(id JSONModelObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion;
+- (void)fetchList:(NSString *)URI method:(NSString *)method parameters:(NSDictionary *)parameters expectClass:(Class)modelClass success:(void (^)(NSMutableArray *JSONModelObjects))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion;
+- (void)send:(NSString *)URI parameters:(NSDictionary *)parameters success:(void (^)(id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion;
+
+/** 显示错误的统一方法
+ 
+ 默认使用 UIAlertView，重写已使用其他提示方式
+ 
+ @param error 显示错误信息的对象
+ @param title 提示标题，可选
+ */
 - (void)alertError:(NSError *)error title:(NSString *)title;
 
 @end
 
 // 暴漏给外部的常量
 extern NSString *const APIURLDeployBase;
+extern NSString *const APIURLAssetsBase;
 extern NSUInteger APIConfigFetchPageSize;
-

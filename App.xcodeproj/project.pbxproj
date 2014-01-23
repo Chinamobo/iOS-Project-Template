@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D50558651890C5B30049A759 /* UIResponder+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558641890C5B30049A759 /* UIResponder+RFKit.m */; };
+		D50558691890C7F40049A759 /* RFAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558681890C7F40049A759 /* RFAPI.m */; };
+		D50558731890C80B0049A759 /* RFAssetsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D505586C1890C80B0049A759 /* RFAssetsCache.m */; };
+		D50558741890C80B0049A759 /* RFAssetsCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */; };
+		D50558751890C80B0049A759 /* RFAssetsCacheData.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558701890C80B0049A759 /* RFAssetsCacheData.m */; };
+		D50558761890C80B0049A759 /* RFAssetsCacheRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */; };
+		D505587B1890C8AC0049A759 /* APIJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D505587A1890C8AC0049A759 /* APIJSONResponseSerializer.m */; };
+		D505587F1890CA060049A759 /* MBAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D505587E1890CA060049A759 /* MBAppVersion.m */; };
+		D50558851890E8A50049A759 /* SVProgressHUD LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D50558811890E8A50049A759 /* SVProgressHUD LICENSE.txt */; };
+		D50558861890E8A50049A759 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50558821890E8A50049A759 /* SVProgressHUD.bundle */; };
+		D50558871890E8A50049A759 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558841890E8A50049A759 /* SVProgressHUD.m */; };
+		D50558911890E8EE0049A759 /* RFLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588A1890E8EE0049A759 /* RFLine.m */; };
+		D50558921890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588C1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m */; };
+		D50558931890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588E1890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.m */; };
+		D50558941890E8EE0049A759 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */; };
 		D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3D17EECAAF00CA387C /* Foundation.framework */; };
 		D5197A4017EECAAF00CA387C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */; };
 		D5197A4217EECAAF00CA387C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A4117EECAAF00CA387C /* UIKit.framework */; };
@@ -21,7 +36,6 @@
 		D5197A6C17EECAAF00CA387C /* AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A6B17EECAAF00CA387C /* AppTests.m */; };
 		D5197A7817EECF3B00CA387C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A7717EECF3B00CA387C /* HomeViewController.m */; };
 		D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197A7A17EED1EC00CA387C /* RootNavigationController.m */; };
-		D5197C5017F019E500CA387C /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AD317F019E200CA387C /* UIView+RFPatternImageBackground.m */; };
 		D5197C5117F019E500CA387C /* RFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AD617F019E200CA387C /* RFButton.m */; };
 		D5197C5217F019E500CA387C /* RFControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AD817F019E200CA387C /* RFControl.m */; };
 		D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197ADD17F019E200CA387C /* RFCheckbox.m */; };
@@ -129,6 +143,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D50558631890C5B30049A759 /* UIResponder+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+RFKit.h"; sourceTree = "<group>"; };
+		D50558641890C5B30049A759 /* UIResponder+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+RFKit.m"; sourceTree = "<group>"; };
+		D50558671890C7F40049A759 /* RFAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAPI.h; sourceTree = "<group>"; };
+		D50558681890C7F40049A759 /* RFAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAPI.m; sourceTree = "<group>"; };
+		D505586B1890C80B0049A759 /* RFAssetsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCache.h; sourceTree = "<group>"; };
+		D505586C1890C80B0049A759 /* RFAssetsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCache.m; sourceTree = "<group>"; };
+		D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RFAssetsCache.xcdatamodel; sourceTree = "<group>"; };
+		D505586F1890C80B0049A759 /* RFAssetsCacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCacheData.h; sourceTree = "<group>"; };
+		D50558701890C80B0049A759 /* RFAssetsCacheData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheData.m; sourceTree = "<group>"; };
+		D50558711890C80B0049A759 /* RFAssetsCacheRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCacheRecord.h; sourceTree = "<group>"; };
+		D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheRecord.m; sourceTree = "<group>"; };
+		D50558771890C8AC0049A759 /* APIConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIConfig.h; sourceTree = "<group>"; };
+		D50558791890C8AC0049A759 /* APIJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIJSONResponseSerializer.h; sourceTree = "<group>"; };
+		D505587A1890C8AC0049A759 /* APIJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIJSONResponseSerializer.m; sourceTree = "<group>"; };
+		D505587D1890CA060049A759 /* MBAppVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppVersion.h; sourceTree = "<group>"; };
+		D505587E1890CA060049A759 /* MBAppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppVersion.m; sourceTree = "<group>"; };
+		D50558811890E8A50049A759 /* SVProgressHUD LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SVProgressHUD LICENSE.txt"; sourceTree = "<group>"; };
+		D50558821890E8A50049A759 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		D50558831890E8A50049A759 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		D50558841890E8A50049A759 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		D50558891890E8EE0049A759 /* RFLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFLine.h; sourceTree = "<group>"; };
+		D505588A1890E8EE0049A759 /* RFLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFLine.m; sourceTree = "<group>"; };
+		D505588B1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+RFResizableBackgroundImage.h"; sourceTree = "<group>"; };
+		D505588C1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+RFResizableBackgroundImage.m"; sourceTree = "<group>"; };
+		D505588D1890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFApperanceLayerCornerRadius.h"; sourceTree = "<group>"; };
+		D505588E1890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFApperanceLayerCornerRadius.m"; sourceTree = "<group>"; };
+		D505588F1890E8EE0049A759 /* UIView+RFPatternImageBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFPatternImageBackground.h"; sourceTree = "<group>"; };
+		D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D5197A3A17EECAAF00CA387C /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5197A3D17EECAAF00CA387C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,8 +191,6 @@
 		D5197A7717EECF3B00CA387C /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D5197A7917EED1EC00CA387C /* RootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
 		D5197A7A17EED1EC00CA387C /* RootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
-		D5197AD217F019E200CA387C /* UIView+RFPatternImageBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RFPatternImageBackground.h"; sourceTree = "<group>"; };
-		D5197AD317F019E200CA387C /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D5197AD517F019E200CA387C /* RFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFButton.h; sourceTree = "<group>"; };
 		D5197AD617F019E200CA387C /* RFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFButton.m; sourceTree = "<group>"; };
 		D5197AD717F019E200CA387C /* RFControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFControl.h; sourceTree = "<group>"; };
@@ -228,7 +268,6 @@
 		D5197BA717F019E400CA387C /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		D5197BA817F019E400CA387C /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		D5197BA917F019E400CA387C /* EXTScope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTScope.m; sourceTree = "<group>"; };
-		D5197BAA17F019E400CA387C /* EXTSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSwizzle.h; sourceTree = "<group>"; };
 		D5197BAB17F019E400CA387C /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
 		D5197BAC17F019E400CA387C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D5197BAE17F019E400CA387C /* JRSwizzle Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "JRSwizzle Readme.md"; sourceTree = "<group>"; };
@@ -385,6 +424,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D50558661890C7F40049A759 /* RFAPI */ = {
+			isa = PBXGroup;
+			children = (
+				D50558671890C7F40049A759 /* RFAPI.h */,
+				D50558681890C7F40049A759 /* RFAPI.m */,
+			);
+			path = RFAPI;
+			sourceTree = "<group>";
+		};
+		D505586A1890C80B0049A759 /* RFAssetsCache */ = {
+			isa = PBXGroup;
+			children = (
+				D505586B1890C80B0049A759 /* RFAssetsCache.h */,
+				D505586C1890C80B0049A759 /* RFAssetsCache.m */,
+				D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */,
+				D505586F1890C80B0049A759 /* RFAssetsCacheData.h */,
+				D50558701890C80B0049A759 /* RFAssetsCacheData.m */,
+				D50558711890C80B0049A759 /* RFAssetsCacheRecord.h */,
+				D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */,
+			);
+			path = RFAssetsCache;
+			sourceTree = "<group>";
+		};
+		D50558781890C8AC0049A759 /* APIResponseSerialization */ = {
+			isa = PBXGroup;
+			children = (
+				D50558791890C8AC0049A759 /* APIJSONResponseSerializer.h */,
+				D505587A1890C8AC0049A759 /* APIJSONResponseSerializer.m */,
+			);
+			path = APIResponseSerialization;
+			sourceTree = "<group>";
+		};
+		D505587C1890C9E90049A759 /* JSONModels */ = {
+			isa = PBXGroup;
+			children = (
+				D505587D1890CA060049A759 /* MBAppVersion.h */,
+				D505587E1890CA060049A759 /* MBAppVersion.m */,
+			);
+			path = JSONModels;
+			sourceTree = "<group>";
+		};
+		D50558801890E8A50049A759 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D50558811890E8A50049A759 /* SVProgressHUD LICENSE.txt */,
+				D50558821890E8A50049A759 /* SVProgressHUD.bundle */,
+				D50558831890E8A50049A759 /* SVProgressHUD.h */,
+				D50558841890E8A50049A759 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = Frameworks/SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		D50558881890E8EE0049A759 /* RFViewApperance */ = {
+			isa = PBXGroup;
+			children = (
+				D50558891890E8EE0049A759 /* RFLine.h */,
+				D505588A1890E8EE0049A759 /* RFLine.m */,
+				D505588B1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.h */,
+				D505588C1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m */,
+				D505588D1890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.h */,
+				D505588E1890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.m */,
+				D505588F1890E8EE0049A759 /* UIView+RFPatternImageBackground.h */,
+				D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */,
+			);
+			path = RFViewApperance;
+			sourceTree = "<group>";
+		};
 		D5197A3117EECAAF00CA387C = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +517,7 @@
 				D5197C0217F019E500CA387C /* AFNetworking */,
 				D5197C2E17F019E500CA387C /* JSONModel */,
 				D5197AC517F019E200CA387C /* RFUI */,
+				D50558801890E8A50049A759 /* SVProgressHUD */,
 				D5197D0417F01E1D00CA387C /* CoreData.framework */,
 				D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */,
 				D5197A3D17EECAAF00CA387C /* Foundation.framework */,
@@ -491,23 +599,16 @@
 		D5197AC617F019E200CA387C /* Alpha */ = {
 			isa = PBXGroup;
 			children = (
-				D5197AD117F019E200CA387C /* RFBackground */,
+				D50558661890C7F40049A759 /* RFAPI */,
+				D505586A1890C80B0049A759 /* RFAssetsCache */,
 				D5197AD417F019E200CA387C /* RFButton */,
 				D5197ADB17F019E200CA387C /* RFCheckbox */,
 				D5197ADE17F019E200CA387C /* RFCoreData */,
 				D5197AE417F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin */,
 				D5197B1617F019E300CA387C /* RFPlugin */,
+				D50558881890E8EE0049A759 /* RFViewApperance */,
 			);
 			path = Alpha;
-			sourceTree = "<group>";
-		};
-		D5197AD117F019E200CA387C /* RFBackground */ = {
-			isa = PBXGroup;
-			children = (
-				D5197AD217F019E200CA387C /* UIView+RFPatternImageBackground.h */,
-				D5197AD317F019E200CA387C /* UIView+RFPatternImageBackground.m */,
-			);
-			path = RFBackground;
 			sourceTree = "<group>";
 		};
 		D5197AD417F019E200CA387C /* RFButton */ = {
@@ -659,6 +760,8 @@
 				D5197B8B17F019E400CA387C /* UIDevice+RFKit.m */,
 				D5197B8C17F019E400CA387C /* UIImage+RFKit.h */,
 				D5197B8D17F019E400CA387C /* UIImage+RFKit.m */,
+				D50558631890C5B30049A759 /* UIResponder+RFKit.h */,
+				D50558641890C5B30049A759 /* UIResponder+RFKit.m */,
 				D5197B8E17F019E400CA387C /* UISearchBar+RFKit.h */,
 				D5197B8F17F019E400CA387C /* UISearchBar+RFKit.m */,
 				D5197B9017F019E400CA387C /* UIStoryboard+RFKit.h */,
@@ -709,7 +812,6 @@
 				D5197BA717F019E400CA387C /* EXTKeyPathCoding.h */,
 				D5197BA817F019E400CA387C /* EXTScope.h */,
 				D5197BA917F019E400CA387C /* EXTScope.m */,
-				D5197BAA17F019E400CA387C /* EXTSwizzle.h */,
 				D5197BAB17F019E400CA387C /* metamacros.h */,
 			);
 			path = extobjc;
@@ -868,6 +970,7 @@
 		D5197D0817F01ED400CA387C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D505587C1890C9E90049A759 /* JSONModels */,
 				D5197D0D17F020A000CA387C /* DataStack.h */,
 				D5197D0E17F020A000CA387C /* DataStack.m */,
 				D5197D0917F01EEC00CA387C /* Model.xcdatamodeld */,
@@ -878,6 +981,7 @@
 		D5197D1017F0213600CA387C /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D50558781890C8AC0049A759 /* APIResponseSerialization */,
 				D5197D1617F0213600CA387C /* AppUpdate */,
 				D5197D1917F0213600CA387C /* AutoSync */,
 				D5197D1C17F0213600CA387C /* UserPlugin */,
@@ -885,6 +989,7 @@
 				D5197D1217F0213600CA387C /* AFNetworking+API.m */,
 				D5197D1317F0213600CA387C /* API.h */,
 				D5197D1417F0213600CA387C /* API.m */,
+				D50558771890C8AC0049A759 /* APIConfig.h */,
 				D5197D1517F0213600CA387C /* APIInterface.h */,
 			);
 			path = API;
@@ -1025,6 +1130,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Chinamobo;
 				TargetAttributes = {
+					D5197A3917EECAAF00CA387C = {
+						DevelopmentTeam = 32GVVZMZN3;
+					};
 					D5197A5D17EECAAF00CA387C = {
 						TestTargetID = D5197A3917EECAAF00CA387C;
 					};
@@ -1060,6 +1168,8 @@
 				D5197D3517F027BB00CA387C /* Localizable.strings in Resources */,
 				D5197A5417EECAAF00CA387C /* Main_iPad.storyboard in Resources */,
 				D5197A5117EECAAF00CA387C /* Main_iPhone.storyboard in Resources */,
+				D50558851890E8A50049A759 /* SVProgressHUD LICENSE.txt in Resources */,
+				D50558861890E8A50049A759 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1219,7 @@
 				D5197D2217F0213600CA387C /* API.m in Sources */,
 				D5197D2317F0213600CA387C /* APIAppUpdatePlugin.m in Sources */,
 				D5197D2417F0213600CA387C /* APIAutoSyncPlugin.m in Sources */,
+				D505587B1890C8AC0049A759 /* APIJSONResponseSerializer.m in Sources */,
 				D5197D2517F0213600CA387C /* APIUserPlugin.m in Sources */,
 				D5197A4E17EECAAF00CA387C /* AppDelegate.m in Sources */,
 				D5197D0F17F020A000CA387C /* DataStack.m in Sources */,
@@ -1123,6 +1234,7 @@
 				D5197CEE17F019E600CA387C /* JSONModelError.m in Sources */,
 				D5197CF417F019E600CA387C /* JSONValueTransformer.m in Sources */,
 				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
+				D505587F1890CA060049A759 /* MBAppVersion.m in Sources */,
 				D5197D0B17F01EEC00CA387C /* Model.xcdatamodeld in Sources */,
 				D5E4353E186937B200336C9B /* NavigationBarAppearanceConfig.m in Sources */,
 				D5197CEF17F019E600CA387C /* NSArray+JSONModel.m in Sources */,
@@ -1143,6 +1255,11 @@
 				D5197CB217F019E600CA387C /* RACSwizzling.m in Sources */,
 				D5197CB517F019E600CA387C /* RFAlloctionProxyButton.m in Sources */,
 				D5197CB617F019E600CA387C /* RFAlloctionProxyView.m in Sources */,
+				D50558691890C7F40049A759 /* RFAPI.m in Sources */,
+				D50558731890C80B0049A759 /* RFAssetsCache.m in Sources */,
+				D50558741890C80B0049A759 /* RFAssetsCache.xcdatamodeld in Sources */,
+				D50558751890C80B0049A759 /* RFAssetsCacheData.m in Sources */,
+				D50558761890C80B0049A759 /* RFAssetsCacheRecord.m in Sources */,
 				D5197C5117F019E500CA387C /* RFButton.m in Sources */,
 				D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */,
 				D5197CD017F019E600CA387C /* RFContainedSegue.m in Sources */,
@@ -1152,6 +1269,7 @@
 				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
 				D5197CB817F019E600CA387C /* RFGeometry.m in Sources */,
 				D5197C8F17F019E600CA387C /* RFKeyboard.m in Sources */,
+				D50558911890E8EE0049A759 /* RFLine.m in Sources */,
 				D5197CD117F019E600CA387C /* RFNavigationPushAsRootSegue.m in Sources */,
 				D5197CD217F019E600CA387C /* RFNavigationPushSegue.m in Sources */,
 				D5197CB917F019E600CA387C /* RFPerformance.m in Sources */,
@@ -1162,22 +1280,26 @@
 				D5197CCF17F019E600CA387C /* RFSeguePopButton.m in Sources */,
 				D5197CC717F019E600CA387C /* RFUI.m in Sources */,
 				D5197A7B17EED1EC00CA387C /* RootNavigationController.m in Sources */,
+				D50558871890E8A50049A759 /* SVProgressHUD.m in Sources */,
 				D5DED94D1839C9DE0087CB7C /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				D5DED94E1839C9DE0087CB7C /* UIAlertView+AFNetworking.m in Sources */,
 				D5197C9B17F019E600CA387C /* UIAlertView+RFKit.m in Sources */,
 				D5DED94F1839C9DE0087CB7C /* UIButton+AFNetworking.m in Sources */,
 				D5197C9C17F019E600CA387C /* UIButton+RFKit.m in Sources */,
+				D50558921890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m in Sources */,
 				D5197C9D17F019E600CA387C /* UIColor+RFKit.m in Sources */,
 				D5197C9E17F019E600CA387C /* UIDevice+RFKit.m in Sources */,
 				D5197C9F17F019E600CA387C /* UIImage+RFKit.m in Sources */,
 				D5DED9501839C9DE0087CB7C /* UIImageView+AFNetworking.m in Sources */,
 				D5DED9511839C9DE0087CB7C /* UIProgressView+AFNetworking.m in Sources */,
+				D50558651890C5B30049A759 /* UIResponder+RFKit.m in Sources */,
 				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
 				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
 				D5197CA217F019E600CA387C /* UITableView+RFKit.m in Sources */,
 				D5197CA317F019E600CA387C /* UIView+RFAnimate.m in Sources */,
+				D50558931890E8EE0049A759 /* UIView+RFApperanceLayerCornerRadius.m in Sources */,
 				D5197CA417F019E600CA387C /* UIView+RFKit.m in Sources */,
-				D5197C5017F019E500CA387C /* UIView+RFPatternImageBackground.m in Sources */,
+				D50558941890E8EE0049A759 /* UIView+RFPatternImageBackground.m in Sources */,
 				D5197CA517F019E600CA387C /* UIViewController+RFKit.m in Sources */,
 				D5DED9521839C9DE0087CB7C /* UIWebView+AFNetworking.m in Sources */,
 				D5197CA617F019E600CA387C /* UIWebView+RFKit.m in Sources */,
@@ -1469,6 +1591,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */,
+			);
+			currentVersion = D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */;
+			path = RFAssetsCache.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		D5197D0917F01EEC00CA387C /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

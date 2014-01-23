@@ -50,18 +50,15 @@
 
 // 正在登入
 @property (readonly, nonatomic) BOOL isLogining;
-
+//登陆接口
 - (void)loginWithCallback:(void (^)(BOOL success, NSError *error))callback;
-- (void)logout;
 
+- (void)logout;
 
 #pragma mark 用户信息获取
 @property (readonly, nonatomic) BOOL isFetchingUserInformation; // 只对当前用户有效
-- (void)fetchUserInformationCompletion:(void (^)(BOOL success, NSError *error))callback;
 
-// 用于获取其他用户的用户信息
 - (void)fetchUserInfoWithID:(int)userID completion:(void (^)(UserInformation *info, NSError *error))callback;
-
 
 #pragma mark 找回密码
 - (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback;

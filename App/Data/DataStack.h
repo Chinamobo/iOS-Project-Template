@@ -6,6 +6,7 @@
  */
 
 #import "RFCoreData.h"
+#import "MBAppVersion.h"
 
 @interface DataStack : NSObject
 + (DataStack *)sharedInstance;
