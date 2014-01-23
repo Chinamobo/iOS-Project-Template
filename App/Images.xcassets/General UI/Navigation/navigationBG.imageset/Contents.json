@@ -14,20 +14,9 @@
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "3-part-vertical",
-        "center" : {
-          "mode" : "fill",
-          "height" : 11
-        },
-        "capInsets" : {
-          "top" : 9,
-          "bottom" : 23
-        }
-      },
       "idiom" : "iphone",
-      "filename" : "navigationBG@2x.png",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "navigationBG@2x.png"
     }
   ],
   "info" : {
