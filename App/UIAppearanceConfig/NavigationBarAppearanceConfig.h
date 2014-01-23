@@ -1,10 +1,10 @@
 /*!
     Navigation Bar
     MBAppearanceConfig
- 
-    Copyright (c) 2013 BB9z
+
+    Copyright (c) 2013-2014 BB9z
     https://github.com/BB9z/iOS-Project-Template
- 
+
     The Apache License, Version 2.0
     http://www.apache.org/licenses/LICENSE-2.0
  */
@@ -18,9 +18,13 @@
 
 #pragma mark - 背景设置
 
-// 是否使用自定义导航栏背景图
-// 背景图名称需设置为 navigationBarBackground
+/// 是否使用自定义导航栏背景图
+/// 背景图名称需设置为 navigationBarBackground
 #define __MBACNavigationBar_CustomBackground 1
+
+/// 是否为旧系统（iOS 6 及之前版本）使用单独的导航栏背景图
+/// 背景图名称需设置为 navigationBarBackgroundOld
+#define __MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem 1
 
 // 移除自定义背景下的阴影（未设置背景则阴影不会被移除）
 #define __MBACNavigationBar_RemoveBarShadow 0
@@ -69,17 +73,16 @@
 #define __MBACNavigationBar_ButtonItemTitleColorAlpha 1
 
 // 按钮背景
-#define __MBACNavigationBar_ButtonItemClearBackground 1
+#define __MBACNavigationBar_ButtonItemClearBackground 0
 
 // 返回按钮
 // 隐藏 iOS 7 返回按钮左侧默认的箭头
-#define __MBACNavigationBar_BackButtonItemHideIndicatorImage 1
+#define __MBACNavigationBar_BackButtonItemHideIndicatorImage 0
 
 // 隐藏返回按钮的标题
-#define __MBACNavigationBar_BackButtonItemHideTitle 1
+#define __MBACNavigationBar_BackButtonItemHideTitle 0
 
 #pragma mark - 其他
-
 
 #if __MBACNavigationBarEnabled
 #import <UIKit/UIKit.h>

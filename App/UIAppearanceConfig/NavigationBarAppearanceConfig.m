@@ -12,21 +12,26 @@
 #pragma mark - 背景设置
 
 #if __MBACNavigationBar_CustomBackground
-    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    if (__MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem && isOldSystem) {
+        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackgroundOld"] forBarMetrics:UIBarMetricsDefault];
+    }
+    else {
+        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    }
 #endif
-    
+
 #if __MBACNavigationBar_RemoveBarShadow
     [navigationBarAppearance setShadowImage:UIImage.new];
 #endif
 
-    
+
 #if __MBACNavigationBar_BarTintColor
 #if __MBACNavigationBar_BarTintColor_iOS6
     [navigationBarAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor_iOS6]];
 #else
     [navigationBarAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor]];
 #endif
-    
+
     // iOS 7
     if ([UINavigationBar instancesRespondToSelector:@selector(setBarTintColor:)]) {
         [navigationBarAppearance setBarTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor]];
@@ -50,7 +55,6 @@
     }
     else {
         textAttributes[NSForegroundColorAttributeName] = [UIColor colorWithRGBHex:__MBACNavigationBar_TitleColor alpha:__MBACNavigationBar_TitleColorAlpha];
-        douto(textAttributes[NSForegroundColorAttributeName])
     }
 #endif
     if (__MBACNavigationBar_TitleShadowColor) {
@@ -70,8 +74,8 @@
     if (textAttributes.count) {
         [navigationBarAppearance setTitleTextAttributes:textAttributes.copy];
     }
-    
-    
+
+
 #if __MBACNavigationBar_TitleVerticalPositionAdjustment
     [navigationBarAppearance setTitleVerticalPositionAdjustment:__MBACNavigationBar_TitleVerticalPositionAdjustment forBarMetrics:UIBarMetricsDefault];
 #endif
@@ -88,12 +92,12 @@
         [itemAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_ButtonItemTitleColor alpha:__MBACNavigationBar_ButtonItemTitleColorAlpha]];
     }
 #endif
-    
+
     if (textAttributes.count) {
         [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
     }
 
-    UIImage *blankImage = [UIImage imageNamed:@"blank2"];
+    __unused UIImage *blankImage = [UIImage imageNamed:@"blank2"];
 #if __MBACNavigationBar_ButtonItemClearBackground
     [itemAppearance setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 #endif
