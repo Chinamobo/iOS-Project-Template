@@ -3,6 +3,8 @@
 #import "debug.h"
 
 @interface DataStack ()
+@property (strong, nonatomic) id applicationWillTerminateNotificationObserver;
+@property (strong, nonatomic) id applicationWillResignActiveNotificationObserver;
 @end
 
 @implementation DataStack
@@ -19,15 +21,20 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillTerminateNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.applicationWillTerminateNotificationObserver = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillTerminateNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
             [self save];
         }];
-        [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        self.applicationWillResignActiveNotificationObserver = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillResignActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
             [self save];
         }];
     }
-    
+
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self.applicationWillResignActiveNotificationObserver];
+    [[NSNotificationCenter defaultCenter] removeObserver:self.applicationWillTerminateNotificationObserver];
 }
 
 - (NSURL *)dataBaseURL {
@@ -94,8 +101,7 @@
     return _persistentStoreCoordinator;
 }
 
-#pragma mark - 单例快速访问
-
+#pragma mark - 快速访问
 + (NSManagedObjectContext *)managedObjectContext {
     return [self sharedInstance].managedObjectContext;
 }
