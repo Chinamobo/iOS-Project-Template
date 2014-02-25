@@ -6,7 +6,7 @@
 	url = https://github.com/RFUI/Core.git
 [submodule "Frameworks/RFUI/RFSegue"]
 	path = Frameworks/RFUI/RFSegue
-	url = https://bb9z@github.com/RFUI/RFSegue.git
+	url = https://github.com/RFUI/RFSegue.git
 [submodule "Frameworks/RFUI/Alpha"]
 	path = Frameworks/RFUI/Alpha
 	url = https://github.com/RFUI/Alpha.git
