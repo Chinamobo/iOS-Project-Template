@@ -65,6 +65,7 @@ Chinamobo iOS 项目模版
 * 代码签名规则简化，Release 使用发布 Profile；
 * 附加一组默认 UI 素材，及相应 UIAppearance 设置；
 * 添加仓库级别的 git 忽略规则；
+* 添加搜索路径，只需把第三方的库添加到 Frameworks 目录下就可以直接了，无需再添加相应搜索路径；
 * 全套应用 Icon 及启动画面；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；
 * 修正 Xcode 默认项目模版重命名后单元测试路径错误；
@@ -73,7 +74,7 @@ Chinamobo iOS 项目模版
 
 Licenses
 ----
-Copyright 2013 BB9z@me.com
+Copyright 2013-2014 BB9z@me.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
