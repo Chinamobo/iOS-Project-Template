@@ -204,24 +204,23 @@ extern NSString *const APIErrorDomain;
 
 @end
 
-#import "UIImageView+AFNetworking.h"
 
-@implementation UIImageView (API)
-
-- (void)setImageWithURLString:(NSString *)urlString placeholderImage:(UIImage *)placeholderImage requestFailedImage:(UIImage *)requestFailedImage {
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", APIURLAssetsBase, urlString]] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:20];
-
-    @weakify(self);
-    [self setImageWithURLRequest:request placeholderImage:placeholderImage success:nil failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
-        @strongify(self);
-        if (requestFailedImage) {
-            self.image = requestFailedImage;
-        }
-    }];
-}
-
-- (void)setImageWithURLString:(NSString *)urlString {
-    [self setImageWithURLString:urlString placeholderImage:[UIImage imageNamed:@"blank"] requestFailedImage:[UIImage imageNamed:@"blank"]];
-}
-
-@end
+//@implementation UIImageView (API)
+//
+//- (void)setImageWithURLString:(NSString *)urlString placeholderImage:(UIImage *)placeholderImage requestFailedImage:(UIImage *)requestFailedImage {
+//    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", APIURLAssetsBase, urlString]] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:20];
+//
+//    @weakify(self);
+//    [self setImageWithURLRequest:request placeholderImage:placeholderImage success:nil failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+//        @strongify(self);
+//        if (requestFailedImage) {
+//            self.image = requestFailedImage;
+//        }
+//    }];
+//}
+//
+//- (void)setImageWithURLString:(NSString *)urlString {
+//    [self setImageWithURLString:urlString placeholderImage:[UIImage imageNamed:@"blank"] requestFailedImage:[UIImage imageNamed:@"blank"]];
+//}
+//
+//@end

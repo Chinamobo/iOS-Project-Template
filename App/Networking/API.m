@@ -57,7 +57,7 @@ RFDefineConstString(APIErrorDomain);
     // 配置网络
     if ([UIDevice currentDevice].isBeingDebugged) {
         [[AFNetworkActivityLogger sharedLogger] startLogging];
-        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelInfo;
+        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelDebug;
     }
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
     
@@ -71,7 +71,11 @@ RFDefineConstString(APIErrorDomain);
 // API 初始化后的检查
 - (void)contextCheck {
     @autoreleasepool {
-        
+        [self DELETE:@"http://example.com" parameters:@{ @"number": @1, @"null": [NSNull null], @"bool" : @(YES)} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+
+        }];
     }
 }
 
