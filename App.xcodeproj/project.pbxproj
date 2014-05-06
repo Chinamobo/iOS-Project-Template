@@ -134,6 +134,8 @@
 		D5542F121918976B00831016 /* RFDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F0F1918976B00831016 /* RFDrawView.m */; };
 		D5542F161918B83400831016 /* MBApp.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F151918B83400831016 /* MBApp.m */; };
 		D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */; };
+		D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F221918C6C600831016 /* MBEntityDetailViewController.m */; };
+		D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F251918C6E800831016 /* MBEntityListViewController.m */; };
 		D5DED9211839C9C70087CB7C /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */; };
 		D5DED9461839C9DE0087CB7C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9271839C9DE0087CB7C /* AFNetworkReachabilityManager.m */; };
 		D5DED9471839C9DE0087CB7C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9291839C9DE0087CB7C /* AFSecurityPolicy.m */; };
@@ -437,6 +439,11 @@
 		D5542F151918B83400831016 /* MBApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBApp.m; sourceTree = "<group>"; };
 		D5542F1D1918C5B900831016 /* MBMultiLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMultiLineLabel.h; sourceTree = "<group>"; };
 		D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMultiLineLabel.m; sourceTree = "<group>"; };
+		D5542F211918C6C600831016 /* MBEntityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEntityDetailViewController.h; sourceTree = "<group>"; };
+		D5542F221918C6C600831016 /* MBEntityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEntityDetailViewController.m; sourceTree = "<group>"; };
+		D5542F241918C6E800831016 /* MBEntityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEntityListViewController.h; sourceTree = "<group>"; };
+		D5542F251918C6E800831016 /* MBEntityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEntityListViewController.m; sourceTree = "<group>"; };
+		D5542F2A1918C97A00831016 /* MBEntityExchanging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEntityExchanging.h; sourceTree = "<group>"; };
 		D5DED91F1839C9C70087CB7C /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		D5DED9261839C9DE0087CB7C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
@@ -1090,6 +1097,7 @@
 		D552DD7C18C8541D00D02290 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				D5542F201918C6BF00831016 /* EntityViewControllers */,
 				D5542F1D1918C5B900831016 /* MBMultiLineLabel.h */,
 				D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */,
 				D5542EA31918839700831016 /* Buttons */,
@@ -1199,6 +1207,18 @@
 				D5542F151918B83400831016 /* MBApp.m */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D5542F201918C6BF00831016 /* EntityViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D5542F241918C6E800831016 /* MBEntityListViewController.h */,
+				D5542F251918C6E800831016 /* MBEntityListViewController.m */,
+				D5542F211918C6C600831016 /* MBEntityDetailViewController.h */,
+				D5542F221918C6C600831016 /* MBEntityDetailViewController.m */,
+				D5542F2A1918C97A00831016 /* MBEntityExchanging.h */,
+			);
+			path = EntityViewControllers;
 			sourceTree = "<group>";
 		};
 		D5DED91E1839C9C70087CB7C /* AFNetworkActivityLogger */ = {
@@ -1402,6 +1422,7 @@
 				D5197C9317F019E600CA387C /* NSDateFormatter+RFKit.m in Sources */,
 				D5197C9417F019E600CA387C /* NSDictionary+RFKit.m in Sources */,
 				D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */,
+				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
 				D5197C9517F019E600CA387C /* NSFileManager+RFKit.m in Sources */,
 				D5197C9617F019E600CA387C /* NSJSONSerialization+RFKit.m in Sources */,
 				D5197C5517F019E500CA387C /* NSManagedObject+RFCoreData.m in Sources */,
@@ -1431,6 +1452,7 @@
 				D5197CCC17F019E600CA387C /* RFDismissModalBarButtonItem.m in Sources */,
 				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
 				D5542EF119188ED500831016 /* RFDrawImage.m in Sources */,
+				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F121918976B00831016 /* RFDrawView.m in Sources */,
 				D5197CB817F019E600CA387C /* RFGeometry.m in Sources */,
 				D5197C8F17F019E600CA387C /* RFKeyboard.m in Sources */,
