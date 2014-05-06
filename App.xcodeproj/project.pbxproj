@@ -139,6 +139,7 @@
 		D5542F2C1918CECE00831016 /* LICENSE-SVProgressHUD in Resources */ = {isa = PBXBuildFile; fileRef = D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */; };
 		D5CC92CC1918DBF300C5B4D8 /* LICENSE-AFNetworking.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */; };
 		D5CC92CE1918DBFF00C5B4D8 /* LICENSE-SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */; };
+		D5CC92D11918EAAB00C5B4D8 /* UIColor+App.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */; };
 		D5DED9211839C9C70087CB7C /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */; };
 		D5DED9461839C9DE0087CB7C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9271839C9DE0087CB7C /* AFNetworkReachabilityManager.m */; };
 		D5DED9471839C9DE0087CB7C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9291839C9DE0087CB7C /* AFSecurityPolicy.m */; };
@@ -342,8 +343,8 @@
 		D5197D0C17F0208C00CA387C /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		D5197D3317F027B400CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5197D3617F027BB00CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D552DD3F18C84EB100D02290 /* NavigationBarAppearanceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationBarAppearanceConfig.h; path = NavigationBarAppearanceConfig.h; sourceTree = "<group>"; };
-		D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationBarAppearanceConfig.m; path = NavigationBarAppearanceConfig.m; sourceTree = "<group>"; };
+		D552DD3F18C84EB100D02290 /* NavigationBarAppearanceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarAppearanceConfig.h; sourceTree = "<group>"; };
+		D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarAppearanceConfig.m; sourceTree = "<group>"; };
 		D552DD4B18C8506700D02290 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D552DD4C18C8506700D02290 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D552DD4E18C8506700D02290 /* DataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStack.h; sourceTree = "<group>"; };
@@ -447,6 +448,8 @@
 		D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SVProgressHUD"; sourceTree = "<group>"; };
 		D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-AFNetworking.md"; sourceTree = "<group>"; };
 		D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SDWebImage"; sourceTree = "<group>"; };
+		D5CC92CF1918EAAA00C5B4D8 /* UIColor+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+App.h"; sourceTree = "<group>"; };
+		D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+App.m"; sourceTree = "<group>"; };
 		D5DED91F1839C9C70087CB7C /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		D5DED9261839C9DE0087CB7C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
@@ -1095,6 +1098,8 @@
 				D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */,
 				D552DD3F18C84EB100D02290 /* NavigationBarAppearanceConfig.h */,
 				D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */,
+				D5CC92CF1918EAAA00C5B4D8 /* UIColor+App.h */,
+				D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1480,6 +1485,7 @@
 				D5197C9C17F019E600CA387C /* UIButton+RFKit.m in Sources */,
 				D50558921890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m in Sources */,
 				D5542EE619188B0C00831016 /* UIButton+WebCache.m in Sources */,
+				D5CC92D11918EAAB00C5B4D8 /* UIColor+App.m in Sources */,
 				D5197C9D17F019E600CA387C /* UIColor+RFKit.m in Sources */,
 				D5197C9E17F019E600CA387C /* UIDevice+RFKit.m in Sources */,
 				D5542EE719188B0C00831016 /* UIImage+GIF.m in Sources */,
