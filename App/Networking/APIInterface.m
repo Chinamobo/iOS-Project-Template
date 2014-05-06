@@ -5,13 +5,13 @@
 NSString *const APIURLAssetsBase        = @"http://example.com";
 
 // 用户接口
-NSString *const APIURLLogin				= @"User Login";
-NSString *const APIURLResetPassword		= @"User Reset Password";
-NSString *const APIURLChangePassword	= @"User Change Password";
-NSString *const APIURLUserInfo          = @"User Info";
+NSString *const APINameLogin            = @"User Login";
+NSString *const APINameResetPassword    = @"User Reset Password";
+NSString *const APINameChangePassword   = @"User Change Password";
+NSString *const APINameUserInfo         = @"User Info";
 
 // 更新
-NSString *const APIURLCheckUpdate       = @"Version";
+NSString *const APINameCheckUpdate      = @"Version";
 
 #pragma mark - User deafult key
 

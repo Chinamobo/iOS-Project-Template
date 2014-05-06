@@ -65,7 +65,7 @@ NSString *const UDkUserInformation      = @"User Information";
     
     self.isLogining = YES;
 
-    [API requestWithName:APIURLLogin parameters:@{
+    [API requestWithName:APINameLogin parameters:@{
         @"username" : self.account,
         @"password" : self.userPassword
     } viewController:nil loadingMessage:@"正在登录…" modal:YES success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -104,9 +104,9 @@ NSString *const UDkUserInformation      = @"User Information";
 #pragma mark -
 - (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback {
 
-	RFAPIControl *cn = [[RFAPIControl alloc] initWithIdentifier:APIURLResetPassword loadingMessage:@"提交重置密码请求..."];
+	RFAPIControl *cn = [[RFAPIControl alloc] initWithIdentifier:APINameResetPassword loadingMessage:@"提交重置密码请求..."];
 	cn.message.modal = YES;
-	[self.master requestWithName:APIURLResetPassword parameters:recoverInfo controlInfo:cn success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	[self.master requestWithName:APINameResetPassword parameters:recoverInfo controlInfo:cn success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (callback) {
             callback(responseObject, nil);
         }
