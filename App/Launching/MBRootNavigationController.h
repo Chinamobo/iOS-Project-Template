@@ -18,6 +18,8 @@ UINavigationControllerDelegate
 
 + (instancetype)globalNavigationController;
 
+/// 默认情况下，导航栏是隐藏还是显示
+/// 默认值与 Stroyboard 中设置一致
 @property (assign, nonatomic) BOOL preferredNavigationBarHidden;
 @end
 
