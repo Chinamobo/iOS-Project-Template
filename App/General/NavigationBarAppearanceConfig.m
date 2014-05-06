@@ -1,6 +1,7 @@
 
 #import "NavigationBarAppearanceConfig.h"
 #import "UIColor+RFKit.h"
+#import "RFDrawImage.h"
 
 #if __MBACNavigationBarEnabled
 @implementation UINavigationBar (MBAppearanceConfig)
@@ -12,12 +13,12 @@
 #pragma mark - 背景设置
 
 #if __MBACNavigationBar_CustomBackground
-    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
 #endif
 
 #if __MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem
     if (isOldSystem) {
-        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackgroundOld"] forBarMetrics:UIBarMetricsDefault];
+        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"NavigationBarBackgroundOld"] forBarMetrics:UIBarMetricsDefault];
     }
 #endif
 
@@ -108,7 +109,7 @@
         [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
     }
 
-    __unused UIImage *blankImage = [UIImage imageNamed:@"blank2"];
+    __unused UIImage *blankImage = [RFDrawImage imageWithSizeColor:CGSizeMake(40, 40) fillColor:[UIColor clearColor]];
 #if __MBACNavigationBar_ButtonItemClearBackground
     if (isOldSystem) {
         [itemAppearance setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
