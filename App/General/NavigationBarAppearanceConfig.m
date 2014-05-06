@@ -12,30 +12,37 @@
 #pragma mark - 背景设置
 
 #if __MBACNavigationBar_CustomBackground
-    if (__MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem && isOldSystem) {
+    [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
+#endif
+
+#if __MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem
+    if (isOldSystem) {
         [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackgroundOld"] forBarMetrics:UIBarMetricsDefault];
-    }
-    else {
-        [navigationBarAppearance setBackgroundImage:[UIImage imageNamed:@"navigationBarBackground"] forBarMetrics:UIBarMetricsDefault];
     }
 #endif
 
+    // 背景图阴影
 #if __MBACNavigationBar_RemoveBarShadow
     [navigationBarAppearance setShadowImage:UIImage.new];
 #endif
 
-
+    // 导航条颜色
 #if __MBACNavigationBar_BarTintColor
-#if __MBACNavigationBar_BarTintColor_iOS6
-    [navigationBarAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor_iOS6]];
-#else
     [navigationBarAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor]];
-#endif
 
     // iOS 7
     if ([UINavigationBar instancesRespondToSelector:@selector(setBarTintColor:)]) {
         [navigationBarAppearance setBarTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor]];
     }
+#endif
+
+#if __MBACNavigationBar_BarTintColor_iOS6
+    if (isOldSystem) {
+        [navigationBarAppearance setTintColor:[UIColor colorWithRGBHex:__MBACNavigationBar_BarTintColor_iOS6]];
+    }
+#else
+
+
 #endif
 
 #pragma mark - 标题设置
@@ -50,6 +57,7 @@
     }
 
 #if __MBACNavigationBar_TitleColor
+    // 标题文字
     if (isOldSystem) {
         textAttributes[UITextAttributeTextColor] = [UIColor colorWithRGBHex:__MBACNavigationBar_TitleColor alpha:__MBACNavigationBar_TitleColorAlpha];
     }
@@ -57,6 +65,8 @@
         textAttributes[NSForegroundColorAttributeName] = [UIColor colorWithRGBHex:__MBACNavigationBar_TitleColor alpha:__MBACNavigationBar_TitleColorAlpha];
     }
 #endif
+
+    // 标题阴影
     if (__MBACNavigationBar_TitleShadowColor) {
         if (isOldSystem) {
             textAttributes[UITextAttributeTextShadowColor] = __MBACNavigationBar_TitleShadowColor;
@@ -75,7 +85,7 @@
         [navigationBarAppearance setTitleTextAttributes:textAttributes.copy];
     }
 
-
+    // 标题位置
 #if __MBACNavigationBar_TitleVerticalPositionAdjustment
     [navigationBarAppearance setTitleVerticalPositionAdjustment:__MBACNavigationBar_TitleVerticalPositionAdjustment forBarMetrics:UIBarMetricsDefault];
 #endif
@@ -84,6 +94,7 @@
 
     id itemAppearance = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
     [textAttributes removeAllObjects];
+    // 按钮文字颜色
 #if __MBACNavigationBar_ButtonItemTitleColor
     if (isOldSystem) {
         textAttributes[UITextAttributeTextColor] = [UIColor colorWithRGBHex:__MBACNavigationBar_ButtonItemTitleColor alpha:__MBACNavigationBar_ButtonItemTitleColorAlpha];
@@ -99,7 +110,10 @@
 
     __unused UIImage *blankImage = [UIImage imageNamed:@"blank2"];
 #if __MBACNavigationBar_ButtonItemClearBackground
-    [itemAppearance setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    if (isOldSystem) {
+        [itemAppearance setBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        [itemAppearance setBackButtonBackgroundImage:blankImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    }
 #endif
 
 #if __MBACNavigationBar_BackButtonItemHideIndicatorImage

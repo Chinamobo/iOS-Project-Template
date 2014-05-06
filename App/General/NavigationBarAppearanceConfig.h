@@ -20,18 +20,18 @@
 
 /// 是否使用自定义导航栏背景图
 /// 背景图名称需设置为 navigationBarBackground
-#define __MBACNavigationBar_CustomBackground 1
+#define __MBACNavigationBar_CustomBackground 0
 
-/// 是否为旧系统（iOS 6 及之前版本）使用单独的导航栏背景图
+/// 是否为旧系统（iOS 6 及之前版本）设置自定义导航栏背景图
 /// 背景图名称需设置为 navigationBarBackgroundOld
-#define __MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem 1
+#define __MBACNavigationBar_CustomBackgroundUsingSpecifiedVersionForOldSystem 0
 
 // 移除自定义背景下的阴影（未设置背景则阴影不会被移除）
-#define __MBACNavigationBar_RemoveBarShadow 0
+#define __MBACNavigationBar_RemoveBarShadow 1
 
 // 导航栏颜色
 // 设置为十六机制数值，如 0x4088CF。设为 0 以禁用
-#define __MBACNavigationBar_BarTintColor 0xFDC915
+#define __MBACNavigationBar_BarTintColor 0
 #define __MBACNavigationBar_BarTintColor_iOS6 __MBACNavigationBar_BarTintColor
 
 #pragma mark - 标题设置
@@ -67,12 +67,12 @@
 #define __MBACNavigationBar_TitleVerticalPositionAdjustment 0
 
 #pragma mark - 按钮设置
-// 按钮颜色设置
+// 按钮文字颜色设置
 // 设置为十六机制数值，如 0xFFFFFF，为 0 忽略颜色设置
-#define __MBACNavigationBar_ButtonItemTitleColor 0xFFFFFF
+#define __MBACNavigationBar_ButtonItemTitleColor 0
 #define __MBACNavigationBar_ButtonItemTitleColorAlpha 1
 
-// 按钮背景
+// iOS 6 按钮背景清除
 #define __MBACNavigationBar_ButtonItemClearBackground 0
 
 // 返回按钮
