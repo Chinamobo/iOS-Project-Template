@@ -136,6 +136,7 @@
 		D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */; };
 		D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F221918C6C600831016 /* MBEntityDetailViewController.m */; };
 		D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F251918C6E800831016 /* MBEntityListViewController.m */; };
+		D5542F2C1918CECE00831016 /* LICENSE-SVProgressHUD.txt in Resources */ = {isa = PBXBuildFile; fileRef = D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD.txt */; };
 		D5DED9211839C9C70087CB7C /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */; };
 		D5DED9461839C9DE0087CB7C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9271839C9DE0087CB7C /* AFNetworkReachabilityManager.m */; };
 		D5DED9471839C9DE0087CB7C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9291839C9DE0087CB7C /* AFSecurityPolicy.m */; };
@@ -174,7 +175,6 @@
 		D50558701890C80B0049A759 /* RFAssetsCacheData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheData.m; sourceTree = "<group>"; };
 		D50558711890C80B0049A759 /* RFAssetsCacheRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCacheRecord.h; sourceTree = "<group>"; };
 		D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheRecord.m; sourceTree = "<group>"; };
-		D50558811890E8A50049A759 /* SVProgressHUD LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SVProgressHUD LICENSE.txt"; sourceTree = "<group>"; };
 		D50558821890E8A50049A759 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		D50558831890E8A50049A759 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		D50558841890E8A50049A759 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -444,6 +444,7 @@
 		D5542F241918C6E800831016 /* MBEntityListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEntityListViewController.h; sourceTree = "<group>"; };
 		D5542F251918C6E800831016 /* MBEntityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEntityListViewController.m; sourceTree = "<group>"; };
 		D5542F2A1918C97A00831016 /* MBEntityExchanging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEntityExchanging.h; sourceTree = "<group>"; };
+		D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SVProgressHUD.txt"; sourceTree = "<group>"; };
 		D5DED91F1839C9C70087CB7C /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		D5DED9261839C9DE0087CB7C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
@@ -512,7 +513,7 @@
 		D50558801890E8A50049A759 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				D50558811890E8A50049A759 /* SVProgressHUD LICENSE.txt */,
+				D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD.txt */,
 				D50558821890E8A50049A759 /* SVProgressHUD.bundle */,
 				D50558831890E8A50049A759 /* SVProgressHUD.h */,
 				D50558841890E8A50049A759 /* SVProgressHUD.m */,
@@ -1097,10 +1098,10 @@
 		D552DD7C18C8541D00D02290 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				D5542EA31918839700831016 /* Buttons */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
 				D5542F1D1918C5B900831016 /* MBMultiLineLabel.h */,
 				D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */,
-				D5542EA31918839700831016 /* Buttons */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -1212,11 +1213,11 @@
 		D5542F201918C6BF00831016 /* EntityViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5542F241918C6E800831016 /* MBEntityListViewController.h */,
-				D5542F251918C6E800831016 /* MBEntityListViewController.m */,
 				D5542F211918C6C600831016 /* MBEntityDetailViewController.h */,
 				D5542F221918C6C600831016 /* MBEntityDetailViewController.m */,
 				D5542F2A1918C97A00831016 /* MBEntityExchanging.h */,
+				D5542F241918C6E800831016 /* MBEntityListViewController.h */,
+				D5542F251918C6E800831016 /* MBEntityListViewController.m */,
 			);
 			path = EntityViewControllers;
 			sourceTree = "<group>";
@@ -1342,6 +1343,7 @@
 				D5542EAA191887F500831016 /* APIDefine.plist in Resources */,
 				D5197A5917EECAAF00CA387C /* Images.xcassets in Resources */,
 				D5197D3217F027B400CA387C /* InfoPlist.strings in Resources */,
+				D5542F2C1918CECE00831016 /* LICENSE-SVProgressHUD.txt in Resources */,
 				D5197D3517F027BB00CA387C /* Localizable.strings in Resources */,
 				D5197A5417EECAAF00CA387C /* Main_iPad.storyboard in Resources */,
 				D5197A5117EECAAF00CA387C /* Main_iPhone.storyboard in Resources */,
@@ -1412,6 +1414,9 @@
 				D5542F161918B83400831016 /* MBApp.m in Sources */,
 				D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */,
 				D5542EA6191883A800831016 /* MBButton.m in Sources */,
+				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
+				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
+				D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
 				D552DD7218C8506700D02290 /* Model.xcdatamodeld in Sources */,
 				D552DD4118C84EB100D02290 /* NavigationBarAppearanceConfig.m in Sources */,
@@ -1421,8 +1426,6 @@
 				D5197C9217F019E600CA387C /* NSDate+RFKit.m in Sources */,
 				D5197C9317F019E600CA387C /* NSDateFormatter+RFKit.m in Sources */,
 				D5197C9417F019E600CA387C /* NSDictionary+RFKit.m in Sources */,
-				D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */,
-				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
 				D5197C9517F019E600CA387C /* NSFileManager+RFKit.m in Sources */,
 				D5197C9617F019E600CA387C /* NSJSONSerialization+RFKit.m in Sources */,
 				D5197C5517F019E500CA387C /* NSManagedObject+RFCoreData.m in Sources */,
@@ -1452,7 +1455,6 @@
 				D5197CCC17F019E600CA387C /* RFDismissModalBarButtonItem.m in Sources */,
 				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
 				D5542EF119188ED500831016 /* RFDrawImage.m in Sources */,
-				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F121918976B00831016 /* RFDrawView.m in Sources */,
 				D5197CB817F019E600CA387C /* RFGeometry.m in Sources */,
 				D5197C8F17F019E600CA387C /* RFKeyboard.m in Sources */,
