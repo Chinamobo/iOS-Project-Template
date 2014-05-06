@@ -9,7 +9,7 @@ NSString *const UDkUpdateForceVesrion = @"Update Force Version";
 @interface APIAppUpdatePlugin () <
     UIAlertViewDelegate
 >
-@property (weak, nonatomic) AFHTTPRequestOperationManager<RFPluginSupported> *master;
+@property (weak, nonatomic) API *master;
 @property (assign, nonatomic) BOOL silenceMode;
 @property (copy, nonatomic) void (^complationBlock)(APIAppUpdatePlugin *);
 @end
@@ -21,7 +21,7 @@ NSString *const UDkUpdateForceVesrion = @"Update Force Version";
     return nil;
 }
 
-- (instancetype)initWithMaster:(AFHTTPRequestOperationManager<RFPluginSupported> *)api {
+- (instancetype)initWithMaster:(API *)api {
     self = [super init];
     if (self) {
         self.master = api;
@@ -70,7 +70,7 @@ NSString *const UDkUpdateForceVesrion = @"Update Force Version";
             }
         }];
         
-        [self.master.operationQueue addOperation:op];
+        [self.master addOperation:op];
         return;
     }
     
@@ -87,7 +87,7 @@ NSString *const UDkUpdateForceVesrion = @"Update Force Version";
             self.complationBlock(self);
         }];
         
-        [self.master.operationQueue addOperation:op];
+        [self.master addOperation:op];
         return;
     }
 
@@ -96,23 +96,7 @@ NSString *const UDkUpdateForceVesrion = @"Update Force Version";
 }
 
 - (void)checkCustomAPI {
-    @weakify(self);
-    [(API *)self.master fetch:self.customCheckAPIURL.absoluteString method:nil parameters:nil expectClass:[MBAppVersion class] success:^(MBAppVersion *info) {
-        @strongify(self);
-        self.isForceUpdate = info.isForceUpdate;
-        self.installURL = [NSURL URLWithString:info.URI];
-        self.releaseNotes = info.releaseNote;
-        self.remoteVersion = info.version;
 
-        [self checkResponseInfo];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        @strongify(self);
-        if (!self.silenceMode) {
-            [SVProgressHUD showErrorWithStatus:error.localizedDescription];
-        }
-    } completion:^(AFHTTPRequestOperation *operation) {
-        
-    }];
 }
 
 - (void)proccessAppStoreInfo:(NSDictionary *)info {

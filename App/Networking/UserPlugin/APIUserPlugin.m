@@ -3,14 +3,10 @@
 #import "API.h"
 #import "debug.h"
 
-extern NSString *const APIURLLogin;
-extern NSString *const APIURLForgetPassword;
-extern NSString *const APIURLUserInfo;
-
-NSString *const UDkLastUserAccount = @"Last User Account";
-NSString *const UDkUserPass = @"User Password";
-NSString *const UDkUserRemeberPass = @"Should Remember User Password";
-NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
+NSString *const UDkLastUserAccount      = @"Last User Account";
+NSString *const UDkUserPass             = @"User Password";
+NSString *const UDkUserRemeberPass      = @"Should Remember User Password";
+NSString *const UDkUserInformation      = @"User Information";
 
 @interface APIUserPlugin ()
 @property (weak, nonatomic) API *master;
@@ -29,141 +25,103 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
     return nil;
 }
 
+- (instancetype)initWithMaster:(API *)master {
+    self = [super init];
+    if (self) {
+        self.master = master;
+        [self onInit];
+        [self performSelector:@selector(afterInit) withObject:self afterDelay:0];
+    }
+    return self;
+}
+
 - (void)onInit {
     [super onInit];
     
-    self.token = @"";
     [self loadProfileConfig];
+
+    if (self.information || DebugAPISkipLogin) {
+        self.isLoggedIn = YES;
+    }
 }
 
 - (void)afterInit {
     [super afterInit];
     
-    if (DebugAPISkipLogin) {
-        self.isLoggedIn = YES;
-    }
-    
-    if (self.shouldAutoLogin) {
-        [self loginWithCallback:^(BOOL success, NSError *error) {
-            if (!success) {
-                [self.master alertError:error title:nil];
-            }
-        }];
+    if (!self.isLoggedIn && self.shouldAutoLogin &&
+        self.account && self.userPassword) {
+        [self loginWithSuccessCallback:nil completion:nil];
     }
 }
 
 #pragma mark - 登入
 
-- (void)loginWithCallback:(void (^)(BOOL success, NSError *error))callback {
-    NSParameterAssert(callback);
+- (void)loginWithSuccessCallback:(void (^)(void))success completion:(void (^)(AFHTTPRequestOperation *operation))completion {
+
     if (self.isLoggedIn || self.isLogining) return;
-    
-    if (!self.userAccount.length || !self.userPassword.length) {
-        if (callback) {
-            callback(NO, [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:1 userInfo:@{NSLocalizedDescriptionKey: @"User Name or Password is nil"}]);
-        }
-        return;
-    }
+
+    RFAssert(self.account.length, @"账户未指定");
+    RFAssert(self.userPassword.length, @"密码未指定");
     
     self.isLogining = YES;
 
-    [self.master send:APIURLLogin parameters:@{
-        @"username" : self.userAccount,
+    [API requestWithName:APIURLLogin parameters:@{
+        @"username" : self.account,
         @"password" : self.userPassword
-    } success:^(id JSONObject) {
-        BOOL isSuccess = NO;
-        NSError __autoreleasing *e;
+    } viewController:nil loadingMessage:@"正在登录…" modal:YES success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // TODO: 根据返回赋值
+        [self saveProfileConfig];
+        self.isLoggedIn = YES;
 
-        if ([JSONObject isKindOfClass:[NSDictionary class]]) {
-            self.userID = [JSONObject[@"uid"] intValue];
-            self.token = JSONObject[@"token"];
-
-            if (self.userID) {
-                [self saveProfileConfig];
-                isSuccess = YES;
-                self.isLoggedIn = YES;
-            }
-            else {
-                e = [NSError errorWithDomain:[NSBundle mainBundle].bundleIdentifier code:0 userInfo:@{ NSLocalizedDescriptionKey: JSONObject[@"result"] }];
-            }
-        }
-
-        if (callback) {
-            callback(isSuccess, e);
+        if (success) {
+            success();
         }
 
         if (self.shouldAutoFetchOtherUserInformationAfterLogin) {
             [self fetchUserInformationCompletion:nil];
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (callback) {
-            callback(NO, error);
-        }
     } completion:^(AFHTTPRequestOperation *operation) {
         self.isLogining = NO;
+
+        if (completion) {
+            completion(operation);
+        }
     }];
 }
 
 - (void)logout {
     self.isLoggedIn = NO;
-    self.userID = 0;
     [self resetProfileConfig];
-}
 
-#pragma mark -
-- (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback {
-    [self.master send:APIURLForgetPassword parameters:recoverInfo success:^(id responseObject) {
-        if (callback) {
-            callback(responseObject, nil);
-        }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (callback) {
-            callback(nil, error);
-        }
-    } completion:nil];
+    // 其他清理
 }
 
 #pragma mark -
 - (void)fetchUserInformationCompletion:(void (^)(BOOL success, NSError *))callback {
-    if (self.userID) {
-        self.isFetchingUserInformation = YES;
-        [self fetchUserInfoWithID:self.userID completion:^(UserInformation *info, NSError *error) {
-            self.otherUserInformation = info;
-            if (callback) {
-                callback(YES, error);
-            }
-            self.isFetchingUserInformation = NO;
-        }];
-    }
-    else {
-        if (callback) {
-            NSError __autoreleasing *e = [[NSError alloc] initWithDomain:@"this" code:0 userInfo:@{ NSLocalizedDescriptionKey : @"未登陆" }];
-            callback(NO, e);
-        }
-    }
+
 }
 
-- (void)fetchUserInfoWithID:(int)userID completion:(void (^)(UserInformation *info, NSError *error))callback {
-    [self.master fetch:APIURLUserInfo method:nil parameters:@{
-        @"uid" : @(userID),
-        @"token" : (self.token)? : @""
-    } expectClass:[UserInformation class] success:^(id JSONModelObject) {
+#pragma mark -
+- (void)resetPasswordWithInfo:(NSDictionary *)recoverInfo completion:(void (^)(NSString *password, NSError *error))callback {
+
+	RFAPIControl *cn = [[RFAPIControl alloc] initWithIdentifier:APIURLResetPassword loadingMessage:@"提交重置密码请求..."];
+	cn.message.modal = YES;
+	[self.master requestWithName:APIURLResetPassword parameters:recoverInfo controlInfo:cn success:^(AFHTTPRequestOperation *operation, id responseObject) {
         if (callback) {
-            callback(JSONModelObject, nil);
+            callback(responseObject, nil);
         }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (callback) {
             callback(nil, error);
         }
-    } completion:nil];
+	} completion:nil];
 }
 
 #pragma mark - Secret staues
 - (void)loadProfileConfig {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     self.shouldRememberPassword = [ud boolForKey:UDkUserRemeberPass];
-    self.shouldAutoLogin = [ud boolForKey:UDkUserAutoLogin];
-    self.userAccount = [ud objectForKey:UDkLastUserAccount];
+    self.account = [ud objectForKey:UDkLastUserAccount];
     
     if (self.shouldRememberPassword) {
 #if APIUserPluginUsingKeychainToStroeSecret
@@ -178,10 +136,9 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 
 - (void)saveProfileConfig {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    [ud setObject:self.userAccount forKey:UDkLastUserAccount];
+    [ud setObject:self.account forKey:UDkLastUserAccount];
     [ud setBool:self.shouldRememberPassword forKey:UDkUserRemeberPass];
-    [ud setBool:self.shouldAutoLogin forKey:UDkUserAutoLogin];
-    
+
 #if APIUserPluginUsingKeychainToStroeSecret
     if (self.shouldRememberPassword) {
         NSError __autoreleasing *e = nil;
@@ -204,11 +161,14 @@ NSString *const UDkUserAutoLogin = @"Should Auto Login Into User Profile";
 }
 
 - (void)resetProfileConfig {
+    self.userPassword = nil;
+    self.information = nil;
+
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setBool:NO forKey:UDkUserRemeberPass];
-    [ud setBool:NO forKey:UDkUserAutoLogin];
-    [ud setObject:@"" forKey:UDkUserPass];
-    [ud setObject:@"" forKey:UDkLastUserAccount];
+    [ud removeObjectForKey:UDkUserPass];
+    [ud removeObjectForKey:UDkLastUserAccount];
+    [ud removeObjectForKey:UDkUserInformation];
     [ud synchronize];
     
 #if APIUserPluginUsingKeychainToStroeSecret

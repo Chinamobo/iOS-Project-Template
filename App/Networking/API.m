@@ -4,6 +4,7 @@
 #import "APIInterface.h"
 #import "APIConfig.h"
 #import "APIJSONResponseSerializer.h"
+#import "RFSVProgressMessageManager.h"
 
 #import "AFNetworkActivityLogger.h"
 #import "AFNetworkActivityIndicatorManager.h"
@@ -14,196 +15,85 @@
 
 RFDefineConstString(APIErrorDomain);
 
-@interface API ()
-<UIAlertViewDelegate>
-
-@property (readwrite, nonatomic) BOOL updating;
-- (void)doUpdate;
+@interface API () <
+    UIAlertViewDelegate
+>
 
 @end
 
 @implementation API
 
-+ (instancetype)sharedInstance {
-	static API* sharedInstance = nil;
-    static dispatch_once_t oncePredicate;
-    dispatch_once(&oncePredicate, ^{
-        sharedInstance = [[self alloc] init];
-    });
-	return sharedInstance;
++ (APIUserPlugin *)user {
+    return [API sharedInstance].user;
 }
 
-- (instancetype)init {
-    self = [self initWithBaseURL:[NSURL URLWithString:APIURLDeployBase]];
-    if (!self) return nil;
+- (void)onInit {
+    [super onInit];
 
-    NSError __autoreleasing *e = nil;
-    NSString *cachePath = [[NSFileManager defaultManager] subDirectoryURLWithPathComponent:@"networking/" inDirectory:NSCachesDirectory createIfNotExist:YES error:&e].path;
-    if (e) dout_error(@"%@", e);
-
-    NSURLCache *sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:5 * 1024 * 1024 diskCapacity:50 * 1024 * 1024 diskPath:cachePath];
-    [NSURLCache setSharedURLCache:sharedCache];
-
+    // 接口总体设置
+    NSString *configPath = [[NSBundle mainBundle] pathForResource:@"APIDefine" ofType:@"plist"];
+    NSDictionary *rules = [[NSDictionary alloc] initWithContentsOfFile:configPath];
+    [self setAPIDefineWithRules:rules];
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
     self.responseSerializer = [APIJSONResponseSerializer serializer];
+    self.maxConcurrentOperationCount = 2;
 
     // 设置属性
     self.user = [[APIUserPlugin alloc] initWithMaster:self];
+//    self.user.shouldKeepLoginStatus = YES;
     self.user.shouldRememberPassword = YES;
-    self.user.shouldAutoFetchOtherUserInformationAfterLogin = YES;
-    
-    self.autoSyncPlugin = [[APIAutoSyncPlugin alloc] initWithMaster:self];
-    self.autoSyncPlugin.syncCheckInterval = APIConfigAutoUpdateCheckInterval;
-    
+    self.user.shouldAutoLogin = NO;
+
+    self.networkActivityIndicatorManager = [RFSVProgressMessageManager new];
+
     // 配置网络
     if ([UIDevice currentDevice].isBeingDebugged) {
         [[AFNetworkActivityLogger sharedLogger] startLogging];
-        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelDebug;
+        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelInfo;
     }
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    
-    // 后续操作
-    [self contextCheck];
-    
-    return self;
 }
 
 #pragma mark - 通用流程
-// API 初始化后的检查
-- (void)contextCheck {
-    @autoreleasepool {
-        [self DELETE:@"http://example.com" parameters:@{ @"number": @1, @"null": [NSNull null], @"bool" : @(YES)} success:^(AFHTTPRequestOperation *operation, id responseObject) {
 
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-
-        }];
+- (BOOL)generalHandlerForError:(NSError *)error withDefine:(RFAPIDefine *)define controlInfo:(RFAPIControl *)controlInfo requestOperation:(AFHTTPRequestOperation *)operation operationFailureCallback:(void (^)(AFHTTPRequestOperation *, NSError *))operationFailureCallback {
+    if ([error.domain isEqualToString:RFAPIErrorDomain] && error.code == 3) {
+        [self.networkActivityIndicatorManager alertError:error title:@"请重新登录"];
+        dispatch_after_seconds(1, ^{
+            [self.user logout];
+        });
+        return NO;
     }
+    return YES;
 }
 
-- (void)requestUpdate {
-    if (!self.isUpdating) {
-        [self doUpdate];
++ (AFHTTPRequestOperation *)requestWithName:(NSString *)APIName parameters:(NSDictionary *)parameters viewController:(UIViewController *)viewController loadingMessage:(NSString *)message modal:(BOOL)modal success:(void (^)(AFHTTPRequestOperation *, id))success completion:(void (^)(AFHTTPRequestOperation *))completion {
+    RFAPIControl *cn = [[RFAPIControl alloc] init];
+    if (message) {
+        cn.message = [[RFNetworkActivityIndicatorMessage alloc] initWithIdentifier:APIName title:nil message:message status:RFNetworkActivityIndicatorStatusLoading];
+        cn.message.modal = modal;
     }
+    cn.identifier = APIName;
+    cn.groupIdentifier = NSStringFromClass(viewController.class);
+    return [[self sharedInstance] requestWithName:APIName parameters:parameters controlInfo:cn success:success failure:nil completion:completion];
 }
 
-- (void)doUpdate {
-    self.updating = YES;
-    
-    if (!self.reachabilityManager.reachable) {
-        [UIAlertView showWithTitle:@"提示" message:@"可能尚未联网，请检查你的网络连接" buttonTitle:@"OK"];
-    }
-    
-    // TODO: 更新操作
-}
-
-/// 执行更新后的工作，需保证必定能被调用
-- (void)afterUpdate {
-    dout_info(@"更新完毕")
-    [self.autoSyncPlugin syncFinshed:YES];
-    
-    self.updating = NO;
++ (void)showSuccessStatus:(NSString *)message {
+    [[API sharedInstance].networkActivityIndicatorManager showWithTitle:nil message:message status:RFNetworkActivityIndicatorStatusSuccess modal:NO priority:RFNetworkActivityIndicatorMessagePriorityHigh autoHideAfterTimeInterval:0 identifier:nil groupIdentifier:nil userInfo:nil];
 }
 
 #pragma mark - 具体业务
 
 
-
-#pragma mark - Auto sync & App update
-+ (NSSet *)keyPathsForValuesAffectingCanPerformSync {
-    API *this;
-    return [NSSet setWithObjects:@keypath(this, isUpdating), @keypath(this, reachabilityManager.networkReachabilityStatus), nil];
-}
-
-- (BOOL)canPerformSync {
-    if (!self.isUpdating && self.reachabilityManager.networkReachabilityStatus == AFNetworkReachabilityStatusReachableViaWiFi) {
-        return YES;
-    }
-    return NO;
-}
-
-- (void)startSync {
-    [self doUpdate];
-    self.appUpdatePlugin.showNoticeIfNoUpdateAvailableUsingBuildInNoticeDelegate = NO;
-    [self.appUpdatePlugin checkUpdateSilence:YES completion:nil];
-}
-
-- (void)clearAfterSync {
-    self.autoSyncPlugin = nil;
-    self.appUpdatePlugin = nil;
-}
+#pragma mark - App update
 
 - (APIAppUpdatePlugin *)appUpdatePlugin {
     if (!_appUpdatePlugin) {
         APIAppUpdatePlugin *up = [[APIAppUpdatePlugin alloc] initWithMaster:self];
-        up.appStoreID = APIConfigAppStroeID;
         up.enterpriseDistributionPlistURL = [NSURL URLWithString: APIConfigEnterpriseDistributionURL];
         _appUpdatePlugin = up;
     }
     return _appUpdatePlugin;
-}
-
-#pragma mark - 请求方法
-
-- (void)fetch:(NSString *)URI method:(NSString *)method parameters:(NSDictionary *)parameters expectClass:(Class)modelClass success:(void (^)(id JSONModelObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion {
-    if (!method) method = @"GET";
-
-    [self requestWithMethod:method URLString:URI parameters:parameters headers:nil expectObjectClass:modelClass success:^(AFHTTPRequestOperation *operation, id JSONModelObject) {
-        success(JSONModelObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) {
-            failure(operation, error);
-        }
-        else {
-            [self alertError:error title:nil];
-        }
-    } completion:completion];
-}
-
-- (void)fetchList:(NSString *)URI method:(NSString *)method parameters:(NSDictionary *)parameters expectClass:(Class)modelClass success:(void (^)(NSMutableArray *JSONModelObjects))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion {
-    if (!method) method = @"GET";
-
-    [self requestWithMethod:method URLString:URI parameters:parameters headers:nil expectArrayContainsClass:modelClass success:^(AFHTTPRequestOperation *operation, NSMutableArray *objects) {
-        success(objects);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) {
-            failure(operation, error);
-        }
-        else {
-            [self alertError:error title:nil];
-        }
-    } completion:completion];
-}
-
-- (void)send:(NSString *)URI parameters:(NSDictionary *)parameters success:(void (^)(id responseObject))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure completion:(void (^)(AFHTTPRequestOperation *operation))completion {
-    [self requestWithMethod:@"POST" URLString:URI parameters:parameters headers:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        success(responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        if (failure) {
-            failure(operation, error);
-        }
-        else {
-            [self alertError:error title:nil];
-        }
-    } completion:completion];
-}
-
-#pragma mark - 统一错误处理
-
-- (void)alertError:(NSError *)error title:(NSString *)title {
-    NSMutableString *message = [NSMutableString string];
-    if (error.localizedDescription) {
-        [message appendFormat:@"%@\n", error.localizedDescription];
-    }
-    if (error.localizedFailureReason) {
-        [message appendFormat:@"%@\n", error.localizedFailureReason];
-    }
-    if (error.localizedRecoverySuggestion) {
-        [message appendFormat:@"%@\n", error.localizedRecoverySuggestion];
-    }
-#if RFDEBUG
-    dout_error(@"Error: %@ (%d), URL:%@", error.domain, error.code, error.userInfo[NSURLErrorFailingURLErrorKey]);
-#endif
-
-    [UIAlertView showWithTitle:title? : @"不能完成请求" message:message buttonTitle:@"确定"];
 }
 
 @end

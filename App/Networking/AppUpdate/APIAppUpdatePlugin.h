@@ -15,7 +15,7 @@
 
 #import "RFPlugin.h"
 
-@class AFHTTPRequestOperationManager, APIAppUpdatePlugin;
+@class API, APIAppUpdatePlugin;
 
 @protocol APIAppUpdatePluginNoticeDelegate <NSObject>
 @optional
@@ -27,7 +27,7 @@
     APIAppUpdatePluginNoticeDelegate
 >
 
-- (instancetype)initWithMaster:(AFHTTPRequestOperationManager<RFPluginSupported> *)api;
+- (instancetype)initWithMaster:(API *)api;
 
 /// 执行更新检查
 - (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *plugin))completion;

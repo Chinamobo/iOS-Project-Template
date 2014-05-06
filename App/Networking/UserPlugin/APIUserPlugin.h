@@ -16,19 +16,23 @@
 #import "SSKeychain.h"
 #endif
 
-@class API;
+@class API, AFHTTPRequestOperation;
 
 @interface APIUserPlugin : RFPlugin
 
+- (instancetype)initWithMaster:(API *)master;
+
 #pragma mark - 用户信息
-@property (assign, nonatomic) int userID;
-@property (copy, nonatomic) NSString *userAccount;
+@property (copy, nonatomic) NSString *account;
 @property (copy, nonatomic) NSString *userPassword;
-@property (strong, nonatomic) UserInformation *otherUserInformation;
+@property (strong, nonatomic) UserInformation *information;
 
 @property (copy, nonatomic) NSString *token;
 
 #pragma mark - 设置
+/// 保持登录状态，下次启动不走登录流程。默认 `NO`
+@property (assign, nonatomic) BOOL shouldKeepLoginStatus;
+
 /// Default `NO`
 @property (assign, nonatomic) BOOL shouldRememberPassword;
 
@@ -50,8 +54,9 @@
 
 // 正在登入
 @property (readonly, nonatomic) BOOL isLogining;
+
 //登陆接口
-- (void)loginWithCallback:(void (^)(BOOL success, NSError *error))callback;
+- (void)loginWithSuccessCallback:(void (^)(void))success completion:(void (^)(AFHTTPRequestOperation *operation))completion;
 
 - (void)logout;
 
