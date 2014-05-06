@@ -12,7 +12,7 @@ Chinamobo iOS 项目模版
 
 这个仓库可以本地留一份，以后直接 push 到新的 remote 就可以了。
 
-项目最低要求 Xcode 5，支持 iOS 6 及以上版本。需要 AFNetworking 2，1.x 不再支持。
+项目最低要求 Xcode 5.1，支持 iOS 6 及以上版本。需要 AFNetworking 2，1.x 不再支持。
 
 修改明细
 ----
