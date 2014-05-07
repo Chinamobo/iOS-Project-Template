@@ -9,8 +9,7 @@
 #endif
 
 /// API
-// 接收到数据后延迟返回
-#define DebugAPIDelayFetchCallbackReturnSecond 0
+// 如果你想模拟网络延迟，请使用 Network Link Conditioner
 
 // 每次启动强制自动更新，忽略更新间隔检查
 #define DebugAPIUpdateForceAutoUpdate 0
