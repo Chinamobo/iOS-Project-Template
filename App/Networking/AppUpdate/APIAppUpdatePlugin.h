@@ -8,6 +8,7 @@
     http://www.apache.org/licenses/LICENSE-2.0
  */
 #import "RFPlugin.h"
+#import "MBAppVersion.h"
 
 @class API, APIAppUpdatePlugin;
 
@@ -17,22 +18,34 @@
 
 @end
 
+/** 
+ 更新检查源
+ 
+ @const APIAppUpdatePluginCheckSourceAppStore 从商店检查
+ @const APIAppUpdatePluginCheckSourceEnterpriseDistributionPlist 企业发布 plist 作为检查源
+ @const APIAppUpdatePluginCheckSourceCustomAPI 自定义 API，需要改写 checkCustomAPI 方法
+ */
+typedef NS_ENUM(short, APIAppUpdatePluginCheckSource) {
+    APIAppUpdatePluginCheckSourceAppStore = 0,
+    APIAppUpdatePluginCheckSourceEnterpriseDistributionPlist,
+    APIAppUpdatePluginCheckSourceCustomAPI
+};
+
 /**
  应用更新插件
 
  特性：
- * 支持 App Store 作为数据源，无需额外服务器
+ * 支持 App Store 作为数据源，无需额外服务器，无需额外配置
  * 支持企业发布，如需显示更新摘要，需要在`metadata`字段中添加`releaseNotes`字段
+ * 支持自定义检查接口
  * 用户选择支持直接更新，支持忽略特定版本
 
  使用：
- * 先设置`appStoreID`或`enterpriseDistributionPlistURL`，同时设置只检查 App Store
+ * 先设置 checkSource 及相应属性
  * 执行`checkUpdate`方法进行检查
- * 如果不设置`noticeDelegate`，将使用内建的通知方式通知并提示用户操作
+ * 使用内建的通知方式通知并提示用户操作
  */
-@interface APIAppUpdatePlugin : RFPlugin <
-    APIAppUpdatePluginNoticeDelegate
->
+@interface APIAppUpdatePlugin : RFPlugin
 
 - (instancetype)initWithMaster:(API *)api;
 
@@ -44,36 +57,22 @@
 
 #pragma mark - 设置
 
-@property (copy, nonatomic) NSURL *customCheckAPIURL;
-
-// AppStore 上的应用ID，如：569781369
-@property (copy, nonatomic) NSString *appStoreID;
+@property (assign, nonatomic) APIAppUpdatePluginCheckSource checkSource;
 
 // 如果同时设置了AppStore ID，则只检查 AppStore 版本
 @property (copy, nonatomic) NSURL *enterpriseDistributionPlistURL;
 
 #pragma mark - 更新信息
-@property (copy, nonatomic) NSString *releaseNotes;
-@property (copy, nonatomic) NSString *remoteVersion;
+
+@property (strong, nonatomic) MBAppVersion *versionInfo;
 
 // 是否强制用户升级
-@property (assign, nonatomic) BOOL isForceUpdate;
-
-// 执行安装的URL
-@property (copy, nonatomic) NSURL *installURL;
+@property (assign, nonatomic) BOOL needsForceUpdate;
 
 #pragma mark - 通知
 
-// 可选，不设置使用内建的通知方式
-@property (weak, nonatomic) id<APIAppUpdatePluginNoticeDelegate> noticeDelegate;
 - (void)ignoreCurrentVersion;
-
-@property (assign, nonatomic) BOOL showNoticeIfNoUpdateAvailableUsingBuildInNoticeDelegate;
-
 @end
-
-extern NSString *const UDkUpdateIgnoredVersion;
-extern NSString *const UDkUpdateForceVesrion;
 
 // 只是用于hold住插件，防止在AlertView dismiss前被释放
 @interface APIAppUpdatePluginAlertView : UIAlertView
