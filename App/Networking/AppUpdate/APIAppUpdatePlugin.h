@@ -49,32 +49,36 @@ typedef NS_ENUM(short, APIAppUpdatePluginCheckSource) {
 
 - (instancetype)initWithMaster:(API *)api;
 
-/// 执行更新检查
-- (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *plugin))completion;
-
-@property (assign, nonatomic) BOOL isChecking;
-@property (strong, nonatomic) NSError *lastError;
-
 #pragma mark - 设置
 
 @property (assign, nonatomic) APIAppUpdatePluginCheckSource checkSource;
 
-// 如果同时设置了AppStore ID，则只检查 AppStore 版本
+/// 如果更新源是企业发布，plist 地址
 @property (copy, nonatomic) NSURL *enterpriseDistributionPlistURL;
 
-#pragma mark - 更新信息
+/// 是否允许用户忽略版本，默认 NO
+@property (assign, nonatomic) BOOL allowUserIgnoreNewVersion;
+
+#pragma mark - 检查
+
+/// 执行更新检查
+- (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *plugin))completion;
+
+@property (assign, nonatomic) BOOL checking;
+
+#pragma mark 状态信息
 
 @property (strong, nonatomic) MBAppVersion *versionInfo;
 
-// 是否强制用户升级
-@property (assign, nonatomic) BOOL needsForceUpdate;
+@property (copy, nonatomic) NSError *lastError;
 
-#pragma mark - 通知
+/// 是否强制用户升级
+@property (readonly, nonatomic) BOOL needsForceUpdate;
 
-- (void)ignoreCurrentVersion;
-@end
+/// 有新版本吗
+@property (readonly, nonatomic) BOOL hasNewVersion;
 
-// 只是用于hold住插件，防止在AlertView dismiss前被释放
-@interface APIAppUpdatePluginAlertView : UIAlertView
-@property (strong, nonatomic) APIAppUpdatePlugin *plugin;
+/// 新版本是否已忽略
+@property (readonly, nonatomic) BOOL versionIgnored;
+
 @end

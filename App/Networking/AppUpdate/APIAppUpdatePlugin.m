@@ -4,15 +4,22 @@
 #import "API.h"
 
 NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";
-NSString *const UDkUpdateForceVesrion   = @"Update Force Version";
-NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
+NSString *const UDkUpdateInfomation     = @"Update Infomation";
 
 @interface APIAppUpdatePlugin () <
     UIAlertViewDelegate
 >
 @property (weak, nonatomic) API *master;
 @property (assign, nonatomic) BOOL silenceMode;
+@property (readwrite, nonatomic) BOOL needsForceUpdate;
+@property (readwrite, nonatomic) BOOL hasNewVersion;
+@property (readwrite, nonatomic) BOOL versionIgnored;
 @property (copy, nonatomic) void (^complationBlock)(APIAppUpdatePlugin *);
+@end
+
+// 只是用于hold住插件，防止在AlertView dismiss前被释放
+@interface APIAppUpdatePluginAlertView : UIAlertView
+@property (strong, nonatomic) APIAppUpdatePlugin *plugin;
 @end
 
 @implementation APIAppUpdatePlugin
@@ -36,8 +43,12 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
     [super onInit];
 
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    self.versionInfo.minimalRequiredVersion = [ud objectForKey:UDkUpdateForceVesrion];
-    self.versionInfo.URI = [ud objectForKey:UDkUpdateInstallURI];
+
+    NSString *json = [ud objectForKey:UDkUpdateInfomation];
+    id __autoreleasing e = nil;
+    self.versionInfo = [[MBAppVersion alloc] initWithString:json error:&e];
+    if (e) dout_error(@"%@", e);
+    [self onVersionInfoUpdated];
 }
 
 - (MBAppVersion *)versionInfo {
@@ -48,14 +59,14 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
 }
 
 - (void)checkUpdateSilence:(BOOL)isSilence completion:(void (^)(APIAppUpdatePlugin *))completion {
-    if (self.isChecking) {
+    if (self.checking) {
         if (!isSilence) {
             [UIAlertView showWithTitle:@"更新提示" message:@"正在检查更新，请稍后再试" buttonTitle:@"知道了"];
         }
         return;
     }
 
-    self.isChecking = YES;
+    self.checking = YES;
     self.silenceMode = isSilence;
     self.complationBlock = completion? completion : ^(APIAppUpdatePlugin *plugin) {};
 
@@ -64,7 +75,7 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
     void (^failureBlock)(AFHTTPRequestOperation *, NSError *) = ^(AFHTTPRequestOperation *operation, NSError *error) {
         @strongify(self);
         dout_warning(@"检查版本出错 %@", error);
-        self.isChecking = NO;
+        self.checking = NO;
         self.lastError = error;
         self.complationBlock(self);
     };
@@ -95,11 +106,10 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
             [op.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/x-plist", @"text/xml", nil]];
             [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id plist) {
                 @strongify(self);
-                NSDictionary *itemInfo = [(NSArray *)plist[@"items"] firstObject];
+                NSDictionary *itemInfo = [[(NSArray *)plist[@"items"] firstObject] valueForKey:@"metadata"];
                 if (itemInfo) {
-                    NSDictionary *metaData = itemInfo[@"metadata"];
-                    self.versionInfo.version = metaData[@"bundle-version"];
-                    self.versionInfo.releaseNote = metaData[@"releaseNotes"];
+                    self.versionInfo.version = itemInfo[@"bundle-version"];
+                    self.versionInfo.releaseNote = itemInfo[@"releaseNotes"];
                     self.versionInfo.URI = [NSString stringWithFormat:@"itms-services://?action=download-manifest&url=%@", self.enterpriseDistributionPlistURL];
                 }
                 [self onVersionInfoUpdated];
@@ -116,7 +126,7 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
 
         default:
             dout_warning(@"Unimplemented APIAppUpdatePluginCheckSource type.");
-            self.isChecking = NO;
+            self.checking = NO;
             break;
     }
 }
@@ -138,7 +148,7 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
         }
     } completion:^(AFHTTPRequestOperation *operation) {
         @strongify(self);
-        self.isChecking = NO;
+        self.checking = NO;
         self.complationBlock(self);
     }];
 }
@@ -148,39 +158,39 @@ NSString *const UDkUpdateInstallURI     = @"Update Inatall URI";
     NSString *currentVersion = [[NSBundle mainBundle] versionString];
     NSString *minimalRequiredVersion = self.versionInfo.minimalRequiredVersion;
 
-    BOOL isIgnored = ([version isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
+    self.versionIgnored = ([version isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
     
-    BOOL hasNewVersion = ([currentVersion compare:version options:NSNumericSearch] == NSOrderedAscending);
+    self.hasNewVersion = ([currentVersion compare:version options:NSNumericSearch] == NSOrderedAscending);
     if (minimalRequiredVersion.length) {
         self.needsForceUpdate = ([currentVersion compare:minimalRequiredVersion options:NSNumericSearch] == NSOrderedAscending);
     }
 
     if (self.needsForceUpdate) {
-        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-        [ud setObject:minimalRequiredVersion forKey:UDkUpdateForceVesrion];
-        [ud setObject:self.versionInfo.URI forKey:UDkUpdateInstallURI];
-        [ud synchronize];
-
         APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:@"强制更新提示" message:[NSString stringWithFormat:@"应用必须更新才能使用\n%@\n点击确认关闭应用", self.versionInfo.releaseNote] delegate:self cancelButtonTitle:@"确认" otherButtonTitles:nil];
         notice.plugin = self;
         [notice show];
     }
-    else if (isIgnored) {
+    else if (self.versionIgnored) {
         dout_info(@"被忽略的版本")
     }
-    else if (hasNewVersion) {
-        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", version] message:self.versionInfo.releaseNote delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles:@"更新", @"跳过该版本", nil];
+    else if (self.hasNewVersion && self.checking) {
+        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", version] message:self.versionInfo.releaseNote delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles:@"更新", self.allowUserIgnoreNewVersion? @"跳过该版本" : nil, nil];
         notice.plugin = self;
         [notice show];
     }
     else {
         // 没有新版本
-        if (!self.silenceMode) {
+        if (!self.silenceMode && self.checking) {
             UIAlertView *notice = [[UIAlertView alloc] initWithTitle:@"没有新版本" message:nil delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [notice show];
         }
     }
-    self.isChecking = NO;
+
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:[self.versionInfo toJSONString] forKey:UDkUpdateInfomation];
+    [ud synchronize];
+
+    self.checking = NO;
     self.complationBlock(self);
 }
 
