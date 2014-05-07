@@ -7,5 +7,7 @@
 @interface UIColor (App)
 
 + (UIColor *)globalTintColor;
++ (UIColor *)globalHighlightedTintColor;
++ (UIColor *)globalDisabledTintColor;
 
 @end

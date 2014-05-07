@@ -12,6 +12,7 @@
 #import "DataStack.h"
 #import "API.h"
 #import "UncaughtExceptionHandler.h"
+#import "MBNavigationBarAppearanceConfigurator.h"
 
 @implementation AppDelegate
 
@@ -35,18 +36,12 @@
 }
 
 - (void)generalAppearanceSetup {
-    // Checkbox
-    //    id checkboxAppearance = [RFCheckBox appearance];
-    //    id checkboxAppearance2 = [RFCheckBox appearanceWhenContainedIn:[LoginViewController class], nil];
-    //    [checkboxAppearance setOnImage:[UIImage imageNamed:@"checkbox_on"]];
-    //    [checkboxAppearance2 setOnHighlightedImage:[UIImage imageNamed:@"checkbox_onHighlighted"]];
-    //    [checkboxAppearance setOnDisabledImage:[UIImage imageNamed:@"checkbox_onDisabled"]];
-    //    [checkboxAppearance setOffImage:[UIImage imageNamed:@"checkbox_off"]];
-    //    [checkboxAppearance2 setOffHighlightedImage:[UIImage imageNamed:@"checkbox_offHighlighted"]];
-    //    [checkboxAppearance setOffDisabledImage:[UIImage imageNamed:@"checkbox_offDisabled"]];
-    
-    // 刷新按钮
-    //    [[UIActivityIndicatorView appearanceWhenContainedIn:[RFRefreshButton class], nil] setColor:[UIColor colorWithRGBHex:0x2384d0]];
+    MBNavigationBarAppearanceConfigurator *nac = [MBNavigationBarAppearanceConfigurator new];
+    nac.backgroundImage = [[UIImage imageNamed:RF_iOS7Before? @"NavigationBarBackgroundOld" : @"NavigationBarBackground"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 0, 1, 0)];
+
+    // 在 iOS 6 上模拟 iOS 7 外观
+    nac.style = MBNavigationBarAppearanceStyle_iOS7;
+    [nac applay];
 }
 
 @end

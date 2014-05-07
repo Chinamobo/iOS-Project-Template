@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "NavigationBarBackButton.png"
+      "filename" : "NavigationBackIndicatorImage.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "NavigationBarBackButton@2x.png"
+      "filename" : "NavigationBackIndicatorImage@2x.png"
     }
   ],
   "info" : {

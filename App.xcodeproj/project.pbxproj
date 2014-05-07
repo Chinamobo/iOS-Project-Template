@@ -86,7 +86,6 @@
 		D5197D0517F01E1D00CA387C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197D0417F01E1D00CA387C /* CoreData.framework */; };
 		D5197D3217F027B400CA387C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3417F027B400CA387C /* InfoPlist.strings */; };
 		D5197D3517F027BB00CA387C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3717F027BB00CA387C /* Localizable.strings */; };
-		D552DD4118C84EB100D02290 /* NavigationBarAppearanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */; };
 		D552DD6F18C8506700D02290 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4C18C8506700D02290 /* HomeViewController.m */; };
 		D552DD7018C8506700D02290 /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4F18C8506700D02290 /* DataStack.m */; };
 		D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD5218C8506700D02290 /* MBAppVersion.m */; };
@@ -140,6 +139,8 @@
 		D5CC92CC1918DBF300C5B4D8 /* LICENSE-AFNetworking.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */; };
 		D5CC92CE1918DBFF00C5B4D8 /* LICENSE-SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */; };
 		D5CC92D11918EAAB00C5B4D8 /* UIColor+App.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */; };
+		D5CC92D51918F8BE00C5B4D8 /* MBAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D41918F8BE00C5B4D8 /* MBAppearanceConfigurator.m */; };
+		D5CC92D81918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D71918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.m */; };
 		D5DED9211839C9C70087CB7C /* AFNetworkActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */; };
 		D5DED9461839C9DE0087CB7C /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9271839C9DE0087CB7C /* AFNetworkReachabilityManager.m */; };
 		D5DED9471839C9DE0087CB7C /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5DED9291839C9DE0087CB7C /* AFSecurityPolicy.m */; };
@@ -343,8 +344,6 @@
 		D5197D0C17F0208C00CA387C /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		D5197D3317F027B400CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5197D3617F027BB00CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D552DD3F18C84EB100D02290 /* NavigationBarAppearanceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarAppearanceConfig.h; sourceTree = "<group>"; };
-		D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarAppearanceConfig.m; sourceTree = "<group>"; };
 		D552DD4B18C8506700D02290 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D552DD4C18C8506700D02290 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D552DD4E18C8506700D02290 /* DataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStack.h; sourceTree = "<group>"; };
@@ -450,6 +449,10 @@
 		D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SDWebImage"; sourceTree = "<group>"; };
 		D5CC92CF1918EAAA00C5B4D8 /* UIColor+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+App.h"; sourceTree = "<group>"; };
 		D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+App.m"; sourceTree = "<group>"; };
+		D5CC92D31918F8BE00C5B4D8 /* MBAppearanceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppearanceConfigurator.h; sourceTree = "<group>"; };
+		D5CC92D41918F8BE00C5B4D8 /* MBAppearanceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppearanceConfigurator.m; sourceTree = "<group>"; };
+		D5CC92D61918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNavigationBarAppearanceConfigurator.h; sourceTree = "<group>"; };
+		D5CC92D71918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNavigationBarAppearanceConfigurator.m; sourceTree = "<group>"; };
 		D5DED91F1839C9C70087CB7C /* AFNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityLogger.h; sourceTree = "<group>"; };
 		D5DED9201839C9C70087CB7C /* AFNetworkActivityLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityLogger.m; sourceTree = "<group>"; };
 		D5DED9261839C9DE0087CB7C /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
@@ -1094,10 +1097,9 @@
 			children = (
 				D5542EA31918839700831016 /* Buttons */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
+				D5CC92D21918F8A100C5B4D8 /* UIAppearanceConfigurator */,
 				D5542F1D1918C5B900831016 /* MBMultiLineLabel.h */,
 				D5542F1E1918C5B900831016 /* MBMultiLineLabel.m */,
-				D552DD3F18C84EB100D02290 /* NavigationBarAppearanceConfig.h */,
-				D552DD4018C84EB100D02290 /* NavigationBarAppearanceConfig.m */,
 				D5CC92CF1918EAAA00C5B4D8 /* UIColor+App.h */,
 				D5CC92D01918EAAB00C5B4D8 /* UIColor+App.m */,
 			);
@@ -1218,6 +1220,17 @@
 				D5542F251918C6E800831016 /* MBEntityListViewController.m */,
 			);
 			path = EntityViewControllers;
+			sourceTree = "<group>";
+		};
+		D5CC92D21918F8A100C5B4D8 /* UIAppearanceConfigurator */ = {
+			isa = PBXGroup;
+			children = (
+				D5CC92D31918F8BE00C5B4D8 /* MBAppearanceConfigurator.h */,
+				D5CC92D41918F8BE00C5B4D8 /* MBAppearanceConfigurator.m */,
+				D5CC92D61918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.h */,
+				D5CC92D71918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.m */,
+			);
+			path = UIAppearanceConfigurator;
 			sourceTree = "<group>";
 		};
 		D5DED91E1839C9C70087CB7C /* AFNetworkActivityLogger */ = {
@@ -1412,14 +1425,15 @@
 				D5542EBF19188AFD00831016 /* JSONValueTransformer.m in Sources */,
 				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
 				D5542F161918B83400831016 /* MBApp.m in Sources */,
+				D5CC92D51918F8BE00C5B4D8 /* MBAppearanceConfigurator.m in Sources */,
 				D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */,
 				D5542EA6191883A800831016 /* MBButton.m in Sources */,
 				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
 				D5542F1F1918C5B900831016 /* MBMultiLineLabel.m in Sources */,
+				D5CC92D81918F92100C5B4D8 /* MBNavigationBarAppearanceConfigurator.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
 				D552DD7218C8506700D02290 /* Model.xcdatamodeld in Sources */,
-				D552DD4118C84EB100D02290 /* NavigationBarAppearanceConfig.m in Sources */,
 				D5197C9017F019E600CA387C /* NSArray+RFKit.m in Sources */,
 				D5197C9117F019E600CA387C /* NSBundle+RFKit.m in Sources */,
 				D5542EDD19188B0C00831016 /* NSData+ImageContentType.m in Sources */,
