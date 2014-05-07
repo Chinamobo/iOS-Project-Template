@@ -154,15 +154,15 @@ NSString *const UDkUpdateInfomation     = @"Update Infomation";
 }
 
 - (void)onVersionInfoUpdated {
-    NSString *version = self.versionInfo.version;
-    NSString *currentVersion = [[NSBundle mainBundle] versionString];
-    NSString *minimalRequiredVersion = self.versionInfo.minimalRequiredVersion;
+    NSString *remoteVersion = self.versionInfo.version;
+    NSString *appVersion = [[NSBundle mainBundle] versionString];
+    NSString *requiredVersion = self.versionInfo.minimalRequiredVersion;
 
-    self.versionIgnored = ([version isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
+    self.versionIgnored = ([remoteVersion isEqualToString:[[NSUserDefaults standardUserDefaults] objectForKey:UDkUpdateIgnoredVersion]]);
     
-    self.hasNewVersion = ([currentVersion compare:version options:NSNumericSearch] == NSOrderedAscending);
-    if (minimalRequiredVersion.length) {
-        self.needsForceUpdate = ([currentVersion compare:minimalRequiredVersion options:NSNumericSearch] == NSOrderedAscending);
+    self.hasNewVersion = ([appVersion compare:remoteVersion options:NSNumericSearch] == NSOrderedAscending);
+    if (requiredVersion.length) {
+        self.needsForceUpdate = ([appVersion compare:requiredVersion options:NSNumericSearch] == NSOrderedAscending);
     }
 
     if (self.needsForceUpdate) {
@@ -174,7 +174,7 @@ NSString *const UDkUpdateInfomation     = @"Update Infomation";
         dout_info(@"被忽略的版本")
     }
     else if (self.hasNewVersion && self.checking) {
-        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", version] message:self.versionInfo.releaseNote delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles:@"更新", self.allowUserIgnoreNewVersion? @"跳过该版本" : nil, nil];
+        APIAppUpdatePluginAlertView *notice = [[APIAppUpdatePluginAlertView alloc] initWithTitle:[NSString stringWithFormat:@"新版本(%@)可用", remoteVersion] message:self.versionInfo.releaseNote delegate:self cancelButtonTitle:@"下次再说" otherButtonTitles:@"更新", self.allowUserIgnoreNewVersion? @"跳过该版本" : nil, nil];
         notice.plugin = self;
         [notice show];
     }
