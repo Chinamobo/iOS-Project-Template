@@ -1,5 +1,6 @@
 
 #import "UIKit+App.h"
+#import "RFDrawImage.h"
 
 @implementation UIColor (App)
 
@@ -29,5 +30,11 @@
     });
 	return sharedInstance;
 }
+
+@end
+
+
+@implementation UIImage (App)
+
 
 @end
