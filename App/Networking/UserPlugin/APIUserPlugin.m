@@ -10,11 +10,10 @@ NSString *const UDkUserInformation      = @"User Information";
 
 @interface APIUserPlugin ()
 @property (weak, nonatomic) API *master;
-@property (strong, nonatomic) NSUserDefaults *userDefaults; // Not used
 
-@property (readwrite, nonatomic) BOOL isLoggedIn;
-@property (readwrite, nonatomic) BOOL isLogining;
-@property (readwrite, nonatomic) BOOL isFetchingUserInformation;
+@property (readwrite, nonatomic) BOOL loggedIn;
+@property (readwrite, nonatomic) BOOL logining;
+@property (readwrite, nonatomic) BOOL fetchingUserInformation;
 
 @end
 
@@ -40,16 +39,20 @@ NSString *const UDkUserInformation      = @"User Information";
     
     [self loadProfileConfig];
 
-    if (self.information || DebugAPISkipLogin) {
-        self.isLoggedIn = YES;
+    if (!self.information) {
+        self.information = [UserInformation new];
+    }
+
+    if (DebugAPISkipLogin) {
+        self.loggedIn = YES;
     }
 }
 
 - (void)afterInit {
     [super afterInit];
     
-    if (!self.isLoggedIn && self.shouldAutoLogin &&
-        self.account && self.userPassword) {
+    if (!self.loggedIn && self.shouldAutoLogin &&
+        self.account && self.password) {
         [self loginWithSuccessCallback:nil completion:nil];
     }
 }
@@ -58,20 +61,20 @@ NSString *const UDkUserInformation      = @"User Information";
 
 - (void)loginWithSuccessCallback:(void (^)(void))success completion:(void (^)(AFHTTPRequestOperation *operation))completion {
 
-    if (self.isLoggedIn || self.isLogining) return;
+    if (self.loggedIn || self.logining) return;
 
     RFAssert(self.account.length, @"账户未指定");
-    RFAssert(self.userPassword.length, @"密码未指定");
+    RFAssert(self.password.length, @"密码未指定");
     
-    self.isLogining = YES;
+    self.logining = YES;
 
     [API requestWithName:APINameLogin parameters:@{
         @"username" : self.account,
-        @"password" : self.userPassword
+        @"password" : self.password
     } viewController:nil loadingMessage:@"正在登录…" modal:YES success:^(AFHTTPRequestOperation *operation, id responseObject) {
         // TODO: 根据返回赋值
         [self saveProfileConfig];
-        self.isLoggedIn = YES;
+        self.loggedIn = YES;
 
         if (success) {
             success();
@@ -81,7 +84,7 @@ NSString *const UDkUserInformation      = @"User Information";
             [self fetchUserInformationCompletion:nil];
         }
     } completion:^(AFHTTPRequestOperation *operation) {
-        self.isLogining = NO;
+        self.logining = NO;
 
         if (completion) {
             completion(operation);
@@ -90,7 +93,7 @@ NSString *const UDkUserInformation      = @"User Information";
 }
 
 - (void)logout {
-    self.isLoggedIn = NO;
+    self.loggedIn = NO;
     [self resetProfileConfig];
 
     // 其他清理
@@ -129,7 +132,7 @@ NSString *const UDkUserInformation      = @"User Information";
         self.userPassword = [SSKeychain passwordForService:[NSBundle mainBundle].bundleIdentifier account:self.userAccount error:&e];
         if (e) dout_error(@"%@", e);
 #else
-        self.userPassword = [[NSUserDefaults standardUserDefaults] objectForKey:UDkUserPass];
+        self.password = [[NSUserDefaults standardUserDefaults] objectForKey:UDkUserPass];
 #endif
     }
 }
@@ -150,7 +153,7 @@ NSString *const UDkUserInformation      = @"User Information";
     }
 #else
     if (self.shouldRememberPassword) {
-        [ud setObject:self.userPassword forKey:UDkUserPass];
+        [ud setObject:self.password forKey:UDkUserPass];
     }
     else {
         [ud removeObjectForKey:UDkUserPass];
@@ -161,7 +164,7 @@ NSString *const UDkUserInformation      = @"User Information";
 }
 
 - (void)resetProfileConfig {
-    self.userPassword = nil;
+    self.password = nil;
     self.information = nil;
 
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
