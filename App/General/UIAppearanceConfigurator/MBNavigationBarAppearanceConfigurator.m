@@ -7,7 +7,7 @@
 //
 
 #import "MBNavigationBarAppearanceConfigurator.h"
-#import "UIColor+App.h"
+#import "UIKit+App.h"
 #import "RFDrawImage.h"
 
 @implementation MBNavigationBarAppearanceConfigurator

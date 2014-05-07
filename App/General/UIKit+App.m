@@ -1,5 +1,5 @@
 
-#import "UIColor+App.h"
+#import "UIKit+App.h"
 
 @implementation UIColor (App)
 
