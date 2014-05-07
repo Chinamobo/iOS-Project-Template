@@ -1,13 +1,18 @@
-//
-//  MBAppearanceConfigurator.h
-//  App
-//
-//  Created by BB9z on 5/6/14.
-//  Copyright (c) 2014 Chinamobo. All rights reserved.
-//
+/*!
+    MBAppearanceConfigurator
+
+    Copyright © 2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 #import <Foundation/Foundation.h>
 
+/**
+ 外观设置器基类
+ */
 @interface MBAppearanceConfigurator : NSObject
 @property (weak, nonatomic) id appearance;
 

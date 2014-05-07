@@ -1,18 +1,38 @@
-//
-//  MBNavigationBarAppearanceConfigurator.h
-//  App
-//
-//  Created by BB9z on 5/6/14.
-//  Copyright (c) 2014 Chinamobo. All rights reserved.
-//
+/*!
+    MBNavigationBarAppearanceConfigurator
 
+    Copyright © 2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+ */
 #import "MBAppearanceConfigurator.h"
 
+/**
+ 控制导航栏整体风格
+
+ @const MBNavigationBarAppearanceStyleNotChange 除了设置定义好的属性外，不做特殊处理
+ @const MBNavigationBarAppearanceStyle_iOS7 在旧版本的设备上模拟 iOS 7 的效果
+ */
 typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
     MBNavigationBarAppearanceStyleNotChange = 0,
     MBNavigationBarAppearanceStyle_iOS7
 };
 
+/**
+ 导航栏外观设置器
+
+ 示例：
+ @code
+ MBNavigationBarAppearanceConfigurator *nac = [MBNavigationBarAppearanceConfigurator new];
+ nac.backgroundImage = [UIImage imageNamed:RF_iOS7Before? @"NavigationBarBackgroundOld" : @"NavigationBarBackground"];
+
+ // 在 iOS 6 上模拟 iOS 7 外观
+ nac.style = MBNavigationBarAppearanceStyle_iOS7;
+ [nac applay];
+ @endcode
+ */
 @interface MBNavigationBarAppearanceConfigurator : MBAppearanceConfigurator
 
 /// 导航栏外观风格

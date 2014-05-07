@@ -1,25 +1,33 @@
 /*!
     MBRootNavigationController
 
-    Copyright (c) 2014 Chinamobo Co., Ltd.
-    https://github.com/Chinamobo
+    Copyright © 2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
 
     Apache License, Version 2.0
     http://www.apache.org/licenses/LICENSE-2.0
  */
-
 #import <UIKit/UIKit.h>
 
 @protocol MBNavigationBehaving;
 
+/**
+ 根导航控制器
+ */
 @interface MBRootNavigationController : UINavigationController <
-UINavigationControllerDelegate
+    UINavigationControllerDelegate
 >
 
+/**
+ 
+ */
 + (instancetype)globalNavigationController;
 
-/// 默认情况下，导航栏是隐藏还是显示
-/// 默认值与 Stroyboard 中设置一致
+/**
+ 默认情况下，导航栏是隐藏还是显示
+ 
+ 默认值与 Stroyboard 中设置一致
+ */
 @property (assign, nonatomic) BOOL preferredNavigationBarHidden;
 @end
 

@@ -1,16 +1,15 @@
-//
-//  main.m
-//  App
-//
-//  Created by BB9z on 13-9-22.
-//  Copyright (c) 2013年 Chinamobo. All rights reserved.
-//
+/*!
+    iOS Project Template
+
+    Copyright © 2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 #import <UIKit/UIKit.h>
-
 #import "AppDelegate.h"
-#import "NSDateFormatter+RFKit.h"
-#import "NSJSONSerialization+RFKit.h"
 
 int main(int argc, char * argv[])
 {

@@ -1,16 +1,20 @@
-//
-//  MBEntityDetailViewController.h
-//  CarPointing
-//
-//  Created by BB9z on 4/30/14.
-//  Copyright (c) 2014 Chinamobo. All rights reserved.
-//
+/*!
+    MBEntityDetailViewController
+ 
+    Copyright © 2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+ */
 
 #import <UIKit/UIKit.h>
 #import "MBEntityExchanging.h"
 
 /**
-
+ Model 显示视图基类
+ 
+ 符合 MBEntityExchanging 协议，通过 segue 跳转时会尝试设置 destinationViewController 的 item 属性为自己的 item
  */
 @interface MBEntityDetailViewController : UIViewController <
     MBEntityExchanging
