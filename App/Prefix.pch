@@ -1,15 +1,19 @@
-//
-//  Prefix header
-//
-//  The contents of this file are implicitly included at the beginning of every source file.
-//
+/**
+ Prefix header
+ 
+ 包含在此文件的头文件会在所有文件中包含，不用另引入
+ 
+ 但注意不要包含过多的文件，这会减慢每次编译的速度
+ */
 
 #import <Availability.h>
 
-#ifndef __IPHONE_5_0
-#warning "This project uses features only available in iOS SDK 5.0 and later."
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#warning "项目编译需要 iOS 7 SDK"
 #endif
 
 #ifdef __OBJC__
     #import "RFUI.h"
+    #import "MBApp.h"
 #endif

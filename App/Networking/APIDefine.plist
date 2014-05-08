@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DEFAULT</key>
+	<dict>
+		<key>Base</key>
+		<string>http://example.com</string>
+		<key>Path Prefix</key>
+		<string>api/index?c=</string>
+		<key>Method</key>
+		<string>POST</string>
+		<key>Authorization</key>
+		<true/>
+		<key>Cache Policy</key>
+		<integer>0</integer>
+		<key>Offline Policy</key>
+		<integer>0</integer>
+		<key>Expire</key>
+		<string>60</string>
+	</dict>
+	<key>User Login</key>
+	<dict>
+		<key>Path</key>
+		<string>user/login</string>
+		<key>Authorization</key>
+		<false/>
+		<key>Response Class</key>
+		<string>UserInformation</string>
+		<key>Response Type</key>
+		<integer>2</integer>
+		<key>Notes</key>
+		<string>用户登录</string>
+	</dict>
+	<key>User Reset Password</key>
+	<dict>
+		<key>Path</key>
+		<string>user/reset</string>
+		<key>Authorization</key>
+		<false/>
+		<key>Notes</key>
+		<string>密码重置</string>
+	</dict>
+	<key>User Change Password</key>
+	<dict>
+		<key>Path</key>
+		<string>user/password</string>
+		<key>Notes</key>
+		<string>修改密码</string>
+	</dict>
+	<key>User Info</key>
+	<dict>
+		<key>Path</key>
+		<string>user</string>
+		<key>Method</key>
+		<string>GET</string>
+		<key>Notes</key>
+		<string>用户信息</string>
+	</dict>
+	<key>Version</key>
+	<dict>
+		<key>Path</key>
+		<string>version</string>
+		<key>Authorization</key>
+		<false/>
+		<key>Response Type</key>
+		<integer>2</integer>
+		<key>Response Class</key>
+		<string>MBAppVersion</string>
+		<key>Parameters</key>
+		<dict>
+			<key>os</key>
+			<string>ios</string>
+		</dict>
+		<key>Notes</key>
+		<string>更新版本检查</string>
+	</dict>
+</dict>
+</plist>
