@@ -1,23 +1,29 @@
-/**
+/*!
     APIAutoSyncPlugin
-    API 自动同步插件
- 
+
+    Copyright © 2013-2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
+ */
+#import "RFPlugin.h"
+
+@protocol APIAutoSyncPluginDelegate;
+
+/**
+ API 自动同步插件
+
  特性：
  * 同步间隔检查，设置syncCheckInterval属性以激活。只在距上次更新时间大于syncCheckInterval后才开始更新
  * 如果未到下次更新时间，会自动设置相应timer，到时间时再执行同步
- 
+
  使用：
  * API 模块需要创建 canPerformSync 属性，符合更新条件时设为YES，该属性需支持KVO
  * 实现 startSync 用于同步
  * 同步结束后调用 syncFinshed: 方法结束同步，返回NO不会更新同步时间
  * 可以在 clearAfterSync 中释放该插件
- 
  */
-
-#import "RFPlugin.h"
-
-@protocol APIAutoSyncPluginDelegate;
-
 @interface APIAutoSyncPlugin : RFPlugin
 
 - (instancetype)initWithMaster:(id<APIAutoSyncPluginDelegate>)api;

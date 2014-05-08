@@ -1,10 +1,12 @@
-/**
+/*!
     API
-    网络基础及接口封装
 
-    如果有像UserID这种东西，让API来管理，不要在外面获取再传进来
+    Copyright © 2013-2014 Chinamobo Co., Ltd.
+    https://github.com/Chinamobo/iOS-Project-Template
+
+    Apache License, Version 2.0
+    http://www.apache.org/licenses/LICENSE-2.0
  */
-
 #import "RFAPI.h"
 #import "RFMessageManager+RFDisplay.h"
 #import "DataStack.h"
@@ -15,6 +17,12 @@
 #import "APIAutoSyncPlugin.h"
 #import "APIAppUpdatePlugin.h"
 
+/**
+ API
+ 网络基础及接口封装
+
+ 如果有像UserID这种东西，让API来管理，不要在外面获取再传进来
+ */
 @interface API : RFAPI
 
 /**
