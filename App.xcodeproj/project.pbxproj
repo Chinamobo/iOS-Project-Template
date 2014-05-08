@@ -548,12 +548,19 @@
 			path = RFViewApperance;
 			sourceTree = "<group>";
 		};
+		D5170CE8191B327A000C7D45 /* JPushManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JPushManager;
+			sourceTree = "<group>";
+		};
 		D5197A3117EECAAF00CA387C = {
 			isa = PBXGroup;
 			children = (
 				D5197A4317EECAAF00CA387C /* App */,
 				D5197A6517EECAAF00CA387C /* AppTests */,
-				D5197A3C17EECAAF00CA387C /* Framework */,
+				D5197A3C17EECAAF00CA387C /* Frameworks */,
 				D5197A3B17EECAAF00CA387C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -567,7 +574,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5197A3C17EECAAF00CA387C /* Framework */ = {
+		D5197A3C17EECAAF00CA387C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D5197C0217F019E500CA387C /* AFNetworking */,
@@ -1200,6 +1207,7 @@
 		D5542F131918B82100831016 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				D5170CE8191B327A000C7D45 /* JPushManager */,
 				D5542F141918B83400831016 /* MBApp.h */,
 				D5542F151918B83400831016 /* MBApp.m */,
 			);
