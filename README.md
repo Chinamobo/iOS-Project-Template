@@ -1,18 +1,15 @@
-Chinamobo iOS 项目模版
+Chinamobo iOS 项目模版 v3
 ====
 
-使用
+<big>[猛击此处阅读：使用指南](Guide.md)</big>
+
+
+需求
 ----
-其实也没什么好说的，就是拿下来推到另一个地址。推荐的做法：
+项目最低要求 Xcode 5.1，支持 iOS 6 及以上版本。
 
-1. git clone https://github.com/Chinamobo/iOS-Project-Template.git
-2. 添加目标项目的 remote
-3. push 到目标仓库
-4. 从目标仓库重新 clone，切到 develop 分支开始开发
+需要 AFNetworking 2，理论上也支持 1.x。
 
-这个仓库可以本地留一份，以后直接 push 到新的 remote 就可以了。
-
-项目最低要求 Xcode 5.1，支持 iOS 6 及以上版本。需要 AFNetworking 2，1.x 不再支持。
 
 修改明细
 ----
@@ -74,7 +71,7 @@ Chinamobo iOS 项目模版
 
 Licenses
 ----
-Copyright 2013-2014 BB9z@me.com
+Copyright 2013-2014 2014 Chinamobo Co., Ltd., BB9z@me.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
