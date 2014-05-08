@@ -1,6 +1,6 @@
 Chinamobo iOS 项目模版 v3
 ====
-
+<base href="//github.com/BB9z/iOS-Project-Template/blob/master/" />
 <big>[猛击此处阅读：使用指南](Guide.md)</big>
 
 
@@ -11,10 +11,11 @@ Chinamobo iOS 项目模版 v3
 
 修改明细
 ----
-* 基于 Xcode 5.0 Single View Application 模版，通用版本；
+* 基于 Xcode 5.0 Single View Application 模版，通用版本，已整合 Xcode 5.1 推荐设置；
 
 * 全新 RFAPI 网络请求框架，集自动解析、错误处理、状态提醒、队列控制、缓存控制于一身，只需一行代码即可优雅完成大部分接口调用情形；
-  - 请求基于定制的 AFNetworking，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)，理论上支持 1.x 版本；
+  - 请求基于 AFNetworking 2，理论上支持 1.x 版本。已集成[定制版](https://github.com/Chinamobo/AFNetworking)，包括 SDWebImage 及请求打印组件；
+  - 集成精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) 优雅处理获取的 JSON 数据；
   - 多种插件，应用版本更新检测、用户系统插件、数据同步插件。
 
 * 编译脚本辅助系统，特色：
@@ -27,10 +28,8 @@ Chinamobo iOS 项目模版 v3
   - 支持配置开关；
   - 缺陷是当项目文件修改后，会导致一次编译取消，需再跑一次。
   
-* 包含数据模块：
-  - 以 Core Data 为核心，解决数据更新、获取与持久化；
-  - 使用精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) 优雅处理获取的 JSON 数据；
-  - 包含 Core Data 基础结构，默认的 Model 文件及其 Stack；
+* 包含 Core Data 模块：
+  - 包含默认的 Model 文件及其 Stack；
   - Core Data Model 初始版本设为 V0；
   - Core Data Model 不兼容时重置数据，加快开发。
   
@@ -50,11 +49,11 @@ Chinamobo iOS 项目模版 v3
   - 本地化版本去掉英文版本，用 Base 版本替代；
   - CFBundleDevelopmentRegion 设为 zh_CN。
 
-* 添加基础流程界面，根导航控制器，导航条改为不透明，保证后续视图布局与 iOS 6 一致；
+* 添加基础流程界面，根导航控制器，导航条不透明；
+* 外观定制组件，默认 iOS 6 下导航样式将于 iOS 7 高度一致，附加一组常用 UI 素材；
 * Deployment Target 设置为 iOS 6.0；
-* Storyboard 版本设置为 iOS 6；
+* Storyboard 编译版本设为 iOS 6，全局颜色设置为红色，要求 Xcode 5.1；
 * 代码签名规则简化，Release 使用发布 Profile；
-* 附加一组默认 UI 素材，及相应 UIAppearance 设置；
 * 添加仓库级别的 git 忽略规则；
 * 全套应用 Icon 及启动画面；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；
