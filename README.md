@@ -8,12 +8,14 @@ Chinamobo iOS 项目模版 v3
 ----
 项目最低要求 Xcode 5.1，支持 iOS 6 及以上版本。
 
-需要 AFNetworking 2，理论上也支持 1.x。
-
 
 修改明细
 ----
 * 基于 Xcode 5.0 Single View Application 模版，通用版本；
+
+* 全新 RFAPI 网络请求框架，集自动解析、错误处理、状态提醒、队列控制、缓存控制于一身，只需一行代码即可优雅完成大部分接口调用情形；
+  - 请求基于定制的 AFNetworking，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)，理论上支持 1.x 版本；
+  - 多种插件，应用版本更新检测、用户系统插件、数据同步插件。
 
 * 编译脚本辅助系统，特色：
   - 自动编译计数，为了减少冲突，为每个独立用户分别纪录编译数最终加和。也可设置按日期格式命名；
@@ -24,14 +26,6 @@ Chinamobo iOS 项目模版 v3
   - 智能修改判断，不会每次把所有脚本都跑一遍，只跑需要的；
   - 支持配置开关；
   - 缺陷是当项目文件修改后，会导致一次编译取消，需再跑一次。
-
-* 包含 API 网络请求模块：
-  - 基于定制的 AFNetworking，详见：[github.com/Chinamobo/AFNetworking](https://github.com/Chinamobo/AFNetworking)；
-  - 通用接口访问层，基于 AFHTTPRequestOperationManager；
-  - AFNetworking 扩展，在更加便捷的同时，支持更丰富的调试；
-  - 自动同步插件；
-  - 应用版本监测更新模块，支持 App Store 和企业发布；
-  - 用户插件，登陆、用户信息获取自动化完成，高度可配置。
   
 * 包含数据模块：
   - 以 Core Data 为核心，解决数据更新、获取与持久化；
@@ -40,9 +34,9 @@ Chinamobo iOS 项目模版 v3
   - Core Data Model 初始版本设为 V0；
   - Core Data Model 不兼容时重置数据，加快开发。
   
-* RFUI 集成，外观无关、可复用的界面套件：
+* RFUI 集成，外观无关、可复用的界面与工具套件：
   - 引入 RFUI/Core、RFSegue、RFUI/Alpha submodule；
-  - RFUI/Alpha 默认引入：RFBackground、RFButton、RFCheckbox、RFCoreData、RFCoreDataAutoFetchTableViewPlugin、RFPlugin；
+  - RFUI/Alpha；
   - pch 文件调整，默认包含的头文件修改为 RFUI.h。
   
 * 调试增强：
