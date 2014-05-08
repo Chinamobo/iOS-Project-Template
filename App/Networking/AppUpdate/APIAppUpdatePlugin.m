@@ -1,6 +1,5 @@
 
 #import "APIAppUpdatePlugin.h"
-#import "AFHTTPRequestOperationManager.h"
 #import "API.h"
 
 NSString *const UDkUpdateIgnoredVersion = @"Update Ignored Version";

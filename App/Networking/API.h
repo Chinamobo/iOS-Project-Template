@@ -9,6 +9,7 @@
 #import "RFMessageManager+RFDisplay.h"
 #import "DataStack.h"
 #import "APIInterface.h"
+#import "AFHTTPRequestOperation.h"
 
 #import "APIUserPlugin.h"
 #import "APIAutoSyncPlugin.h"
