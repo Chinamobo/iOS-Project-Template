@@ -526,8 +526,7 @@
 				D50558831890E8A50049A759 /* SVProgressHUD.h */,
 				D50558841890E8A50049A759 /* SVProgressHUD.m */,
 			);
-			name = SVProgressHUD;
-			path = Frameworks/SVProgressHUD;
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		D50558881890E8EE0049A759 /* RFViewApperance */ = {
@@ -554,7 +553,7 @@
 			children = (
 				D5197A4317EECAAF00CA387C /* App */,
 				D5197A6517EECAAF00CA387C /* AppTests */,
-				D5197A3C17EECAAF00CA387C /* Frameworks */,
+				D5197A3C17EECAAF00CA387C /* Framework */,
 				D5197A3B17EECAAF00CA387C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -568,7 +567,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5197A3C17EECAAF00CA387C /* Frameworks */ = {
+		D5197A3C17EECAAF00CA387C /* Framework */ = {
 			isa = PBXGroup;
 			children = (
 				D5197C0217F019E500CA387C /* AFNetworking */,
@@ -581,7 +580,7 @@
 				D5197A4117EECAAF00CA387C /* UIKit.framework */,
 				D5197A5F17EECAAF00CA387C /* XCTest.framework */,
 			);
-			name = Frameworks;
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		D5197A4317EECAAF00CA387C /* App */ = {
@@ -638,8 +637,7 @@
 				D5197B6317F019E300CA387C /* Core */,
 				D5197BEB17F019E500CA387C /* RFSegue */,
 			);
-			name = RFUI;
-			path = Frameworks/RFUI;
+			path = RFUI;
 			sourceTree = "<group>";
 		};
 		D5197AC617F019E200CA387C /* Alpha */ = {
@@ -952,8 +950,7 @@
 				D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */,
 				D5197C2D17F019E500CA387C /* README.md */,
 			);
-			name = AFNetworking;
-			path = Frameworks/AFNetworking;
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		D5197C0E17F019E500CA387C /* extension */ = {
@@ -985,8 +982,7 @@
 				D5197D0017F01AB000CA387C /* LICENSE_jsonmodel.txt */,
 				D5197D0117F01AB000CA387C /* README.md */,
 			);
-			name = JSONModel;
-			path = Frameworks/JSONModel;
+			path = JSONModel;
 			sourceTree = "<group>";
 		};
 		D552DD4918C8506700D02290 /* Scene */ = {
