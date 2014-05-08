@@ -5,10 +5,26 @@ Chinamobo iOS 项目模版使用指南
 ----
 其实也没什么好说的，就是拿下来推到另一个地址。推荐的做法：
 
-1. git clone https://github.com/Chinamobo/iOS-Project-Template.git
-2. 添加目标项目的 remote
-3. push 到目标仓库
-4. 从目标仓库重新 clone，切到 develop 分支开始开发
+1. 先用 git 把仓库 clone 下来，正式仓库地址是 `https://github.com/Chinamobo/iOS-Project-Template.git`，用 SourceTree 的可参考下图：
+
+    ![
+在 SourceTree 中 Clone](Guide/clone_in_sourcetree.png)
+
+    拿下来后可能是这个样子：
+    
+    ![Clone 后结果](Guide/clone_after_and_settings.gif)
+
+2. 点击右上角的 Settings，会显示仓库 Remote 菜单：
+
+    ![Remote 菜单](Guide/sourcetree_remote.png)
+    
+    点添加把新的仓库添加进去，如下图所示：
+    
+    ![添加新 Remote 示意](Guide/sourcetree_add_remote.png)
+
+3. 把 master 和 develop 分支 push 到新的 remote，[动画演示](Guide/sourcetree_push_to_new_remote_animation.gif)
+
+4. 建议从目标仓库重新 clone，切到 develop 分支开始开发
 
 这个仓库可以本地留一份，以后直接更新再 push 到新的 remote 就可以了。
 
