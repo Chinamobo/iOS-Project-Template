@@ -2,15 +2,15 @@
 # Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved.
 # Maintained by BB9z (https://github.com/BB9z)
 
-echo "MBAutoBuildScript 0.4.1"
-echo "Copyright (c) 2013 Chinamobo Co., Ltd. All rights reserved."
+echo "MBAutoBuildScript 0.5"
+echo "Copyright (c) 2013-2014 Chinamobo Co., Ltd. All rights reserved."
 echo "-----------------------"
 
 cd "$ScriptPath"
 timeFile=$"$ScriptPath/PreBuild.time"
 
 # 文件夹自动排序
-if [ $EnableAutoGroupSortByName = "YES" ]; then
+if [[ $EnableAutoGroupSortByName = "YES" && $ACTION = "" ]]; then
 	if [ -n "$(find "$SRCROOT" -name project.pbxproj -newer "$timeFile")" ]; then
 		perl -w "$ScriptPath/sort-Xcode-project-file.pl" "$PROJECT_FILE_PATH"
 		echo "$ProjectFilePath:0: 整理 project.pbxproj，请重新编译项目"
