@@ -19,6 +19,7 @@
 		D50558921890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588C1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m */; };
 		D50558941890E8EE0049A759 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */; };
 		D50558971890F5B20049A759 /* RFPlaceHolderSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */; };
+		D5170CF4191B3944000C7D45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */; };
 		D5170CF9191B3967000C7D45 /* UINavigationController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */; };
 		D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3D17EECAAF00CA387C /* Foundation.framework */; };
 		D5197A4017EECAAF00CA387C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */; };
@@ -191,6 +192,7 @@
 		D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D50558951890F5B20049A759 /* RFPlaceHolderSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPlaceHolderSegue.h; sourceTree = "<group>"; };
 		D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPlaceHolderSegue.m; sourceTree = "<group>"; };
+		D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5170CF7191B3967000C7D45 /* UINavigationController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RFKit.h"; sourceTree = "<group>"; };
 		D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RFKit.m"; sourceTree = "<group>"; };
 		D5197A3A17EECAAF00CA387C /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +482,7 @@
 				D5197D0517F01E1D00CA387C /* CoreData.framework in Frameworks */,
 				D5197A4017EECAAF00CA387C /* CoreGraphics.framework in Frameworks */,
 				D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */,
+				D5170CF4191B3944000C7D45 /* SystemConfiguration.framework in Frameworks */,
 				D5197A4217EECAAF00CA387C /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +590,7 @@
 				D5197D0417F01E1D00CA387C /* CoreData.framework */,
 				D5197A3F17EECAAF00CA387C /* CoreGraphics.framework */,
 				D5197A3D17EECAAF00CA387C /* Foundation.framework */,
+				D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */,
 				D5197A4117EECAAF00CA387C /* UIKit.framework */,
 				D5197A5F17EECAAF00CA387C /* XCTest.framework */,
 			);

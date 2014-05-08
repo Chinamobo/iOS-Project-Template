@@ -13,9 +13,10 @@ Chinamobo iOS 项目模版 v3
 ----
 * 基于 Xcode 5.0 Single View Application 模版，通用版本，已整合 Xcode 5.1 推荐设置；
 
-* 全新 RFAPI 网络请求框架，集自动解析、错误处理、状态提醒、队列控制、缓存控制于一身，只需一行代码即可优雅完成大部分接口调用情形；
+* 全新 RFAPI 网络请求框架，集自动解析、错误处理、状态提醒、队列控制、缓存控制于一身，只需一行代码即可优雅完成大部分接口调用；
   - 请求基于 AFNetworking 2，理论上支持 1.x 版本。已集成[定制版](https://github.com/Chinamobo/AFNetworking)，包括 SDWebImage 及请求打印组件；
   - 集成精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) 优雅处理获取的 JSON 数据；
+  - 为 Reachability Manager 加入 SystemConfiguration.framework；
   - 多种插件，应用版本更新检测、用户系统插件、数据同步插件。
 
 * 编译脚本辅助系统，特色：
