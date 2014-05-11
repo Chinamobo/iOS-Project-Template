@@ -12,11 +12,12 @@
         self.removeBarShadow = YES;
 
         self.titleColor = [UIColor blackColor];
+        self.clearTitleShadow = YES;
 
         self.itemTitleColor = [UIColor globalTintColor];
         self.itemTitleHighlightedColor = [UIColor globalHighlightedTintColor];
         self.itemTitleDisabledColor = [UIColor globalDisabledTintColor];
-        self.clearTitleShadow = YES;
+        self.clearItemBackground = YES;
     }
     return self;
 }
@@ -55,7 +56,7 @@
     }
     [navigationBarAppearance setTitleTextAttributes:textAttributes.copy];
 
-    // 按钮设置
+    // 按钮文字设置
     textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleColor;
     if (iOS7Style) {
         textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:17];
@@ -71,10 +72,21 @@
     textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleDisabledColor;
     [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateDisabled];
 
-    // iOS 6 按钮背景
-    if (iOS7Style) {
-        [itemAppearance setBackgroundImage:[RFDrawImage imageWithSizeColor:CGSizeMake(10, 30) fillColor:[UIColor clearColor]] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    UIImage *blankButtonBackgroundImage = [RFDrawImage imageWithSizeColor:CGSizeMake(10, 30) fillColor:[UIColor clearColor]];
+    // 普通按钮背景
+    if (self.clearItemBackground || iOS7Style) {
+        [itemAppearance setBackgroundImage:blankButtonBackgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    }
 
+    // 返回按钮背景
+    if (self.backButtonIcon) {
+        [itemAppearance setBackButtonBackgroundImage:self.backButtonIcon forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+
+        // 把标题移出屏幕
+        [itemAppearance setBackButtonTitlePositionAdjustment:UIOffsetMake(-9999, 0) forBarMetrics:UIBarMetricsDefault];
+        [itemAppearance setBackButtonTitlePositionAdjustment:UIOffsetMake(-9999, 0) forBarMetrics:UIBarMetricsLandscapePhone];
+    }
+    else if (iOS7Style) {
         UIEdgeInsets backImageResizeInsets = UIEdgeInsetsMake(22, 22, 0, 1);
         UIImage *backImage = [UIImage imageNamed:@"NavigationBackIndicatorImage"];
 
@@ -83,6 +95,9 @@
 
         UIImage *highlight = [[backImage imageWithTintColor:self.itemTitleHighlightedColor] resizableImageWithCapInsets:backImageResizeInsets];
         [itemAppearance setBackButtonBackgroundImage:highlight forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
+    }
+    else if (self.clearItemBackground) {
+        [itemAppearance setBackButtonBackgroundImage:blankButtonBackgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
 }
 

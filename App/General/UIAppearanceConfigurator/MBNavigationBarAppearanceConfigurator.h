@@ -56,6 +56,10 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
 /// 默认黑色
 @property (strong, nonatomic) UIColor *titleColor;
 
+/// 要清空标题和按钮文字的阴影
+/// 默认 YES
+@property (assign, nonatomic) BOOL clearTitleShadow;
+
 #pragma mark - 按钮
 /// 按钮颜色
 /// 默认使用全局 tint color
@@ -63,7 +67,11 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
 @property (strong, nonatomic) UIColor *itemTitleHighlightedColor;
 @property (strong, nonatomic) UIColor *itemTitleDisabledColor;
 
-/// 要清空标题和按钮的背景么
+/// 清空按钮背景
 /// 默认 YES
-@property (assign, nonatomic) BOOL clearTitleShadow;
+@property (assign, nonatomic) BOOL clearItemBackground;
+
+/// 返回按钮图像
+/// 非空时，返回按钮将只显示这个图像，隐藏标题和箭头
+@property (strong, nonatomic) UIImage *backButtonIcon;
 @end
