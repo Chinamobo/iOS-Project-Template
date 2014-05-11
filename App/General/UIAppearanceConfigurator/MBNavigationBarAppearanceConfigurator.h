@@ -22,6 +22,8 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
 
 /**
  导航栏外观设置器
+ 
+ 如果你只想给特定对象设置样式，可以设置 appearance 和 barButtonItemAppearance
 
  示例：
  @code
@@ -34,6 +36,7 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
  @endcode
  */
 @interface MBNavigationBarAppearanceConfigurator : MBAppearanceConfigurator
+@property (strong, nonatomic) id barButtonItemAppearance;
 
 /// 导航栏外观风格
 @property (assign, nonatomic) MBNavigationBarAppearanceStyle style;

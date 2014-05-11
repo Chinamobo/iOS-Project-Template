@@ -24,7 +24,7 @@
 
 - (void)applay {
     id navigationBarAppearance = self.appearance?: [UINavigationBar appearance];
-    id itemAppearance = [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
+    id itemAppearance = self.barButtonItemAppearance?: [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
     BOOL iOS7Style = (self.style == MBNavigationBarAppearanceStyle_iOS7 && RF_iOS7Before);
 
     // 基础颜色设置

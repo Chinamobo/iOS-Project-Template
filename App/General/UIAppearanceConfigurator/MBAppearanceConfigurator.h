@@ -14,7 +14,7 @@
  外观设置器基类
  */
 @interface MBAppearanceConfigurator : NSObject
-@property (weak, nonatomic) id appearance;
+@property (strong, nonatomic) id appearance;
 
 - (void)applay;
 @end
