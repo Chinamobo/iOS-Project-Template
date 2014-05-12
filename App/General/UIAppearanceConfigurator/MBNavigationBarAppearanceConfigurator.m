@@ -80,7 +80,13 @@
 
     // 返回按钮背景
     if (self.backButtonIcon) {
-        [itemAppearance setBackButtonBackgroundImage:self.backButtonIcon forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        UIImage *backImage = self.backButtonIcon;
+        if (UIEdgeInsetsEqualToEdgeInsets(self.backButtonIcon.capInsets, UIEdgeInsetsZero) ) {
+            // 需要转
+            CGSize imageSize = backImage.size;
+            backImage = [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(imageSize.width, imageSize.height, 0, 1)];
+        }
+        [itemAppearance setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 
         // 把标题移出屏幕
         [itemAppearance setBackButtonTitlePositionAdjustment:UIOffsetMake(-9999, 0) forBarMetrics:UIBarMetricsDefault];

@@ -74,7 +74,10 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
 /// 默认 YES
 @property (assign, nonatomic) BOOL clearItemBackground;
 
-/// 返回按钮图像
-/// 非空时，返回按钮将只显示这个图像，隐藏标题和箭头
+/**
+ 返回按钮图像，建议尺寸 44x44，并在右侧留有空白
+
+ 非空时，返回按钮将只显示这个图像，隐藏标题和箭头
+ */
 @property (strong, nonatomic) UIImage *backButtonIcon;
 @end
