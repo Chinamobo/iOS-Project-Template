@@ -1179,6 +1179,7 @@
 			isa = PBXGroup;
 			children = (
 				D5170CE8191B327A000C7D45 /* JPushManager */,
+				D58A00CB1921FD00002F698C /* WebFontLoader */,
 				D5542F141918B83400831016 /* MBApp.h */,
 				D5542F151918B83400831016 /* MBApp.m */,
 			);
@@ -1195,6 +1196,13 @@
 				D5542F251918C6E800831016 /* MBEntityListViewController.m */,
 			);
 			path = EntityViewControllers;
+			sourceTree = "<group>";
+		};
+		D58A00CB1921FD00002F698C /* WebFontLoader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebFontLoader;
 			sourceTree = "<group>";
 		};
 		D5CC92D21918F8A100C5B4D8 /* UIAppearanceConfigurator */ = {
