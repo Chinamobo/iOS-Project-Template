@@ -10,7 +10,7 @@
         <scene sceneID="RootScene">
             <objects>
                 <navigationController definesPresentationContext="YES" id="RootNavigation" customClass="MBRootNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RootNavigationBar">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="RootNavigationBar" customClass="MBRootNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

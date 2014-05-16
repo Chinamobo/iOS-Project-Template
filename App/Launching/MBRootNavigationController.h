@@ -42,3 +42,9 @@
 - (BOOL)prefersNavigationBarHiddenForNavigationController:(MBRootNavigationController *)navigation;
 
 @end
+
+/**
+ 只是为了限定 UIAppearance 的设置范围
+ */
+@interface MBRootNavigationBar : UINavigationBar
+@end

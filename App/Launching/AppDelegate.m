@@ -5,6 +5,7 @@
 #import "API.h"
 #import "UncaughtExceptionHandler.h"
 #import "MBNavigationBarAppearanceConfigurator.h"
+#import "MBRootNavigationController.h"
 
 @implementation AppDelegate
 
@@ -33,6 +34,11 @@
 
     // 在 iOS 6 上模拟 iOS 7 外观
     nac.style = MBNavigationBarAppearanceStyle_iOS7;
+
+    // 限定只设置根导航控制器的外观
+    nac.appearance = [MBRootNavigationBar appearance];
+    nac.barButtonItemAppearance = [UIBarButtonItem appearanceWhenContainedIn:[MBRootNavigationBar class], nil];
+
     [nac applay];
 }
 

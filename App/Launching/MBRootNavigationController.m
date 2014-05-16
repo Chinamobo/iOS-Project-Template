@@ -62,3 +62,6 @@ RFUIInterfaceOrientationSupportNavigation
 }
 
 @end
+
+@implementation MBRootNavigationBar
+@end
