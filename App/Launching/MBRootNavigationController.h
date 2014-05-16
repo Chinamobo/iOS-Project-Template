@@ -41,6 +41,13 @@
  */
 - (BOOL)prefersNavigationBarHiddenForNavigationController:(MBRootNavigationController *)navigation;
 
+/**
+ 询问点击返回按钮时是否可以返回
+ 
+ @return 返回 YES，导航将正常 pop，否则返回按钮点击无效
+ */
+- (BOOL)shouldPopOnBackButtonTappedForNavigationController:(MBRootNavigationController *)navigation;
+
 @end
 
 /**
