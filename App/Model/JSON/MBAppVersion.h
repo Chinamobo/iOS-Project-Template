@@ -14,10 +14,10 @@
  */
 @interface MBAppVersion : JSONModel
 /// 版本号
-@property (strong, nonatomic) NSString *version;
+@property (strong, nonatomic) NSString<Optional> *version;
 
 /// 标识
-@property (strong, nonatomic) NSString *URI;
+@property (strong, nonatomic) NSString<Optional> *URI;
 
 /// 描述
 @property (strong, nonatomic) NSString<Optional> *releaseNote;

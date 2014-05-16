@@ -47,6 +47,11 @@ NSString *const UDkUpdateInfomation     = @"Update Infomation";
     id __autoreleasing e = nil;
     self.versionInfo = [[MBAppVersion alloc] initWithString:json error:&e];
     if (e) dout_error(@"%@", e);
+}
+
+- (void)afterInit {
+    [super afterInit];
+
     [self onVersionInfoUpdated];
 }
 
@@ -190,7 +195,9 @@ NSString *const UDkUpdateInfomation     = @"Update Infomation";
     [ud synchronize];
 
     self.checking = NO;
-    self.complationBlock(self);
+    if (self.complationBlock) {
+        self.complationBlock(self);
+    }
 }
 
 - (void)ignoreCurrentVersion {
