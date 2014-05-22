@@ -34,6 +34,10 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
  nac.style = MBNavigationBarAppearanceStyle_iOS7;
  [nac applay];
  @endcode
+ 
+ 已知问题：
+ - 用 backButtonIcon 设置返回按钮时，iOS 6 下标题仍会占据位置，如果过长会吧中间的标题挤到右侧
+
  */
 @interface MBNavigationBarAppearanceConfigurator : MBAppearanceConfigurator
 @property (strong, nonatomic) id barButtonItemAppearance;
@@ -75,7 +79,7 @@ typedef NS_ENUM(short, MBNavigationBarAppearanceStyle) {
 @property (assign, nonatomic) BOOL clearItemBackground;
 
 /**
- 返回按钮图像，建议尺寸 44x44，并在右侧留有空白
+ 返回按钮图像，建议尺寸高度为 22，并在右侧留有空白
 
  非空时，返回按钮将只显示这个图像，隐藏标题和箭头
  */

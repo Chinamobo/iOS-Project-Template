@@ -87,7 +87,13 @@
             CGSize imageSize = backImage.size;
             backImage = [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(imageSize.height, imageSize.width, 0, 1)];
         }
-        [itemAppearance setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        if (iOS7Before) {
+            [itemAppearance setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        }
+        else if ([UINavigationBar instancesRespondToSelector:@selector(setBackIndicatorImage:)]) {
+            [navigationBarAppearance setBackIndicatorImage:backImage];
+            [navigationBarAppearance setBackIndicatorTransitionMaskImage:backImage];
+        }
 
         // 把标题移出屏幕
         [itemAppearance setBackButtonTitlePositionAdjustment:UIOffsetMake(-9999, 0) forBarMetrics:UIBarMetricsDefault];
