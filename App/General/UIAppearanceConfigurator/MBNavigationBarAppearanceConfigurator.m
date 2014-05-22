@@ -86,6 +86,9 @@
             // 需要转
             CGSize imageSize = backImage.size;
             backImage = [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(imageSize.height, imageSize.width, 0, 1)];
+            if ([self.backButtonIcon respondsToSelector:@selector(renderingMode)]) {
+                backImage = [backImage imageWithRenderingMode:self.backButtonIcon.renderingMode];
+            }
         }
         if (iOS7Before) {
             [itemAppearance setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
