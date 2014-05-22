@@ -25,10 +25,11 @@
 - (void)applay {
     id navigationBarAppearance = self.appearance?: [UINavigationBar appearance];
     id itemAppearance = self.barButtonItemAppearance?: [UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil];
-    BOOL iOS7Style = (self.style == MBNavigationBarAppearanceStyle_iOS7 && RF_iOS7Before);
+    BOOL iOS7Before = RF_iOS7Before;
+    BOOL iOS7Style = (self.style == MBNavigationBarAppearanceStyle_iOS7 && iOS7Before);
 
     // 基础颜色设置
-    if (RF_iOS7Before) {
+    if (iOS7Before) {
         [navigationBarAppearance setTintColor:self.barColor];
     }
     else {
@@ -49,7 +50,7 @@
     }
 
     // 标题设置
-    textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.titleColor;
+    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.titleColor;
     if (iOS7Style) {
         textAttributes[UITextAttributeFont] = [UIFont boldSystemFontOfSize:17];
         [navigationBarAppearance setTitleVerticalPositionAdjustment:1.5 forBarMetrics:UIBarMetricsDefault];
@@ -57,7 +58,7 @@
     [navigationBarAppearance setTitleTextAttributes:textAttributes.copy];
 
     // 按钮文字设置
-    textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleColor;
+    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleColor;
     if (iOS7Style) {
         textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:17];
         // 调整 iOS 6 下的偏移
@@ -66,10 +67,10 @@
     }
 	[itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
 
-    textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleHighlightedColor;
+    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleHighlightedColor;
     [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateHighlighted];
 
-    textAttributes[RF_iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleDisabledColor;
+    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleDisabledColor;
     [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateDisabled];
 
     UIImage *blankButtonBackgroundImage = [RFDrawImage imageWithSizeColor:CGSizeMake(10, 30) fillColor:[UIColor clearColor]];
