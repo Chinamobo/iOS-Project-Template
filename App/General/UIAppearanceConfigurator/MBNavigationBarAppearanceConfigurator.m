@@ -85,7 +85,7 @@
         if (UIEdgeInsetsEqualToEdgeInsets(self.backButtonIcon.capInsets, UIEdgeInsetsZero) ) {
             // 需要转
             CGSize imageSize = backImage.size;
-            backImage = [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(imageSize.width, imageSize.height, 0, 1)];
+            backImage = [backImage resizableImageWithCapInsets:UIEdgeInsetsMake(imageSize.height, imageSize.width, 0, 1)];
         }
         [itemAppearance setBackButtonBackgroundImage:backImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 
