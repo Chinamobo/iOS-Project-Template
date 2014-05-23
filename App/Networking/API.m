@@ -33,9 +33,9 @@ RFDefineConstString(APIErrorDomain);
     // 接口总体设置
     NSString *configPath = [[NSBundle mainBundle] pathForResource:@"APIDefine" ofType:@"plist"];
     NSDictionary *rules = [[NSDictionary alloc] initWithContentsOfFile:configPath];
-    [self setAPIDefineWithRules:rules];
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    self.responseSerializer = [APIJSONResponseSerializer serializer];
+    [self.defineManager setDefinesWithRulesInfo:rules];
+    self.defineManager.defaultRequestSerializer = [AFJSONRequestSerializer serializer];
+    self.defineManager.defaultResponseSerializer = [APIJSONResponseSerializer serializer];
     self.maxConcurrentOperationCount = 2;
 
     // 设置属性
