@@ -3,15 +3,9 @@
 
 @implementation MBMultiLineLabel
 
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    [super willMoveToSuperview:newSuperview];
-
-    self.preferredMaxLayoutWidth = CGRectGetWidth(self.bounds);
-}
-
 - (void)setBounds:(CGRect)bounds {
     [super setBounds:bounds];
-//    self.preferredMaxLayoutWidth = CGRectGetWidth(bounds);
+    self.preferredMaxLayoutWidth = CGRectGetWidth(bounds);
 }
 
 - (CGSize)intrinsicContentSize {
