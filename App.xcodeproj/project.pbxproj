@@ -89,6 +89,7 @@
 		D5197D3217F027B400CA387C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3417F027B400CA387C /* InfoPlist.strings */; };
 		D5197D3517F027BB00CA387C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3717F027BB00CA387C /* Localizable.strings */; };
 		D54B911E1943225900DE100C /* MBMultiLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D54B911D1943225900DE100C /* MBMultiLineLabel.m */; };
+		D54B91211943305900DE100C /* MBFixWidthImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54B91201943305900DE100C /* MBFixWidthImageView.m */; };
 		D552DD6F18C8506700D02290 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4C18C8506700D02290 /* HomeViewController.m */; };
 		D552DD7018C8506700D02290 /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4F18C8506700D02290 /* DataStack.m */; };
 		D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD5218C8506700D02290 /* MBAppVersion.m */; };
@@ -337,6 +338,8 @@
 		D5197D3617F027BB00CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D54B911C1943225900DE100C /* MBMultiLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMultiLineLabel.h; sourceTree = "<group>"; };
 		D54B911D1943225900DE100C /* MBMultiLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMultiLineLabel.m; sourceTree = "<group>"; };
+		D54B911F1943305900DE100C /* MBFixWidthImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFixWidthImageView.h; sourceTree = "<group>"; };
+		D54B91201943305900DE100C /* MBFixWidthImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFixWidthImageView.m; sourceTree = "<group>"; };
 		D552DD4B18C8506700D02290 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D552DD4C18C8506700D02290 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D552DD4E18C8506700D02290 /* DataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStack.h; sourceTree = "<group>"; };
@@ -967,6 +970,8 @@
 		D54B911B1943224500DE100C /* Auto Layout Fix */ = {
 			isa = PBXGroup;
 			children = (
+				D54B911F1943305900DE100C /* MBFixWidthImageView.h */,
+				D54B91201943305900DE100C /* MBFixWidthImageView.m */,
 				D54B911C1943225900DE100C /* MBMultiLineLabel.h */,
 				D54B911D1943225900DE100C /* MBMultiLineLabel.m */,
 			);
@@ -1418,6 +1423,7 @@
 				D5542F161918B83400831016 /* MBApp.m in Sources */,
 				D5CC92D51918F8BE00C5B4D8 /* MBAppearanceConfigurator.m in Sources */,
 				D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */,
+				D54B91211943305900DE100C /* MBFixWidthImageView.m in Sources */,
 				D5542EA6191883A800831016 /* MBButton.m in Sources */,
 				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
