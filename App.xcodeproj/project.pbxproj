@@ -1113,10 +1113,10 @@
 		D552DD7C18C8541D00D02290 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				D55FB78B19444DF100358714 /* TableView */,
 				D55FB762194443F600358714 /* Appearance */,
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
-				D55FB76F19444B2B00358714 /* PullToFetch */,
 				D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */,
 				D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */,
 			);
@@ -1280,6 +1280,14 @@
 				D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */,
 			);
 			path = RFTableViewPullToFetchPlugin;
+			sourceTree = "<group>";
+		};
+		D55FB78B19444DF100358714 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D55FB76F19444B2B00358714 /* PullToFetch */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 		D58A00CB1921FD00002F698C /* WebFontLoader */ = {
