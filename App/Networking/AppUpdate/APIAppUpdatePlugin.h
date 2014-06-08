@@ -1,5 +1,6 @@
 /*!
     APIAppUpdatePlugin
+    v 1.0
 
     Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template

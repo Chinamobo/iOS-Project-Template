@@ -1,5 +1,6 @@
 /*!
     APIJSONResponseSerializer
+    v 1.0
 
     Copyright (c) 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo
