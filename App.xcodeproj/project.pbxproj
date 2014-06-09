@@ -151,6 +151,7 @@
 		D55FB78719444B5900358714 /* RFTableViewCellHeightDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78019444B5900358714 /* RFTableViewCellHeightDelegate.m */; };
 		D55FB78819444B5900358714 /* RFTableViewPullToFetchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78319444B5900358714 /* RFTableViewPullToFetchPlugin.m */; };
 		D55FB78919444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */; };
+		D55FB78E19444E9A00358714 /* MBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78D19444E9A00358714 /* MBTableView.m */; };
 		D5CC92CC1918DBF300C5B4D8 /* LICENSE-AFNetworking.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */; };
 		D5CC92CE1918DBFF00C5B4D8 /* LICENSE-SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */; };
 		D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */; };
@@ -469,6 +470,8 @@
 		D55FB78319444B5900358714 /* RFTableViewPullToFetchPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFTableViewPullToFetchPlugin.m; sourceTree = "<group>"; };
 		D55FB78419444B5900358714 /* UIScrollView+RFScrollViewContentDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RFScrollViewContentDistance.h"; sourceTree = "<group>"; };
 		D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RFScrollViewContentDistance.m"; sourceTree = "<group>"; };
+		D55FB78C19444E9A00358714 /* MBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTableView.h; sourceTree = "<group>"; };
+		D55FB78D19444E9A00358714 /* MBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTableView.m; sourceTree = "<group>"; };
 		D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-AFNetworking.md"; sourceTree = "<group>"; };
 		D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SDWebImage"; sourceTree = "<group>"; };
 		D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+App.h"; sourceTree = "<group>"; };
@@ -1286,6 +1289,8 @@
 			isa = PBXGroup;
 			children = (
 				D55FB76F19444B2B00358714 /* PullToFetch */,
+				D55FB78C19444E9A00358714 /* MBTableView.h */,
+				D55FB78D19444E9A00358714 /* MBTableView.m */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1582,6 +1587,7 @@
 				D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */,
 				D5170CF9191B3967000C7D45 /* UINavigationController+RFKit.m in Sources */,
 				D50558651890C5B30049A759 /* UIResponder+RFKit.m in Sources */,
+				D55FB78E19444E9A00358714 /* MBTableView.m in Sources */,
 				D55FB78919444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m in Sources */,
 				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
 				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
