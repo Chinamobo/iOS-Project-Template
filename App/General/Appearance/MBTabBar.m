@@ -62,7 +62,7 @@ RFInitializingRootForUIView
 }
 
 - (void)updateAppearance {
-    // iOS 7 的上边线是为提供的 shadowImage
+    // iOS 7 的上边线是未提供的 shadowImage
     if (RF_iOS7Before && !self.shadowImage) {
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(1, 3), NO, 0);
         CGContextRef context = UIGraphicsGetCurrentContext();
