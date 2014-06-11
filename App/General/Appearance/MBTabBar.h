@@ -13,7 +13,8 @@
 /**
  iOS 7 外观的 UITabBar
  
- 默认情况下
+ 通常，你只需把 Storyboard 中 UITabBarController 的 tabBar 类改成 MBTabBar 即完成设置。
+ 如果默认的样式不满足，除了创建子类外，还可以通过 UIAppearance 设置。
  */
 @interface MBTabBar : UITabBar <
     RFInitializing
