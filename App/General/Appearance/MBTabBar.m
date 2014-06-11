@@ -19,10 +19,18 @@ RFInitializingRootForUIView
     if ([self respondsToSelector:@selector(setTintColor:)]) {
         self.tintColor = [UIColor globalTintColor];
     }
+
+    // Item 样式设置的时机延迟了一些，为了给其他代码设置的机会
+    [self updateBarAppearance];
 }
 
 - (void)afterInit {
-    [self updateAppearance];
+    // nothing
+}
+
+- (void)willMoveToWindow:(UIWindow *)newWindow {
+    [super willMoveToWindow:newWindow];
+    [self updateItemAppearance];
 }
 
 - (void)setItems:(NSArray *)items {
@@ -61,7 +69,7 @@ RFInitializingRootForUIView
     }
 }
 
-- (void)updateAppearance {
+- (void)updateBarAppearance {
     // iOS 7 的上边线是未提供的 shadowImage
     if (RF_iOS7Before && !self.shadowImage) {
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(1, 3), NO, 0);
@@ -95,8 +103,6 @@ RFInitializingRootForUIView
         [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateHighlighted];
     }
 #endif
-
-    [self updateItemAppearance];
 }
 
 @end
