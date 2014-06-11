@@ -138,6 +138,7 @@
 		D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F221918C6C600831016 /* MBEntityDetailViewController.m */; };
 		D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F251918C6E800831016 /* MBEntityListViewController.m */; };
 		D5542F2C1918CECE00831016 /* LICENSE-SVProgressHUD in Resources */ = {isa = PBXBuildFile; fileRef = D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */; };
+		D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */; };
 		D55FB76B1944441E00358714 /* MBAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7641944441E00358714 /* MBAppearanceConfigurator.m */; };
 		D55FB76C1944441E00358714 /* MBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7661944441E00358714 /* MBButton.m */; };
 		D55FB76D1944441E00358714 /* MBNavigationBarAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7681944441E00358714 /* MBNavigationBarAppearanceConfigurator.m */; };
@@ -447,6 +448,8 @@
 		D5542F251918C6E800831016 /* MBEntityListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEntityListViewController.m; sourceTree = "<group>"; };
 		D5542F2A1918C97A00831016 /* MBEntityExchanging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBEntityExchanging.h; sourceTree = "<group>"; };
 		D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SVProgressHUD"; sourceTree = "<group>"; };
+		D559BDEF19484EA2004F4CC1 /* MBSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSegmentedControl.h; sourceTree = "<group>"; };
+		D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSegmentedControl.m; sourceTree = "<group>"; };
 		D55FB7631944441E00358714 /* MBAppearanceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppearanceConfigurator.h; sourceTree = "<group>"; };
 		D55FB7641944441E00358714 /* MBAppearanceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppearanceConfigurator.m; sourceTree = "<group>"; };
 		D55FB7651944441E00358714 /* MBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBButton.h; sourceTree = "<group>"; };
@@ -1116,10 +1119,10 @@
 		D552DD7C18C8541D00D02290 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				D55FB78B19444DF100358714 /* TableView */,
 				D55FB762194443F600358714 /* Appearance */,
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
+				D55FB78B19444DF100358714 /* TableView */,
 				D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */,
 				D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */,
 			);
@@ -1243,6 +1246,8 @@
 				D55FB7661944441E00358714 /* MBButton.m */,
 				D55FB7671944441E00358714 /* MBNavigationBarAppearanceConfigurator.h */,
 				D55FB7681944441E00358714 /* MBNavigationBarAppearanceConfigurator.m */,
+				D559BDEF19484EA2004F4CC1 /* MBSegmentedControl.h */,
+				D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */,
 				D55FB7691944441E00358714 /* MBTextField.h */,
 				D55FB76A1944441E00358714 /* MBTextField.m */,
 			);
@@ -1508,6 +1513,8 @@
 				D55FB77819444B2B00358714 /* MBRefreshFooterView.m in Sources */,
 				D55FB77A19444B2B00358714 /* MBRefreshHeaderView.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
+				D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */,
+				D55FB78E19444E9A00358714 /* MBTableView.m in Sources */,
 				D55FB77C19444B2B00358714 /* MBTableViewPullToFetchControl.m in Sources */,
 				D55FB76E1944441E00358714 /* MBTextField.m in Sources */,
 				D552DD7218C8506700D02290 /* Model.xcdatamodeld in Sources */,
@@ -1587,7 +1594,6 @@
 				D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */,
 				D5170CF9191B3967000C7D45 /* UINavigationController+RFKit.m in Sources */,
 				D50558651890C5B30049A759 /* UIResponder+RFKit.m in Sources */,
-				D55FB78E19444E9A00358714 /* MBTableView.m in Sources */,
 				D55FB78919444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m in Sources */,
 				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
 				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
