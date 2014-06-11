@@ -19,17 +19,10 @@ RFInitializingRootForUIView
     if ([self respondsToSelector:@selector(setTintColor:)]) {
         self.tintColor = [UIColor globalTintColor];
     }
-
-    // Item 样式设置的时机延迟了一些，为了给其他代码设置的机会
-    [self updateBarAppearance];
 }
 
 - (void)afterInit {
-    // nothing
-}
-
-- (void)willMoveToWindow:(UIWindow *)newWindow {
-    [super willMoveToWindow:newWindow];
+    [self updateBarAppearance];
     [self updateItemAppearance];
 }
 
