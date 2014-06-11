@@ -19,6 +19,7 @@
 		D50558921890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588C1890E8EE0049A759 /* UIButton+RFResizableBackgroundImage.m */; };
 		D50558941890E8EE0049A759 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */; };
 		D50558971890F5B20049A759 /* RFPlaceHolderSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */; };
+		D50693D4194887160002BFCC /* MBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D50693D3194887160002BFCC /* MBSearchBar.m */; };
 		D5170CF4191B3944000C7D45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */; };
 		D5170CF9191B3967000C7D45 /* UINavigationController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */; };
 		D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3D17EECAAF00CA387C /* Foundation.framework */; };
@@ -206,6 +207,8 @@
 		D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RFPatternImageBackground.m"; sourceTree = "<group>"; };
 		D50558951890F5B20049A759 /* RFPlaceHolderSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPlaceHolderSegue.h; sourceTree = "<group>"; };
 		D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPlaceHolderSegue.m; sourceTree = "<group>"; };
+		D50693D2194887160002BFCC /* MBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSearchBar.h; sourceTree = "<group>"; };
+		D50693D3194887160002BFCC /* MBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSearchBar.m; sourceTree = "<group>"; };
 		D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5170CF7191B3967000C7D45 /* UINavigationController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RFKit.h"; sourceTree = "<group>"; };
 		D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RFKit.m"; sourceTree = "<group>"; };
@@ -1249,6 +1252,8 @@
 				D55FB7661944441E00358714 /* MBButton.m */,
 				D55FB7671944441E00358714 /* MBNavigationBarAppearanceConfigurator.h */,
 				D55FB7681944441E00358714 /* MBNavigationBarAppearanceConfigurator.m */,
+				D50693D2194887160002BFCC /* MBSearchBar.h */,
+				D50693D3194887160002BFCC /* MBSearchBar.m */,
 				D559BDEF19484EA2004F4CC1 /* MBSegmentedControl.h */,
 				D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */,
 				D559BDF21948503A004F4CC1 /* MBTabBar.h */,
@@ -1518,6 +1523,7 @@
 				D55FB77819444B2B00358714 /* MBRefreshFooterView.m in Sources */,
 				D55FB77A19444B2B00358714 /* MBRefreshHeaderView.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
+				D50693D4194887160002BFCC /* MBSearchBar.m in Sources */,
 				D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */,
 				D559BDF41948503A004F4CC1 /* MBTabBar.m in Sources */,
 				D55FB78E19444E9A00358714 /* MBTableView.m in Sources */,
