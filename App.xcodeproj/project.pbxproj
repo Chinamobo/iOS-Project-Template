@@ -139,6 +139,7 @@
 		D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5542F251918C6E800831016 /* MBEntityListViewController.m */; };
 		D5542F2C1918CECE00831016 /* LICENSE-SVProgressHUD in Resources */ = {isa = PBXBuildFile; fileRef = D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */; };
 		D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */; };
+		D559BDF41948503A004F4CC1 /* MBTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D559BDF31948503A004F4CC1 /* MBTabBar.m */; };
 		D55FB76B1944441E00358714 /* MBAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7641944441E00358714 /* MBAppearanceConfigurator.m */; };
 		D55FB76C1944441E00358714 /* MBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7661944441E00358714 /* MBButton.m */; };
 		D55FB76D1944441E00358714 /* MBNavigationBarAppearanceConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB7681944441E00358714 /* MBNavigationBarAppearanceConfigurator.m */; };
@@ -450,6 +451,8 @@
 		D5542F2B1918CECE00831016 /* LICENSE-SVProgressHUD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SVProgressHUD"; sourceTree = "<group>"; };
 		D559BDEF19484EA2004F4CC1 /* MBSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSegmentedControl.h; sourceTree = "<group>"; };
 		D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSegmentedControl.m; sourceTree = "<group>"; };
+		D559BDF21948503A004F4CC1 /* MBTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTabBar.h; sourceTree = "<group>"; };
+		D559BDF31948503A004F4CC1 /* MBTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTabBar.m; sourceTree = "<group>"; };
 		D55FB7631944441E00358714 /* MBAppearanceConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAppearanceConfigurator.h; sourceTree = "<group>"; };
 		D55FB7641944441E00358714 /* MBAppearanceConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAppearanceConfigurator.m; sourceTree = "<group>"; };
 		D55FB7651944441E00358714 /* MBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBButton.h; sourceTree = "<group>"; };
@@ -1248,6 +1251,8 @@
 				D55FB7681944441E00358714 /* MBNavigationBarAppearanceConfigurator.m */,
 				D559BDEF19484EA2004F4CC1 /* MBSegmentedControl.h */,
 				D559BDF019484EA2004F4CC1 /* MBSegmentedControl.m */,
+				D559BDF21948503A004F4CC1 /* MBTabBar.h */,
+				D559BDF31948503A004F4CC1 /* MBTabBar.m */,
 				D55FB7691944441E00358714 /* MBTextField.h */,
 				D55FB76A1944441E00358714 /* MBTextField.m */,
 			);
@@ -1514,6 +1519,7 @@
 				D55FB77A19444B2B00358714 /* MBRefreshHeaderView.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
 				D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */,
+				D559BDF41948503A004F4CC1 /* MBTabBar.m in Sources */,
 				D55FB78E19444E9A00358714 /* MBTableView.m in Sources */,
 				D55FB77C19444B2B00358714 /* MBTableViewPullToFetchControl.m in Sources */,
 				D55FB76E1944441E00358714 /* MBTextField.m in Sources */,
