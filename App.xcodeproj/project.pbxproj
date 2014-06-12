@@ -20,6 +20,7 @@
 		D50558941890E8EE0049A759 /* UIView+RFPatternImageBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */; };
 		D50558971890F5B20049A759 /* RFPlaceHolderSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */; };
 		D50693D4194887160002BFCC /* MBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D50693D3194887160002BFCC /* MBSearchBar.m */; };
+		D50693D819495D9E0002BFCC /* MBControlGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D50693D719495D9E0002BFCC /* MBControlGroup.m */; };
 		D5170CF4191B3944000C7D45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */; };
 		D5170CF9191B3967000C7D45 /* UINavigationController+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */; };
 		D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197A3D17EECAAF00CA387C /* Foundation.framework */; };
@@ -209,6 +210,8 @@
 		D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPlaceHolderSegue.m; sourceTree = "<group>"; };
 		D50693D2194887160002BFCC /* MBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSearchBar.h; sourceTree = "<group>"; };
 		D50693D3194887160002BFCC /* MBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSearchBar.m; sourceTree = "<group>"; };
+		D50693D619495D9E0002BFCC /* MBControlGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBControlGroup.h; sourceTree = "<group>"; };
+		D50693D719495D9E0002BFCC /* MBControlGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBControlGroup.m; sourceTree = "<group>"; };
 		D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5170CF7191B3967000C7D45 /* UINavigationController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RFKit.h"; sourceTree = "<group>"; };
 		D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RFKit.m"; sourceTree = "<group>"; };
@@ -579,6 +582,15 @@
 				D50558901890E8EE0049A759 /* UIView+RFPatternImageBackground.m */,
 			);
 			path = RFViewApperance;
+			sourceTree = "<group>";
+		};
+		D50693D519495D940002BFCC /* MBControlGroup */ = {
+			isa = PBXGroup;
+			children = (
+				D50693D619495D9E0002BFCC /* MBControlGroup.h */,
+				D50693D719495D9E0002BFCC /* MBControlGroup.m */,
+			);
+			path = MBControlGroup;
 			sourceTree = "<group>";
 		};
 		D5170CE8191B327A000C7D45 /* JPushManager */ = {
@@ -1128,6 +1140,7 @@
 				D55FB762194443F600358714 /* Appearance */,
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
+				D50693D519495D940002BFCC /* MBControlGroup */,
 				D55FB78B19444DF100358714 /* TableView */,
 				D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */,
 				D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */,
@@ -1515,6 +1528,7 @@
 				D55FB76B1944441E00358714 /* MBAppearanceConfigurator.m in Sources */,
 				D552DD7118C8506700D02290 /* MBAppVersion.m in Sources */,
 				D55FB76C1944441E00358714 /* MBButton.m in Sources */,
+				D50693D819495D9E0002BFCC /* MBControlGroup.m in Sources */,
 				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
 				D54B91211943305900DE100C /* MBFixWidthImageView.m in Sources */,
