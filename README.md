@@ -1,4 +1,4 @@
-Chinamobo iOS 项目模版 v3
+Chinamobo iOS 项目模版 v3.1
 ====
 <base href="//github.com/BB9z/iOS-Project-Template/blob/master/" />
 <big>[猛击此处阅读：使用指南](Guide.md)</big>
@@ -6,7 +6,7 @@ Chinamobo iOS 项目模版 v3
 
 需求
 ----
-项目最低要求 Xcode 5.1，支持 iOS 6 及以上版本。
+项目最低要求 Xcode 5.1，iOS 7 SDK，支持 iOS 6 及以上版本。
 
 
 修改明细
@@ -18,6 +18,8 @@ Chinamobo iOS 项目模版 v3
   - 集成精简的 [JSONModel](https://github.com/Chinamobo/JSONModel) 优雅处理获取的 JSON 数据；
   - 为 Reachability Manager 加入 SystemConfiguration.framework；
   - 多种插件，应用版本更新检测、用户系统插件、数据同步插件。
+  
+* 一整套项目级的 UI 复用控件，涉及外观定制、数据交换等等，详见 General 目录下各文件自身的说明；
 
 * 编译脚本辅助系统，特色：
   - 自动编译计数，为了减少冲突，为每个独立用户分别纪录编译数最终加和。也可设置按日期格式命名；

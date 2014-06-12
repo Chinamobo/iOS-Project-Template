@@ -49,3 +49,6 @@ Chinamobo iOS 项目模版使用指南
 └── Scripts                 辅助脚本
 ```
 
+修改全局颜色
+----
+General/Appearance 目录下的很多外观控件依赖于全局颜色，你需要修改 UIKit+App 和 Storyboard 中的全局颜色设置。
