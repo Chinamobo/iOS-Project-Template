@@ -1,6 +1,6 @@
 /*!
     MBTabBar
-    v 0.2
+    v 0.3
 
     Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template
@@ -15,6 +15,10 @@
  
  通常，你只需把 Storyboard 中 UITabBarController 的 tabBar 类改成 MBTabBar 即完成设置。
  如果默认的样式不满足，除了创建子类外，还可以通过 UIAppearance 设置。
+ 
+ 已知问题：
+ - BarItem 的图像只支持自定义的，不支持系统预置的
+ - iOS 6 下，如果 barItem 未设置图像，文字颜色不会应用
  */
 @interface MBTabBar : UITabBar <
     RFInitializing

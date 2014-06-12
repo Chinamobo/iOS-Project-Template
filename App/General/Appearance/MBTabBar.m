@@ -85,17 +85,13 @@ RFInitializingRootForUIView
         self.backgroundImage = backgroundImage;
     }
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
-    if (RF_iOS7Before) {
-        NSMutableDictionary *textAttributes = [[NSMutableDictionary alloc] initWithCapacity:3];
-        textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:10];
-        textAttributes[UITextAttributeTextColor] = self.itemTintColor;
-        [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
+    NSMutableDictionary *textAttributes = [[NSMutableDictionary alloc] initWithCapacity:3];
+    textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:10];
+    textAttributes[UITextAttributeTextColor] = self.itemTintColor;
+    [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
 
-        textAttributes[UITextAttributeTextColor] = self.itemHighlightedColor;
-        [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateHighlighted];
-    }
-#endif
+    textAttributes[UITextAttributeTextColor] = self.itemHighlightedColor;
+    [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateSelected];
 }
 
 @end
