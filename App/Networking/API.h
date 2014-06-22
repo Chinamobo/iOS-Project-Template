@@ -50,5 +50,10 @@
 
 @end
 
-// 暴漏给外部的常量
-extern NSUInteger APIConfigFetchPageSize;
+
+@interface UIImageView (App)
+
+- (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholder;
+
+@end
+
