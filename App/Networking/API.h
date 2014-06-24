@@ -50,6 +50,7 @@
 
 @end
 
+extern NSUInteger APIConfigFetchPageSize;
 
 @interface UIImageView (App)
 
