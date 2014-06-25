@@ -15,7 +15,8 @@
  主要用于外观定制
  */
 @interface MBTextField : UITextField <
-    RFInitializing
+    RFInitializing,
+    UITextFieldDelegate
 >
 
 /**
@@ -24,4 +25,7 @@
  默认上下 7pt，左右 10pt
  */
 @property (assign, nonatomic) UIEdgeInsets textEdgeInsets;
+
+@property (weak, nonatomic) IBOutlet UIResponder *nextField;
+
 @end

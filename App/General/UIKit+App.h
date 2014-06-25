@@ -19,6 +19,9 @@
 + (UIColor *)globalHighlightedTintColor;
 + (UIColor *)globalDisabledTintColor;
 
+/// 占位符文本颜色
++ (UIColor *)globalPlaceholderTextColor;
+
 @end
 
 @interface UIImage (App)
