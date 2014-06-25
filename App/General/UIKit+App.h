@@ -12,6 +12,7 @@
     把可重复利用的资源放在这里
  */
 #import <UIKit/UIKit.h>
+#import "NSAttributedStringCompatiblity.h"
 
 @interface UIColor (App)
 

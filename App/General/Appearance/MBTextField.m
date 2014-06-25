@@ -28,6 +28,7 @@ RFInitializingRootForUIView
 
 #pragma mark - 修改 place holder 文字样式
 - (void)setPlaceholder:(NSString *)placeholder {
+    // iOS 6 无效果
     self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:placeholder attributes:@{ NSForegroundColorAttributeName : [UIColor globalPlaceholderTextColor], NSFontAttributeName : [UIFont boldSystemFontOfSize:14] }];
 }
 

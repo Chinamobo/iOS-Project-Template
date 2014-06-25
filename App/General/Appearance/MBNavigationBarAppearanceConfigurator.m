@@ -50,27 +50,27 @@
     }
 
     // 标题设置
-    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.titleColor;
+    textAttributes[NSForegroundColorAttributeName] = self.titleColor;
     if (iOS7Style) {
-        textAttributes[UITextAttributeFont] = [UIFont boldSystemFontOfSize:17];
+        textAttributes[NSFontAttributeName] = [UIFont boldSystemFontOfSize:17];
         [navigationBarAppearance setTitleVerticalPositionAdjustment:1.5 forBarMetrics:UIBarMetricsDefault];
     }
     [navigationBarAppearance setTitleTextAttributes:textAttributes.copy];
 
     // 按钮文字设置
-    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleColor;
+    textAttributes[NSForegroundColorAttributeName] = self.itemTitleColor;
     if (iOS7Style) {
-        textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:17];
+        textAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:17];
         // 调整 iOS 6 下的偏移
         [itemAppearance setTitlePositionAdjustment:UIOffsetMake(4.5, .5) forBarMetrics:UIBarMetricsDefault];
         [itemAppearance setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -2.5) forBarMetrics:UIBarMetricsLandscapePhone];
     }
 	[itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
 
-    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleHighlightedColor;
+    textAttributes[NSForegroundColorAttributeName] = self.itemTitleHighlightedColor;
     [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateHighlighted];
 
-    textAttributes[iOS7Before ? UITextAttributeTextColor : NSForegroundColorAttributeName] = self.itemTitleDisabledColor;
+    textAttributes[NSForegroundColorAttributeName] = self.itemTitleDisabledColor;
     [itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateDisabled];
 
     UIImage *blankButtonBackgroundImage = [RFDrawImage imageWithSizeColor:CGSizeMake(10, 30) fillColor:[UIColor clearColor]];

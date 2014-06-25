@@ -86,11 +86,11 @@ RFInitializingRootForUIView
     }
 
     NSMutableDictionary *textAttributes = [[NSMutableDictionary alloc] initWithCapacity:3];
-    textAttributes[UITextAttributeFont] = [UIFont systemFontOfSize:10];
-    textAttributes[UITextAttributeTextColor] = self.itemTintColor;
+    textAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:10];
+    textAttributes[NSForegroundColorAttributeName] = self.itemTintColor;
     [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateNormal];
 
-    textAttributes[UITextAttributeTextColor] = self.itemHighlightedColor;
+    textAttributes[NSForegroundColorAttributeName] = self.itemHighlightedColor;
     [self.itemAppearance setTitleTextAttributes:textAttributes.copy forState:UIControlStateSelected];
 }
 

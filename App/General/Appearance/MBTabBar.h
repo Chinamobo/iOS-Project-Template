@@ -1,6 +1,6 @@
 /*!
     MBTabBar
-    v 0.3
+    v 0.4
 
     Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template

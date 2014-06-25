@@ -48,8 +48,8 @@ RFInitializingRootForUIView
     UIImage *selectedBackgroundImage = [RFDrawImage imageWithRoundingCorners:corners size:CGSizeMake(12, self.height) fillColor:self.tintColor strokeColor:nil strokeWidth:0 boxMargin:UIEdgeInsetsZero resizableCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) scaleFactor:0];
     UIImage *highlightedBackgroundImage = [RFDrawImage imageWithRoundingCorners:corners size:CGSizeMake(12, self.height) fillColor:[self.tintColor mixedColorWithRatio:.25 color:[UIColor colorWithRGBHex:0xFFFFFF]] strokeColor:nil strokeWidth:0 boxMargin:UIEdgeInsetsZero resizableCapInsets:UIEdgeInsetsMake(5, 5, 5, 5) scaleFactor:0];
 
-    [self setTitleTextAttributes:@{ UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetZero], UITextAttributeTextColor : self.tintColor, UITextAttributeFont : [UIFont systemFontOfSize:13] } forState:UIControlStateNormal];
-    [self setTitleTextAttributes:@{ UITextAttributeTextColor : [UIColor whiteColor] } forState:UIControlStateHighlighted];
+    [self setTitleTextAttributes:@{ UITextAttributeTextShadowOffset : [NSValue valueWithUIOffset:UIOffsetZero], NSForegroundColorAttributeName : self.tintColor, NSFontAttributeName : [UIFont systemFontOfSize:13] } forState:UIControlStateNormal];
+    [self setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor whiteColor] } forState:UIControlStateHighlighted];
 
     [self setBackgroundImage:backgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     [self setBackgroundImage:highlightedBackgroundImage forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];

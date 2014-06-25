@@ -212,6 +212,7 @@
 		D50693D3194887160002BFCC /* MBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSearchBar.m; sourceTree = "<group>"; };
 		D50693D619495D9E0002BFCC /* MBControlGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBControlGroup.h; sourceTree = "<group>"; };
 		D50693D719495D9E0002BFCC /* MBControlGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBControlGroup.m; sourceTree = "<group>"; };
+		D50EAAEC195AC56700548BF6 /* NSAttributedStringCompatiblity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringCompatiblity.h; sourceTree = "<group>"; };
 		D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5170CF7191B3967000C7D45 /* UINavigationController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RFKit.h"; sourceTree = "<group>"; };
 		D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RFKit.m"; sourceTree = "<group>"; };
@@ -591,6 +592,14 @@
 				D50693D719495D9E0002BFCC /* MBControlGroup.m */,
 			);
 			path = MBControlGroup;
+			sourceTree = "<group>";
+		};
+		D50EAAEB195AC54F00548BF6 /* Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				D50EAAEC195AC56700548BF6 /* NSAttributedStringCompatiblity.h */,
+			);
+			path = Compatibility;
 			sourceTree = "<group>";
 		};
 		D5170CE8191B327A000C7D45 /* JPushManager */ = {
@@ -1139,6 +1148,7 @@
 			children = (
 				D55FB762194443F600358714 /* Appearance */,
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
+				D50EAAEB195AC54F00548BF6 /* Compatibility */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
 				D50693D519495D940002BFCC /* MBControlGroup */,
 				D55FB78B19444DF100358714 /* TableView */,
