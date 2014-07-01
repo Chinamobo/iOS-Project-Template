@@ -1,6 +1,6 @@
 /*!
     MBNavigationBarAppearanceConfigurator
-    v 1.0
+    v 1.2
 
     Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template

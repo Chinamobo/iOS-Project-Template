@@ -8,6 +8,7 @@
     [super awakeFromNib];
 
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+    self.empty = NO;
 }
 
 - (void)setEmpty:(BOOL)empty {

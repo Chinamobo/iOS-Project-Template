@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "edge.png"
+      "filename" : "text_field_bg_focused.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "text_field_bg_focused@2x.png"
     }
   ],
   "info" : {

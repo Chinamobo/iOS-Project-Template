@@ -1,7 +1,6 @@
 
 #import "debug.h"
 #import "API.h"
-#import "APIInterface.h"
 #import "APIConfig.h"
 #import "APIJSONResponseSerializer.h"
 #import "RFSVProgressMessageManager.h"
@@ -98,3 +97,14 @@ RFDefineConstString(APIErrorDomain);
 
 @end
 
+#import "UIImageView+WebCache.h"
+
+@implementation UIImageView (App)
+
+- (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholder {
+    NSURL *url = [NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]];
+    placeholder = placeholder?: self.image;
+    [self setImageWithURL:url placeholderImage:placeholder];
+}
+
+@end

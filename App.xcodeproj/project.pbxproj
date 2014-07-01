@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		D50558651890C5B30049A759 /* UIResponder+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558641890C5B30049A759 /* UIResponder+RFKit.m */; };
 		D50558691890C7F40049A759 /* RFAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558681890C7F40049A759 /* RFAPI.m */; };
-		D50558731890C80B0049A759 /* RFAssetsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D505586C1890C80B0049A759 /* RFAssetsCache.m */; };
-		D50558741890C80B0049A759 /* RFAssetsCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */; };
-		D50558751890C80B0049A759 /* RFAssetsCacheData.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558701890C80B0049A759 /* RFAssetsCacheData.m */; };
-		D50558761890C80B0049A759 /* RFAssetsCacheRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */; };
 		D50558861890E8A50049A759 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50558821890E8A50049A759 /* SVProgressHUD.bundle */; };
 		D50558871890E8A50049A759 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D50558841890E8A50049A759 /* SVProgressHUD.m */; };
 		D50558911890E8EE0049A759 /* RFLine.m in Sources */ = {isa = PBXBuildFile; fileRef = D505588A1890E8EE0049A759 /* RFLine.m */; };
@@ -90,6 +86,10 @@
 		D5197D0517F01E1D00CA387C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5197D0417F01E1D00CA387C /* CoreData.framework */; };
 		D5197D3217F027B400CA387C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3417F027B400CA387C /* InfoPlist.strings */; };
 		D5197D3517F027BB00CA387C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5197D3717F027BB00CA387C /* Localizable.strings */; };
+		D542C33F196292B600524271 /* RFAsynchronousPresentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D542C33A196292B600524271 /* RFAsynchronousPresentSegue.m */; };
+		D542C340196292B600524271 /* RFAsynchronousPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D542C33C196292B600524271 /* RFAsynchronousPushSegue.m */; };
+		D542C341196292B600524271 /* RFAsynchronousSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D542C33E196292B600524271 /* RFAsynchronousSegue.m */; };
+		D542C3441962930400524271 /* RFPresentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D542C3431962930400524271 /* RFPresentSegue.m */; };
 		D54B911E1943225900DE100C /* MBMultiLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D54B911D1943225900DE100C /* MBMultiLineLabel.m */; };
 		D54B91211943305900DE100C /* MBFixWidthImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D54B91201943305900DE100C /* MBFixWidthImageView.m */; };
 		D552DD6F18C8506700D02290 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D552DD4C18C8506700D02290 /* HomeViewController.m */; };
@@ -190,13 +190,6 @@
 		D50558641890C5B30049A759 /* UIResponder+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+RFKit.m"; sourceTree = "<group>"; };
 		D50558671890C7F40049A759 /* RFAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAPI.h; sourceTree = "<group>"; };
 		D50558681890C7F40049A759 /* RFAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAPI.m; sourceTree = "<group>"; };
-		D505586B1890C80B0049A759 /* RFAssetsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCache.h; sourceTree = "<group>"; };
-		D505586C1890C80B0049A759 /* RFAssetsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCache.m; sourceTree = "<group>"; };
-		D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RFAssetsCache.xcdatamodel; sourceTree = "<group>"; };
-		D505586F1890C80B0049A759 /* RFAssetsCacheData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCacheData.h; sourceTree = "<group>"; };
-		D50558701890C80B0049A759 /* RFAssetsCacheData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheData.m; sourceTree = "<group>"; };
-		D50558711890C80B0049A759 /* RFAssetsCacheRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAssetsCacheRecord.h; sourceTree = "<group>"; };
-		D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAssetsCacheRecord.m; sourceTree = "<group>"; };
 		D50558821890E8A50049A759 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		D50558831890E8A50049A759 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		D50558841890E8A50049A759 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
@@ -212,6 +205,7 @@
 		D50693D3194887160002BFCC /* MBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSearchBar.m; sourceTree = "<group>"; };
 		D50693D619495D9E0002BFCC /* MBControlGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBControlGroup.h; sourceTree = "<group>"; };
 		D50693D719495D9E0002BFCC /* MBControlGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBControlGroup.m; sourceTree = "<group>"; };
+		D50EAAEC195AC56700548BF6 /* NSAttributedStringCompatiblity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringCompatiblity.h; sourceTree = "<group>"; };
 		D5170CF3191B3944000C7D45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5170CF7191B3967000C7D45 /* UINavigationController+RFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RFKit.h"; sourceTree = "<group>"; };
 		D5170CF8191B3967000C7D45 /* UINavigationController+RFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+RFKit.m"; sourceTree = "<group>"; };
@@ -355,6 +349,14 @@
 		D5197D0C17F0208C00CA387C /* debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		D5197D3317F027B400CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5197D3617F027BB00CA387C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D542C339196292B600524271 /* RFAsynchronousPresentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAsynchronousPresentSegue.h; sourceTree = "<group>"; };
+		D542C33A196292B600524271 /* RFAsynchronousPresentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAsynchronousPresentSegue.m; sourceTree = "<group>"; };
+		D542C33B196292B600524271 /* RFAsynchronousPushSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAsynchronousPushSegue.h; sourceTree = "<group>"; };
+		D542C33C196292B600524271 /* RFAsynchronousPushSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAsynchronousPushSegue.m; sourceTree = "<group>"; };
+		D542C33D196292B600524271 /* RFAsynchronousSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAsynchronousSegue.h; sourceTree = "<group>"; };
+		D542C33E196292B600524271 /* RFAsynchronousSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAsynchronousSegue.m; sourceTree = "<group>"; };
+		D542C3421962930400524271 /* RFPresentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPresentSegue.h; sourceTree = "<group>"; };
+		D542C3431962930400524271 /* RFPresentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPresentSegue.m; sourceTree = "<group>"; };
 		D54B911C1943225900DE100C /* MBMultiLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMultiLineLabel.h; sourceTree = "<group>"; };
 		D54B911D1943225900DE100C /* MBMultiLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMultiLineLabel.m; sourceTree = "<group>"; };
 		D54B911F1943305900DE100C /* MBFixWidthImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFixWidthImageView.h; sourceTree = "<group>"; };
@@ -540,20 +542,6 @@
 			path = RFAPI;
 			sourceTree = "<group>";
 		};
-		D505586A1890C80B0049A759 /* RFAssetsCache */ = {
-			isa = PBXGroup;
-			children = (
-				D505586B1890C80B0049A759 /* RFAssetsCache.h */,
-				D505586C1890C80B0049A759 /* RFAssetsCache.m */,
-				D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */,
-				D505586F1890C80B0049A759 /* RFAssetsCacheData.h */,
-				D50558701890C80B0049A759 /* RFAssetsCacheData.m */,
-				D50558711890C80B0049A759 /* RFAssetsCacheRecord.h */,
-				D50558721890C80B0049A759 /* RFAssetsCacheRecord.m */,
-			);
-			path = RFAssetsCache;
-			sourceTree = "<group>";
-		};
 		D50558801890E8A50049A759 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +579,14 @@
 				D50693D719495D9E0002BFCC /* MBControlGroup.m */,
 			);
 			path = MBControlGroup;
+			sourceTree = "<group>";
+		};
+		D50EAAEB195AC54F00548BF6 /* Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				D50EAAEC195AC56700548BF6 /* NSAttributedStringCompatiblity.h */,
+			);
+			path = Compatibility;
 			sourceTree = "<group>";
 		};
 		D5170CE8191B327A000C7D45 /* JPushManager */ = {
@@ -697,7 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				D50558661890C7F40049A759 /* RFAPI */,
-				D505586A1890C80B0049A759 /* RFAssetsCache */,
+				D542C338196292B600524271 /* RFAsynchronousSegue */,
 				D5197AD417F019E200CA387C /* RFButton */,
 				D5197ADB17F019E200CA387C /* RFCheckbox */,
 				D5197ADE17F019E200CA387C /* RFCoreData */,
@@ -943,6 +939,8 @@
 				D5197BFE17F019E500CA387C /* RFNavigationPushSegue.m */,
 				D50558951890F5B20049A759 /* RFPlaceHolderSegue.h */,
 				D50558961890F5B20049A759 /* RFPlaceHolderSegue.m */,
+				D542C3421962930400524271 /* RFPresentSegue.h */,
+				D542C3431962930400524271 /* RFPresentSegue.m */,
 				D5197BFF17F019E500CA387C /* RFSegue.h */,
 				D5197C0017F019E500CA387C /* RFSegue.m */,
 				D5197C0117F019E500CA387C /* RFSegueDelegate.h */,
@@ -1018,6 +1016,19 @@
 				D5197D0017F01AB000CA387C /* LICENSE_jsonmodel.txt */,
 			);
 			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		D542C338196292B600524271 /* RFAsynchronousSegue */ = {
+			isa = PBXGroup;
+			children = (
+				D542C339196292B600524271 /* RFAsynchronousPresentSegue.h */,
+				D542C33A196292B600524271 /* RFAsynchronousPresentSegue.m */,
+				D542C33B196292B600524271 /* RFAsynchronousPushSegue.h */,
+				D542C33C196292B600524271 /* RFAsynchronousPushSegue.m */,
+				D542C33D196292B600524271 /* RFAsynchronousSegue.h */,
+				D542C33E196292B600524271 /* RFAsynchronousSegue.m */,
+			);
+			path = RFAsynchronousSegue;
 			sourceTree = "<group>";
 		};
 		D54B911B1943224500DE100C /* Auto Layout Fix */ = {
@@ -1139,6 +1150,7 @@
 			children = (
 				D55FB762194443F600358714 /* Appearance */,
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
+				D50EAAEB195AC54F00548BF6 /* Compatibility */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
 				D50693D519495D940002BFCC /* MBControlGroup */,
 				D55FB78B19444DF100358714 /* TableView */,
@@ -1566,10 +1578,9 @@
 				D5542EF919188EE700831016 /* RFAPIDefine.m in Sources */,
 				D5542EFA19188EE700831016 /* RFAPIDefineConfigFileKeys.m in Sources */,
 				D5542EFB19188EE700831016 /* RFAPIDefineManager.m in Sources */,
-				D50558731890C80B0049A759 /* RFAssetsCache.m in Sources */,
-				D50558741890C80B0049A759 /* RFAssetsCache.xcdatamodeld in Sources */,
-				D50558751890C80B0049A759 /* RFAssetsCacheData.m in Sources */,
-				D50558761890C80B0049A759 /* RFAssetsCacheRecord.m in Sources */,
+				D542C33F196292B600524271 /* RFAsynchronousPresentSegue.m in Sources */,
+				D542C340196292B600524271 /* RFAsynchronousPushSegue.m in Sources */,
+				D542C341196292B600524271 /* RFAsynchronousSegue.m in Sources */,
 				D5197C5117F019E500CA387C /* RFButton.m in Sources */,
 				D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */,
 				D5197CD017F019E600CA387C /* RFContainedSegue.m in Sources */,
@@ -1591,6 +1602,7 @@
 				D50558971890F5B20049A759 /* RFPlaceHolderSegue.m in Sources */,
 				D5197C6C17F019E500CA387C /* RFPlugin.m in Sources */,
 				D5197CCD17F019E600CA387C /* RFPopBarButtonItem.m in Sources */,
+				D542C3441962930400524271 /* RFPresentSegue.m in Sources */,
 				D5542F101918976B00831016 /* RFRoundingCornersView.m in Sources */,
 				D5197CD317F019E600CA387C /* RFSegue.m in Sources */,
 				D5197CCE17F019E600CA387C /* RFSegueDismissModalButton.m in Sources */,
@@ -1914,16 +1926,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D505586D1890C80B0049A759 /* RFAssetsCache.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */,
-			);
-			currentVersion = D505586E1890C80B0049A759 /* RFAssetsCache.xcdatamodel */;
-			path = RFAssetsCache.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		D552DD5318C8506700D02290 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
