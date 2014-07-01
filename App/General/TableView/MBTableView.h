@@ -1,6 +1,6 @@
 /*!
     MBTableView
-    v 0.2
+    v 0.3
 
     Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template
@@ -34,6 +34,10 @@
 
 /// 刷新数据，会重置 cell 高度缓存
 - (void)reload;
+
+/// 使用 Auto Layout 更新 cell 高度
+- (void)updateCellHeightAtIndexPath:(NSIndexPath *)indexPath;
+- (void)updateCellHeightOfCell:(UITableViewCell *)cell;
 @end
 
 /**
@@ -58,6 +62,10 @@
 @end
 
 /*! Change log
+ 
+ 0.3
+ - 增加更新 cell 高度的方法
+ - 补上内容为空的状态更新
 
  0.2
  - 把分页、数据获取等逻辑真正集成进来

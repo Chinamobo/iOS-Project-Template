@@ -1,6 +1,7 @@
 
 #import "MBTableView.h"
 #import "API.h"
+#import "MBRefreshFooterView.h"
 
 @interface MBTableView ()
 @property (weak, nonatomic) id<MBTableViewDelegate> delegate;
@@ -17,19 +18,7 @@ RFInitializingRootForUIView
 
 - (void)afterInit {
     [self cellHeightManager];
-
-    MBTableViewPullToFetchControl *control = self.pullToFetchController;
-
-    @weakify(self);
-    [control setHeaderProcessBlock:^{
-        @strongify(self);
-        [self fetchItemsWithPageFlag:NO];
-    }];
-
-    [control setFooterProcessBlock:^{
-        @strongify(self);
-        [self fetchItemsWithPageFlag:YES];
-    }];
+    [self pullToFetchController];
 }
 
 - (RFTableViewCellHeightDelegate *)cellHeightManager {
@@ -43,8 +32,21 @@ RFInitializingRootForUIView
 
 - (MBTableViewPullToFetchControl *)pullToFetchController {
     if (!_pullToFetchController) {
-        _pullToFetchController = [[MBTableViewPullToFetchControl alloc] init];
-        _pullToFetchController.tableView = self;
+        MBTableViewPullToFetchControl *control = [[MBTableViewPullToFetchControl alloc] init];
+        control.tableView = self;
+
+        @weakify(self);
+        [control setHeaderProcessBlock:^{
+            @strongify(self);
+            [self fetchItemsWithPageFlag:NO];
+        }];
+
+        [control setFooterProcessBlock:^{
+            @strongify(self);
+            [self fetchItemsWithPageFlag:(self.page != 0)];
+        }];
+
+        _pullToFetchController = control;
     }
     return _pullToFetchController;
 }
@@ -66,6 +68,8 @@ RFInitializingRootForUIView
         else {
             [self.items setArray:responseObject];
             [self.cellHeightManager invalidateCellHeightCache];
+            MBRefreshFooterView *fv = (id)self.pullToFetchController.footerContainer;
+            fv.empty = (responseObject.count == 0);
         }
         self.pullToFetchController.footerReachEnd = !!(responseObject.count < self.pageSize);
         [self reloadData];
@@ -90,6 +94,21 @@ RFInitializingRootForUIView
     RFAssert(cell, nil);
     [self.delegate tableView:tableView configureCell:cell forIndexPath:indexPath offscreenRendering:NO];
     return cell;
+}
+
+#pragma mark - Cell height update
+
+- (void)updateCellHeightAtIndexPath:(NSIndexPath *)indexPath {
+    [self.cellHeightManager invalidateCellHeightCacheAtIndexPath:indexPath];
+    [self beginUpdates];
+    [self endUpdates];
+}
+
+- (void)updateCellHeightOfCell:(UITableViewCell *)cell {
+    NSIndexPath *ip = [self indexPathForCell:cell];
+    if (ip) {
+        [self updateCellHeightAtIndexPath:ip];
+    }
 }
 
 @end
