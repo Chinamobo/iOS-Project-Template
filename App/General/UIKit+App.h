@@ -1,7 +1,7 @@
 /*!
     UIKit+App
 
-    Copyright © 2013-2014 Chinamobo Co., Ltd.
+    Copyright © 2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template
 
     Apache License, Version 2.0
@@ -27,4 +27,10 @@
 
 @interface UIImage (App)
 
+@end
+
+@interface NSString (App)
+
+/// email 格式检查
+- (BOOL)isValidEmail;
 @end
