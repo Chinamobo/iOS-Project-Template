@@ -113,7 +113,9 @@
         [itemAppearance setBackButtonBackgroundImage:highlight forState:UIControlStateHighlighted barMetrics:UIBarMetricsDefault];
     }
     else if (self.clearItemBackground) {
-        [itemAppearance setBackButtonBackgroundImage:blankButtonBackgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        if (iOS7Before) {
+            [itemAppearance setBackButtonBackgroundImage:blankButtonBackgroundImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        }
     }
 }
 
