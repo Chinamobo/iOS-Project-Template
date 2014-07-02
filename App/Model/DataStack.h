@@ -1,5 +1,6 @@
 /*!
     DataStack
+    v 1.0
 
     Copyright © 2013-2014 Chinamobo Co., Ltd.
     https://github.com/Chinamobo/iOS-Project-Template
@@ -23,6 +24,11 @@
 - (BOOL)save;
 
 #pragma mark - 单例快速访问
+
+/**
+ 在 managedObjectContext 的私有队列中执行 block 代码
+ */
++ (void)contextPerform:(void (^)())block;
 + (NSManagedObjectContext *)managedObjectContext;
 + (BOOL)save;
 
