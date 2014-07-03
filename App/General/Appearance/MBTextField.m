@@ -87,4 +87,11 @@ RFInitializingRootForUIView
     return YES;
 }
 
+// 当 UITextField 子类设置 delegate 为自身时，切换键盘可能导致无限循环
+// 重写私有方法 customOverlayContainer 作为修正
+// REF! http://stackoverflow.com/q/19758025/945906
+- (id)customOverlayContainer {
+    return self;
+}
+
 @end
