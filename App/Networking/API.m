@@ -102,9 +102,17 @@ RFDefineConstString(APIErrorDomain);
 @implementation UIImageView (App)
 
 - (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholder {
-    NSURL *url = [NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]];
-    placeholder = placeholder?: self.image;
-    [self setImageWithURL:url placeholderImage:placeholder];
+    [self setImageWithURLString:path placeholderImage:placeholder completion:nil];
 }
+
+- (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholderImage completion:(void (^)(void))completion {
+    placeholderImage = placeholderImage?: self.image;
+    [self setImageWithURL:[NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        if (completion) {
+            completion();
+        }
+    }];
+}
+
 
 @end

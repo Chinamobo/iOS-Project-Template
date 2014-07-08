@@ -37,6 +37,11 @@
  */
 + (void)showSuccessStatus:(NSString *)message;
 
+/**
+ 取消属于 viewController 的请求，这些请求必须用 viewController 的类名做为 groupIdentifier
+ */
++ (void)cancelOperationsWithViewController:(id)viewController;
+
 #pragma mark - 具体业务
 
 
@@ -55,6 +60,12 @@ extern NSUInteger APIConfigFetchPageSize;
 @interface UIImageView (App)
 
 - (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholder;
+
+/**
+ @param path 图片的 URL 地址，如果是相对地址，会跟 APIURLAssetsBase 做拼接
+ @param placeholderImage 占位图，若为空，会把当前图片作为占位符
+ */
+- (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholderImage completion:(void (^)(void))completion;
 
 @end
 
