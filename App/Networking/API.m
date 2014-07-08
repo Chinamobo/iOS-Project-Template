@@ -48,7 +48,7 @@ RFDefineConstString(APIErrorDomain);
     // 配置网络
     if ([UIDevice currentDevice].isBeingDebugged) {
         [[AFNetworkActivityLogger sharedLogger] startLogging];
-        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelInfo;
+        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelDebug;
     }
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 }
