@@ -2,6 +2,11 @@
 #import "MBTextField.h"
 #import "RFDrawImage.h"
 #import "UIKit+App.h"
+#import "UITextFiledDelegateChain.h"
+
+@interface MBTextField ()
+@property (strong, nonatomic) UITextFiledDelegateChain *trueDelegate;
+@end
 
 @implementation MBTextField
 RFInitializingRootForUIView
@@ -14,15 +19,22 @@ RFInitializingRootForUIView
     self.borderStyle = UITextBorderStyleNone;
     self.disabledBackground = [MBTextField disabledBackgroundImage];
     self.background = [MBTextField backgroundImage];
-
-    // 回车切换到下一个输入框或按钮
-    self.delegate = self;
 }
 
 - (void)afterInit {
     // 修改 place holder 文字样式
     if (self.placeholder) {
         self.placeholder = self.placeholder;
+    }
+
+    // 回车切换到下一个输入框或按钮，默认键盘样式
+    if (self.nextField && self.returnKeyType == UIReturnKeyDefault) {
+        if ([self.nextField isKindOfClass:[UIControl class]]) {
+            self.returnKeyType = UIReturnKeySend;
+        }
+        else {
+            self.returnKeyType = UIReturnKeyNext;
+        }
     }
 }
 
@@ -75,23 +87,38 @@ RFInitializingRootForUIView
     return [super resignFirstResponder];
 }
 
-#pragma mark - 回车切换到下一个输入框或按钮
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([self.nextField isKindOfClass:[UITextField class]]
-        || [self.nextField isKindOfClass:[UITextView class]]) {
-        [self.nextField becomeFirstResponder];
-    }
-    if ([self.nextField isKindOfClass:[UIControl class]]) {
-        [(UIControl *)self.nextField sendActionsForControlEvents:UIControlEventTouchUpInside];
-    }
-    return YES;
+#pragma mark - Delegate
+
+- (id<UITextFieldDelegate>)delegate {
+    return self.trueDelegate.delegate;
 }
 
-// 当 UITextField 子类设置 delegate 为自身时，切换键盘可能导致无限循环
-// 重写私有方法 customOverlayContainer 作为修正
-// REF! http://stackoverflow.com/q/19758025/945906
-- (id)customOverlayContainer {
-    return self;
+- (void)setDelegate:(id<UITextFieldDelegate>)delegate {
+    self.trueDelegate.delegate = delegate;
 }
 
+- (UITextFiledDelegateChain *)trueDelegate {
+    if (!_trueDelegate) {
+        _trueDelegate = [UITextFiledDelegateChain new];
+        [_trueDelegate setShouldReturn:^BOOL(UITextField *aTextField, id<UITextFieldDelegate> delegate) {
+            MBTextField *textField = (id)aTextField;
+            if ([delegate respondsToSelector:@selector(textFieldShouldReturn:)]) {
+                if (![delegate textFieldShouldReturn:textField]) {
+                    return NO;
+                }
+            }
+            if (![textField isKindOfClass:[MBTextField class]]) return YES;
+            if ([textField.nextField isKindOfClass:[UITextField class]]
+                || [textField.nextField isKindOfClass:[UITextView class]]) {
+                [textField.nextField becomeFirstResponder];
+            }
+            if ([textField.nextField isKindOfClass:[UIControl class]]) {
+                [(UIControl *)textField.nextField sendActionsForControlEvents:UIControlEventTouchUpInside];
+            }
+            return YES;
+        }];
+        [super setDelegate:_trueDelegate];
+    }
+    return _trueDelegate;
+}
 @end

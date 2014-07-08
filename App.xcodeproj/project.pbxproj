@@ -156,6 +156,7 @@
 		D55FB78819444B5900358714 /* RFTableViewPullToFetchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78319444B5900358714 /* RFTableViewPullToFetchPlugin.m */; };
 		D55FB78919444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */; };
 		D55FB78E19444E9A00358714 /* MBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78D19444E9A00358714 /* MBTableView.m */; };
+		D5C7728B196BD4790000A426 /* UITextFiledDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */; };
 		D5CC92CC1918DBF300C5B4D8 /* LICENSE-AFNetworking.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */; };
 		D5CC92CE1918DBFF00C5B4D8 /* LICENSE-SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */; };
 		D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */; };
@@ -486,6 +487,8 @@
 		D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RFScrollViewContentDistance.m"; sourceTree = "<group>"; };
 		D55FB78C19444E9A00358714 /* MBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTableView.h; sourceTree = "<group>"; };
 		D55FB78D19444E9A00358714 /* MBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTableView.m; sourceTree = "<group>"; };
+		D5C77289196BD4790000A426 /* UITextFiledDelegateChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFiledDelegateChain.h; sourceTree = "<group>"; };
+		D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFiledDelegateChain.m; sourceTree = "<group>"; };
 		D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-AFNetworking.md"; sourceTree = "<group>"; };
 		D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SDWebImage"; sourceTree = "<group>"; };
 		D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+App.h"; sourceTree = "<group>"; };
@@ -1196,6 +1199,7 @@
 		D5542EEA19188ED500831016 /* RFDelegateChain */ = {
 			isa = PBXGroup;
 			children = (
+				D5C77288196BD4790000A426 /* UIKit */,
 				D5542EEB19188ED500831016 /* RFDelegateChain.h */,
 				D5542EEC19188ED500831016 /* RFDelegateChain.m */,
 			);
@@ -1340,6 +1344,15 @@
 			children = (
 			);
 			path = WebFontLoader;
+			sourceTree = "<group>";
+		};
+		D5C77288196BD4790000A426 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D5C77289196BD4790000A426 /* UITextFiledDelegateChain.h */,
+				D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		D5DED91E1839C9C70087CB7C /* AFNetworkActivityLogger */ = {
@@ -1549,6 +1562,7 @@
 				D55FB77819444B2B00358714 /* MBRefreshFooterView.m in Sources */,
 				D55FB77A19444B2B00358714 /* MBRefreshHeaderView.m in Sources */,
 				D552DD7418C8506700D02290 /* MBRootNavigationController.m in Sources */,
+				D5C7728B196BD4790000A426 /* UITextFiledDelegateChain.m in Sources */,
 				D50693D4194887160002BFCC /* MBSearchBar.m in Sources */,
 				D559BDF119484EA2004F4CC1 /* MBSegmentedControl.m in Sources */,
 				D559BDF41948503A004F4CC1 /* MBTabBar.m in Sources */,
