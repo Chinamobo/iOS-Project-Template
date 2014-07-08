@@ -33,4 +33,7 @@
 
 /// email 格式检查
 - (BOOL)isValidEmail;
+
+/// 是否是大陆手机手机号
+- (BOOL)isValidPhoneNumber;
 @end
