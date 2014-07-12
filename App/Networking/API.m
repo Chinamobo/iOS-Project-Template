@@ -81,6 +81,10 @@ RFDefineConstString(APIErrorDomain);
     [[API sharedInstance].networkActivityIndicatorManager showWithTitle:nil message:message status:RFNetworkActivityIndicatorStatusSuccess modal:NO priority:RFNetworkActivityIndicatorMessagePriorityHigh autoHideAfterTimeInterval:0 identifier:nil groupIdentifier:nil userInfo:nil];
 }
 
++ (void)cancelOperationsWithViewController:(id)viewController {
+    [[API sharedInstance] cancelOperationsWithGroupIdentifier:NSStringFromClass([viewController class])];
+}
+
 #pragma mark - 具体业务
 
 
@@ -107,7 +111,7 @@ RFDefineConstString(APIErrorDomain);
 
 - (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholderImage completion:(void (^)(void))completion {
     placeholderImage = placeholderImage?: self.image;
-    [self setImageWithURL:[NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+    [self sd_setImageWithURL:[NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (completion) {
             completion();
         }
