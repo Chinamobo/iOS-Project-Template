@@ -1815,6 +1815,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"RFDEBUG=1",
+					"RFDebugLevel=4",
 					"DOUT_FALG_TRACE=1",
 					"DOUT_ASSERT_AT_ERROR=1",
 					"DOUT_TREAT_ERROR_AS_EXCEPTION=0",
@@ -1910,6 +1911,90 @@
 			};
 			name = Release;
 		};
+		D564D5D41970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RFDEBUG=0";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHocTest;
+		};
+		D564D5D51970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = App/Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RFDEBUG=1",
+					"RFDebugLevel=3",
+				);
+				INFOPLIST_FILE = App/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHocTest;
+		};
+		D564D5D61970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/${PROJECT_NAME:rfc1034identifier}.app/${PROJECT_NAME:rfc1034identifier}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = App/Prefix.pch;
+				INFOPLIST_FILE = "AppTests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = AdHocTest;
+		};
+		D564D5D71970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = AdHocTest;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1918,6 +2003,7 @@
 			buildConfigurations = (
 				D5197A6D17EECAAF00CA387C /* Debug */,
 				D5197A6E17EECAAF00CA387C /* Release */,
+				D564D5D41970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1927,6 +2013,7 @@
 			buildConfigurations = (
 				D5197A7017EECAAF00CA387C /* Debug */,
 				D5197A7117EECAAF00CA387C /* Release */,
+				D564D5D51970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1936,6 +2023,7 @@
 			buildConfigurations = (
 				D5197A7317EECAAF00CA387C /* Debug */,
 				D5197A7417EECAAF00CA387C /* Release */,
+				D564D5D61970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1945,6 +2033,7 @@
 			buildConfigurations = (
 				D5197D2917F0242000CA387C /* Debug */,
 				D5197D2A17F0242000CA387C /* Release */,
+				D564D5D71970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
