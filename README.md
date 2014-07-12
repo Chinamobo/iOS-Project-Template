@@ -50,6 +50,7 @@ Chinamobo iOS 项目模版 v3.3
 * 编译设置定制：
   - 增加 AdHocTest 编译配置，专用于内部测试发布版本使用；
   - 代码签名规则简化整合；
+  - 默认开启 -Wall。
  
 * 国际化定制：
   - 增 Localizable.strings，InfoPlist.strings；
