@@ -52,6 +52,8 @@
 }
 
 - (BOOL)save {
+    if (!self.managedObjectContext.hasChanges) return YES;
+
     NSError __autoreleasing *e = nil;
     if (![self.managedObjectContext save:&e]) {
         dout_error(@"ManagedObjectContext saved failed: %@", e);
@@ -64,7 +66,7 @@
 - (NSManagedObjectContext *)managedObjectContext {
     if (!_managedObjectContext) {
         if (self.persistentStoreCoordinator) {
-            _managedObjectContext = [[NSManagedObjectContext alloc] init];
+            _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
             [_managedObjectContext setPersistentStoreCoordinator:self.persistentStoreCoordinator];
         }
     }
@@ -102,6 +104,10 @@
 }
 
 #pragma mark - 快速访问
++ (void)contextPerform:(void (^)())block {
+    [[self sharedInstance].managedObjectContext performBlock:block];
+}
+
 + (NSManagedObjectContext *)managedObjectContext {
     return [self sharedInstance].managedObjectContext;
 }

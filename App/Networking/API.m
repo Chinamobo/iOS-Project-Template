@@ -48,7 +48,7 @@ RFDefineConstString(APIErrorDomain);
     // 配置网络
     if ([UIDevice currentDevice].isBeingDebugged) {
         [[AFNetworkActivityLogger sharedLogger] startLogging];
-        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelInfo;
+        [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelDebug;
     }
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 }
@@ -81,6 +81,10 @@ RFDefineConstString(APIErrorDomain);
     [[API sharedInstance].networkActivityIndicatorManager showWithTitle:nil message:message status:RFNetworkActivityIndicatorStatusSuccess modal:NO priority:RFNetworkActivityIndicatorMessagePriorityHigh autoHideAfterTimeInterval:0 identifier:nil groupIdentifier:nil userInfo:nil];
 }
 
++ (void)cancelOperationsWithViewController:(id)viewController {
+    [[API sharedInstance] cancelOperationsWithGroupIdentifier:NSStringFromClass([viewController class])];
+}
+
 #pragma mark - 具体业务
 
 
@@ -102,9 +106,17 @@ RFDefineConstString(APIErrorDomain);
 @implementation UIImageView (App)
 
 - (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholder {
-    NSURL *url = [NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]];
-    placeholder = placeholder?: self.image;
-    [self setImageWithURL:url placeholderImage:placeholder];
+    [self setImageWithURLString:path placeholderImage:placeholder completion:nil];
 }
+
+- (void)setImageWithURLString:(NSString *)path placeholderImage:(UIImage *)placeholderImage completion:(void (^)(void))completion {
+    placeholderImage = placeholderImage?: self.image;
+    [self sd_setImageWithURL:[NSURL URLWithString:path relativeToURL:[NSURL URLWithString:APIURLAssetsBase]] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if (completion) {
+            completion();
+        }
+    }];
+}
+
 
 @end

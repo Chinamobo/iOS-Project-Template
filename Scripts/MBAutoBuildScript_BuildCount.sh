@@ -2,11 +2,13 @@
 # Copyright (c) 2013-2014 Chinamobo Co., Ltd. All rights reserved.
 # Maintained by BB9z (https://github.com/BB9z)
 
-echo "MBAutoBuildScript Build Count 0.5.0"
+echo "MBAutoBuildScript Build Count 0.5.1"
 echo "-----------------------"
 
 # 自动构建数
 if [ $enableAutoBuildCount = 1 ]; then
+	buildnum=$("$scriptPath/UserBuildCount" "$buildCountRecordFile" "$USER")
+	
 	if [ $CONFIGURATION = "Debug" ]; then
 		echo "Debug 模式，跳过版本设置"
 		
@@ -19,8 +21,6 @@ if [ $enableAutoBuildCount = 1 ]; then
 			if [ -n $(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$infoPlistPath") ]; then
 				if [ $autoBuildCountUseDataFormat = 1 ]; then
 					buildnum=$(date $autoBuildCountDataFormat)
-				else
-					buildnum=$("$scriptPath/UserBuildCount" "$buildCountRecordFile" "$USER")
 				fi
 				/usr/libexec/PlistBuddy -c "Set CFBundleVersion $buildnum" "$infoPlistPath"
 				echo "将版本设置为 $buildnum"

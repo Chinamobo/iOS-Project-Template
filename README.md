@@ -1,4 +1,4 @@
-Chinamobo iOS 项目模版 v3.1
+Chinamobo iOS 项目模版 v3.3
 ====
 <base href="//github.com/BB9z/iOS-Project-Template/blob/master/" />
 <big>[猛击此处阅读：使用指南](Guide.md)</big>
@@ -19,7 +19,7 @@ Chinamobo iOS 项目模版 v3.1
   - 为 Reachability Manager 加入 SystemConfiguration.framework；
   - 多种插件，应用版本更新检测、用户系统插件、数据同步插件。
   
-* 一整套项目级的 UI 复用控件，涉及外观定制、数据交换等等，详见 General 目录下各文件自身的说明；
+* 一整套项目级的 UI 复用控件，涉及外观定制、数据交换等等，详见 General 和 Service 目录下各文件自身的说明；
 
 * 编译脚本辅助系统，特色：
   - 自动编译计数，为了减少冲突，为每个独立用户分别纪录编译数最终加和。也可设置按日期格式命名；
@@ -46,6 +46,11 @@ Chinamobo iOS 项目模版 v3.1
   - 开启 dout 开关：DOUT_FALG_TRACE、DOUT_ASSERT_AT_ERROR；
   - 增加 debug.h，专用于控制业务模块的调试行为；
   - 添加全局异常断点、测试失败断点。
+  
+* 编译设置定制：
+  - 增加 AdHocTest 编译配置，专用于内部测试发布版本使用；
+  - 代码签名规则简化整合；
+  - 默认开启 -Wall。
  
 * 国际化定制：
   - 增 Localizable.strings，InfoPlist.strings；
@@ -53,10 +58,8 @@ Chinamobo iOS 项目模版 v3.1
   - CFBundleDevelopmentRegion 设为 zh_CN。
 
 * 添加基础流程界面，根导航控制器，导航条不透明；
-* 外观定制组件，默认 iOS 6 下导航样式将于 iOS 7 高度一致，附加一组常用 UI 素材；
 * Deployment Target 设置为 iOS 6.0；
-* Storyboard 编译版本设为 iOS 6，全局颜色设置为红色，要求 Xcode 5.1；
-* 代码签名规则简化，Release 使用发布 Profile；
+* Storyboard 编译版本设为 iOS 6，全局颜色设置为红色；
 * 添加仓库级别的 git 忽略规则；
 * 全套应用 Icon 及启动画面；
 * Info.plist 中增加 iTunes 文件共享字段，默认关闭；

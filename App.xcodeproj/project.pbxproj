@@ -35,7 +35,6 @@
 		D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197ADD17F019E200CA387C /* RFCheckbox.m */; };
 		D5197C5517F019E500CA387C /* NSManagedObject+RFCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AE017F019E200CA387C /* NSManagedObject+RFCoreData.m */; };
 		D5197C5617F019E500CA387C /* NSManagedObject+RFCoreDataSyncPurge.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AE217F019E200CA387C /* NSManagedObject+RFCoreDataSyncPurge.m */; };
-		D5197C5817F019E500CA387C /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197AE717F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin.m */; };
 		D5197C6C17F019E500CA387C /* RFPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197B1817F019E300CA387C /* RFPlugin.m */; };
 		D5197C8F17F019E600CA387C /* RFKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197B6917F019E400CA387C /* RFKeyboard.m */; };
 		D5197C9017F019E600CA387C /* NSArray+RFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = D5197B6E17F019E400CA387C /* NSArray+RFKit.m */; };
@@ -156,6 +155,9 @@
 		D55FB78819444B5900358714 /* RFTableViewPullToFetchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78319444B5900358714 /* RFTableViewPullToFetchPlugin.m */; };
 		D55FB78919444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */; };
 		D55FB78E19444E9A00358714 /* MBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D55FB78D19444E9A00358714 /* MBTableView.m */; };
+		D564CF3C196D9A7A0087B179 /* MBFormSelectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D564CF3B196D9A7A0087B179 /* MBFormSelectListViewController.m */; };
+		D564D5D31970EE340032FEC3 /* MBModalPresentSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D564D5D21970EE340032FEC3 /* MBModalPresentSegue.m */; };
+		D5C7728B196BD4790000A426 /* UITextFiledDelegateChain.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */; };
 		D5CC92CC1918DBF300C5B4D8 /* LICENSE-AFNetworking.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */; };
 		D5CC92CE1918DBFF00C5B4D8 /* LICENSE-SDWebImage in Resources */ = {isa = PBXBuildFile; fileRef = D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */; };
 		D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */; };
@@ -234,9 +236,6 @@
 		D5197AE117F019E200CA387C /* NSManagedObject+RFCoreDataSyncPurge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+RFCoreDataSyncPurge.h"; sourceTree = "<group>"; };
 		D5197AE217F019E200CA387C /* NSManagedObject+RFCoreDataSyncPurge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+RFCoreDataSyncPurge.m"; sourceTree = "<group>"; };
 		D5197AE317F019E200CA387C /* RFCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCoreData.h; sourceTree = "<group>"; };
-		D5197AE517F019E200CA387C /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
-		D5197AE617F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFCoreDataAutoFetchTableViewPlugin.h; sourceTree = "<group>"; };
-		D5197AE717F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFCoreDataAutoFetchTableViewPlugin.m; sourceTree = "<group>"; };
 		D5197B1717F019E300CA387C /* RFPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFPlugin.h; sourceTree = "<group>"; };
 		D5197B1817F019E300CA387C /* RFPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFPlugin.m; sourceTree = "<group>"; };
 		D5197B6717F019E400CA387C /* RFInitializing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFInitializing.h; sourceTree = "<group>"; };
@@ -486,6 +485,12 @@
 		D55FB78519444B5900358714 /* UIScrollView+RFScrollViewContentDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RFScrollViewContentDistance.m"; sourceTree = "<group>"; };
 		D55FB78C19444E9A00358714 /* MBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTableView.h; sourceTree = "<group>"; };
 		D55FB78D19444E9A00358714 /* MBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTableView.m; sourceTree = "<group>"; };
+		D564CF3A196D9A7A0087B179 /* MBFormSelectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFormSelectListViewController.h; sourceTree = "<group>"; };
+		D564CF3B196D9A7A0087B179 /* MBFormSelectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFormSelectListViewController.m; sourceTree = "<group>"; };
+		D564D5D11970EE340032FEC3 /* MBModalPresentSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBModalPresentSegue.h; sourceTree = "<group>"; };
+		D564D5D21970EE340032FEC3 /* MBModalPresentSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBModalPresentSegue.m; sourceTree = "<group>"; };
+		D5C77289196BD4790000A426 /* UITextFiledDelegateChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFiledDelegateChain.h; sourceTree = "<group>"; };
+		D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFiledDelegateChain.m; sourceTree = "<group>"; };
 		D5CC92CB1918DBF300C5B4D8 /* LICENSE-AFNetworking.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-AFNetworking.md"; sourceTree = "<group>"; };
 		D5CC92CD1918DBFF00C5B4D8 /* LICENSE-SDWebImage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-SDWebImage"; sourceTree = "<group>"; };
 		D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+App.h"; sourceTree = "<group>"; };
@@ -697,7 +702,6 @@
 				D5197AD417F019E200CA387C /* RFButton */,
 				D5197ADB17F019E200CA387C /* RFCheckbox */,
 				D5197ADE17F019E200CA387C /* RFCoreData */,
-				D5197AE417F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin */,
 				D5542EEA19188ED500831016 /* RFDelegateChain */,
 				D5542EED19188ED500831016 /* RFDrawImage */,
 				D5542EFC19188F4F00831016 /* RFMessageManager */,
@@ -739,16 +743,6 @@
 				D5197AE317F019E200CA387C /* RFCoreData.h */,
 			);
 			path = RFCoreData;
-			sourceTree = "<group>";
-		};
-		D5197AE417F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin */ = {
-			isa = PBXGroup;
-			children = (
-				D5197AE517F019E200CA387C /* Readme.md */,
-				D5197AE617F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin.h */,
-				D5197AE717F019E200CA387C /* RFCoreDataAutoFetchTableViewPlugin.m */,
-			);
-			path = RFCoreDataAutoFetchTableViewPlugin;
 			sourceTree = "<group>";
 		};
 		D5197B1617F019E300CA387C /* RFPlugin */ = {
@@ -1152,7 +1146,9 @@
 				D54B911B1943224500DE100C /* Auto Layout Fix */,
 				D50EAAEB195AC54F00548BF6 /* Compatibility */,
 				D5542F201918C6BF00831016 /* EntityViewControllers */,
+				D564CF39196D98E10087B179 /* Form */,
 				D50693D519495D940002BFCC /* MBControlGroup */,
+				D564D5D01970EE2C0032FEC3 /* Segue */,
 				D55FB78B19444DF100358714 /* TableView */,
 				D5CC92CF1918EAAA00C5B4D8 /* UIKit+App.h */,
 				D5CC92D01918EAAB00C5B4D8 /* UIKit+App.m */,
@@ -1196,6 +1192,7 @@
 		D5542EEA19188ED500831016 /* RFDelegateChain */ = {
 			isa = PBXGroup;
 			children = (
+				D5C77288196BD4790000A426 /* UIKit */,
 				D5542EEB19188ED500831016 /* RFDelegateChain.h */,
 				D5542EEC19188ED500831016 /* RFDelegateChain.m */,
 			);
@@ -1335,11 +1332,38 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		D564CF39196D98E10087B179 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				D564CF3A196D9A7A0087B179 /* MBFormSelectListViewController.h */,
+				D564CF3B196D9A7A0087B179 /* MBFormSelectListViewController.m */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		D564D5D01970EE2C0032FEC3 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				D564D5D11970EE340032FEC3 /* MBModalPresentSegue.h */,
+				D564D5D21970EE340032FEC3 /* MBModalPresentSegue.m */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
 		D58A00CB1921FD00002F698C /* WebFontLoader */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = WebFontLoader;
+			sourceTree = "<group>";
+		};
+		D5C77288196BD4790000A426 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D5C77289196BD4790000A426 /* UITextFiledDelegateChain.h */,
+				D5C7728A196BD4790000A426 /* UITextFiledDelegateChain.m */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		D5DED91E1839C9C70087CB7C /* AFNetworkActivityLogger */ = {
@@ -1544,6 +1568,8 @@
 				D5542F231918C6C600831016 /* MBEntityDetailViewController.m in Sources */,
 				D5542F261918C6E800831016 /* MBEntityListViewController.m in Sources */,
 				D54B91211943305900DE100C /* MBFixWidthImageView.m in Sources */,
+				D564CF3C196D9A7A0087B179 /* MBFormSelectListViewController.m in Sources */,
+				D564D5D31970EE340032FEC3 /* MBModalPresentSegue.m in Sources */,
 				D54B911E1943225900DE100C /* MBMultiLineLabel.m in Sources */,
 				D55FB76D1944441E00358714 /* MBNavigationBarAppearanceConfigurator.m in Sources */,
 				D55FB77819444B2B00358714 /* MBRefreshFooterView.m in Sources */,
@@ -1585,7 +1611,6 @@
 				D5197C5417F019E500CA387C /* RFCheckbox.m in Sources */,
 				D5197CD017F019E600CA387C /* RFContainedSegue.m in Sources */,
 				D5197C5217F019E500CA387C /* RFControl.m in Sources */,
-				D5197C5817F019E500CA387C /* RFCoreDataAutoFetchTableViewPlugin.m in Sources */,
 				D5542EF019188ED500831016 /* RFDelegateChain.m in Sources */,
 				D5197CCC17F019E600CA387C /* RFDismissModalBarButtonItem.m in Sources */,
 				D5197CB717F019E600CA387C /* RFDispatch.m in Sources */,
@@ -1636,6 +1661,7 @@
 				D5197CA017F019E600CA387C /* UISearchBar+RFKit.m in Sources */,
 				D5197CA117F019E600CA387C /* UIStoryboard+RFKit.m in Sources */,
 				D5197CA217F019E600CA387C /* UITableView+RFKit.m in Sources */,
+				D5C7728B196BD4790000A426 /* UITextFiledDelegateChain.m in Sources */,
 				D5197CA317F019E600CA387C /* UIView+RFAnimate.m in Sources */,
 				D5197CA417F019E600CA387C /* UIView+RFKit.m in Sources */,
 				D5542F111918976B00831016 /* UIView+RFLayerApperance.m in Sources */,
@@ -1730,6 +1756,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"RFDEBUG=1",
+					"RFDebugLevel=4",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1742,6 +1769,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
 		};
@@ -1776,6 +1804,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
 		};
@@ -1789,6 +1818,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"RFDEBUG=1",
+					"RFDebugLevel=4",
 					"DOUT_FALG_TRACE=1",
 					"DOUT_ASSERT_AT_ERROR=1",
 					"DOUT_TREAT_ERROR_AS_EXCEPTION=0",
@@ -1884,6 +1914,90 @@
 			};
 			name = Release;
 		};
+		D564D5D41970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RFDEBUG=1",
+					"RFDebugLevel=3",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = AdHocTest;
+		};
+		D564D5D51970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = App/Prefix.pch;
+				INFOPLIST_FILE = App/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHocTest;
+		};
+		D564D5D61970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/${PROJECT_NAME:rfc1034identifier}.app/${PROJECT_NAME:rfc1034identifier}";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = App/Prefix.pch;
+				INFOPLIST_FILE = "AppTests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = AdHocTest;
+		};
+		D564D5D71970EF290032FEC3 /* AdHocTest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
+				CodeCommentsHighlightSkipFrameworks = YES;
+				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
+				EnableAutoGroupSortByName = YES;
+				EnableChangeProductNameRemind = YES;
+				EnableCodeCommentsHighlight = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
+				ScriptPath = $SRCROOT/Scripts;
+			};
+			name = AdHocTest;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1892,6 +2006,7 @@
 			buildConfigurations = (
 				D5197A6D17EECAAF00CA387C /* Debug */,
 				D5197A6E17EECAAF00CA387C /* Release */,
+				D564D5D41970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1901,6 +2016,7 @@
 			buildConfigurations = (
 				D5197A7017EECAAF00CA387C /* Debug */,
 				D5197A7117EECAAF00CA387C /* Release */,
+				D564D5D51970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1910,6 +2026,7 @@
 			buildConfigurations = (
 				D5197A7317EECAAF00CA387C /* Debug */,
 				D5197A7417EECAAF00CA387C /* Release */,
+				D564D5D61970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1919,6 +2036,7 @@
 			buildConfigurations = (
 				D5197D2917F0242000CA387C /* Debug */,
 				D5197D2A17F0242000CA387C /* Release */,
+				D564D5D71970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
