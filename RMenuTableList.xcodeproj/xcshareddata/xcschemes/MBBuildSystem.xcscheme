@@ -17,7 +17,7 @@
                BlueprintIdentifier = "D5197D2717F0241F00CA387C"
                BuildableName = "MBBuildSystem"
                BlueprintName = "MBBuildSystem"
-               ReferencedContainer = "container:App.xcodeproj">
+               ReferencedContainer = "container:RMenuTableList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

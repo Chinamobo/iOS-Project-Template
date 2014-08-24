@@ -8,7 +8,8 @@
     http://www.apache.org/licenses/LICENSE-2.0
  */
 #import <UIKit/UIKit.h>
+#import "RESideMenu.h"
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : RESideMenu <RESideMenuDelegate>
 
 @end

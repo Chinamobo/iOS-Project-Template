@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5197A3917EECAAF00CA387C"
-               BuildableName = "App.app"
+               BuildableName = "RMenuTableList.app"
                BlueprintName = "App"
-               ReferencedContainer = "container:App.xcodeproj">
+               ReferencedContainer = "container:RMenuTableList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D5197A5D17EECAAF00CA387C"
-               BuildableName = "AppTests.xctest"
-               BlueprintName = "AppTests"
-               ReferencedContainer = "container:App.xcodeproj">
+               BuildableName = "AppRMenuTableLists.xctest"
+               BlueprintName = "AppRMenuTableLists"
+               ReferencedContainer = "container:RMenuTableList.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5197A3917EECAAF00CA387C"
-            BuildableName = "App.app"
+            BuildableName = "RMenuTableList.app"
             BlueprintName = "App"
-            ReferencedContainer = "container:App.xcodeproj">
+            ReferencedContainer = "container:RMenuTableList.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5197A3917EECAAF00CA387C"
-            BuildableName = "App.app"
+            BuildableName = "RMenuTableList.app"
             BlueprintName = "App"
-            ReferencedContainer = "container:App.xcodeproj">
+            ReferencedContainer = "container:RMenuTableList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D5197A3917EECAAF00CA387C"
-            BuildableName = "App.app"
+            BuildableName = "RMenuTableList.app"
             BlueprintName = "App"
-            ReferencedContainer = "container:App.xcodeproj">
+            ReferencedContainer = "container:RMenuTableList.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
