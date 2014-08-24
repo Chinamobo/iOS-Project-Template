@@ -66,7 +66,7 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 4:
-            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Fivth View Controller"]]
+            [self.sideMenuViewController setContentViewController:[[UINavigationController alloc] initWithRootViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"]]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;
@@ -108,7 +108,7 @@
         cell.selectedBackgroundView = [[UIView alloc] init];
     }
     
-    NSArray *titles = @[@"Home", @"Calendar", @"Products", @"Settings", @"Log Out"];
+    NSArray *titles = @[@"Home", @"Calendar", @"Products", @"Settings", @"Log In"];
     NSArray *images = @[@"IconHome", @"IconCalendar", @"IconProfile", @"IconSettings", @"IconEmpty"];
     cell.textLabel.text = titles[indexPath.row];
     cell.imageView.image = [UIImage imageNamed:images[indexPath.row]];

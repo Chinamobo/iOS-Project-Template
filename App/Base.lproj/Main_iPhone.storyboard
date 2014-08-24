@@ -134,11 +134,11 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WG-Ja-S5k">
                                 <rect key="frame" x="97" y="75" width="162" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Push View Controller">
+                                <state key="normal" title="View Products">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4ln-PT-ATC" kind="push" id="5SW-eL-o1k"/>
+                                    <action selector="pushViewController:" destination="JQI-CK-lMJ" eventType="touchUpInside" id="YGG-R5-arT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,6 +158,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="fP0-4G-lf6" kind="push" identifier="Second 2 Products" id="OdB-WT-f7T"/>
+                        <segue destination="DTZ-ia-Wmw" kind="push" identifier="Second 2 Login" id="12c-7c-kTK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cn-tt-OQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +172,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ListInfoViewController" id="fP0-4G-lf6" customClass="TableListTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="utM-l2-VTQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -190,7 +194,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="vmp-wr-RmK">
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
@@ -200,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V90-SJ-zSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="664" y="1420"/>
+            <point key="canvasLocation" x="1132" y="1428"/>
         </scene>
         <!--View Controller - FourthView-->
         <scene sceneID="bnu-pb-bMw">
@@ -284,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opc-49-Ppj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136" y="1420"/>
+            <point key="canvasLocation" x="1588" y="1420"/>
         </scene>
         <!--View Controller - fivth-->
         <scene sceneID="WSy-2V-Ban">
@@ -304,7 +308,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2x-Rl-jm6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="2147"/>
+            <point key="canvasLocation" x="1029" y="2107"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ahN-BN-zti">
+            <objects>
+                <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" id="DTZ-ia-Wmw" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bik-lf-oQw"/>
+                        <viewControllerLayoutGuide type="bottom" id="UeK-Bw-GTa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Login" id="bQ2-e5-eA6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9W-f4-W2S">
+                                <rect key="frame" x="206" y="225" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchLogout:" destination="DTZ-ia-Wmw" eventType="touchUpInside" id="6xv-Kk-SqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrW-rD-gqw">
+                                <rect key="frame" x="64" y="225" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchLoginButton:" destination="DTZ-ia-Wmw" eventType="touchUpInside" id="F8u-Zp-3xh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gxY-26-lAc"/>
+                    <connections>
+                        <segue destination="4ln-PT-ATC" kind="push" identifier="Login 2 1st" id="GQt-u7-LyG"/>
+                        <segue destination="fP0-4G-lf6" kind="push" identifier="Login 2 Products" id="8fM-A1-y2L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fe2-yP-rot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="2127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yZ-xb-kP7">
@@ -366,6 +415,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="5SW-eL-o1k"/>
+        <segue reference="OdB-WT-f7T"/>
+        <segue reference="GQt-u7-LyG"/>
     </inferredMetricsTieBreakers>
 </document>

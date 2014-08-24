@@ -20,5 +20,6 @@
 @interface MBApp : NSObject
 
 + (instancetype)status;
+@property (nonatomic) BOOL isLogin;
 
 @end

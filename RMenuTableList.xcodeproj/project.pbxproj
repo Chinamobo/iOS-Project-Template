@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BBC21B111998A5D000840A1B /* InfoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC21B101998A5D000840A1B /* InfoListCell.xib */; };
+		BBCC76B019AA37CB0087D3B6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */; };
 		BBE03EE6199788C200717837 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE03EE5199788C200717837 /* AudioToolbox.framework */; };
 		BBE03EEF1997987000717837 /* DEMOFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE03EE81997987000717837 /* DEMOFirstViewController.m */; };
 		BBE03EF01997987000717837 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE03EEA1997987000717837 /* DEMOSecondViewController.m */; };
@@ -206,6 +207,8 @@
 		BB93501D199BE5F8007D98C1 /* MySingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
 		BB93501E199BE5F8007D98C1 /* MySingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 		BBC21B101998A5D000840A1B /* InfoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoListCell.xib; sourceTree = "<group>"; };
+		BBCC76AE19AA37CB0087D3B6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BBE03EE4199788C200717837 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = App.entitlements; sourceTree = "<group>"; };
 		BBE03EE5199788C200717837 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BBE03EE71997987000717837 /* DEMOFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOFirstViewController.h; sourceTree = "<group>"; };
@@ -1134,6 +1137,8 @@
 				BBE03EEE1997987000717837 /* DEMORightMenuViewController.m */,
 				BBE03EE91997987000717837 /* DEMOSecondViewController.h */,
 				BBE03EEA1997987000717837 /* DEMOSecondViewController.m */,
+				BBCC76AE19AA37CB0087D3B6 /* LoginViewController.h */,
+				BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1661,6 +1666,7 @@
 				D5542EBE19188AFD00831016 /* JSONModelError.m in Sources */,
 				D5542EBF19188AFD00831016 /* JSONValueTransformer.m in Sources */,
 				BBE03F091997BF3300717837 /* ListDetailVC.m in Sources */,
+				BBCC76B019AA37CB0087D3B6 /* LoginViewController.m in Sources */,
 				D5197A4A17EECAAF00CA387C /* main.m in Sources */,
 				D5542F161918B83400831016 /* MBApp.m in Sources */,
 				D55FB76B1944441E00358714 /* MBAppearanceConfigurator.m in Sources */,

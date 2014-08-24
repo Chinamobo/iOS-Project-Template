@@ -115,7 +115,7 @@
 //    return cell.frame.size.height;
     
     [self setCellContent:self.tempCell withInfo:[self.listModel objectAtIndex:indexPath.row] flag:NO];
-//    NSLog(@"self.tempCell.cellHeight = %f", self.tempCell.cellHeight);
+    NSLog(@"self.tempCell.cellHeight = %f", self.tempCell.cellHeight);
   
     return self.tempCell.cellHeight;
 }
