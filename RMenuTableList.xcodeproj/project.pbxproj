@@ -1942,6 +1942,7 @@
 				);
 				INFOPLIST_FILE = App/Info.plist;
 				PRODUCT_NAME = RMenuTableList;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1956,6 +1957,7 @@
 				GCC_PREFIX_HEADER = App/Prefix.pch;
 				INFOPLIST_FILE = App/Info.plist;
 				PRODUCT_NAME = RMenuTableList;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -2078,6 +2080,7 @@
 				GCC_PREFIX_HEADER = App/Prefix.pch;
 				INFOPLIST_FILE = App/Info.plist;
 				PRODUCT_NAME = RMenuTableList;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHocTest;
