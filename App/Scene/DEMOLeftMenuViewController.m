@@ -61,7 +61,7 @@
             [self.sideMenuViewController hideMenuViewController];
             break;
         case 3:
-            [self.sideMenuViewController setContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Fourth View Controller"]
+            [self.sideMenuViewController setContentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Setting Navigator View Controller"]
                                                          animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;

@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB90DF0D19B73D4E00EDA0A5 /* SettingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB90DF0C19B73D4E00EDA0A5 /* SettingViewController.mm */; };
+		BB90DF1119B761B700EDA0A5 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB90DF1019B761B700EDA0A5 /* UIImage+OpenCV.mm */; };
 		BBC21B111998A5D000840A1B /* InfoListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC21B101998A5D000840A1B /* InfoListCell.xib */; };
 		BBCC76B019AA37CB0087D3B6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */; };
+		BBD60DB619B8208000AF40F7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD60DB519B8208000AF40F7 /* CoreVideo.framework */; };
+		BBD60DB819B8208D00AF40F7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD60DB719B8208D00AF40F7 /* CoreMedia.framework */; };
+		BBD60DBA19B8209900AF40F7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD60DB919B8209900AF40F7 /* AVFoundation.framework */; };
+		BBD60DBC19B820A200AF40F7 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD60DBB19B820A200AF40F7 /* ImageIO.framework */; };
+		BBD60DBE19B8214E00AF40F7 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD60DBD19B8214E00AF40F7 /* opencv2.framework */; };
 		BBE03EE6199788C200717837 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE03EE5199788C200717837 /* AudioToolbox.framework */; };
 		BBE03EEF1997987000717837 /* DEMOFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE03EE81997987000717837 /* DEMOFirstViewController.m */; };
 		BBE03EF01997987000717837 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBE03EEA1997987000717837 /* DEMOSecondViewController.m */; };
@@ -194,21 +201,23 @@
 			remoteGlobalIDString = D5197A3917EECAAF00CA387C;
 			remoteInfo = App;
 		};
-		D5197D2B17F0242C00CA387C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5197A3217EECAAF00CA387C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D5197D2717F0241F00CA387C;
-			remoteInfo = MBBuildSystem;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB90DF0B19B73D4E00EDA0A5 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = ../SettingViewController.h; sourceTree = "<group>"; };
+		BB90DF0C19B73D4E00EDA0A5 /* SettingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SettingViewController.mm; path = ../SettingViewController.mm; sourceTree = "<group>"; };
+		BB90DF0F19B761B700EDA0A5 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		BB90DF1019B761B700EDA0A5 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		BB93501D199BE5F8007D98C1 /* MySingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
 		BB93501E199BE5F8007D98C1 /* MySingleton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
 		BBC21B101998A5D000840A1B /* InfoListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoListCell.xib; sourceTree = "<group>"; };
 		BBCC76AE19AA37CB0087D3B6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		BBD60DB519B8208000AF40F7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BBD60DB719B8208D00AF40F7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BBD60DB919B8209900AF40F7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BBD60DBB19B820A200AF40F7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		BBD60DBD19B8214E00AF40F7 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../../Development/opencv2.framework; sourceTree = "<group>"; };
 		BBE03EE4199788C200717837 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = App.entitlements; sourceTree = "<group>"; };
 		BBE03EE5199788C200717837 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BBE03EE71997987000717837 /* DEMOFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOFirstViewController.h; sourceTree = "<group>"; };
@@ -565,12 +574,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD60DBC19B820A200AF40F7 /* ImageIO.framework in Frameworks */,
+				BBD60DBA19B8209900AF40F7 /* AVFoundation.framework in Frameworks */,
+				BBD60DB819B8208D00AF40F7 /* CoreMedia.framework in Frameworks */,
+				BBD60DB619B8208000AF40F7 /* CoreVideo.framework in Frameworks */,
 				BBE03EE6199788C200717837 /* AudioToolbox.framework in Frameworks */,
 				D5197D0517F01E1D00CA387C /* CoreData.framework in Frameworks */,
 				D5197A4017EECAAF00CA387C /* CoreGraphics.framework in Frameworks */,
 				D5197A3E17EECAAF00CA387C /* Foundation.framework in Frameworks */,
 				D5170CF4191B3944000C7D45 /* SystemConfiguration.framework in Frameworks */,
 				D5197A4217EECAAF00CA387C /* UIKit.framework in Frameworks */,
+				BBD60DBE19B8214E00AF40F7 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +601,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB90DF0E19B7619A00EDA0A5 /* OpencvUtil */ = {
+			isa = PBXGroup;
+			children = (
+				BB90DF0F19B761B700EDA0A5 /* UIImage+OpenCV.h */,
+				BB90DF1019B761B700EDA0A5 /* UIImage+OpenCV.mm */,
+			);
+			name = OpencvUtil;
+			sourceTree = "<group>";
+		};
 		BBE03EF3199798D200717837 /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +731,11 @@
 		D5197A3C17EECAAF00CA387C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBD60DBD19B8214E00AF40F7 /* opencv2.framework */,
+				BBD60DBB19B820A200AF40F7 /* ImageIO.framework */,
+				BBD60DB919B8209900AF40F7 /* AVFoundation.framework */,
+				BBD60DB719B8208D00AF40F7 /* CoreMedia.framework */,
+				BBD60DB519B8208000AF40F7 /* CoreVideo.framework */,
 				D5197C0217F019E500CA387C /* AFNetworking */,
 				D5197C2E17F019E500CA387C /* JSONModel */,
 				D5197AC517F019E200CA387C /* RFUI */,
@@ -730,6 +758,7 @@
 				D552DD5518C8506700D02290 /* Launching */,
 				D552DD4D18C8506700D02290 /* Model */,
 				D552DD5A18C8506700D02290 /* Networking */,
+				BB90DF0E19B7619A00EDA0A5 /* OpencvUtil */,
 				BBE03EF3199798D200717837 /* RESideMenu */,
 				D552DD4918C8506700D02290 /* Scene */,
 				D5542F131918B82100831016 /* Service */,
@@ -1139,6 +1168,8 @@
 				BBE03EEA1997987000717837 /* DEMOSecondViewController.m */,
 				BBCC76AE19AA37CB0087D3B6 /* LoginViewController.h */,
 				BBCC76AF19AA37CB0087D3B6 /* LoginViewController.m */,
+				BB90DF0B19B73D4E00EDA0A5 /* SettingViewController.h */,
+				BB90DF0C19B73D4E00EDA0A5 /* SettingViewController.mm */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -1485,23 +1516,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		D5197D2717F0241F00CA387C /* MBBuildSystem */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "";
-			buildConfigurationList = D5197D2817F0242000CA387C /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */;
-			buildPhases = (
-			);
-			buildToolPath = ./MBAutoBuildScript.sh;
-			buildWorkingDirectory = "$(ScriptPath)";
-			dependencies = (
-			);
-			name = MBBuildSystem;
-			passBuildSettingsInEnvironment = 1;
-			productName = MBBuildSystem;
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		D5197A3917EECAAF00CA387C /* App */ = {
 			isa = PBXNativeTarget;
@@ -1515,7 +1529,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D5197D2C17F0242C00CA387C /* PBXTargetDependency */,
 			);
 			name = App;
 			productName = App;
@@ -1573,7 +1586,6 @@
 			targets = (
 				D5197A3917EECAAF00CA387C /* App */,
 				D5197A5D17EECAAF00CA387C /* AppRMenuTableLists */,
-				D5197D2717F0241F00CA387C /* MBBuildSystem */,
 			);
 		};
 /* End PBXProject section */
@@ -1753,6 +1765,7 @@
 				D5542EE319188B0C00831016 /* SDWebImageDownloaderOperation.m in Sources */,
 				D5542EE419188B0C00831016 /* SDWebImageManager.m in Sources */,
 				D5542EE519188B0C00831016 /* SDWebImagePrefetcher.m in Sources */,
+				BB90DF0D19B73D4E00EDA0A5 /* SettingViewController.mm in Sources */,
 				D50558871890E8A50049A759 /* SVProgressHUD.m in Sources */,
 				BBE03F081997BF3300717837 /* TableListTVC.m in Sources */,
 				BBE03F0B1997BF3300717837 /* TableListViewController.m in Sources */,
@@ -1764,6 +1777,7 @@
 				D5197C9E17F019E600CA387C /* UIDevice+RFKit.m in Sources */,
 				D5542EE719188B0C00831016 /* UIImage+GIF.m in Sources */,
 				D5542EE819188B0C00831016 /* UIImage+MultiFormat.m in Sources */,
+				BB90DF1119B761B700EDA0A5 /* UIImage+OpenCV.mm in Sources */,
 				D5197C9F17F019E600CA387C /* UIImage+RFKit.m in Sources */,
 				D5542EE919188B0C00831016 /* UIImageView+WebCache.m in Sources */,
 				D5CC92D11918EAAB00C5B4D8 /* UIKit+App.m in Sources */,
@@ -1802,11 +1816,6 @@
 			isa = PBXTargetDependency;
 			target = D5197A3917EECAAF00CA387C /* App */;
 			targetProxy = D5197A6317EECAAF00CA387C /* PBXContainerItemProxy */;
-		};
-		D5197D2C17F0242C00CA387C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D5197D2717F0241F00CA387C /* MBBuildSystem */;
-			targetProxy = D5197D2B17F0242C00CA387C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1927,7 +1936,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/born/Development,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = App/Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1952,7 +1968,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/born/Development,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = App/Prefix.pch;
 				INFOPLIST_FILE = App/Info.plist;
@@ -2002,36 +2025,6 @@
 			};
 			name = Release;
 		};
-		D5197D2917F0242000CA387C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
-				CodeCommentsHighlightSkipFrameworks = YES;
-				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
-				EnableAutoGroupSortByName = YES;
-				EnableChangeProductNameRemind = YES;
-				EnableCodeCommentsHighlight = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
-				ScriptPath = $SRCROOT/Scripts;
-			};
-			name = Debug;
-		};
-		D5197D2A17F0242000CA387C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
-				CodeCommentsHighlightSkipFrameworks = YES;
-				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
-				EnableAutoGroupSortByName = YES;
-				EnableChangeProductNameRemind = YES;
-				EnableCodeCommentsHighlight = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
-				ScriptPath = $SRCROOT/Scripts;
-			};
-			name = Release;
-		};
 		D564D5D41970EF290032FEC3 /* AdHocTest */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2075,7 +2068,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = App/App.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/born/Development,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = App/Prefix.pch;
 				INFOPLIST_FILE = App/Info.plist;
@@ -2100,21 +2100,6 @@
 				PRODUCT_NAME = AppRMenuTableLists;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
-			};
-			name = AdHocTest;
-		};
-		D564D5D71970EF290032FEC3 /* AdHocTest */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CodeCommentsHighlightKeywordsExpression = "TODO|FIXME|\\\\?\\\\?\\\\?|\\\\!\\\\!\\\\!|MARK";
-				CodeCommentsHighlightSkipFrameworks = YES;
-				CodeReviewFixRightNowKeywordsExpression = "FUCK|FIXRIGHTNOW|NOTICE";
-				EnableAutoGroupSortByName = YES;
-				EnableChangeProductNameRemind = YES;
-				EnableCodeCommentsHighlight = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				ProjectFilePath = "${SRCROOT}/${PROJECT}.xcodeproj";
-				ScriptPath = $SRCROOT/Scripts;
 			};
 			name = AdHocTest;
 		};
@@ -2147,16 +2132,6 @@
 				D5197A7317EECAAF00CA387C /* Debug */,
 				D5197A7417EECAAF00CA387C /* Release */,
 				D564D5D61970EF290032FEC3 /* AdHocTest */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D5197D2817F0242000CA387C /* Build configuration list for PBXLegacyTarget "MBBuildSystem" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5197D2917F0242000CA387C /* Debug */,
-				D5197D2A17F0242000CA387C /* Release */,
-				D564D5D71970EF290032FEC3 /* AdHocTest */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

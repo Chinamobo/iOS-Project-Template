@@ -13,7 +13,12 @@
 #warning "项目编译需要 iOS 7 SDK"
 #endif
 
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
 #ifdef __OBJC__
     #import "RFUI.h"
     #import "MBApp.h"
 #endif
+
