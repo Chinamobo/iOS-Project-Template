@@ -65,6 +65,7 @@ const int kCannyAperture = 5;
     
     // Convert captured frame to grayscale
     cv::cvtColor(_lastFrame, grayFrame, cv::COLOR_RGB2GRAY);
+//    cv::seamlessClone(grayFrame, grayFrame, NULL, <#Point p#>, <#OutputArray blend#>, <#int flags#>)
     
     // Perform Canny edge detection using slide values for thresholds
     cv::Canny(grayFrame, output,
